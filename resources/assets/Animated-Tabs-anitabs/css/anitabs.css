@@ -13,8 +13,12 @@
 .tabs-content .tabs-content{margin:0;}
 .tabs-content .tabs-nav{font-size:14px;}
 
-.tab{width:100%;position:absolute;top:0;left:0;opacity:0;-webkit-transition-timing-function:linear;-ms-transition-timing-function:linear;transition-timing-function:linear;}
-.tab.active{position:relative;opacity:1;}
+.tab{width:100%;position:absolute;top:0;left:0;
+    /* opacity:0; */
+    display: none;
+    -webkit-transition-timing-function:linear;
+    -ms-transition-timing-function:linear;transition-timing-function:linear;}
+.tab.active{position:relative;opacity:1; display: block;}
 .tab.slide{display:none;opacity:1;}
 .tab.slide.active{display:block;}
 .tab.slide.moved{display:block;}
