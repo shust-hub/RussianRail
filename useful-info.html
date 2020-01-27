@@ -10,11 +10,12 @@
 
   <link rel="icon" href="resources/img/favicon.ico" type="image/x-icon" />
 
-  <link rel="stylesheet" href="resources/css/style.css">
-  <link rel="stylesheet" href="resources/assets/lightbox/dist/css/lightbox.min.css">
+  <link rel="stylesheet" type="text/css" href="resources/assets/Animated-Tabs-anitabs/css/anitabs.css">
 
+  <link rel="stylesheet" href="resources/assets/lightbox/dist/css/lightbox.min.css">
   <link rel="stylesheet" href="resources/assets/OwlCarousel/dist/assets/owl.carousel.min.css">
   <link rel="stylesheet" href="resources/assets/OwlCarousel/dist/assets/owl.theme.default.min.css">
+  <link rel="stylesheet" href="resources/css/style.css">
 
   <script type="text/javascript">
       function slowScroll(id) {
@@ -276,27 +277,508 @@
       </div>
   </div>
 
-    <div class="usefulInfo__content content flexbox no-wrap align-start usefulInfo marginTop30">
+    <div class="usefulInfo__content content">
 
-      <div class="usefulInfo-sidebar sidebar flexbox">
-          <div class="sidebar-button">
-            <p>Basic info</p>
+        <div class="tabs js-tabs">
+          <div class="tabs-nav js-tabs-nav" id="fade-example">
+              <ul class="tabs-nav__list">
+                  <li class="tabs-nav__item js-tabs-item active">
+                      <a class="tabs-nav__link js-tabs-link" href="#tab-1">BASIC INFO</a>
+                  </li>
+                  <li class="tabs-nav__item js-tabs-item">
+                      <a class="tabs-nav__link js-tabs-link" href="#tab-2">TRAVEL TIPS</a>
+                  </li>
+                  <li class="tabs-nav__item js-tabs-item">
+                      <a class="tabs-nav__link js-tabs-link" href="#tab-3">TRAINS</a>
+                  </li>
+                  <li class="tabs-nav__item js-tabs-item">
+                    <a class="tabs-nav__link js-tabs-link" href="#tab-4">EXPERIENCE</a>
+                </li>
+              </ul>
+              <span class="tabs-nav__drag js-tabs-drag"></span>
           </div>
-          <div class="sidebar-button">
-            <p>Travel Tips</p>
-          </div>
-          <div class="sidebar-button">
-            <p>Trains</p>
-          </div>
-          <div class="sidebar-button">
-            <p>Experience</p>
-          </div>
+          <div class="tabs-content js-tabs-wrap">
+              <div class="tab js-tabs-content active" id="tab-1">
 
-          <button>SHOW ARTICLES</button>
+                <div class="main-info flexbox">
 
+                  <div class="usefulInfo__block">
+                    <a href="/article-page.html">
+                      <img src="./resources/img/useful-info/0.jpg" alt="" class="usefulInfo__img">
+                      <div class="description">
+                        <h3>TYPES OF RUSSIAN TRAINS</h3>
+                        <p>Read which train types and cabin types
+                           exist in Russia
+                        </p>
+                      </div>
+                    </a>
+                  </div>
+
+                  <div class="usefulInfo__block">
+                    <a href="/article-page.html">
+                      <img src="./resources/img/useful-info/1.jpg" alt="" class="usefulInfo__img">
+                      <div class="description">
+                        <h3>RUSSIAN TRAIN TICKETS</h3>
+                        <p>Learn more about electronic, 
+                          semi-electronic and paper tickets. 
+                          
+                        </p>
+                      </div>
+                    </a>
+                  </div>
+
+
+                  <div class="usefulInfo__block">
+                    <a href="/article-page.html">
+                      <img src="./resources/img/useful-info/2.jpg" alt="" class="usefulInfo__img">
+                      <div class="description">
+                        <h3>TIPS FOR TRAVELLING BY TRAIN IN RUSSIA</h3>
+                        <p>
+                          See what to pack for the trip, how to find your 
+                          train at the station.
+                        </p>
+                      </div>
+                    </a>
+                  </div>
+
+                  <div class="usefulInfo__block">
+                    <a href="article-page.html">
+                      <img src="./resources/img/useful-info/3.jpg" alt="" class="usefulInfo__img">
+                      <div class="description">
+                        <h3>THE RUSSIAN TRAIN EXPERIENCE</h3>
+                        <p>Our colleague Masha is an experienced train traveler
+                        </p>
+                      </div>
+                    </a>
+                  </div>
+
+                  <div class="usefulInfo__block">
+                    <a href="/article-page.html">
+                      <img src="./resources/img/useful-info/4.jpg" alt="" class="usefulInfo__img">
+                      <div class="description">
+                        <h3>SAFETY ON RUSSIAN TRAINS</h3>
+                        <p>
+                          Russia’s railway system is one of the most extensive in 
+                          the world as it transports passengers
+                        </p>
+                      </div>
+                    </a>
+                  </div>
+
+
+                  <div class="usefulInfo__block">
+                    <a href="article-page.html">        
+                      <img src="./resources/img/useful-info/5.jpg" alt="" class="usefulInfo__img">
+                      <div class="description">
+                        <h3>BEST WAYS TO TRAVEL FROM MOSCOW TO ST PETERSBURG</h3>
+                        <p>
+                          A person traveling from Moscow to St. Petersburg 
+                          has many options. 
+                        </p>
+                      </div>
+                    </a>
+                  </div>
+
+                  <div class="usefulInfo__block">
+                    <a href="article-page.html">
+                      <img src="./resources/img/useful-info/6.jpg" alt="" class="usefulInfo__img">
+                      <div class="description">
+                        <h3>MOSCOW - ST PETERSBURG NIGHT TRAIN VS DAY TRAIN</h3>
+                        <p>
+                          Maybe you’ve read our article on the best ways 
+                          to travel from Moscow to St. Petersburg 
+            
+                        </p>
+                      </div>
+                    </a>
+                  </div>
+
+                  <div class="usefulInfo__block">
+                    <a href="/article-page.html">
+                      <img src="./resources/img/useful-info/7.jpg" alt="" class="usefulInfo__img">
+                      <div class="description">
+                        <h3>THE ULTIMATE LIST OF RUSSIA’S MOST POPULAR TRAINS</h3>
+                        <p>
+                          Maybe you’ve read our article on the 
+                          best ways to travel from Moscow to St. Petersburg
+                          
+                        </p>
+                      </div>
+                      </a>
+                  </div>
+
+
+                </div>
+
+              </div>
+
+
+              <div class="tab js-tabs-content" id="tab-2">
+                <div class="main-info flexbox">
+
+                  <div class="usefulInfo__block">
+                    <a href="/article-page.html">
+                      <img src="./resources/img/useful-info/4.jpg" alt="" class="usefulInfo__img">
+                      <div class="description">
+                        <h3>SAFETY ON RUSSIAN TRAINS</h3>
+                        <p>
+                          Russia’s railway system is one of the most extensive in 
+                          the world as it transports passengers.
+                        </p>
+                      </div>
+                    </a>
+                  </div>
+
+
+                  <div class="usefulInfo__block">
+                    <a href="article-page.html">        
+                      <img src="./resources/img/useful-info/5.jpg" alt="" class="usefulInfo__img">
+                      <div class="description">
+                        <h3>BEST WAYS TO TRAVEL FROM MOSCOW TO ST PETERSBURG</h3>
+                        <p>
+                          A person traveling from Moscow to St. Petersburg 
+                          has many options. 
+                        </p>
+                      </div>
+                    </a>
+                  </div>
+
+                  <div class="usefulInfo__block">
+                    <a href="article-page.html">
+                      <img src="./resources/img/useful-info/6.jpg" alt="" class="usefulInfo__img">
+                      <div class="description">
+                        <h3>MOSCOW - ST PETERSBURG NIGHT TRAIN VS DAY TRAIN</h3>
+                        <p>
+                          Maybe you’ve read our article on the best ways 
+                          to travel from Moscow to St. Petersburg. 
+            
+                        </p>
+                      </div>
+                    </a>
+                  </div>
+
+                  <div class="usefulInfo__block">
+                    <a href="/article-page.html">
+                      <img src="./resources/img/useful-info/7.jpg" alt="" class="usefulInfo__img">
+                      <div class="description">
+                        <h3>THE ULTIMATE LIST OF RUSSIA’S MOST POPULAR TRAINS</h3>
+                        <p>
+                          Maybe you’ve read our article on the 
+                          best ways to travel from Moscow to St. Petersburg.
+                        </p>
+                      </div>
+                      </a>
+                  </div>
+
+                  <div class="usefulInfo__block">
+                    <a href="article-page.html">
+                      <img src="./resources/img/useful-info/8.jpg" alt="" class="usefulInfo__img">
+                      <div class="description">
+                        <h3>DIFFERENT SEATING CLASSES ON THE SAPSAN TRAIN</h3>
+                        <p>
+                          Traveling is not only about choosing the 
+                          right mode of transport.  
+                        </p>
+                      </div>
+                    </a>
+                  </div>
+
+                  <div class="usefulInfo__block">
+                    <a href="article-page.html">
+                      <img src="./resources/img/useful-info/9.jpg" alt="" class="usefulInfo__img">
+                      <div class="description">
+                        <h3>DIFFERENT CLASSES ON THE RED ARROW TRAIN</h3>
+                        <p>
+                          The Red Arrow, or Krasnaya Strela is probably 
+                          Russia’s most historical and prestigious overnight train. 
+                        </p>
+                      </div>
+                    </a>
+                  </div>
+
+                  <div class="usefulInfo__block">
+                    <img src="./resources/img/useful-info/91.jpg" alt="" class="usefulInfo__img">
+                      <a href="article-page.html">
+                      <div class="description">
+                        <h3>SAPSAN VS. NEVSKY EXPRESS: HOW DO THEY DIFFER?</h3>
+                        <p>
+                          As of 2019, there are two
+                          high speed trains.
+                            </p>        
+                      </div>
+                    </a>
+                  </div>
+
+                  <div class="usefulInfo__block">
+                    <a href="article-page.html">
+                      <img src="./resources/img/useful-info/91.jpg" alt="" class="usefulInfo__img">
+                      <div class="description">
+                        <h3>RED ARROW VS THE GRAND EXPRESS TRAIN</h3>
+                        <p>
+                          Train travel is probably the best 
+                          way to discover Russia’s vast and diverse 
+                          landscape. 
+                          
+                          </p>
+                      </div>
+                    </a>
+                  </div>
+
+                  <div class="usefulInfo__block">
+                    <a href="article-page.html">
+                      <img src="./resources/img/useful-info/92.jpg" alt="" class="usefulInfo__img">
+                      <div class="description">
+                        <h3>TRAVELLING FROM HELSINKI TO ST PETERSBURG</h3>
+                        <p>
+                          St Petersburg’s location on the Gulf of Finland is ideal.        
+                          </p>
+                      </div>
+                      </a>
+                  </div>
+
+                </div>
+
+              </div>
+              <div class="tab js-tabs-content" id="tab-3">
+                <div class="main-info flexbox">
+
+                  <div class="usefulInfo__block">
+                    <a href="article-page.html">
+                      <img src="./resources/img/useful-info/6.jpg" alt="" class="usefulInfo__img">
+                      <div class="description">
+                        <h3>MOSCOW - ST PETERSBURG NIGHT TRAIN VS DAY TRAIN</h3>
+                        <p>
+                          Maybe you’ve read our article on the best ways 
+                          to travel from Moscow to St. Petersburg.
+            
+                        </p>
+                      </div>
+                    </a>
+                  </div>
+
+                  <div class="usefulInfo__block">
+                    <a href="/article-page.html">
+                      <img src="./resources/img/useful-info/7.jpg" alt="" class="usefulInfo__img">
+                      <div class="description">
+                        <h3>THE ULTIMATE LIST OF RUSSIA’S MOST POPULAR TRAINS</h3>
+                        <p>
+                          Maybe you’ve read our article on the 
+                          best ways to travel from Moscow to St. Petersburg.
+                      </div>
+                      </a>
+                  </div>
+
+                  <div class="usefulInfo__block">
+                    <a href="article-page.html">
+                      <img src="./resources/img/useful-info/8.jpg" alt="" class="usefulInfo__img">
+                      <div class="description">
+                        <h3>DIFFERENT SEATING CLASSES ON THE SAPSAN TRAIN</h3>
+                        <p>
+                          Traveling is not only about choosing the 
+                          right mode of transport. 
+                        </p>
+                      </div>
+                    </a>
+                  </div>
+
+                  <div class="usefulInfo__block">
+                    <a href="article-page.html">
+                      <img src="./resources/img/useful-info/9.jpg" alt="" class="usefulInfo__img">
+                      <div class="description">
+                        <h3>DIFFERENT CLASSES ON THE RED ARROW TRAIN</h3>
+                        <p>
+                          The Red Arrow, or Krasnaya Strela is probably 
+                          Russia’s most historical and prestigious overnight train. 
+                        </p>
+                      </div>
+                    </a>
+                  </div>
+
+                  <div class="usefulInfo__block">
+                    <img src="./resources/img/useful-info/91.jpg" alt="" class="usefulInfo__img">
+                      <a href="article-page.html">
+                      <div class="description">
+                        <h3>SAPSAN VS. NEVSKY EXPRESS: HOW DO THEY DIFFER?</h3>
+                        <p>
+                          As of 2019, there are two
+                          high speed trains.
+                            </p>        
+                      </div>
+                    </a>
+                  </div>
+
+                  <div class="usefulInfo__block">
+                    <a href="article-page.html">
+                      <img src="./resources/img/useful-info/91.jpg" alt="" class="usefulInfo__img">
+                      <div class="description">
+                        <h3>RED ARROW VS THE GRAND EXPRESS TRAIN</h3>
+                        <p>
+                          Train travel is probably the best 
+                          way to discover Russia’s vast and diverse 
+                          landscape. 
+                          
+                          </p>
+                      </div>
+                    </a>
+                  </div>
+
+                  <div class="usefulInfo__block">
+                    <a href="article-page.html">
+                      <img src="./resources/img/useful-info/92.jpg" alt="" class="usefulInfo__img">
+                      <div class="description">
+                        <h3>TRAVELLING FROM HELSINKI TO ST PETERSBURG</h3>
+                        <p>
+                          St Petersburg’s location on the Gulf of Finland is ideal.        
+                          </p>
+                      </div>
+                      </a>
+                  </div>
+
+                  <div class="usefulInfo__block">
+                    <a href="/article-page.html">
+                      <img src="./resources/img/useful-info/7.jpg" alt="" class="usefulInfo__img">
+                      <div class="description">
+                        <h3>THE ULTIMATE LIST OF RUSSIA’S MOST POPULAR TRAINS</h3>
+                        <p>
+                          Maybe you’ve read our article on the 
+                          best ways to travel from Moscow to St. Petersburg.
+                        </p>
+                      </div>
+                      </a>
+                  </div>
+
+                </div>
+              </div>
+              
+              <div class="tab js-tabs-content" id="tab-4">
+                <div class="main-info flexbox">
+
+
+                <div class="usefulInfo__block">
+                  <a href="/article-page.html">
+                    <img src="./resources/img/useful-info/2.jpg" alt="" class="usefulInfo__img">
+                    <div class="description">
+                      <h3>TIPS FOR TRAVELLING BY TRAIN IN RUSSIA</h3>
+                      <p>
+                        See what to pack for the trip, how to find your 
+                        train at the station and what to expect during the journey.
+                      </p>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="usefulInfo__block">
+                  <a href="article-page.html">
+                    <img src="./resources/img/useful-info/3.jpg" alt="" class="usefulInfo__img">
+                    <div class="description">
+                      <h3>THE RUSSIAN TRAIN EXPERIENCE</h3>
+                      <p>Our colleague Masha is an experienced train traveler.
+                      </p>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="usefulInfo__block">
+                  <a href="/article-page.html">
+                    <img src="./resources/img/useful-info/4.jpg" alt="" class="usefulInfo__img">
+                    <div class="description">
+                      <h3>SAFETY ON RUSSIAN TRAINS</h3>
+                      <p>
+                        Russia’s railway system is one of the most extensive in 
+                        the world as it transports passengers.
+                      </p>
+                    </div>
+                  </a>
+                </div>
+
+
+                <div class="usefulInfo__block">
+                  <a href="article-page.html">        
+                    <img src="./resources/img/useful-info/5.jpg" alt="" class="usefulInfo__img">
+                    <div class="description">
+                      <h3>BEST WAYS TO TRAVEL FROM MOSCOW TO ST PETERSBURG</h3>
+                      <p>
+                        A person traveling from Moscow to St. Petersburg 
+                        has many options.
+                      </p>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="usefulInfo__block">
+                  <a href="article-page.html">
+                    <img src="./resources/img/useful-info/6.jpg" alt="" class="usefulInfo__img">
+                    <div class="description">
+                      <h3>MOSCOW - ST PETERSBURG NIGHT TRAIN VS DAY TRAIN</h3>
+                      <p>
+                        Maybe you’ve read our article on the best ways 
+                        to travel from Moscow to St. Petersburg;
+          
+                      </p>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="usefulInfo__block">
+                  <a href="/article-page.html">
+                    <img src="./resources/img/useful-info/7.jpg" alt="" class="usefulInfo__img">
+                    <div class="description">
+                      <h3>THE ULTIMATE LIST OF RUSSIA’S MOST POPULAR TRAINS</h3>
+                      <p>
+                        Maybe you’ve read our article on the 
+                        best ways to travel from Moscow to St. Petersburg. 
+                      </p>
+                    </div>
+                    </a>
+                </div>
+
+                <div class="usefulInfo__block">
+                  <a href="article-page.html">
+                    <img src="./resources/img/useful-info/8.jpg" alt="" class="usefulInfo__img">
+                    <div class="description">
+                      <h3>DIFFERENT SEATING CLASSES ON THE SAPSAN TRAIN</h3>
+                      <p>
+                        Traveling is not only about choosing the 
+                        right mode of transport. 
+                      </p>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="usefulInfo__block">
+                  <a href="article-page.html">
+                    <img src="./resources/img/useful-info/91.jpg" alt="" class="usefulInfo__img">
+                    <div class="description">
+                      <h3>RED ARROW VS THE GRAND EXPRESS TRAIN</h3>
+                      <p>
+                        Train travel is probably the best 
+                        way to discover Russia’s vast and diverse 
+                        landscape. 
+                        
+                        </p>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="usefulInfo__block">
+                  <a href="article-page.html">
+                    <img src="./resources/img/useful-info/92.jpg" alt="" class="usefulInfo__img">
+                    <div class="description">
+                      <h3>TRAVELLING FROM HELSINKI TO ST PETERSBURG</h3>
+                      <p>
+                        St Petersburg’s location on the Gulf of Finland is ideal.      
+                        </p>
+                    </div>
+                    </a>
+                </div>
+
+              </div>
+              </div>
+          </div>
       </div>
 
-      <div class="main-info flexbox">
+
+      <!-- <div class="main-info flexbox">
 
         <div class="usefulInfo__block">
           <a href="/article-page.html">
@@ -477,7 +959,8 @@
             </a>
         </div>
 
-      </div>
+      </div> -->
+
     </div>
   </section>
 
@@ -673,30 +1156,30 @@
 <script src="resources/assets/OwlCarousel/dist/owl.carousel.min.js"></script>
 <script src="resources/js/nav.js"></script>
 <script src="resources/assets/lightbox/dist/js/lightbox.js"></script>
-
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+<script src="resources/assets/Animated-Tabs-anitabs/js/anitabs.min.js" ></script>
 <script>
-    $(document).ready(function() {
-        var owl = $('.gallery');
-        owl.owlCarousel({
-            margin: 10,
-            nav: true,
-            loop: true,
-            dots: false,
-            autoplay: true,
-            autoplayTimeout: 20000,
-            responsive: {
-                0: {
-                    items: 1
-                },
-                1320: {
-                    items: 2
-                },
-                1350: {
-                    items: 3
-                }
-            }
-        })
-    })
+	$(window).load(function(){
+		$("#fade-example .js-tabs-link").aniTabs();
+		$("#slide-example .js-tabs-link").aniTabs({animation:"slide", animationSpeed:600, dragSpeed:600});
+		$("#custom-example .js-tabs-link").aniTabs({animation:"slide", animationSpeed:800, slideDirection:"right", drag:false, autoHeight:false});
+		$("#multiple-example .js-tabs-link").aniTabs();
+		$("#multiple-inner .js-tabs-link").aniTabs({animation:"slide"});
+	})
+</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
 </script>
 
 <script>
