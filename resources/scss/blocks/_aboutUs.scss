@@ -1,0 +1,51 @@
+#aboutUs{
+    background:  $lighter-gray-color;
+    background:  $lighter-gray-color;
+  
+    .description {
+      background-color: white;
+      padding-bottom: 30px;
+    }
+
+
+    .aboutUs {
+        .aboutUs__block{
+            width: 49%;
+            display: flex;
+            flex-wrap: nowrap;
+            background-color: white;
+            padding: 10px;
+            @include white-border();
+            margin-bottom: 10px;
+
+            @media (min-width: 1281px) {
+                width: 49%;
+              }
+              
+              
+              @media (min-width: 768px) and (max-width: 1280px) {
+                 width: 49%;
+              }
+              
+              
+              @media (min-width: 320px) and (max-width: 767px) {
+                width: 100%;  
+              }
+
+            img{
+                width: 130px;
+                height: 170px;
+            }
+
+            .description {
+                padding: 0 10px 0 25px;
+
+                .position {
+                    color: $blue-color;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+
+}
