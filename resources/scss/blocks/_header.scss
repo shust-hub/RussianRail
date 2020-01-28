@@ -24,10 +24,22 @@
       }
 
       P {
-        color: $light-gray-color;
+        color:  $white-color;
+        font-size: 24px;
+        font-weight: bolder;
+        display: inline-block;
+        text-shadow: -1px 1px 0 rgba($black-color, .3), 
+                      1px 1px 0 rgba($black-color, .3), 
+                    1px -1px 0 rgba($black-color, .3),
+                    -1px -1px 0 rgba($black-color, .3); 
 
         a {
           color: $white-color;
+          display: inline-block;
+          text-shadow: -1px 1px 5px rgba($black-color, .3), 
+          1px 1px 5px rgba($black-color, .3), 
+        1px -1px 5px rgba($black-color, .3),
+        -1px -1px 5px rgba($black-color, .3); 
 
           &:hover {
             color: darken($white-color, 20%);
@@ -46,6 +58,7 @@
 
     h1, h4 {
       text-shadow: 1px 1px 3px rgba($black-color, .3);
+      text-transform: uppercase;
     }
   }
 

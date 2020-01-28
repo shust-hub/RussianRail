@@ -879,20 +879,20 @@ ol{
   opacity: 1;
   }
 
-  ::selection {
-    background: $accent-color; /* Safari */
-    color: white;
-    }
-    ::-moz-selection {
-    background: $accent-color; /* Firefox */
-    color: white;
-    
-    }
+::selection {
+  background: $accent-color; /* Safari */
+  color: white;
+}
 
-    mark {
-      background-color: rgba($color: #000000, $alpha: .5);
-      color: white;
-      padding: 0 5px;
-    }
+::-moz-selection {
+  background: $accent-color; /* Firefox */
+  color: white;
+}
+
+mark {
+    background-color: rgba($color: #000000, $alpha: .5);
+    color: white;
+    padding: 0 5px;
+}
 
 
