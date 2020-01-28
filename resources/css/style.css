@@ -92,7 +92,7 @@ header .content .nav-trigger, header .content .nav-trigger span, header .content
   left: 0;
   right: 0; }
 
-*, ::after, ::before, form input, form textarea, #header, #header .right, #recommended .recommended__block a#bbblink div, #choose .content .choose__block, .navigation, .navigation__list, .navigation__list a, #commitment, #commitment .commitment__left, #destinations .destinations__block .description, #action, #testimonials .testimonials__block, #testimonials .testimonials__block .main .quote p, #kids .kids__content, #news .news, #news .news__block .description, .trains__content .main-info .train__description .text, .trains__content .main-info .train__schedule .stroke .number, .trains__content .main-info .train__schedule .stroke .time, .trains__content .main-info .train__schedule .stroke .from, .trains__content .main-info .train__schedule .stroke .to, #about .who-we-are, #about .description__right img, #culture-for-kids .description__left img, #culture-for-kids .description__right img, .usefulInfo .usefulInfo__content .usefulInfo__block .description, .newsList .newsList__block .description {
+*, ::after, ::before, form input, form textarea, #header, #header .right, #recommended .recommended__block a#bbblink div, #choose .content .choose__block, .navigation, .navigation__list, .navigation__list a, #commitment, #commitment .commitment__left, #destinations .destinations__block .description, #action, #testimonials .testimonials__block, #testimonials .testimonials__block .main .quote p, #kids .kids__content, #news .news, #news .news__block .description, .trains__content .main-info .train__description .text, .trains__content .main-info .train__schedule .stroke .number, .trains__content .main-info .train__schedule .stroke .time, .trains__content .main-info .train__schedule .stroke .from, .trains__content .main-info .train__schedule .stroke .to, #about .who-we-are, #about .description__right img, #culture-for-kids .description__left img, #culture-for-kids .description__right img, .usefulInfo__block .description, .newsList .newsList__block .description {
   -webkit-box-sizing: border-box;
   -ms-box-sizing: border-box;
   -o-box-sizing: border-box;
@@ -228,6 +228,34 @@ mark {
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
   padding: 0 5px; }
+
+.article__nav {
+  width: 100%;
+  margin-top: 30px; }
+  .article__nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+    .article__nav ul li {
+      padding: 10px 2vw;
+      cursor: pointer; }
+      .article__nav ul li a {
+        width: 100%;
+        height: 100%; }
+      .article__nav ul li p {
+        font-weight: bold; }
+    .article__nav ul li.active {
+      background-color: #4169e1; }
+      .article__nav ul li.active a {
+        color: #fff; }
+    .article__nav ul li:hover {
+      background-color: #4169e1; }
+      .article__nav ul li:hover a {
+        color: #fff; }
 
 .content {
   max-width: 1180px;
@@ -2869,96 +2897,83 @@ input:checked ~ .tab-content {
   #usefulInfo .description {
     background-color: white;
     padding-bottom: 30px; }
-
-@media only screen and (max-width: 980px), (orientation: portrait) {
-  .usefulInfo__content {
+  #usefulInfo .usefulInfo__content {
+    background: #f0f0f0;
+    padding: 30px 0 0;
     -ms-flex-wrap: wrap;
-        flex-wrap: wrap; } }
-.usefulInfo .usefulInfo__content {
-  background: #f0f0f0;
-  padding: 30px 0 0;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap; }
-  .usefulInfo .usefulInfo__content .main-info {
-    max-width: 100%;
-    width: 100%; }
-    @media only screen and (max-width: 1200px), (orientation: portrait) {
-      .usefulInfo .usefulInfo__content .main-info {
-        max-width: 100%; } }
-    @media only screen and (max-width: 980px), (orientation: portrait) {
-      .usefulInfo .usefulInfo__content .main-info {
-        max-width: 100%; } }
+        flex-wrap: wrap; }
     @media (min-width: 1281px) {
-      .usefulInfo .usefulInfo__content .main-info .usefulInfo__block:nth-child(4n+1):nth-last-child(-n+4) ~ .usefulInfo__block {
+      #usefulInfo .usefulInfo__content .usefulInfo__block:nth-child(4n+1):nth-last-child(-n+4) ~ .usefulInfo__block {
         margin-left: calc(24% * .055);
         margin-right: auto; }
-      .usefulInfo .usefulInfo__content .main-info .usefulInfo__block:nth-child(4n+3):nth-last-child(-n+4):last-child {
+      #usefulInfo .usefulInfo__content .usefulInfo__block:nth-child(4n+3):nth-last-child(-n+4):last-child {
         margin-left: -24%; } }
     @media (min-width: 768px) and (max-width: 1280px) {
-      .usefulInfo .usefulInfo__content .main-info .usefulInfo__block:nth-child(3n+1):nth-last-child(-n+3) ~ .usefulInfo__block {
+      #usefulInfo .usefulInfo__content .usefulInfo__block:nth-child(3n+1):nth-last-child(-n+3) ~ .usefulInfo__block {
         margin-left: calc(32% * .055);
         margin-right: auto; }
-      .usefulInfo .usefulInfo__content .main-info .usefulInfo__block:nth-child(3n+2):nth-last-child(-n+3):last-child {
+      #usefulInfo .usefulInfo__content .usefulInfo__block:nth-child(3n+2):nth-last-child(-n+3):last-child {
         margin-left: -32%; } }
-  .usefulInfo .usefulInfo__content .usefulInfo__block {
-    overflow: hidden;
-    width: 24%;
-    margin-bottom: 20px;
-    position: relative;
-    cursor: pointer; }
-    .usefulInfo .usefulInfo__content .usefulInfo__block img {
+
+.usefulInfo__block {
+  overflow: hidden;
+  width: 24%;
+  margin-bottom: 20px;
+  position: relative;
+  cursor: pointer; }
+  .usefulInfo__block img {
+    -webkit-transition: all 0.3s ease-out, all 0.3s ease-out, auto;
+    transition: all 0.3s ease-out, all 0.3s ease-out, auto; }
+  .usefulInfo__block h3 {
+    color: black; }
+  .usefulInfo__block:hover img {
+    opacity: .9; }
+  .usefulInfo__block:hover .description h3 {
+    color: #ad1e2f; }
+  .usefulInfo__block .description {
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    right: 0;
+    width: calc(100% - 40px);
+    background: #fff;
+    text-align: center;
+    padding: 25px 25px 30px;
+    margin: auto; }
+    @media only screen and (max-width: 520px), (orientation: portrait) {
+      .usefulInfo__block .description {
+        width: calc(100% - 30px);
+        bottom: 15px; } }
+    .usefulInfo__block .description p {
       -webkit-transition: all 0.3s ease-out, all 0.3s ease-out, auto;
-      transition: all 0.3s ease-out, all 0.3s ease-out, auto; }
-    .usefulInfo .usefulInfo__content .usefulInfo__block h3 {
-      color: black; }
-    .usefulInfo .usefulInfo__content .usefulInfo__block:hover img {
-      opacity: .9; }
-    .usefulInfo .usefulInfo__content .usefulInfo__block:hover .description h3 {
-      color: #ad1e2f; }
-    .usefulInfo .usefulInfo__content .usefulInfo__block .description {
-      position: absolute;
-      bottom: 30px;
-      left: 0;
-      right: 0;
-      width: calc(100% - 40px);
-      background: #fff;
-      text-align: center;
-      padding: 25px 25px 30px;
-      margin: auto; }
-      @media only screen and (max-width: 520px), (orientation: portrait) {
-        .usefulInfo .usefulInfo__content .usefulInfo__block .description {
-          width: calc(100% - 30px);
-          bottom: 15px; } }
-      .usefulInfo .usefulInfo__content .usefulInfo__block .description p {
-        -webkit-transition: all 0.3s ease-out, all 0.3s ease-out, auto;
-        transition: all 0.3s ease-out, all 0.3s ease-out, auto;
-        color: black;
-        position: relative;
-        margin-bottom: 0; }
-        .usefulInfo .usefulInfo__content .usefulInfo__block .description p::after {
-          position: absolute;
-          content: '\2192';
-          font-family: "Segoe UI Emoji";
-          font-size: 16px;
-          color: #ad1e2f;
-          margin-left: 5px; }
-    @media (min-width: 1281px) {
-      .usefulInfo .usefulInfo__content .usefulInfo__block {
-        width: 24%; } }
-    @media (min-width: 768px) and (max-width: 1280) {
-      .usefulInfo .usefulInfo__content .usefulInfo__block {
-        width: 32%; } }
-    @media (min-width: 481px) and (max-width: 767px) {
-      .usefulInfo .usefulInfo__content .usefulInfo__block {
-        width: 49%; } }
-    @media (min-width: 320px) and (max-width: 480px) {
-      .usefulInfo .usefulInfo__content .usefulInfo__block {
-        width: 100%; } }
-    .usefulInfo .usefulInfo__content .usefulInfo__block img {
-      max-height: 330px; }
-    .usefulInfo .usefulInfo__content .usefulInfo__block h3 {
-      font-size: 16px;
-      line-height: 18px; }
+      transition: all 0.3s ease-out, all 0.3s ease-out, auto;
+      color: black;
+      position: relative;
+      margin-bottom: 0; }
+      .usefulInfo__block .description p::after {
+        position: absolute;
+        content: '\2192';
+        font-family: "Segoe UI Emoji";
+        font-size: 16px;
+        color: #ad1e2f;
+        margin-left: 5px; }
+  @media (min-width: 1281px) {
+    .usefulInfo__block {
+      width: 24%; } }
+  @media (min-width: 768px) and (max-width: 1280px) {
+    .usefulInfo__block {
+      width: 32%; } }
+  @media (min-width: 481px) and (max-width: 767px) {
+    .usefulInfo__block {
+      width: 49%; } }
+  @media (min-width: 320px) and (max-width: 480px) {
+    .usefulInfo__block {
+      width: 100%; } }
+  .usefulInfo__block img {
+    max-height: 330px; }
+  .usefulInfo__block h3 {
+    font-size: 16px;
+    line-height: 18px; }
 
 #newsList {
   background: #f0f0f0;
@@ -3049,8 +3064,7 @@ input:checked ~ .tab-content {
         display: none; }
   .newsList .newsList__block h3 {
     font-size: 16px;
-    line-height: 18px;
-    text-transform: lowercase; }
+    line-height: 18px; }
 
 #aboutUs {
   background: #f0f0f0;
