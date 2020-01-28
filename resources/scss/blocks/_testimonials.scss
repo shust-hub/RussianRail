@@ -1,4 +1,4 @@
-#testimonials {
+#testimonials, #testimonials-list {
   padding: 45px 0 50px;
   background: $lighter-gray-color;
 
@@ -47,4 +47,29 @@
       }
     }
   }
+}
+
+#testimonials-list{
+  background-color: $lighter-gray-color;
+  padding-top: 1px;
+  .testimonials {
+    position: relative;
+    padding: 30px 0 0;
+
+    &__block {
+      @include testimonials();
+      width: 49.5%;
+      margin-bottom: 10px;
+
+      @media only screen and (max-width: 1023px), (orientation: portrait) {
+        width: 80%;
+        margin: 0 auto;
+      }
+
+      @media only screen and (max-width: 680px), (orientation: portrait) {
+        width: 100%;
+      }
+    }
+  }
+
 }

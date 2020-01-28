@@ -899,10 +899,12 @@ mark {
   width: 100%;
   margin-top: 30px;
   // @include white-border();
+  background-color: $lighter-gray-color;
+  z-index: 23;
 
   ul{
     display: flex;
-    width: 100%;
+    // width: 100%;
     justify-content: center;
 
     li{
@@ -914,6 +916,8 @@ mark {
         height: 100%;
       }
       p{
+        font-size: 16px;
+        line-height: 18px;
         font-weight: bold;
       }
     }

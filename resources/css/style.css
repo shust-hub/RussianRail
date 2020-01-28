@@ -92,7 +92,7 @@ header .content .nav-trigger, header .content .nav-trigger span, header .content
   left: 0;
   right: 0; }
 
-*, ::after, ::before, form input, form textarea, #header, #header .right, #recommended .recommended__block a#bbblink div, #choose .content .choose__block, .navigation, .navigation__list, .navigation__list a, #commitment, #commitment .commitment__left, #destinations .destinations__block .description, #action, #testimonials .testimonials__block, #testimonials .testimonials__block .main .quote p, #kids .kids__content, #news .news, #news .news__block .description, .trains__content .main-info .train__description .text, .trains__content .main-info .train__schedule .stroke .number, .trains__content .main-info .train__schedule .stroke .time, .trains__content .main-info .train__schedule .stroke .from, .trains__content .main-info .train__schedule .stroke .to, #about .who-we-are, #about .description__right img, #culture-for-kids .description__left img, #culture-for-kids .description__right img, .usefulInfo__block .description, .newsList .newsList__block .description {
+*, ::after, ::before, form input, form textarea, #header, #header .right, #recommended .recommended__block a#bbblink div, #choose .content .choose__block, .navigation, .navigation__list, .navigation__list a, #commitment, #commitment .commitment__left, #destinations .destinations__block .description, #action, #testimonials .testimonials__block, #testimonials-list .testimonials__block, #testimonials .testimonials__block .main .quote p, #testimonials-list .testimonials__block .main .quote p, #kids .kids__content, #news .news, #news .news__block .description, .trains__content .main-info .train__description .text, .trains__content .main-info .train__schedule .stroke .number, .trains__content .main-info .train__schedule .stroke .time, .trains__content .main-info .train__schedule .stroke .from, .trains__content .main-info .train__schedule .stroke .to, #about .who-we-are, #about .description__right img, #culture-for-kids .description__left img, #culture-for-kids .description__right img, .usefulInfo__block .description, .newsList .newsList__block .description {
   -webkit-box-sizing: border-box;
   -ms-box-sizing: border-box;
   -o-box-sizing: border-box;
@@ -231,12 +231,13 @@ mark {
 
 .article__nav {
   width: 100%;
-  margin-top: 30px; }
+  margin-top: 30px;
+  background-color: #f0f0f0;
+  z-index: 23; }
   .article__nav ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: 100%;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center; }
@@ -247,6 +248,8 @@ mark {
         width: 100%;
         height: 100%; }
       .article__nav ul li p {
+        font-size: 16px;
+        line-height: 18px;
         font-weight: bold; }
     .article__nav ul li.active {
       background-color: #4169e1; }
@@ -1576,15 +1579,15 @@ main {
     #action .content button {
       margin-top: 30px; }
 
-#testimonials {
+#testimonials, #testimonials-list {
   padding: 45px 0 50px;
   background: #f0f0f0; }
-  #testimonials h2 {
+  #testimonials h2, #testimonials-list h2 {
     margin-bottom: 25px; }
-  #testimonials .owl-dots {
+  #testimonials .owl-dots, #testimonials-list .owl-dots {
     text-align: center;
     margin-top: 15px; }
-    #testimonials .owl-dots .owl-dot {
+    #testimonials .owl-dots .owl-dot, #testimonials-list .owl-dots .owl-dot {
       border-radius: 50%;
       -webkit-transition: all 0.3s ease-out, all 0.3s ease-out, auto;
       transition: all 0.3s ease-out, all 0.3s ease-out, auto;
@@ -1592,12 +1595,13 @@ main {
       height: 16px;
       background: #e3e3e3;
       margin: 0 4px; }
-      #testimonials .owl-dots .owl-dot.active, #testimonials .owl-dots .owl-dot:hover {
+      #testimonials .owl-dots .owl-dot.active, #testimonials .owl-dots .owl-dot:hover, #testimonials-list .owl-dots .owl-dot.active, #testimonials-list .owl-dots .owl-dot:hover {
         background: #c2c2c2; }
-  #testimonials .testimonials {
+  #testimonials .testimonials, #testimonials-list .testimonials {
     position: relative; }
     #testimonials .testimonials .owl-prev,
-    #testimonials .testimonials .owl-next {
+    #testimonials .testimonials .owl-next, #testimonials-list .testimonials .owl-prev,
+    #testimonials-list .testimonials .owl-next {
       position: absolute;
       top: 0;
       bottom: 0;
@@ -1607,10 +1611,12 @@ main {
       margin: auto;
       z-index: 9; }
       #testimonials .testimonials .owl-prev span,
-      #testimonials .testimonials .owl-next span {
+      #testimonials .testimonials .owl-next span, #testimonials-list .testimonials .owl-prev span,
+      #testimonials-list .testimonials .owl-next span {
         display: none; }
       #testimonials .testimonials .owl-prev::before,
-      #testimonials .testimonials .owl-next::before {
+      #testimonials .testimonials .owl-next::before, #testimonials-list .testimonials .owl-prev::before,
+      #testimonials-list .testimonials .owl-next::before {
         -webkit-transition: all 0.3s ease-out, all 0.3s ease-out, auto;
         transition: all 0.3s ease-out, all 0.3s ease-out, auto;
         font-size: 180px;
@@ -1619,53 +1625,58 @@ main {
         color: #e4e4e4; }
         @media only screen and (max-width: 680px), (orientation: portrait) {
           #testimonials .testimonials .owl-prev::before,
-          #testimonials .testimonials .owl-next::before {
+          #testimonials .testimonials .owl-next::before, #testimonials-list .testimonials .owl-prev::before,
+          #testimonials-list .testimonials .owl-next::before {
             font-size: 80px; } }
       #testimonials .testimonials .owl-prev:hover::before,
-      #testimonials .testimonials .owl-next:hover::before {
+      #testimonials .testimonials .owl-next:hover::before, #testimonials-list .testimonials .owl-prev:hover::before,
+      #testimonials-list .testimonials .owl-next:hover::before {
         color: #ad1e2f; }
       @media only screen and (max-width: 680px), (orientation: portrait) {
         #testimonials .testimonials .owl-prev,
-        #testimonials .testimonials .owl-next {
+        #testimonials .testimonials .owl-next, #testimonials-list .testimonials .owl-prev,
+        #testimonials-list .testimonials .owl-next {
           background: rgba(240, 240, 240, 0.6);
           opacity: 0; }
           #testimonials .testimonials .owl-prev::before,
-          #testimonials .testimonials .owl-next::before {
+          #testimonials .testimonials .owl-next::before, #testimonials-list .testimonials .owl-prev::before,
+          #testimonials-list .testimonials .owl-next::before {
             padding: 0 10px; }
           #testimonials .testimonials .owl-prev:hover,
-          #testimonials .testimonials .owl-next:hover {
+          #testimonials .testimonials .owl-next:hover, #testimonials-list .testimonials .owl-prev:hover,
+          #testimonials-list .testimonials .owl-next:hover {
             opacity: 1; } }
-    #testimonials .testimonials .owl-prev {
+    #testimonials .testimonials .owl-prev, #testimonials-list .testimonials .owl-prev {
       left: -70px; }
       @media only screen and (max-width: 1320px), (orientation: portrait) {
-        #testimonials .testimonials .owl-prev {
+        #testimonials .testimonials .owl-prev, #testimonials-list .testimonials .owl-prev {
           left: 0; } }
-      #testimonials .testimonials .owl-prev::before {
+      #testimonials .testimonials .owl-prev::before, #testimonials-list .testimonials .owl-prev::before {
         content: '\2039'; }
-    #testimonials .testimonials .owl-next {
+    #testimonials .testimonials .owl-next, #testimonials-list .testimonials .owl-next {
       right: -70px; }
       @media only screen and (max-width: 1320px), (orientation: portrait) {
-        #testimonials .testimonials .owl-next {
+        #testimonials .testimonials .owl-next, #testimonials-list .testimonials .owl-next {
           right: 0; } }
-      #testimonials .testimonials .owl-next::before {
+      #testimonials .testimonials .owl-next::before, #testimonials-list .testimonials .owl-next::before {
         content: '\203A'; }
-    #testimonials .testimonials__block {
+    #testimonials .testimonials__block, #testimonials-list .testimonials__block {
       background: #fff;
       border: 1px solid #e4e4e4;
       padding: 40px 30px; }
       @media only screen and (max-width: 520px), (orientation: portrait) {
-        #testimonials .testimonials__block {
+        #testimonials .testimonials__block, #testimonials-list .testimonials__block {
           padding: 28px 30px 35px; } }
-      #testimonials .testimonials__block .main {
+      #testimonials .testimonials__block .main, #testimonials-list .testimonials__block .main {
         padding-bottom: 30px;
         -ms-flex-wrap: nowrap;
             flex-wrap: nowrap; }
-        #testimonials .testimonials__block .main .quote {
+        #testimonials .testimonials__block .main .quote, #testimonials-list .testimonials__block .main .quote {
           height: 0; }
           @media only screen and (max-width: 680px), (orientation: portrait) {
-            #testimonials .testimonials__block .main .quote {
+            #testimonials .testimonials__block .main .quote, #testimonials-list .testimonials__block .main .quote {
               display: none; } }
-          #testimonials .testimonials__block .main .quote p {
+          #testimonials .testimonials__block .main .quote p, #testimonials-list .testimonials__block .main .quote p {
             font-family: "Acumin Pro";
             font-size: 110px;
             font-weight: 700;
@@ -1673,18 +1684,18 @@ main {
             color: #4169e1;
             margin: 0;
             padding-right: 15px; }
-        #testimonials .testimonials__block .main .description {
+        #testimonials .testimonials__block .main .description, #testimonials-list .testimonials__block .main .description {
           position: relative; }
-          #testimonials .testimonials__block .main .description h5 {
+          #testimonials .testimonials__block .main .description h5, #testimonials-list .testimonials__block .main .description h5 {
             margin-top: 0; }
             @media only screen and (max-width: 520px), (orientation: portrait) {
-              #testimonials .testimonials__block .main .description h5 {
+              #testimonials .testimonials__block .main .description h5, #testimonials-list .testimonials__block .main .description h5 {
                 padding-top: 25px; } }
-          #testimonials .testimonials__block .main .description p:first-child {
+          #testimonials .testimonials__block .main .description p:first-child, #testimonials-list .testimonials__block .main .description p:first-child {
             margin-top: 0; }
-          #testimonials .testimonials__block .main .description p:last-child {
+          #testimonials .testimonials__block .main .description p:last-child, #testimonials-list .testimonials__block .main .description p:last-child {
             margin-bottom: 0; }
-          #testimonials .testimonials__block .main .description::after {
+          #testimonials .testimonials__block .main .description::after, #testimonials-list .testimonials__block .main .description::after {
             position: absolute;
             content: '\2605\2605\2605\2605\2605';
             top: -2px;
@@ -1694,23 +1705,95 @@ main {
             line-height: 1;
             color: #ffb400; }
             @media only screen and (max-width: 520px), (orientation: portrait) {
-              #testimonials .testimonials__block .main .description::after {
+              #testimonials .testimonials__block .main .description::after, #testimonials-list .testimonials__block .main .description::after {
                 left: 0; } }
-      #testimonials .testimonials__block .footer {
+      #testimonials .testimonials__block .footer, #testimonials-list .testimonials__block .footer {
         border-top: 1px solid #f0f0f0;
         padding-top: 15px; }
-        #testimonials .testimonials__block .footer p {
+        #testimonials .testimonials__block .footer p, #testimonials-list .testimonials__block .footer p {
           margin: 0; }
-        #testimonials .testimonials__block .footer .date p {
+        #testimonials .testimonials__block .footer .date p, #testimonials-list .testimonials__block .footer .date p {
           color: #6a6a6a; }
-        #testimonials .testimonials__block .footer .name p {
+        #testimonials .testimonials__block .footer .name p, #testimonials-list .testimonials__block .footer .name p {
           color: #4169e1; }
       @media only screen and (max-width: 1320px), (orientation: portrait) {
-        #testimonials .testimonials__block {
+        #testimonials .testimonials__block, #testimonials-list .testimonials__block {
           width: 80%;
           margin: 0 auto; } }
       @media only screen and (max-width: 680px), (orientation: portrait) {
-        #testimonials .testimonials__block {
+        #testimonials .testimonials__block, #testimonials-list .testimonials__block {
+          width: 100%; } }
+
+#testimonials-list {
+  background-color: #f0f0f0;
+  padding-top: 1px; }
+  #testimonials-list .testimonials {
+    position: relative;
+    padding: 30px 0 0; }
+    #testimonials-list .testimonials__block {
+      background: #fff;
+      border: 1px solid #e4e4e4;
+      padding: 40px 30px;
+      width: 49.5%;
+      margin-bottom: 10px; }
+      @media only screen and (max-width: 520px), (orientation: portrait) {
+        #testimonials-list .testimonials__block {
+          padding: 28px 30px 35px; } }
+      #testimonials-list .testimonials__block .main {
+        padding-bottom: 30px;
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap; }
+        #testimonials-list .testimonials__block .main .quote {
+          height: 0; }
+          @media only screen and (max-width: 680px), (orientation: portrait) {
+            #testimonials-list .testimonials__block .main .quote {
+              display: none; } }
+          #testimonials-list .testimonials__block .main .quote p {
+            font-family: "Acumin Pro";
+            font-size: 110px;
+            font-weight: 700;
+            line-height: 1;
+            color: #4169e1;
+            margin: 0;
+            padding-right: 15px; }
+        #testimonials-list .testimonials__block .main .description {
+          position: relative; }
+          #testimonials-list .testimonials__block .main .description h5 {
+            margin-top: 0; }
+            @media only screen and (max-width: 520px), (orientation: portrait) {
+              #testimonials-list .testimonials__block .main .description h5 {
+                padding-top: 25px; } }
+          #testimonials-list .testimonials__block .main .description p:first-child {
+            margin-top: 0; }
+          #testimonials-list .testimonials__block .main .description p:last-child {
+            margin-bottom: 0; }
+          #testimonials-list .testimonials__block .main .description::after {
+            position: absolute;
+            content: '\2605\2605\2605\2605\2605';
+            top: -2px;
+            right: 0;
+            font-family: "Segoe UI Emoji";
+            font-size: 20px;
+            line-height: 1;
+            color: #ffb400; }
+            @media only screen and (max-width: 520px), (orientation: portrait) {
+              #testimonials-list .testimonials__block .main .description::after {
+                left: 0; } }
+      #testimonials-list .testimonials__block .footer {
+        border-top: 1px solid #f0f0f0;
+        padding-top: 15px; }
+        #testimonials-list .testimonials__block .footer p {
+          margin: 0; }
+        #testimonials-list .testimonials__block .footer .date p {
+          color: #6a6a6a; }
+        #testimonials-list .testimonials__block .footer .name p {
+          color: #4169e1; }
+      @media only screen and (max-width: 1023px), (orientation: portrait) {
+        #testimonials-list .testimonials__block {
+          width: 80%;
+          margin: 0 auto; } }
+      @media only screen and (max-width: 680px), (orientation: portrait) {
+        #testimonials-list .testimonials__block {
           width: 100%; } }
 
 #kids {
@@ -2680,6 +2763,8 @@ input:checked ~ .tab-content {
       margin: 15px 0 15px 0; }
     .articlesPage__content .articleBlock h2 {
       font-size: 24px; }
+    .articlesPage__content .articleBlock h1 {
+      font-size: 39px; }
 .articlesPage #news {
   padding-top: 0; }
   .articlesPage #news h2 {
@@ -2797,6 +2882,8 @@ input:checked ~ .tab-content {
           display: none; } }
       .newsPage__content .newsBlock .date:not(:first-child) {
         margin-top: 30px; }
+    .newsPage__content .newsBlock h1 {
+      font-size: 39px; }
     .newsPage__content .newsBlock img {
       width: 100%;
       margin: 15px 0 15px 0; }
