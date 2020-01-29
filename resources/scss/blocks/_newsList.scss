@@ -1,6 +1,5 @@
 #newsList {
   background:  $lighter-gray-color;
-  background:  $lighter-gray-color;
 
   .description {
     background-color: white;
@@ -22,14 +21,22 @@
     // }
 
     @media (min-width: 1281px) {
-    .newsList__block:nth-child(4n+1):nth-last-child(-n+4) ~ .newsList__block{
-      margin-left:calc(24% * .055);
-      margin-right: auto;
-    }
+    // .newsList__block:nth-child(4n+1):nth-last-child(-n+4) ~ .newsList__block{
+    //   margin-left:calc(24% * .055);
+    //   margin-right: auto;
+    // }
 
-    .newsList__block:nth-child(4n+3):nth-last-child(-n+4):last-child {
-      margin-left:-24%;
-    }
+    // .newsList__block:nth-child(4n+3):nth-last-child(-n+4):last-child {
+    //   margin-left:-24%;
+    // }
+      .newsList__block:nth-child(3n+1):nth-last-child(-n+3) ~ .newsList__block{
+        margin-left:calc(32% * .055);
+        margin-right: auto;
+      }
+
+      .newsList__block:nth-child(3n+2):nth-last-child(-n+3):last-child {
+        margin-left:-32%;
+      }
     }
 
     @media (min-width: 768px) and (max-width: 1280px) {
@@ -71,11 +78,13 @@
     .newsList__block {
       @include articles();
         overflow: hidden;
-        width: 24%;
+        // width: 24%;
+        width: 32%;
         margin-bottom: 20px;
 
         @media (min-width: 1281px) {
-          width: 24%;
+          // width: 24%;
+          width: 32%;
         }
 
         @media (min-width: 768px) and (max-width: 1280px) {
@@ -91,7 +100,7 @@
         }
 
         img {
-            max-height: 330px;
+            max-height: 400px;
         }
 
         p {

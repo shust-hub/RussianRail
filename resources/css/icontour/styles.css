@@ -1,0 +1,73 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: "icontour";
+  src:url("fonts/icontour.eot");
+  src:url("fonts/icontour.eot@") format("embedded-opentype"),
+    url("fonts/icontour.woff") format("woff"),
+    url("fonts/icontour.ttf") format("truetype"),
+    url("fonts/icontour.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+[data-icon]:before {
+  font-family: "icontour" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="icontour-"]:before,
+[class*=" icontour-"]:before {
+  font-family: "icontour" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icontour-calendar:before {
+  content: "\61";
+}
+.icontour-wifi:before {
+  content: "\62";
+}
+.icontour-time:before {
+  content: "\63";
+}
+.icontour-map:before {
+  content: "\64";
+}
+.icontour-star:before {
+  content: "\65";
+}
+.icontour-moon:before {
+  content: "\66";
+}
+.icontour-marker:before {
+  content: "\67";
+}
+.icontour-files:before {
+  content: "\68";
+}
+.icontour-bill:before {
+  content: "\69";
+}
+.icontour-bulb:before {
+  content: "\6a";
+}
+.icontour-ie:before {
+  content: "\6b";
+}
