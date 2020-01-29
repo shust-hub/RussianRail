@@ -3546,7 +3546,9 @@ input:checked ~ .tab-content {
       background-color: transparent !important;
       color: #4169e1;
       border-radius: 0;
-      font-size: 65px; }
+      font-size: 50px; }
+    #trainPage .feauter .feauter-box h3 {
+      font-size: medium; }
 #trainPage .train {
   background: #fff;
   border: 1px solid #e4e4e4;
