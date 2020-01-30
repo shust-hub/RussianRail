@@ -1,54 +1,53 @@
 #action {
- 
-  @include background-size-image(background_actioncall6, 328px, 45px 0);
-  // @include background-size-image(background_actioncall5, 328px, 45px 0);
-  // background-position: 0% 34%!important;
+  background-image: url("../img/background_actioncall6.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 50%;
+  min-height: 328px;
+  color:  $white-color;
+  text-align: center;
 
-  // @include background-size-image(background_actioncall4, 328px, 45px 0);
-  // @include background-size-image-bright(background_actioncall, 328px, 45px 0);
-  // @include background-size-image-bright(background_actioncall3, 328px, 45px 0);
-
-  // @include background-size-image(background_actioncall1, 328px, 45px 0);
-  // @include background-size-image(background_actioncall2, 328px, 45px 0);
-
-
-
-  .content {
-    text-align: center;
-
-    br {
-      @media only screen and (max-width: 520px), (orientation: portrait) {
-        display: none;
-      }
+  br {
+    @media only screen and (max-width: 520px), (orientation: portrait) {
+      display: none;
     }
+  }
 
-    p {
-      font-size: 19px;
-      margin-top: 0;
-      color: $lighter-gray-color;
-      line-height: 26px;
-      font-weight: bold;
-      // background-color: rgba($color: #000000, $alpha: .5);
-      // padding: 15px;
-      // text-shadow: 1px 1px 2px $gray-color, 0 0 1em $gray-color;
-      // text-shadow: 0 0 5px $gray-color;
-    }
+  p {
+    font-size: 19px;
+    margin-top: 0;
+    color: $lighter-gray-color;
+    line-height: 26px;
+    font-weight: bold;
 
-    h3 {
-      // background-color: rgba($color: #000000, $alpha: .5);
-      // padding: 15px;
-      padding-top: 5px;
-      color: $lighter-gray-color;
-      line-height: 33px;
-      // text-shadow: 1px 1px 2px $gray-color, 0 0 1em $gray-color;
-      // text-shadow: 0 0 5px $gray-color;
-      span {
-        color: $light-blue-color;
-      }
+    @media only screen and (max-width: 1200px), (orientation: portrait) {
+      font-size: 20px;
     }
+  
+    @media only screen and (max-width: 480px), (orientation: portrait) {
+      font-size: 17px;
+      line-height: 21px;
+    }
+  }
 
-    button {
-      margin-top: 30px;
+  h3 {
+    padding-top: 5px;
+    color: $lighter-gray-color;
+    span {
+      color: $light-blue-color;
     }
+    @media only screen and (max-width: 1200px), (orientation: portrait) {
+      font-size: 25px;
+    }
+  
+    @media only screen and (max-width: 480px), (orientation: portrait) {
+      font-size: 22px;
+      line-height: 21px;
+    }
+  }
+
+  button {
+    margin: 30px auto 0;
   }
 }

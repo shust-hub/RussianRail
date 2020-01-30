@@ -10,7 +10,11 @@
 
   <link rel="icon" href="resources/img/favicon.ico" type="image/x-icon" />
 
-  <link rel="stylesheet" href="resources/css/style.css?v1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="resources/scss/style.css">
+  <link rel="stylesheet" href="resources/assets/lightbox/dist/css/lightbox.min.css">
+
   <link rel="stylesheet" href="resources/assets/OwlCarousel/dist/assets/owl.carousel.min.css">
   <link rel="stylesheet" href="resources/assets/OwlCarousel/dist/assets/owl.theme.default.min.css">
 
@@ -217,41 +221,41 @@
 </header>
 
 <main>
-  <section id="header" class="flexbox vertical-align">
-    <div class="content flexbox">
-      <div class="left">
-        <h1>The Easiest <br>
-          and Safest Way to Buy <br>
+  <section id="header" class="header">
+    <div class="container">
+      <div class="row align-items-center">
+      <div class="col-lg-8 col-md-12 col-sm-12  mt-5 mt-lg-0 text-center text-lg-left">
+        <h1>The Easiest 
+          and Safest Way to Buy 
           Russian Train Tickets</h1>
 
-        <h4>At RussianRail we focus only on 2 things: Russian Train Tickets and You!</h4>
+        <h4 class="mt-2 mt-lg-0">At RussianRail we focus only on 2 things: Russian Train Tickets and You!</h4>
       </div>
 
-      <div class="right">
-        <h2>Start planning</h2>
-
-        <form action="#">
+      <div class="col-lg-4 col-md-8 offset-md-2 offset-lg-0 col-sm-12 mt-3 mt-lg-5">
+        <form action="#" class="headerForm">
+          <h2>Start planning</h2>
           <div class="way">
             <input type="text" placeholder="Depatrture from">
           </div>
 
           <input type="text" placeholder="Arrival to">
 
-          <div class="right__colums flexbox">
-            <div class="half flexbox">
+          <div class="w-75 d-flex justify-content-between">
+            <div class="d-flex">
               <input id="one-way" name="way" type="radio">
               <label for="one-way">One way</label>
             </div>
 
-            <div class="half flexbox">
+            <div class="d-flex">
               <input id="return" name="way" type="radio" placeholder="Return">
               <label for=return>Return</label>
             </div>
           </div>
 
-          <div class="right__colums flexbox">
-            <input class="half" type="text" placeholder="Date">
-            <input class="half" type="text" placeholder="Return date" disabled>
+          <div class="d-flex">
+            <input class="mr-2" type="text" placeholder="Date">
+            <input type="text" placeholder="Return date" disabled>
           </div>
 
           <input type="text" placeholder="Passengers">
@@ -260,77 +264,81 @@
         </form>
       </div>
     </div>
+    </div>
   </section>
 
   <section id="choose">
-    <div class="content">
-      <h2>Why Choose Us</h2>
+    <div class="container">
+      <h2>Why Choose us</h2>
+      
+      <div class="row">
+        <div class="col-lg-3 col-sm-6">
+          <div class="feature-box">
+            <img src="resources/img/choose/safe.png" alt="Safe and Secure">
 
-      <div class="choose flexbox">
-        <div class="choose__block">
-          <img src="resources/img/choose/safe.png" alt="Safe and Secure">
-
-          <p><strong>Safe and Secure</strong><br>
-            online payments</p>
+            <p><strong>Safe and Secure</strong><br>
+              online payments</p>
+          </div>          
         </div>
+        <div class="col-lg-3 col-sm-6">
+          <div class="feature-box">
+            <img src="resources/img/choose/trust.png" alt="Trusted name">
 
-        <div class="choose__block">
-          <img src="resources/img/choose/trust.png" alt="Trusted name">
-
-          <p><strong>Trusted name</strong><br>
-            in Russian rail travel with over 80,000<br>
-            tickets issued to date</p>
+            <p><strong>Trusted name</strong><br>
+              in Russian rail travel with over 80,000
+              tickets issued to date</p>
+          </div>
         </div>
+        <div class="col-lg-3 col-sm-6">
+          <div class="feature-box">
+            <img src="resources/img/choose/venture.png" alt="US-Russian Joint Venture">
 
-        <div class="choose__block">
-          <img src="resources/img/choose/venture.png" alt="US-Russian Joint Venture">
-
-          <p><strong>US-Russian Joint Venture</strong><br>
-            Offering<br>
-            High Quality Services at Local Prices</p>
+            <p><strong>US-Russian Joint Venture</strong><br>
+              Offering
+              High Quality Services at Local Prices</p>
+          </div>
         </div>
+        <div class="col-lg-3 col-sm-6">
+          <div class="feature-box">
+            <img src="resources/img/choose/cities.png" alt="St. Petersburg and Moscow">
 
-        <div class="choose__block">
-          <img src="resources/img/choose/cities.png" alt="St. Petersburg and Moscow">
-
-          <p><strong>St. Petersburg and Moscow</strong><br>
-            offices in both cities</p>
+            <p><strong>St. Petersburg and Moscow</strong><br>
+              offices in both cities</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <section>
-    <div class="content">
-      <div class="commitment__">
-        <h2>
-          
-          Your Russian Train
-          Ticket Specialists</h2>
-
-        <p>
-          
-          Our only job and focus is to help you purchase your Russian train tickets as simply, hassle free and quickly
-          as possible. We make it easy. Buying a train ticket in Russia shouldn’t be hard but so many agencies seem to
-          make it that way, over complicating the process, offering contradictory instructions and having poor customer
-          service. We have been assisting travelers just like you for over 15 years and have issued more than 80,000
-          Russian rail tickets to date and promise to give you our full attention.
-        
-        </p>
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h2>
+            Your Russian Train
+            Ticket Specialists</h2>
+          <p>
+            Our only job and focus is to help you purchase your Russian train tickets as simply, hassle free and quickly
+            as possible. We make it easy. Buying a train ticket in Russia shouldn’t be hard but so many agencies seem to
+            make it that way, over complicating the process, offering contradictory instructions and having poor customer
+            service. We have been assisting travelers just like you for over 15 years and have issued more than 80,000
+            Russian rail tickets to date and promise to give you our full attention.
+          </p>
+        </div>
       </div>
     </div>
   </section>
 
   <section id="recommended">
-    <div class="content">
+    <div class="container">
       <h2>Recommended by</h2>
 
       <p>Our travel group under the names Express to Russia, Russian Rail and Trans-Europe Express has been recommended and/or accredited by:</p>
+      <div class="recommended d-flex justify-content-between">
 
-      <div class="recommended flexbox">
         <div class="recommended__block">
           <script type="text/javascript" src="https://seal-newjersey.bbb.org/inc/legacy.js"></script>
-          <div class="tooltip" data-tooltip="Rating: A-">
+          <div data-toggle="tooltip" data-placement="top" title="Rating: A-">
             <a href="https://www.bbb.org/us/nj/montclair/profile/travel-agency/trans-europe-express-llc-0221-90196991/#sealclick" id="bbblink" class="rbhzbus" target="_blank" rel="nofollow">
               <img src="https://seal-newjersey.bbb.org/logo/rbhzbus/bbb-90196991.png" width="114" height="40"
                    style="border: 0;"
@@ -344,28 +352,27 @@
         </div>
 
         <div class="recommended__block">
-          <div class="tooltip" data-tooltip="Recommended for train ticket booking">
+          <div  data-toggle="tooltip" data-placement="top" title="Recommended for train ticket booking">
             <img src="resources/img/recommended/eyewitness.svg" alt="Eyewitness" width="120"
                  height="30">
           </div>
         </div>
 
         <div class="recommended__block">
-          <div class="tooltip" data-tooltip="Recommended for visa service">
+          <div  data-toggle="tooltip" data-placement="top" title="Recommended for visa service">
             <img src="resources/img/recommended/lonely_planet.svg" alt="Lonely Planet" width="120" height="60">
           </div>
         </div>
 
         <div class="recommended__block">
-          <div class="tooltip"
-               data-tooltip="Member of the American Society of Travel Advisors (ASTA) for over 12 years, ASTA ID 900277519">
+          <div  data-toggle="tooltip" data-placement="top" title="Member of the American Society of Travel Advisors (ASTA) for over 12 years, ASTA ID 900277519">
             <img src="resources/img/recommended/asta.png" alt="ASTA" width="62" height="62">
           </div>
         </div>
 
         <div class="recommended__block">
           <a href="https://www.trustpilot.com/review/russianrail.com" target="_blank">
-            <div class="tooltip" data-tooltip="Rated «Excellent» on the Trustpilot review platform">
+            <div  data-toggle="tooltip" data-placement="top" title="Rated «Excellent» on the Trustpilot review platform">
               <img src="resources/img/recommended/trustpilot.svg" alt="Trustpilot" width="80" height="62">
             </div>
           </a>
@@ -374,7 +381,7 @@
         <div class="recommended__block">
           <a href="https://www.tripadvisor.com/Attraction_Review-g298507-d3701481-Reviews-Express_to_Russia-St_Petersburg_Northwestern_District.html"
              target="_blank">
-            <div class="tooltip" data-tooltip="5 out of 5 stars">
+            <div  data-toggle="tooltip" data-placement="top" title="5 out of 5 stars">
               <img src="resources/img/recommended/tripadvisor.svg" alt="TripAdvisor" width="91" height="62">
             </div>
           </a>
@@ -382,14 +389,14 @@
 
         <div class="recommended__block">
           <a href="https://vk.cc/9W2ngf" target="_blank">
-            <div class="tooltip" data-tooltip="4.9 out of 5 stars">
+            <div  data-toggle="tooltip" data-placement="top" title="4.9 out of 5 stars">
               <img src="resources/img/recommended/google.png" alt="Google Reviews" width="120" height="49">
             </div>
           </a>
         </div>
 
         <div class="recommended__block">
-          <div class="tooltip" data-tooltip="Member of NTA">
+          <div  data-toggle="tooltip" data-placement="top" title="Member of NTA">
             <img src="resources/img/recommended/nta.svg" alt="NTA" width="120" height="34">
           </div>
         </div>
@@ -397,206 +404,236 @@
     </div>
   </section>
 
-  <section id="commitment" class="flexbox vertical-align">
-    <div class="content flexbox commitment">
-      <div class="commitment__left">
-        <h2>Our Commitment to You</h2>
+  <section id="commitment" class="d-flex align-items-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 col-md-10 col-sm-10 offset-sm-1 offset-lg-0">
+          <div class="white-box">
+            <h2>Our Commitment to You</h2>
+            <ul class="check">
+            <li>We’ll ensure that your ticket purchasing process is as smooth and simple as possible</li>
 
-        <ul class="check">
-          <li>We’ll ensure that your ticket purchasing process is as smooth and simple as possible</li>
+            <li>No Surprises! Choose the exact train and ticket class that best fits your schedule</li>
 
-          <li>No Surprises! Choose the exact train and ticket class that best fits your schedule</li>
+            <li>No hidden fees and no red-tape or unnecessary hassles</li>
 
-          <li>No hidden fees and no red-tape or unnecessary hassles</li>
+            <li>Pay online <strong>safely and securely</strong></li>
 
-          <li>Pay online <strong>safely and securely</strong></li>
+            <li>Fast, reliable and expert service</li>
 
-          <li>Fast, reliable and expert service</li>
-
-          <li>Our customer service specialists <strong>really do care</strong> and are on hand to answer any questions that you
+            <li>Our customer service specialists <strong>really do care</strong> and are on hand to answer any questions that you
             may have through chat, email or phone</li>
-        </ul>
-      </div>
-
-      <!-- <div class="commitment__right">
-        <h2>
-          
-          Your Russian Train<br>
-          Ticket Specialists</h2>
-
-        <p>
-          
-          Our only job and focus is to help you purchase your Russian train tickets as simply, hassle free and quickly
-          as possible. We make it easy. Buying a train ticket in Russia shouldn’t be hard but so many agencies seem to
-          make it that way, over complicating the process, offering contradictory instructions and having poor customer
-          service. We have been assisting travelers just like you for over 15 years and have issued more than 80,000
-          Russian rail tickets to date and promise to give you our full attention.
-        
-        </p>
-      </div> -->
-    </div>
-  </section>
-
-  <section id="destinations">
-    <div class="content destinations flexbox">
-      <div class="destinations__block">
-        <img src="resources/img/destinations/moscow_st.jpg" alt="Moscow – St Petersburg">
-
-        <div class="description">
-          <h3>Moscow – St Petersburg</h3>
-
-          <p>Sapsan, Red Arrow, Grand Exprеess and more, at least 20 trains daily</p>
-        </div>
-      </div>
-
-      <div class="destinations__block">
-        <img src="resources/img/destinations/europe_russia.jpg" alt="Europe – Russia trains">
-
-        <div class="description">
-          <h3>Europe – Russia trains</h3>
-
-          <p>See how you can reach Russia from France, Germany, Finland and more</p>
-        </div>
-      </div>
-
-      <div class="destinations__block">
-        <img src="resources/img/destinations/siberian_train.jpg" alt="Trains – Siberian trains">
-
-        <div class="description">
-          <h3>Trains – Siberian trains</h3>
-
-          <p>Choose trains to Beijing, Ulan-Bator, Vladivostok, Irkutsk and more</p>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="action" class="flexbox vertical-align">
-    <div class="content marginTop30">
-      <p>
-        
-        Once you have your tickets, look forward to a wonderful, smooth<br>
-        and enjoyable journey through the Russian countryside.
-        
-      </p>
+  <section id="recommended">
+    <div class="container">
+      <h2>Recommended by</h2>
 
-      <h3>
-        
-        Buy your ticket <span> safely and securely</span> and then sit back<br>
-        and <span>enjoy the ride!</span>
+      <p>Our travel group under the names Express to Russia, Russian Rail and Trans-Europe Express has been recommended and/or accredited by:</p>
+      <div class="recommended d-flex flex-wrap justify-content-between align-items-center mt-5">
 
-      </h3>
+        <div class="recommended__block">
+          <script type="text/javascript" src="https://seal-newjersey.bbb.org/inc/legacy.js"></script>
+          <div data-toggle="tooltip" data-placement="top" title="Rating: A-">
+            <a href="https://www.bbb.org/us/nj/montclair/profile/travel-agency/trans-europe-express-llc-0221-90196991/#sealclick" id="bbblink" class="rbhzbus" target="_blank" rel="nofollow">
+              <img src="https://seal-newjersey.bbb.org/logo/rbhzbus/bbb-90196991.png" width="114" height="40"
+                   style="border: 0;"
+                   alt="Trans-Europe Express LLC BBB Business Review" />
 
-      <button>Get Started</button>
+              <div>Since Nov 2019<br>
+                As of 12/11/2019<br>
+                <span>Click for Profile</span></div>
+            </a>
+          </div>
+        </div>
+
+        <div class="recommended__block">
+          <div  data-toggle="tooltip" data-placement="top" title="Recommended for train ticket booking">
+            <img src="resources/img/recommended/eyewitness.svg" alt="Eyewitness" width="120"
+                 height="30">
+          </div>
+        </div>
+
+        <div class="recommended__block">
+          <div  data-toggle="tooltip" data-placement="top" title="Recommended for visa service">
+            <img src="resources/img/recommended/lonely_planet.svg" alt="Lonely Planet" width="120" height="60">
+          </div>
+        </div>
+
+        <div class="recommended__block">
+          <div  data-toggle="tooltip" data-placement="top" title="Member of the American Society of Travel Advisors (ASTA) for over 12 years, ASTA ID 900277519">
+            <img src="resources/img/recommended/asta.png" alt="ASTA" width="62" height="62">
+          </div>
+        </div>
+
+        <div class="recommended__block">
+          <a href="https://www.trustpilot.com/review/russianrail.com" target="_blank">
+            <div  data-toggle="tooltip" data-placement="top" title="Rated «Excellent» on the Trustpilot review platform">
+              <img src="resources/img/recommended/trustpilot.svg" alt="Trustpilot" width="80" height="62">
+            </div>
+          </a>
+        </div>
+
+        <div class="recommended__block">
+          <a href="https://www.tripadvisor.com/Attraction_Review-g298507-d3701481-Reviews-Express_to_Russia-St_Petersburg_Northwestern_District.html"
+             target="_blank">
+            <div  data-toggle="tooltip" data-placement="top" title="5 out of 5 stars">
+              <img src="resources/img/recommended/tripadvisor.svg" alt="TripAdvisor" width="91" height="62">
+            </div>
+          </a>
+        </div>
+
+        <div class="recommended__block">
+          <a href="https://vk.cc/9W2ngf" target="_blank">
+            <div  data-toggle="tooltip" data-placement="top" title="4.9 out of 5 stars">
+              <img src="resources/img/recommended/google.png" alt="Google Reviews" width="120" height="49">
+            </div>
+          </a>
+        </div>
+
+        <div class="recommended__block">
+          <div  data-toggle="tooltip" data-placement="top" title="Member of NTA">
+            <img src="resources/img/recommended/nta.svg" alt="NTA" width="120" height="34">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="action" class="d-flex align-items-center justify-content-center">
+    <div class="container">
+      <div class="row d-flex flex-column justify-content-center">
+        <div class="col-12">
+          <p>
+            Once you have your tickets, look forward to a wonderful, smooth<br>
+            and enjoyable journey through the Russian countryside.
+          </p>
+
+          <h3>
+            Buy your ticket <span> safely and securely</span> and then sit back<br>
+            and <span>enjoy the ride!</span>
+          </h3>
+          <button>Get Started</button>
+        </div>
+      </div>
     </div>
   </section>
 
   <section id="testimonials">
-    <div class="content">
-      <h2>Testimonials</h2>
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h2>Testimonials</h2>
 
-      <div class="testimonials owl-carousel">
-        <div class="testimonials__block">
-          <div class="main flexbox">
-            <div class="quote">
-              <p>“</p>
-            </div>
-
-            <div class="description">
-              <h5>Booking through your company</h5>
-
-              <p>Booking through your company made our life easier when organising such a complex trip from our
-                perspective. Communication was excellent and to break the trip into four parts from Beijing/Ulaan
-                Baatar/Urkutsk/Moscow/St Petersburg this was essential. We would recommend tour company.</p>
-            </div>
+          <div class="testimonials owl-carousel">
+          <div class="testimonials__block">
+          <div class="main d-flex">
+          <div class="quote">
+          <p>“</p>
           </div>
 
-          <div class="footer flexbox">
-            <div class="date">
-              <p>Published, Nov 05, 2019</p>
-            </div>
+          <div class="description">
+          <h5>Booking through your company</h5>
 
-            <div class="name">
-              <p>— Joseph Gontar, USA</p>
-            </div>
+          <p>Booking through your company made our life easier when organising such a complex trip from our
+          perspective. Communication was excellent and to break the trip into four parts from Beijing/Ulaan
+          Baatar/Urkutsk/Moscow/St Petersburg this was essential. We would recommend tour company.</p>
           </div>
-        </div>
-
-        <div class="testimonials__block">
-          <div class="main flexbox">
-            <div class="quote">
-              <p>“</p>
-            </div>
-
-            <div class="description">
-              <h5>Booking through your company</h5>
-
-              <p>Booking through your company made our life easier when organising such a complex trip from our
-                perspective. Communication was excellent and to break the trip into four parts from Beijing/Ulaan
-                Baatar/Urkutsk/Moscow/St Petersburg this was essential. We would recommend tour company.</p>
-            </div>
           </div>
 
-          <div class="footer flexbox">
-            <div class="date">
-              <p>Published, Nov 05, 2019</p>
-            </div>
-
-            <div class="name">
-              <p>— Joseph Gontar, USA</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="testimonials__block">
-          <div class="main flexbox">
-            <div class="quote">
-              <p>“</p>
-            </div>
-
-            <div class="description">
-              <h5>Booking through your company</h5>
-
-              <p>Booking through your company made our life easier when organising such a complex trip from our
-                perspective. Communication was excellent and to break the trip into four parts from Beijing/Ulaan
-                Baatar/Urkutsk/Moscow/St Petersburg this was essential. We would recommend tour company.</p>
-            </div>
+          <div class="footer d-flex justify-content-between">
+          <div class="date">
+          <p>Published, Nov 05, 2019</p>
           </div>
 
-          <div class="footer flexbox">
-            <div class="date">
-              <p>Published, Nov 05, 2019</p>
-            </div>
-
-            <div class="name">
-              <p>— Joseph Gontar, USA</p>
-            </div>
+          <div class="name">
+          <p>— Joseph Gontar, USA</p>
           </div>
-        </div>
-
-        <div class="testimonials__block">
-          <div class="main flexbox">
-            <div class="quote">
-              <p>“</p>
-            </div>
-
-            <div class="description">
-              <h5>Booking through your company</h5>
-
-              <p>Booking through your company made our life easier when organising such a complex trip from our
-                perspective. Communication was excellent and to break the trip into four parts from Beijing/Ulaan
-                Baatar/Urkutsk/Moscow/St Petersburg this was essential. We would recommend tour company.</p>
-            </div>
+          </div>
           </div>
 
-          <div class="footer flexbox">
-            <div class="date">
-              <p>Published, Nov 05, 2019</p>
-            </div>
+          <div class="testimonials__block">
+          <div class="main d-flex">
+          <div class="quote">
+          <p>“</p>
+          </div>
 
-            <div class="name">
-              <p>— Joseph Gontar, USA</p>
-            </div>
+          <div class="description">
+          <h5>Booking through your company</h5>
+
+          <p>Booking through your company made our life easier when organising such a complex trip from our
+          perspective. Communication was excellent and to break the trip into four parts from Beijing/Ulaan
+          Baatar/Urkutsk/Moscow/St Petersburg this was essential. We would recommend tour company.</p>
+          </div>
+          </div>
+
+          <div class="footer d-flex justify-content-between">
+          <div class="date">
+          <p>Published, Nov 05, 2019</p>
+          </div>
+
+          <div class="name">
+          <p>— Joseph Gontar, USA</p>
+          </div>
+          </div>
+          </div>
+
+          <div class="testimonials__block">
+          <div class="main d-flex">
+          <div class="quote">
+          <p>“</p>
+          </div>
+
+          <div class="description">
+          <h5>Booking through your company</h5>
+
+          <p>Booking through your company made our life easier when organising such a complex trip from our
+          perspective. Communication was excellent and to break the trip into four parts from Beijing/Ulaan
+          Baatar/Urkutsk/Moscow/St Petersburg this was essential. We would recommend tour company.</p>
+          </div>
+          </div>
+
+          <div class="footer d-flex justify-content-between">
+          <div class="date">
+          <p>Published, Nov 05, 2019</p>
+          </div>
+
+          <div class="name">
+          <p>— Joseph Gontar, USA</p>
+          </div>
+          </div>
+          </div>
+
+          <div class="testimonials__block">
+          <div class="main d-flex">
+          <div class="quote">
+          <p>“</p>
+          </div>
+
+          <div class="description">
+          <h5>Booking through your company</h5>
+
+          <p>Booking through your company made our life easier when organising such a complex trip from our
+          perspective. Communication was excellent and to break the trip into four parts from Beijing/Ulaan
+          Baatar/Urkutsk/Moscow/St Petersburg this was essential. We would recommend tour company.</p>
+          </div>
+          </div>
+
+          <div class="footer d-flex justify-content-between">
+          <div class="date">
+          <p>Published, Nov 05, 2019</p>
+          </div>
+
+          <div class="name">
+          <p>— Joseph Gontar, USA</p>
+          </div>
+          </div>
+          </div>
           </div>
         </div>
       </div>
@@ -604,45 +641,42 @@
   </section>
 
   <section id="kids">
-    <div class="content">
-      <div class="flexbox kids no-wrap align-middle flex-start">
-        <img src="resources/img/culture_for_kids.png" alt="Culture for Kids">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 d-flex align-items-center flex-nowrap">
+          <img  src="resources/img/culture_for_kids.png" alt="Culture for Kids">
+          <div class="kids__content ml-lg-5 ml-md-5 ml-sm-2">
+            <h2>Culture fo Kids</h2>
 
-        <div class="kids__content">
-          <h2>Culture fo Kids</h2>
-
-          <p>A portion of your order will goes<br>
+            <p>A portion of your order will goes<br>
             to helping underprivileged Russian children.</p>
 
-          <button>Learn more</button>
+            <button>Learn more</button>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <section id="news">
-    <div class="flexbox content relative">
-
+    <div class="container">
       <h2>Russian News and Stories</h2>
 
       <div class="news-wrapper">
         <div class="news-nav"></div>
 
-        <div class="news flexbox no-wrap owl-carousel">
-          <div class="news__block">
+        <div class="news d-flex flex-nowrap owl-carousel">
+          <div class="block">
             <img src="resources/img/news/news_1.jpg" alt="Railway station in Irkutsk">
 
             <div class="description">
               <h3>Railway station in Irkutsk is developing infrastructure to meet the needs of people with disabilities</h3>
 
               <p class="date">1st October 2019</p>
-
-              <p>At the Irkutsk railway station will be carried out works during which will be created an inclusive
-                space for people with disabilities. The works are estimated to be completed in 2022.</p>
             </div>
           </div>
 
-          <div class="news__block">
+          <div class="block">
             <img src="resources/img/news/news_2.jpg" alt="The Russian Railways has reached the 2030">
 
             <div class="description">
@@ -650,12 +684,10 @@
 
               <p class="date">12th Sep 2019</p>
 
-              <p>According to the monitoring results over the process of reaching the ecological efficiency, completed
-                by the experts of the International Railway Union.</p>
             </div>
           </div>
 
-          <div class="news__block">
+          <div class="block">
             <img src="resources/img/news/news_3.jpg" alt="«Lastochka» trains are servicing new route">
 
             <div class="description">
@@ -663,25 +695,21 @@
 
               <p class="date">6th Aug 2019</p>
 
-              <p>The first speed trains «Lastochka»have arrived from St. Petersburg to Pechory on 3rd of August. The
-                trip duration of a one-way journey is 4 hours 15 minutes.</p>
+          
             </div>
           </div>
 
-          <div class="news__block">
+          <div class="block">
             <img src="resources/img/news/news_1.jpg" alt="Railway station in Irkutsk">
 
             <div class="description">
               <h3>Railway station in Irkutsk is developing infrastructure to meet the needs of people with disabilities</h3>
 
               <p class="date">1st October 2019</p>
-
-              <p>At the Irkutsk railway station will be carried out works during which will be created an inclusive
-                space for people with disabilities. The works are estimated to be completed in 2022.</p>
             </div>
           </div>
 
-          <div class="news__block">
+          <div class="block">
             <img src="resources/img/news/news_2.jpg" alt="The Russian Railways has reached the 2030">
 
             <div class="description">
@@ -689,12 +717,10 @@
 
               <p class="date">12th Sep 2019</p>
 
-              <p>According to the monitoring results over the process of reaching the ecological efficiency, completed
-                by the experts of the International Railway Union.</p>
             </div>
           </div>
 
-          <div class="news__block">
+          <div class="block">
             <img src="resources/img/news/news_3.jpg" alt="«Lastochka» trains are servicing new route">
 
             <div class="description">
@@ -702,8 +728,6 @@
 
               <p class="date">6th Aug 2019</p>
 
-              <p>The first speed trains «Lastochka»have arrived from St. Petersburg to Pechory on 3rd of August. The
-                trip duration of a one-way journey is 4 hours 15 minutes.</p>
             </div>
           </div>
         </div>
@@ -713,79 +737,94 @@
 
   <footer>
     <div class="top">
-     <div class="content flexbox no-wrap">
-        <div class="contacts">
-          <div>
-            <p class="russia">7 812 570 4709, 7 812 570 6342</p>
-          </div>
+     <div class="container">
+       <div class="row">
+        <div class="col-lg-4 col-md-4">
+          <div class="contacts">
+            <div>
+              <p class="russia">7 812 570 4709, 7 812 570 6342</p>
+            </div>
 
-          <div class="flexbox no-wrap">
-            <p class="usa">1 888 960 0365</p>
+            <div class="d-flex flex-nowrap">
+              <p class="usa">1 888 960 0365</p>
 
-            <p class="uk">44 800 090 3365</p>
-          </div>
+              <p class="uk">44 800 090 3365</p>
+            </div>
 
-          <div>
-            <p class="au">61 2 8011 3021</p>
-          </div>
+            <div>
+              <p class="au">61 2 8011 3021</p>
+            </div>
 
-          <div>
-            <p class="mail"><a href="mailto:rail@russianrail.com">rail@russianrail.com</a></p>
-          </div>
-        </div>
-
-        <div class="kids">
-          <p>Join our Russian Travel, Culture and Literature Club on Facebook and share your experiences, stories, photos and advice.</p>
-
-          <button>Join the Club</button>
-        </div>
-
-        <div class="accept">
-          <p class="uppercase semibold">We accept:</p>
-
-          <div class="flexbox align-middle">
-            <img src="resources/img/footer_ico/cards.png" alt="Cards">
-
-            <img src="resources/img/footer_ico/ssl.png" alt="SSL">
-
-            <script type="text/javascript" src="https://seal-newjersey.bbb.org/inc/legacy.js"></script>
-            <a href="https://www.bbb.org/us/nj/montclair/profile/travel-agency/trans-europe-express-llc-0221-90196991/#sealclick" id="bbblink" class="ruvtbas" target="_blank" rel="nofollow">
-              <img src="https://seal-newjersey.bbb.org/logo/ruvtbas/bbb-90196991.png" style="border: 0;" alt="Trans-Europe Express LLC BBB Business Review" />
-            </a>
+            <div>
+              <p class="mail"><a href="mailto:rail@russianrail.com">rail@russianrail.com</a></p>
+            </div>
           </div>
         </div>
 
-        <div class="follows">
-          <p class="uppercase semibold">Follow us:</p>
+        <div class="col-lg-5 col-md-4">
+          <div class="join mb-lg-0 mb-md-5 mb-sm-3 mt-lg-0 mt-md-0  mt-sm-3">
+            <p>Join our Russian Travel, Culture and Literature Club on Facebook and share your experiences, stories, photos and advice.</p>
 
-          <div class="flexbox flex-start">
-            <a href="https://www.facebook.com/Express2Russia" target="_blank">
-              <img src="resources/img/footer_ico/facebook.svg" alt="Facebook">
-            </a>
-
-            <a href="https://www.instagram.com/russianrail/" target="_blank">
-              <img src="resources/img/footer_ico/instagram.svg" alt="Instagram">
-            </a>
+            <button class="pl-5 mt-3 position-relative">Join the Club</button>
           </div>
         </div>
+
+        <div class="col-lg-3 col-md-4">
+          <div class="accept d-flex flex-column justify-content-end">
+            <p> <strong>We accept:</strong> </p>
+
+            <div class="d-flex align-items-end">
+              <img class="align-self-center"  src="resources/img/footer_ico/cards.png" alt="Cards">
+
+              <img class="align-self-center" src="resources/img/footer_ico/ssl.png" alt="SSL">
+
+              <script type="text/javascript" src="https://seal-newjersey.bbb.org/inc/legacy.js"></script>
+              <a  href="https://www.bbb.org/us/nj/montclair/profile/travel-agency/trans-europe-express-llc-0221-90196991/#sealclick" id="bbblink" class="ruvtbas" target="_blank" rel="nofollow">
+                <img class="align-self-center" src="https://seal-newjersey.bbb.org/logo/ruvtbas/bbb-90196991.png" style="border: 0;" alt="Trans-Europe Express LLC BBB Business Review" />
+              </a>
+            </div>
+          </div>
+
+          <div class="follows mt-sm-2">
+            <p> <strong>Follow us:</strong></p>
+            <div class="d-flex">
+              <a href="https://www.facebook.com/Express2Russia" target="_blank">
+                <img src="resources/img/footer_ico/facebook.svg" alt="Facebook">
+              </a>
+
+              <a href="https://www.instagram.com/russianrail/" target="_blank">
+                <img src="resources/img/footer_ico/instagram.svg" alt="Instagram">
+              </a>
+            </div>
+          </div>
+
+        </div>
+
       </div>
+    </div>
     </div>
 
     <div class="bottom">
-      <div class="content flexbox">
-        <p>Copyrights © 2019 All Rights Reserved.</p>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4  col-sm-12">
+            <p>Copyrights © 2020 All Rights Reserved.</p>
+          </div>
 
-        <ul class="flexbox">
-          <li><a href="/about.html" target="_blank">About Us</a></li>
+          <div class="col-lg-8 col-sm-12">
+            <ul class="mt-lg-0 mt-sm-2 d-flex flex-wrap justify-content-lg-end justify-content-md-start justify-content-sm-start">
+              <li><a href="/about.html" target="_blank">About Us</a></li>
 
-          <li><a href="/russia_travel.html" target="_blank">Terms of Service</a></li>
+              <li><a href="/russia_travel.html" target="_blank">Terms of Service</a></li>
 
-          <li><a href="/payments.html" target="_blank">Payment Options</a></li>
+              <li><a href="/payments.html" target="_blank">Payment Options</a></li>
 
-          <li><a href="/russian-visa-questions.html" target="_blank">FAQs</a></li>
+              <li><a href="/russian-visa-questions.html" target="_blank">FAQs</a></li>
 
-          <li><a href="/contacts.html" target="_blank">Contact</a></li>
-        </ul>
+              <li><a href="/contacts.html" target="_blank">Contact</a></li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
     
@@ -794,9 +833,20 @@
 
 <div id="toTop"></div>
 
-<script src="resources/js/jquery-3.1.1.min.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="resources/assets/OwlCarousel/dist/owl.carousel.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 <script src="resources/js/nav.js"></script>
+
+<script>
+  $(document).ready(function() {
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+    })
+  })
+</script>
 
 <script>
   $(document).ready(function() {

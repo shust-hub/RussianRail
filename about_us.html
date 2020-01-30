@@ -10,9 +10,7 @@
 
   <link rel="icon" href="resources/img/favicon.ico" type="image/x-icon" />
 
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
-  <link rel="stylesheet" href="resources/scss/style.css">
+  <link rel="stylesheet" href="resources/css/style.css">
   <link rel="stylesheet" href="resources/assets/lightbox/dist/css/lightbox.min.css">
 
   <link rel="stylesheet" href="resources/assets/OwlCarousel/dist/assets/owl.carousel.min.css">
@@ -221,40 +219,42 @@
 </header>
 
 <main>
-  <section id="header" class="header">
-    <div class="container">
-      <div class="row align-items-center">
-      <div class="col-lg-8 col-md-12 col-sm-12  mt-5 mt-lg-0 text-center text-lg-left">
-        <h1>about us</h1>
-          <p class="breadcrumbs mt-3 mt-lg-5">
-            <a href="/">Home</a>
-            </p>
+  <section id="header" class="flexbox vertical-align inner">
+    <div class="content flexbox">
+      <div class="left">
+        <h1>About us
+          </h1>
+
+        <p class="breadcrumbs">
+          <a href="/">Home</a> / <a href="visa.html">About us</a>
+        </p>
       </div>
 
-      <div class="col-lg-4 col-md-8 offset-md-2 offset-lg-0 col-sm-12 mt-3 mt-lg-5">
-        <form action="#" class="headerForm">
-          <h2>Start planning</h2>
+      <div class="right">
+        <h2>Start planning</h2>
+
+        <form action="#">
           <div class="way">
             <input type="text" placeholder="Depatrture from">
           </div>
 
           <input type="text" placeholder="Arrival to">
 
-          <div class="w-75 d-flex justify-content-between">
-            <div class="d-flex">
+          <div class="right__colums flexbox">
+            <div class="half flexbox">
               <input id="one-way" name="way" type="radio">
               <label for="one-way">One way</label>
             </div>
 
-            <div class="d-flex">
+            <div class="half flexbox">
               <input id="return" name="way" type="radio" placeholder="Return">
               <label for=return>Return</label>
             </div>
           </div>
 
-          <div class="d-flex">
-            <input class="mr-2" type="text" placeholder="Date">
-            <input type="text" placeholder="Return date" disabled>
+          <div class="right__colums flexbox">
+            <input class="half" type="text" placeholder="Date">
+            <input class="half" type="text" placeholder="Return date" disabled>
           </div>
 
           <input type="text" placeholder="Passengers">
@@ -263,39 +263,123 @@
         </form>
       </div>
     </div>
+  </section>
+
+  <section id="aboutUs">
+      <div class="description">
+          <div class="content marginTop30">
+              <p>We are a Western owned and managed 
+                  company with offices in Moscow and St. 
+                  Petersburg, and a full member of ASTA, 
+                  (ID 900214747 and 900175313). 
+                  Because of our local presence, our 
+                  customers get the best of both worlds – 
+                  low prices for all of our Russian tours with 
+                  the highest level of quality. Just compare us 
+                  with our competition for any of our Russian
+                   vacation packages!</p>
+
+                   <p>And thousands of satisfied customers, please read our <a href="#">Customer Testimonials.</a> We look forward to serving you and guarantee that you will have an unforgettable experience and a journey of a lifetime with us!
+
+                    To better become acquainted with our company 
+                    and meet the people in our main 
+                    St. Petersburg office, please 
+                    click on the video link. 
+                    We are all looking forward to seeing you in Russia!</p>
+
+                    <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/NSYJtD5Zt_4?start=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+          </div>
+      </div>
+
+      <div class="content flexbox aboutUs marginTop30">
+        <div class="aboutUs__block flexbox">
+            <img src="/resources/img/about-us/00.jpg" alt="">
+            <div class="description">
+                <h3>
+                    Elena</h3>
+                <p class="position">Accountant</p>
+                <p>Elena graduated from the St. Petersburg Institute of Economics and Finance with a degree in accounting and auditing. Her experience is well appreciated in our company. She is outgoing and always brings positive energy to the workplace. In her free time, Lena likes to read, travel and meet with friends.</p>
+            </div>
+        </div>
+        <div class="aboutUs__block flexbox">
+            <img src="/resources/img/about-us/01.jpg" alt="">
+            <div class="description">
+                <h3>
+                    Elena</h3>
+                <p class="position">Tourism Director </p>
+                <p>Tourism Director Elena is a graduate of St. Petersburg University of Architecture and Civil Engineering. Although her major was in civil engineering management, from her third year at the University onward, she dedicated herself to tourism. She has worked as an English speaking guide for several years and now considers guiding her hobby. Elena is also interested in art and the culture of other countries - that is why she is currently learning Spanish.</p>
+            </div>
+        </div>
+        <div class="aboutUs__block flexbox">
+            <img src="/resources/img/about-us/02.jpg" alt="">
+            <div class="description">
+                <h3>
+                    Ludmila</h3>
+                <p class="position">Director</p>
+                <p>Ludmila graduated from Moscow State University with a degree in geography and tourism. She has work experience in different fields of tourism: youth tourism, business travel and outgoing and incoming tourism. But most of all she likes to work with incoming tourists and she is always ready to help them. She likes to meet with friends during the weekend and to discover something new in Moscow and the surrounding areas of the city. And of course she spends all of her free time with her daughter Olivia.
+                    </p>
+            </div>
+        </div>
+        <div class="aboutUs__block flexbox">
+            <img src="/resources/img/about-us/03.jpg" alt="">
+            <div class="description">
+                <h3>
+                    Andrei</h3>
+                <p class="position">Hotels & Tourism Department</p>
+                <p>Andrei is a recent graduate of the Saint Petersburg State University, philological faculty (Department of English language and Translation studies). Andrei speaks English fluently and if you happen to talk to him there hopefully will be no misunderstandings... Andrei also speaks German. He is very interested in developing tourism in Russia and other European countries. He is highly committed and will do his best to help our clients. In his free time Andrei enjoys watching films, driving, playing tennis, football and basketball.
+                    </p>
+            </div>
+        </div>
+
+        <div class="aboutUs__block flexbox">
+          <img src="/resources/img/about-us/04.jpg" alt="">
+          <div class="description">
+              <h3>
+                Galina
+              </h3>
+              <p class="position">Tourism department specialist</p>
+               <p>Galina graduated from St Petersburg State Engineering Economics University, Tourism faculty. She also worked as a tour guide for several seasons. She likes art, music and travel. She is planning to learn Portuguese and visit Portugal some day soon. Galina is always ready to help and loves working with our clients</p>
+          </div>
+      </div>
+
+      <div class="aboutUs__block flexbox">
+        <img src="/resources/img/about-us/05.jpg" alt="">
+        <div class="description">
+            <h3>
+              Yulia
+            </h3>
+            <p class="position">Tourism department specialist</p>
+            <p>Yulia graduated from Saint Petersburg State University with a degree in sociology. With practically 3 languages under the belt it is still her dream to learn a 4th. She wants to step foot on all 6 continents (half way there) and loves her yoga classes. She likes traveling, spending time with friends, visiting museums, theaters and reading classical literature. Very optimistic and full of energy, wants everyone to see how beautiful Russia really is.</p>
+        </div>
     </div>
+
+      </div>
   </section>
 
 
-  <section id="action" class="d-flex align-items-center justify-content-center">
-    <div class="container">
-      <div class="row d-flex flex-column justify-content-center">
-        <div class="col-12">
-          <p>
-            Once you have your tickets, look forward to a wonderful, smooth<br>
-            and enjoyable journey through the Russian countryside.
-          </p>
 
-          <h3>
-            Buy your ticket <span> safely and securely</span> and then sit back<br>
-            and <span>enjoy the ride!</span>
-          </h3>
-          <button>Get Started</button>
-        </div>
-      </div>
+  <section id="action" class="flexbox vertical-align">
+    <div class="content marginTop30">
+      <p>Once you have your tickets, look forward to a wonderful, smooth<br>
+        and enjoyable journey through the Russian countryside.</p>
+
+      <h3>Buy your ticket <span>safely and securely</span> and then sit back<br>
+        and <span>enjoy the ride!</span></h3>
+
+      <button>Get Started</button>
     </div>
-</section>
+  </section>
 
   <section id="recommended">
-    <div class="container">
+    <div class="content marginTop30">
       <h2>Recommended by</h2>
 
       <p>Our travel group under the names Express to Russia, Russian Rail and Trans-Europe Express has been recommended and/or accredited by:</p>
-      <div class="recommended d-flex flex-wrap justify-content-between align-items-center mt-5">
 
+      <div class="recommended flexbox">
         <div class="recommended__block">
           <script type="text/javascript" src="https://seal-newjersey.bbb.org/inc/legacy.js"></script>
-          <div data-toggle="tooltip" data-placement="top" title="Rating: A-">
+          <div class="tooltip" data-tooltip="Rating: A-">
             <a href="https://www.bbb.org/us/nj/montclair/profile/travel-agency/trans-europe-express-llc-0221-90196991/#sealclick" id="bbblink" class="rbhzbus" target="_blank" rel="nofollow">
               <img src="https://seal-newjersey.bbb.org/logo/rbhzbus/bbb-90196991.png" width="114" height="40"
                    style="border: 0;"
@@ -309,27 +393,28 @@
         </div>
 
         <div class="recommended__block">
-          <div  data-toggle="tooltip" data-placement="top" title="Recommended for train ticket booking">
+          <div class="tooltip" data-tooltip="Recommended for train ticket booking">
             <img src="resources/img/recommended/eyewitness.svg" alt="Eyewitness" width="120"
                  height="30">
           </div>
         </div>
 
         <div class="recommended__block">
-          <div  data-toggle="tooltip" data-placement="top" title="Recommended for visa service">
+          <div class="tooltip" data-tooltip="Recommended for visa service">
             <img src="resources/img/recommended/lonely_planet.svg" alt="Lonely Planet" width="120" height="60">
           </div>
         </div>
 
         <div class="recommended__block">
-          <div  data-toggle="tooltip" data-placement="top" title="Member of the American Society of Travel Advisors (ASTA) for over 12 years, ASTA ID 900277519">
+          <div class="tooltip"
+               data-tooltip="Member of the American Society of Travel Advisors (ASTA) for over 12 years, ASTA ID 900277519">
             <img src="resources/img/recommended/asta.png" alt="ASTA" width="62" height="62">
           </div>
         </div>
 
         <div class="recommended__block">
           <a href="https://www.trustpilot.com/review/russianrail.com" target="_blank">
-            <div  data-toggle="tooltip" data-placement="top" title="Rated «Excellent» on the Trustpilot review platform">
+            <div class="tooltip" data-tooltip="Rated «Excellent» on the Trustpilot review platform">
               <img src="resources/img/recommended/trustpilot.svg" alt="Trustpilot" width="80" height="62">
             </div>
           </a>
@@ -338,7 +423,7 @@
         <div class="recommended__block">
           <a href="https://www.tripadvisor.com/Attraction_Review-g298507-d3701481-Reviews-Express_to_Russia-St_Petersburg_Northwestern_District.html"
              target="_blank">
-            <div  data-toggle="tooltip" data-placement="top" title="5 out of 5 stars">
+            <div class="tooltip" data-tooltip="5 out of 5 stars">
               <img src="resources/img/recommended/tripadvisor.svg" alt="TripAdvisor" width="91" height="62">
             </div>
           </a>
@@ -346,14 +431,14 @@
 
         <div class="recommended__block">
           <a href="https://vk.cc/9W2ngf" target="_blank">
-            <div  data-toggle="tooltip" data-placement="top" title="4.9 out of 5 stars">
+            <div class="tooltip" data-tooltip="4.9 out of 5 stars">
               <img src="resources/img/recommended/google.png" alt="Google Reviews" width="120" height="49">
             </div>
           </a>
         </div>
 
         <div class="recommended__block">
-          <div  data-toggle="tooltip" data-placement="top" title="Member of NTA">
+          <div class="tooltip" data-tooltip="Member of NTA">
             <img src="resources/img/recommended/nta.svg" alt="NTA" width="120" height="34">
           </div>
         </div>
@@ -362,8 +447,8 @@
   </section>
 
   <section id="kids" class="inner">
-    <div class="container">
-      <div class="d-flex kids flex-nowrap align-items-center">
+    <div class="content">
+      <div class="flexbox kids no-wrap align-middle flex-start">
         <img src="resources/img/culture_for_kids.png" alt="Culture for Kids">
 
         <div class="kids__content">
@@ -380,141 +465,91 @@
 
   <footer>
     <div class="top">
-     <div class="container">
-       <div class="row">
-        <div class="col-lg-4 col-md-4">
-          <div class="contacts">
-            <div>
-              <p class="russia">7 812 570 4709, 7 812 570 6342</p>
-            </div>
+      <div class="content flexbox no-wrap">
+        <div class="contacts">
+          <div>
+            <p class="russia">7 812 570 4709, 7 812 570 6342</p>
+          </div>
 
-            <div class="d-flex flex-nowrap">
-              <p class="usa">1 888 960 0365</p>
+          <div class="flexbox no-wrap">
+            <p class="usa">1 888 960 0365</p>
 
-              <p class="uk">44 800 090 3365</p>
-            </div>
+            <p class="uk">44 800 090 3365</p>
+          </div>
 
-            <div>
-              <p class="au">61 2 8011 3021</p>
-            </div>
+          <div>
+            <p class="au">61 2 8011 3021</p>
+          </div>
 
-            <div>
-              <p class="mail"><a href="mailto:rail@russianrail.com">rail@russianrail.com</a></p>
-            </div>
+          <div>
+            <p class="mail"><a href="mailto:rail@russianrail.com">rail@russianrail.com</a></p>
           </div>
         </div>
 
-        <div class="col-lg-5 col-md-4">
-          <div class="join mb-lg-0 mb-md-5 mb-sm-3 mt-lg-0 mt-md-0  mt-sm-3">
-            <p>Join our Russian Travel, Culture and Literature Club on Facebook and share your experiences, stories, photos and advice.</p>
+        <div class="kids">
+          <p>Join our Russian Travel, Culture and Literature Club on Facebook and share your experiences, stories, photos and advice.</p>
 
-            <button class="pl-5 mt-3 position-relative">Join the Club</button>
+          <button>Join the Club</button>
+        </div>
+
+        <div class="accept">
+          <p class="uppercase semibold">We accept:</p>
+
+          <div class="flexbox align-middle">
+            <img src="resources/img/footer_ico/cards.png" alt="Cards">
+
+            <img src="resources/img/footer_ico/ssl.png" alt="SSL">
+
+            <script type="text/javascript" src="https://seal-newjersey.bbb.org/inc/legacy.js"></script>
+            <a href="https://www.bbb.org/us/nj/montclair/profile/travel-agency/trans-europe-express-llc-0221-90196991/#sealclick" id="bbblink" class="ruvtbas" target="_blank" rel="nofollow">
+              <img src="https://seal-newjersey.bbb.org/logo/ruvtbas/bbb-90196991.png" style="border: 0;" alt="Trans-Europe Express LLC BBB Business Review" />
+            </a>
           </div>
         </div>
 
-        <div class="col-lg-3 col-md-4">
-          <div class="accept d-flex flex-column justify-content-end">
-            <p> <strong>We accept:</strong> </p>
+        <div class="follows">
+          <p class="uppercase semibold">Follow us:</p>
 
-            <div class="d-flex align-items-end">
-              <img class="align-self-center"  src="resources/img/footer_ico/cards.png" alt="Cards">
+          <div class="flexbox flex-start">
+            <a href="https://www.facebook.com/Express2Russia" target="_blank">
+              <img src="resources/img/footer_ico/facebook.svg" alt="Facebook">
+            </a>
 
-              <img class="align-self-center" src="resources/img/footer_ico/ssl.png" alt="SSL">
-
-              <script type="text/javascript" src="https://seal-newjersey.bbb.org/inc/legacy.js"></script>
-              <a  href="https://www.bbb.org/us/nj/montclair/profile/travel-agency/trans-europe-express-llc-0221-90196991/#sealclick" id="bbblink" class="ruvtbas" target="_blank" rel="nofollow">
-                <img class="align-self-center" src="https://seal-newjersey.bbb.org/logo/ruvtbas/bbb-90196991.png" style="border: 0;" alt="Trans-Europe Express LLC BBB Business Review" />
-              </a>
-            </div>
+            <a href="https://www.instagram.com/russianrail/" target="_blank">
+              <img src="resources/img/footer_ico/instagram.svg" alt="Instagram">
+            </a>
           </div>
-
-          <div class="follows mt-sm-2">
-            <p> <strong>Follow us:</strong></p>
-            <div class="d-flex">
-              <a href="https://www.facebook.com/Express2Russia" target="_blank">
-                <img src="resources/img/footer_ico/facebook.svg" alt="Facebook">
-              </a>
-
-              <a href="https://www.instagram.com/russianrail/" target="_blank">
-                <img src="resources/img/footer_ico/instagram.svg" alt="Instagram">
-              </a>
-            </div>
-          </div>
-
         </div>
-
       </div>
-    </div>
     </div>
 
     <div class="bottom">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-4  col-sm-12">
-            <p>Copyrights © 2020 All Rights Reserved.</p>
-          </div>
+      <div class="content flexbox">
+        <p>Copyrights © 2019 All Rights Reserved.</p>
 
-          <div class="col-lg-8 col-sm-12">
-            <ul class="mt-lg-0 mt-sm-2 d-flex flex-wrap justify-content-lg-end justify-content-md-start justify-content-sm-start">
-              <li><a href="/about.html" target="_blank">About Us</a></li>
+        <ul class="flexbox">
+          <li><a href="/about.html" target="_blank">About Us</a></li>
 
-              <li><a href="/russia_travel.html" target="_blank">Terms of Service</a></li>
+          <li><a href="/russia_travel.html" target="_blank">Terms of Service</a></li>
 
-              <li><a href="/payments.html" target="_blank">Payment Options</a></li>
+          <li><a href="/payments.html" target="_blank">Payment Options</a></li>
 
-              <li><a href="/russian-visa-questions.html" target="_blank">FAQs</a></li>
+          <li><a href="/russian-visa-questions.html" target="_blank">FAQs</a></li>
 
-              <li><a href="/contacts.html" target="_blank">Contact</a></li>
-            </ul>
-          </div>
-        </div>
+          <li><a href="/contacts.html" target="_blank">Contact</a></li>
+        </ul>
       </div>
     </div>
-    
   </footer>
 </main>
 
 <div id="toTop"></div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="resources/assets/OwlCarousel/dist/owl.carousel.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 <script src="resources/js/nav.js"></script>
+<script src="resources/assets/lightbox/dist/js/lightbox.js"></script>
 
-<script>
-  $(document).ready(function() {
-    $(function () {
-      $('[data-toggle="tooltip"]').tooltip()
-    })
-  })
-</script>
-
-<script>
-    $(document).ready(function() {
-
-        var owl = $('.gallery');
-        owl.owlCarousel({
-            margin: 10,
-            nav: true,
-            loop: true,
-            dots: false,
-            autoplay: true,
-            autoplayTimeout: 20000,
-            responsive: {
-                0: {
-                    items: 1
-                },
-                1320: {
-                    items: 2
-                },
-                1350: {
-                    items: 3
-                }
-            }
-        })
-    })
-</script>
 
 <script>
     $(window).scroll(function() {

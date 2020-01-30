@@ -42,7 +42,6 @@ footer {
 
       p {
         position: relative;
-
         margin-bottom: 4px;
         padding-left: 30px;
 
@@ -90,58 +89,33 @@ footer {
             background: url("../img/footer_ico/email.svg") no-repeat center;
           }
         }
+
       }
     }
 
-    .kids {
+    .join {
       max-width: 410px;
-
-      @media only screen and (max-width: 1180px), (orientation: portrait) {
-        margin-bottom: 40px;
-      }
-
-      @media only screen and (max-width: 800px), (orientation: portrait) {
-        width: 100%;
-        padding-left: 0;
-        margin-top: 10px;
-        box-sizing: border-box;
-      }
-
-      @media only screen and (max-width: 680px), (orientation: portrait) {
-        padding-left: 0;
-        margin-top: 10px;
-      }
 
       p {
         margin-bottom: 0;
       }
 
       button {
-        position: relative;
-
         max-width: 190px;
         height: 40px;
-
         font-size: 16px;
         text-transform: inherit;
 
-        padding-left: 38px;
-        margin-top: 15px;
-
         &::before {
           @include transition();
-
           position: absolute;
           content: '';
-
           top: 0;
           left: 28px;
           bottom: 0;
-
           width: 20px;
           height: 18px;
           background: url("../img/footer_ico/join_fb.svg") no-repeat;
-
           margin: auto;
         }
 
@@ -154,6 +128,10 @@ footer {
     }
 
     .accept {
+      @media (min-width: 320px) and (max-width: 577px) {
+        margin-top: 15px;
+      }
+
       img {
         height: 30px;
 
@@ -174,18 +152,14 @@ footer {
       img {
         width: 32px;
         background: $white-color;
-
         margin-top: 6px;
       }
     }
   }
 
   .bottom {
-    // background: $dark-violet-color;
     background: darken($blue-color, 10%);
-
     font-size: 12px;
-
     padding: 40px 0;
 
     p {
@@ -197,22 +171,15 @@ footer {
     }
 
     ul {
-      @media only screen and (max-width: 680px), (orientation: portrait) {
-        margin-top: 20px;
+      li:not(:last-child){
+        margin-right: 10px;
       }
 
-      li {
-        margin-left: 12px;
-
-        @media only screen and (max-width: 680px), (orientation: portrait) {
-          margin-left: 0;
-        }
-
-        a {
-          border-bottom: 1px solid lighten($dark-violet-color, 10%);
-
-          padding-bottom: 3px;
-        }
+      a {
+        border-bottom: 1px solid lighten($dark-violet-color, 10%);
+        padding-bottom: 3px;
+        text-decoration: none;
+        white-space: nowrap;
       }
     }
   }
