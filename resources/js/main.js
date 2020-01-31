@@ -46,7 +46,7 @@ $(document).ready(function() {
       }
     })
     
-    var owl = $('.news');
+    var owl = $('.newsSlider');
     owl.owlCarousel({
         margin: 15,
         navContainer: '.news-nav',
@@ -73,6 +73,24 @@ $(document).ready(function() {
     })
 
   })
+
+    var owl = $('.testimonials');
+    owl.owlCarousel({
+        margin: 0,
+        nav: false,
+        loop: true,
+        dots: true,
+        autoplay: true,
+        autoplayTimeout: 20000,
+        responsive: {
+            0: {
+                items: 1
+            },
+            1920: {
+                items: 1
+            }
+        }
+    })
 
   $(window).scroll(function() {
     if ($(this).scrollTop() > 100) {

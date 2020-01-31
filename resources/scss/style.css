@@ -85,7 +85,7 @@ hr {
           box-sizing: content-box;
   height: 0; }
 
-header .content .nav-trigger, header .content .nav-trigger span, header .content .nav-trigger span::before, header .content .nav-trigger span::after, .navigation li ul.subnav, .navigation .subnav-trigger::before, .navigation .subnav-trigger::after, .navigation .go-back a::before, .navigation .go-back a::after, #kids.inner .kids button::after, .trains__content .sidebar ul li.active::before, .trains__content .main-info .train__schedule .stroke .from::after, .trains__content .main-info .customer-reviews span::after, #trainPage .train__schedule .stroke .from::after {
+header .content .nav-trigger, header .content .nav-trigger span, header .content .nav-trigger span::before, header .content .nav-trigger span::after, .navigation li ul.subnav, .navigation .subnav-trigger::before, .navigation .subnav-trigger::after, .navigation .go-back a::before, .navigation .go-back a::after, #kids.inner .kids button::after, .trains .sidebar ul li.active::before, .trains .train__schedule .stroke .from::after, .trains .customer-reviews span::after, #trainPage .train__schedule .stroke .from::after {
   position: absolute;
   content: '';
   top: 0;
@@ -93,7 +93,7 @@ header .content .nav-trigger, header .content .nav-trigger span, header .content
   left: 0;
   right: 0; }
 
-*, ::after, ::before, form input, form textarea, .block .description, #header .headerForm, #recommended .recommended__block a#bbblink div, #choose .content .choose__block, .navigation, .navigation__list, .navigation__list a, #destinations .destinations__block .description, #testimonials .testimonials__block, #testimonials-list .testimonials__block, #testimonials .testimonials__block .main .quote p, #testimonials-list .testimonials__block .main .quote p, #kids .kids__content, #news .news, #news .news__block .description, #articles .articles, #articles .articles__block .description, .trains__content .main-info .train__description .text, .trains__content .main-info .train__schedule .stroke .number, .trains__content .main-info .train__schedule .stroke .time, .trains__content .main-info .train__schedule .stroke .from, .trains__content .main-info .train__schedule .stroke .to, #about, #trainPage .train__description .text, #trainPage .train__schedule .stroke .number, #trainPage .train__schedule .stroke .time, #trainPage .train__schedule .stroke .from, #trainPage .train__schedule .stroke .to {
+*, ::after, ::before, form input, form textarea, .block .description, #header .headerForm, #recommended .recommended__block a#bbblink div, #choose .content .choose__block, .navigation, .navigation__list, .navigation__list a, #destinations .destinations__block .description, #testimonials .testimonials__block, #testimonials-list .testimonials__block, #testimonials .testimonials__block .main .quote p, #testimonials-list .testimonials__block .main .quote p, #kids .kids__content, #news .news, #news .news__block .description, #articles .articles, #articles .articles__block .description, .trains .train__description .text, .trains .train__schedule .stroke .number, .trains .train__schedule .stroke .time, .trains .train__schedule .stroke .from, .trains .train__schedule .stroke .to, #about, #trainPage .train__description .text, #trainPage .train__schedule .stroke .number, #trainPage .train__schedule .stroke .time, #trainPage .train__schedule .stroke .from, #trainPage .train__schedule .stroke .to {
   -webkit-box-sizing: border-box;
   -ms-box-sizing: border-box;
   -o-box-sizing: border-box;
@@ -639,7 +639,8 @@ mark {
     .contacts-meta li .fas {
       font-size: 10px;
       position: absolute;
-      margin-left: -20px; }
+      margin-left: -20px;
+      color: #4169e1; }
 
 .mapRoute {
   margin-top: 20px; }
@@ -2222,194 +2223,160 @@ main {
       #articles .articles__block .description a {
         color: #000; }
 
-#trains {
-  background: #f0f0f0; }
-
-@media only screen and (max-width: 980px), (orientation: portrait) {
-  .trains .content {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap; } }
-.trains__description {
-  padding: 0 0 30px;
-  background-color: white; }
-.trains__content {
-  background: #f0f0f0;
-  padding: 30px 0 0; }
+.trains .sidebar ul {
+  background: #fff;
+  border: 1px solid #e4e4e4;
+  padding: 30px 25px 40px; }
   @media only screen and (max-width: 980px), (orientation: portrait) {
-    .trains__content {
-      padding: 30px 0 0; } }
-  .trains__content .sidebar {
-    max-width: 26%;
-    width: 100%; }
-    @media only screen and (max-width: 1200px), (orientation: portrait) {
-      .trains__content .sidebar {
-        max-width: 30%; } }
+    .trains .sidebar ul {
+      -js-display: flex;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      -ms-flex-line-pack: start;
+          align-content: flex-start;
+      -webkit-box-align: start;
+          -ms-flex-align: start;
+              align-items: flex-start;
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start;
+      padding: 25px 25px 20px;
+      margin-bottom: 20px; } }
+  .trains .sidebar ul h2 {
+    margin-bottom: 15px; }
     @media only screen and (max-width: 980px), (orientation: portrait) {
-      .trains__content .sidebar {
-        max-width: 100%; } }
-    .trains__content .sidebar ul {
-      background: #fff;
-      border: 1px solid #e4e4e4;
-      padding: 30px 25px 40px; }
-      @media only screen and (max-width: 980px), (orientation: portrait) {
-        .trains__content .sidebar ul {
-          -js-display: flex;
-          display: -webkit-box;
-          display: -ms-flexbox;
-          display: flex;
-          -webkit-box-orient: horizontal;
-          -webkit-box-direction: normal;
-              -ms-flex-direction: row;
-                  flex-direction: row;
-          -ms-flex-wrap: wrap;
-              flex-wrap: wrap;
-          -ms-flex-line-pack: start;
-              align-content: flex-start;
-          -webkit-box-align: start;
-              -ms-flex-align: start;
-                  align-items: flex-start;
-          -webkit-box-pack: start;
-              -ms-flex-pack: start;
-                  justify-content: flex-start;
-          padding: 25px 25px 20px;
-          margin-bottom: 20px; } }
-      .trains__content .sidebar ul h2 {
-        margin-bottom: 15px; }
-        @media only screen and (max-width: 980px), (orientation: portrait) {
-          .trains__content .sidebar ul h2 {
-            width: 100%; } }
-      .trains__content .sidebar ul li {
-        position: relative;
-        font-size: 14px;
-        padding-bottom: 12px; }
-        @media only screen and (max-width: 980px), (orientation: portrait) {
-          .trains__content .sidebar ul li {
-            padding-right: 26px; }
-            .trains__content .sidebar ul li::after {
-              position: absolute;
-              content: '\22EF';
-              top: 0;
-              right: 7px; }
-            .trains__content .sidebar ul li:last-child::after {
-              content: ''; } }
-        .trains__content .sidebar ul li.active {
-          padding-left: 16px; }
-          .trains__content .sidebar ul li.active a {
-            color: #000;
-            font-weight: 700;
-            pointer-events: none;
-            cursor: default; }
-          .trains__content .sidebar ul li.active::before {
-            top: 2px;
-            width: 10px;
-            height: 13px;
-            background-image: url("../img/art_arrow.svg"); }
-        .trains__content .sidebar ul li:last-child {
-          padding-bottom: 0; }
-  .trains__content .main-info {
-    max-width: 73%;
-    width: 100%; }
-    @media only screen and (max-width: 1200px), (orientation: portrait) {
-      .trains__content .main-info {
-        max-width: 68%; } }
-    @media only screen and (max-width: 980px), (orientation: portrait) {
-      .trains__content .main-info {
-        max-width: 100%; } }
-    .trains__content .main-info .train {
-      background: #fff;
-      border: 1px solid #e4e4e4;
-      margin-bottom: 20px; }
-      .trains__content .main-info .train__description {
-        padding: 30px 25px 40px; }
-        .trains__content .main-info .train__description .text {
-          padding-right: 25px; }
-        @media only screen and (max-width: 980px), (orientation: portrait) {
-          .trains__content .main-info .train__description {
-            padding-bottom: 20px; } }
-        @media only screen and (max-width: 680px), (orientation: portrait) {
-          .trains__content .main-info .train__description img {
-            max-width: 150px; } }
-      .trains__content .main-info .train__schedule {
-        margin-bottom: 25px; }
-        .trains__content .main-info .train__schedule .stroke {
-          background: whitesmoke;
-          border-bottom: 1px solid #e4e4e4; }
-          .trains__content .main-info .train__schedule .stroke:first-child {
-            border-top: 1px solid #e4e4e4; }
-          .trains__content .main-info .train__schedule .stroke .bold {
-            margin-top: 10px;
-            margin-bottom: 0; }
-          .trains__content .main-info .train__schedule .stroke .name {
-            font-size: 12px;
-            line-height: 14px;
-            margin-top: 0;
-            margin-bottom: 10px; }
-          .trains__content .main-info .train__schedule .stroke .number {
-            -webkit-box-flex: 0;
-                -ms-flex-positive: 0;
-                    flex-grow: 0;
-            padding: 0 25px;
-            border-right: 1px dashed #e4e4e4; }
-          .trains__content .main-info .train__schedule .stroke .time {
-            max-width: 180px;
-            width: 100%;
-            border-right: 1px dashed #e4e4e4;
-            padding: 0 25px; }
-            @media only screen and (max-width: 680px), (orientation: portrait) {
-              .trains__content .main-info .train__schedule .stroke .time {
-                max-width: 145px; } }
-          .trains__content .main-info .train__schedule .stroke .from {
-            -webkit-box-flex: 1;
-                -ms-flex-positive: 1;
-                    flex-grow: 1;
-            position: relative;
-            min-width: 180px;
-            padding: 0 25px; }
-            .trains__content .main-info .train__schedule .stroke .from::after {
-              right: -50%;
-              width: 10px;
-              height: 13px;
-              background-image: url("../img/art_arrow.svg");
-              margin: auto; }
-              @media only screen and (max-width: 1200px), (orientation: portrait) {
-                .trains__content .main-info .train__schedule .stroke .from::after {
-                  right: -70%; } }
-              @media only screen and (max-width: 1200px), (orientation: portrait) {
-                .trains__content .main-info .train__schedule .stroke .from::after {
-                  right: -85%; } }
-          .trains__content .main-info .train__schedule .stroke .to {
-            -webkit-box-flex: 1;
-                -ms-flex-positive: 1;
-                    flex-grow: 1;
-            min-width: 180px;
-            padding: 0 25px; }
-    .trains__content .main-info .customer-reviews {
-      background: #fff;
-      border: 1px solid #e4e4e4;
-      margin-top: 10px;
-      padding: 30px 25px; }
-      .trains__content .main-info .customer-reviews span {
-        font-size: 20px;
-        position: relative;
-        color: transparent; }
-        .trains__content .main-info .customer-reviews span::after {
-          content: '\2605\2605\2605\2605\2605\2605\2605\2605\2605';
-          color: #ffb400;
-          top: 6px;
-          overflow: hidden; }
-        .trains__content .main-info .customer-reviews span.half-star::after {
-          width: 9px;
-          overflow: hidden; }
-        .trains__content .main-info .customer-reviews span.last-star {
-          margin-left: -17px; }
-          .trains__content .main-info .customer-reviews span.last-star::after {
-            content: '\2606';
-            left: auto; }
-  .trains__content #testimonials {
-    padding: 0; }
-    @media only screen and (max-width: 1320px), (orientation: portrait) {
-      .trains__content #testimonials .testimonials__block {
+      .trains .sidebar ul h2 {
         width: 100%; } }
+  .trains .sidebar ul li {
+    position: relative;
+    font-size: 14px;
+    padding-bottom: 12px; }
+    @media only screen and (max-width: 980px), (orientation: portrait) {
+      .trains .sidebar ul li {
+        padding-right: 26px; }
+        .trains .sidebar ul li::after {
+          position: absolute;
+          content: '\22EF';
+          top: 0;
+          right: 7px; }
+        .trains .sidebar ul li:last-child::after {
+          content: ''; } }
+    .trains .sidebar ul li.active {
+      padding-left: 16px; }
+      .trains .sidebar ul li.active a {
+        color: #000;
+        font-weight: 700;
+        pointer-events: none;
+        cursor: default; }
+      .trains .sidebar ul li.active::before {
+        top: 2px;
+        width: 10px;
+        height: 13px;
+        background-image: url("../img/art_arrow.svg"); }
+    .trains .sidebar ul li:last-child {
+      padding-bottom: 0; }
+.trains .train {
+  background: #fff;
+  border: 1px solid #e4e4e4;
+  margin-bottom: 20px; }
+  .trains .train__description {
+    padding: 30px 25px 40px; }
+    .trains .train__description .text {
+      padding-right: 25px; }
+    @media only screen and (max-width: 980px), (orientation: portrait) {
+      .trains .train__description {
+        padding-bottom: 20px; } }
+    @media only screen and (max-width: 680px), (orientation: portrait) {
+      .trains .train__description img {
+        max-width: 150px; } }
+  .trains .train__schedule {
+    margin-bottom: 25px; }
+    .trains .train__schedule .stroke {
+      background: whitesmoke;
+      border-bottom: 1px solid #e4e4e4; }
+      .trains .train__schedule .stroke:first-child {
+        border-top: 1px solid #e4e4e4; }
+      .trains .train__schedule .stroke .bold {
+        margin-top: 10px;
+        margin-bottom: 0; }
+      .trains .train__schedule .stroke .name {
+        font-size: 12px;
+        line-height: 14px;
+        margin-top: 0;
+        margin-bottom: 10px; }
+      .trains .train__schedule .stroke .number {
+        -webkit-box-flex: 0;
+            -ms-flex-positive: 0;
+                flex-grow: 0;
+        padding: 0 25px;
+        border-right: 1px dashed #e4e4e4; }
+      .trains .train__schedule .stroke .time {
+        max-width: 180px;
+        width: 100%;
+        border-right: 1px dashed #e4e4e4;
+        padding: 0 25px; }
+        @media only screen and (max-width: 680px), (orientation: portrait) {
+          .trains .train__schedule .stroke .time {
+            max-width: 145px; } }
+      .trains .train__schedule .stroke .from {
+        -webkit-box-flex: 1;
+            -ms-flex-positive: 1;
+                flex-grow: 1;
+        position: relative;
+        min-width: 180px;
+        padding: 0 25px; }
+        .trains .train__schedule .stroke .from::after {
+          right: -50%;
+          width: 10px;
+          height: 13px;
+          background-image: url("../img/art_arrow.svg");
+          margin: auto; }
+          @media only screen and (max-width: 1200px), (orientation: portrait) {
+            .trains .train__schedule .stroke .from::after {
+              right: -70%; } }
+          @media only screen and (max-width: 1200px), (orientation: portrait) {
+            .trains .train__schedule .stroke .from::after {
+              right: -85%; } }
+      .trains .train__schedule .stroke .to {
+        -webkit-box-flex: 1;
+            -ms-flex-positive: 1;
+                flex-grow: 1;
+        min-width: 180px;
+        padding: 0 25px; }
+.trains .customer-reviews {
+  background: #fff;
+  border: 1px solid #e4e4e4;
+  margin-top: 10px;
+  padding: 30px 25px; }
+  .trains .customer-reviews span {
+    font-size: 20px;
+    position: relative;
+    color: transparent; }
+    .trains .customer-reviews span::after {
+      content: '\2605\2605\2605\2605\2605\2605\2605\2605\2605';
+      color: #ffb400;
+      top: 6px;
+      overflow: hidden; }
+    .trains .customer-reviews span.half-star::after {
+      width: 9px;
+      overflow: hidden; }
+    .trains .customer-reviews span.last-star {
+      margin-left: -17px; }
+      .trains .customer-reviews span.last-star::after {
+        content: '\2606';
+        left: auto; }
+.trains #testimonials {
+  padding: 0; }
+  @media only screen and (max-width: 1320px), (orientation: portrait) {
+    .trains #testimonials .testimonials__block {
+      width: 100%; } }
 .trains #news {
   padding: 0; }
   @media only screen and (max-width: 980px), (orientation: portrait) {
@@ -2437,31 +2404,12 @@ main {
       -webkit-box-pack: justify;
           -ms-flex-pack: justify;
               justify-content: space-between;
-      display: none;
-      padding-bottom: 50px; } }
-  .trains #news .news__block {
-    margin-top: 20px; }
+      display: none; } }
+  .trains #news .block img {
+    height: 300px; }
     @media only screen and (max-width: 980px), (orientation: portrait) {
-      .trains #news .news__block {
-        width: 49%;
-        height: 195px;
-        overflow: hidden; } }
-    @media only screen and (max-width: 680px), (orientation: portrait) {
-      .trains #news .news__block {
-        width: 100%;
-        height: 150px;
-        margin-top: 10px; }
-        .trains #news .news__block:first-child {
-          margin-top: 20px; } }
-    @media only screen and (max-width: 980px), (orientation: portrait) {
-      .trains #news .news__block img {
+      .trains #news .block img {
         width: 100%; } }
-    .trains #news .news__block .description {
-      min-height: 130px; }
-      @media only screen and (max-width: 980px), (orientation: portrait) {
-        .trains #news .news__block .description {
-          padding: 18px 25px;
-          min-height: 94px; } }
 
 #about {
   background-image: url(../img/background_about.jpg);
