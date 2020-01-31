@@ -2736,26 +2736,18 @@ input:checked ~ .tab-content {
         flex-wrap: wrap; } }
 .articlesPage__content {
   background: #f0f0f0;
-  padding: 20px 0 0; }
+  padding: 10px 0 0; }
   @media only screen and (max-width: 980px), (orientation: portrait) {
     .articlesPage__content {
       padding: 20px 0 0; } }
   .articlesPage__content .main-info {
-    margin: 0 auto;
-    max-width: 80%;
-    width: 100%; }
-    @media only screen and (max-width: 1200px), (orientation: portrait) {
-      .articlesPage__content .main-info {
-        max-width: 68%; } }
-    @media only screen and (max-width: 980px), (orientation: portrait) {
-      .articlesPage__content .main-info {
-        max-width: 100%; } }
+    padding: 0 30px; }
   .articlesPage__content .articlesList {
     background-color: #f0f0f0 !important;
     background: #fff;
     border: 1px solid #e4e4e4;
     margin-bottom: 30px;
-    padding: 30px 25px 40px; }
+    padding: 30px 35px 40px; }
     .articlesPage__content .articlesList li {
       margin-top: 15px; }
   .articlesPage__content .articleBlock {
