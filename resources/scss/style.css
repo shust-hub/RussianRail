@@ -2740,8 +2740,6 @@ input:checked ~ .tab-content {
   @media only screen and (max-width: 980px), (orientation: portrait) {
     .articlesPage__content {
       padding: 20px 0 0; } }
-  .articlesPage__content .main-info {
-    padding: 0 30px; }
   .articlesPage__content .articlesList {
     background-color: #f0f0f0 !important;
     background: #fff;
