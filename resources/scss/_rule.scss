@@ -2,6 +2,10 @@
   @extend %border-box;
 }
 
+a:hover{
+  text-decoration: none;
+}
+
 .content {
   @include content;
 }
