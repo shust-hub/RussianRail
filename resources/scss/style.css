@@ -2913,34 +2913,12 @@ input:checked ~ .tab-content {
   transition: all 0.3s ease-out, all 0.3s ease-out, auto; }
   #trainPage .gallery img:hover {
     opacity: .8; }
-#trainPage .feauter {
-  margin-bottom: 30px; }
-  #trainPage .feauter .feauter-box {
-    margin-top: 30px;
-    background-color: #f0f0f0;
-    height: 135px;
-    width: 24%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center; }
-    #trainPage .feauter .feauter-box .fbox-icon {
-      border: none !important;
-      background-color: transparent !important;
-      color: #4169e1;
-      border-radius: 0;
-      font-size: 50px; }
-    #trainPage .feauter .feauter-box h3 {
-      font-size: medium; }
+#trainPage .fbox-icon {
+  border: none !important;
+  background-color: transparent !important;
+  color: #4169e1;
+  border-radius: 0;
+  font-size: 70px; }
 #trainPage .train {
   background: #fff;
   border: 1px solid #e4e4e4;
