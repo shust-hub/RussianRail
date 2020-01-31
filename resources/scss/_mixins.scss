@@ -142,7 +142,8 @@
 
 // Анимация
 
-@mixin transition($transition-first:all .3s ease-out, $transition-second:all .3s ease-out, $transition-third:auto) {
+@mixin transition($transition-first:all .3s ease-out, $transition-second:all 
+.3s ease-out, $transition-third:auto) {
   transition: $transition-first, $transition-second, $transition-third;
 }
 

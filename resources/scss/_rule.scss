@@ -361,14 +361,20 @@ mark {
 
 .entry-meta {
   list-style: none;
-  margin: 0;
+  margin: 10px 0 5px;
+  display:flex;
 
     li {
       font-size: 13px;
       line-height: 14px;
       color: #999;
       font-style: italic;
-      display: inline!important;
+      display:flex;
+
+      .fbox-icon{
+        margin-right: 5px;
+      }
+
   }
   li:not(:first-child):before {
       content: ' /';
@@ -376,6 +382,27 @@ mark {
       margin-right: 5px;
       margin-left: 5px;
 
+  }
+}
+
+.contacts-meta{
+  list-style: none;
+  margin: 10px 0 5px 20px;
+  li {
+    font-size: 13px;
+    line-height: 14px;
+    color: #999;
+    display:flex;
+    margin-top: 5px;
+    a{
+      color: #999;
+      text-decoration: none;
+    }
+    .fas {
+      font-size: 10px;
+      position: absolute;
+      margin-left: -20px;
+    }
   }
 }
 
@@ -435,11 +462,15 @@ mark {
       h3{
         color: $accent-color;
       }
+      p{
+        color: $black-color;
+      }
     }
   }
 
   a{
     color: $black-color;
+    text-decoration: none;
   }
 
   .description {

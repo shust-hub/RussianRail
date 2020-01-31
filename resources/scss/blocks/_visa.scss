@@ -222,54 +222,12 @@
       }
   }
 
-
-  #ApplyingVisa {
-      .applying{
-          display: flex;
-          width: 102%;
-          justify-content: space-between;
-          margin-left: -10px;
-          margin-bottom: 30px;
-          margin-top: 30px;
-          @media (min-width: 320px) and (max-width: 767px) {
-            flex-wrap: wrap;  
-          }
-          
-          .applyingBox{
-            height: 250px; 
-            background-color: $lighter-gray-color; 
-            display: flex;
-            flex-grow: 1;
-            flex-direction: column;
-            justify-content: flex-end;
-            align-items: center;
-            text-align: center;
-            padding-bottom: 20px;
-            margin: 0 10px;
-
-            @media (min-width: 481px) and (max-width: 767px) {
-                width: 70%;
-                margin-bottom: 20px;
-            }
-              
-            @media (min-width: 320px) and (max-width: 480px) { 
-                width: 70%;
-                margin-bottom: 20px; 
-             }
-
-            .applyBoxText{
-                width: 95%;
-                background-color: white;
-                padding: 20px 30px;
-            }
-
-          }
+  .applyingVisa {
+    .block {
+      img {
+        height: 250px;
       }
+      
+    }
   }
 
-  #applyingBox1{
-    background-image: url('/img/visa/onlineVisaApplicationForm.png');
-  }
-  #applyingBox2{
-    background-image: url('/img/visa/consularFeesForUScitizen.png');
-  }

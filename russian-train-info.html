@@ -12,10 +12,14 @@
 
   <link rel="stylesheet" type="text/css" href="resources/assets/Animated-Tabs-anitabs/css/anitabs.css">
 
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="resources/scss/style.css">
   <link rel="stylesheet" href="resources/assets/lightbox/dist/css/lightbox.min.css">
+
   <link rel="stylesheet" href="resources/assets/OwlCarousel/dist/assets/owl.carousel.min.css">
   <link rel="stylesheet" href="resources/assets/OwlCarousel/dist/assets/owl.theme.default.min.css">
-  <link rel="stylesheet" href="resources/css/style.css">
 
   <script type="text/javascript">
       function slowScroll(id) {
@@ -220,41 +224,40 @@
 </header>
 
 <main>
-  <section id="header" class="flexbox vertical-align inner">
-    <div class="content flexbox">
-      <div class="left">
+  <section id="header" class="header">
+    <div class="container">
+      <div class="row align-items-center">
+      <div class="col-lg-8 col-md-12 col-sm-12  mt-5 mt-lg-0 text-center text-lg-left">
         <h1>RUSSIAN TRAIN INFO</h1>
-
-        <p class="breadcrumbs">
-          <a href="/">Home</a> / <a href="russian-train-info.html">Russian train info</a>
-        </p>
+          <p class="breadcrumbs mt-3 mt-lg-5">
+           <a href="/">Home</a> / <a href="russian-train-info.html">Russian train info</a>
+            </p>
       </div>
 
-      <div class="right">
-        <h2>Start planning</h2>
-
-        <form action="#">
+      <div class="col-lg-4 col-md-8 offset-md-2 offset-lg-0 col-sm-12 mt-3 mt-lg-5">
+        <form action="#" class="headerForm">
+          <h2>Start planning</h2>
           <div class="way">
             <input type="text" placeholder="Depatrture from">
           </div>
 
           <input type="text" placeholder="Arrival to">
 
-          <div class="right__colums flexbox">
-            <div class="half flexbox">
+          <div class="w-75 d-flex justify-content-between">
+            <div class="d-flex">
               <input id="one-way" name="way" type="radio">
               <label for="one-way">One way</label>
             </div>
 
-            <div class="half flexbox">
+            <div class="d-flex">
               <input id="return" name="way" type="radio" placeholder="Return">
               <label for=return>Return</label>
             </div>
           </div>
 
-          <div class="right__colums flexbox">
-            <input class="half" type="text" placeholder="Date">
-            <input class="half" type="text" placeholder="Return date" disabled>
+          <div class="d-flex">
+            <input class="mr-2" type="text" placeholder="Date">
+            <input type="text" placeholder="Return date" disabled>
           </div>
 
           <input type="text" placeholder="Passengers">
@@ -263,391 +266,453 @@
         </form>
       </div>
     </div>
+    </div>
   </section>
 
-
-  <section id="usefulInfo" class="usefulInfo">
-
-    <div class="description marginTop30">
-      <div class="content">
-          <h2>Lorem Ipsum</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum consectetur labore mollitia blanditiis eveniet enim nisi corporis aliquid quia quod, veniam, magni optio exercitationem! Fugiat reprehenderit tempora quasi commodi ut.Iste laborum quibusdam fuga, dolor quasi voluptatum beatae ratione ipsum distinctio. Fugit pariatur illum, doloribus reiciendis rerum quo praesentium temporibus eaque. Beatae autem voluptatem laborum maxime commodi totam, tempore inventore?
-          </p>
-      </div>
-  </div>
-
-  <div class="content">
-    <div class="article__nav">
-      <ul>
-        <li>
-          <a href="russian-train-info.html"><p>Basic info</p></a>
-        </li>
-        <li>
-          <a href="russian-train-info.html?tag=Travel+tips"><p>Travel tips</p></a>
-        </li>
-        <li>
-          <a href="russian-train-info.html?tag=Trains"><p>Trains</p></a>
-        </li>
-        <li>
-          <a href="russian-train-info.html?tag=Experience"><p>Experience</p></a>
-        </li>
-      </ul>
+  <section id="description">
+    <div class="container">
+      <h2>Lorem Ipsum</h2>
+      <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum consectetur labore mollitia blanditiis eveniet enim nisi corporis aliquid quia quod, veniam, magni optio exercitationem! Fugiat reprehenderit tempora quasi commodi ut.Iste laborum quibusdam fuga, dolor quasi voluptatum beatae ratione ipsum distinctio. Fugit pariatur illum, doloribus reiciendis rerum quo praesentium temporibus eaque. Beatae autem voluptatem laborum maxime commodi totam, tempore inventore?
+      </p>
     </div>
-  </div>
+  </section>
 
-  <div class="usefulInfo__content content flexbox">
+  <section class="background-grey mb-n4">
+    <div class="container">
+      <div class="article__nav">
+        <ul>
+          <li>
+            <a href="russian-train-info.html"><p>Basic info</p></a>
+          </li>
+          <li>
+            <a href="russian-train-info.html?tag=Travel+tips"><p>Travel tips</p></a>
+          </li>
+          <li>
+            <a href="russian-train-info.html?tag=Trains"><p>Trains</p></a>
+          </li>
+          <li>
+            <a href="russian-train-info.html?tag=Experience"><p>Experience</p></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="usefulInfo" class="background-grey">
+
+  <div class="container">
+
+    <div class="row">
       
-      <div class="usefulInfo__block">
-        <a href="/article-page.html">
-          <img src="./resources/img/useful-info/0.jpg" alt="" class="usefulInfo__img">
-          <div class="description">
-            <h3>
-              Types of Russian Trains</h3>
-          </div>
-        </a>
-      </div>
-
-      <div class="usefulInfo__block">
-        <a href="/article-page.html">
-          <img src="./resources/img/useful-info/1.jpg" alt="" class="usefulInfo__img">
-          <div class="description">
-            <h3>Russian Train Tickets</h3>
-          </div>
-        </a>
-      </div>
-
-
-      <div class="usefulInfo__block">
-        <a href="/article-page.html">
-          <img src="./resources/img/useful-info/2.jpg" alt="" class="usefulInfo__img">
-          <div class="description">
-            <h3>Tips for Traveling by Train in Russia</h3>
-          </div>
-        </a>
-      </div>
-
-      <div class="usefulInfo__block">
-        <a href="article-page.html">
-          <img src="./resources/img/useful-info/3.jpg" alt="" class="usefulInfo__img">
-          <div class="description">
-            <h3>The Russian Train Experience</h3>
-          </div>
-        </a>
-      </div>
-
-      <div class="usefulInfo__block">
-        <a href="/article-page.html">
-          <img src="./resources/img/useful-info/4.jpg" alt="" class="usefulInfo__img">
-          <div class="description">
-            <h3>Safety on Russian Trains</h3>
-          </div>
-        </a>
-      </div>
-
-
-      <div class="usefulInfo__block">
-        <a href="article-page.html">        
-          <img src="./resources/img/useful-info/5.jpg" alt="" class="usefulInfo__img">
-          <div class="description">
-            <h3>Best Ways to Travel from Moscow to St. Petersburg
-            </h3>
-          </div>
-        </a>
-      </div>
-
-      <div class="usefulInfo__block">
-        <a href="article-page.html">
-          <img src="./resources/img/useful-info/6.jpg" alt="" class="usefulInfo__img">
-          <div class="description">
-            <h3>Moscow - St. Petersburg Night Train vs Day Train</h3>
-          </div>
-        </a>
-      </div>
-
-      <div class="usefulInfo__block">
-        <a href="/article-page.html">
-          <img src="./resources/img/useful-info/7.jpg" alt="" class="usefulInfo__img">
-          <div class="description">
-            <h3>The ultimate list of Russia’s most popular trains</h3>
-          </div>
+      <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="block">
+          <a href="/article-page.html">
+            <img src="./resources/img/useful-info/0.jpg" alt="" class="usefulInfo__img">
+            <div class="description">
+              <h3>
+                Types of Russian Trains</h3>
+            </div>
           </a>
+        </div>
       </div>
 
-      <div class="usefulInfo__block">
-        <a href="article-page.html">
-          <img src="./resources/img/useful-info/8.jpg" alt="" class="usefulInfo__img">
-          <div class="description">
-            <h3>Different seating classes on the Sapsan train</h3>
-          </div>
-        </a>
+        <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="block">
+          <a href="/article-page.html">
+            <img src="./resources/img/useful-info/1.jpg" alt="" class="usefulInfo__img">
+            <div class="description">
+              <h3>Russian Train Tickets</h3>
+            </div>
+          </a>
+        </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="block">
+          <a href="/article-page.html">
+            <img src="./resources/img/useful-info/2.jpg" alt="" class="usefulInfo__img">
+            <div class="description">
+              <h3>Tips for Traveling by Train in Russia</h3>
+            </div>
+          </a>
+        </div>
       </div>
 
-      <div class="usefulInfo__block">
-        <a href="article-page.html">
-          <img src="./resources/img/useful-info/9.jpg" alt="" class="usefulInfo__img">
-          <div class="description">
-            <h3>Different seating classes on the Red Arrow Train</h3>
-          </div>
-        </a>
-      </div>
-
-      <div class="usefulInfo__block">
-        <img src="./resources/img/useful-info/91.jpg" alt="" class="usefulInfo__img">
+      <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="block">
           <a href="article-page.html">
-          <div class="description">
-            <h3>Sapsan vs. Nevsky Express: how do they differ?</h3>      
-          </div>
-        </a>
+            <img src="./resources/img/useful-info/3.jpg" alt="" class="usefulInfo__img">
+            <div class="description">
+              <h3>The Russian Train Experience</h3>
+            </div>
+          </a>
+        </div>
+      </div>
+        
+        <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="block">
+          <a href="/article-page.html">
+            <img src="./resources/img/useful-info/4.jpg" alt="" class="usefulInfo__img">
+            <div class="description">
+              <h3>Safety on Russian Trains</h3>
+            </div>
+          </a>
+        </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="block">
+          <a href="article-page.html">        
+            <img src="./resources/img/useful-info/5.jpg" alt="" class="usefulInfo__img">
+            <div class="description">
+              <h3>Best Ways to Travel from Moscow to St. Petersburg
+              </h3>
+            </div>
+          </a>
+        </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="block">
+          <a href="article-page.html">
+            <img src="./resources/img/useful-info/6.jpg" alt="" class="usefulInfo__img">
+            <div class="description">
+              <h3>Moscow - St. Petersburg Night Train vs Day Train</h3>
+            </div>
+          </a>
+        </div>
       </div>
 
-      <div class="usefulInfo__block">
-        <a href="article-page.html">
+      <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="block">
+          <a href="/article-page.html">
+            <img src="./resources/img/useful-info/7.jpg" alt="" class="usefulInfo__img">
+            <div class="description">
+              <h3>The ultimate list of Russia’s most popular trains</h3>
+            </div>
+            </a>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="block">
+          <a href="article-page.html">
+            <img src="./resources/img/useful-info/8.jpg" alt="" class="usefulInfo__img">
+            <div class="description">
+              <h3>Different seating classes on the Sapsan train</h3>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="block">
+          <a href="article-page.html">
+            <img src="./resources/img/useful-info/9.jpg" alt="" class="usefulInfo__img">
+            <div class="description">
+              <h3>Different seating classes on the Red Arrow Train</h3>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="block">
           <img src="./resources/img/useful-info/91.jpg" alt="" class="usefulInfo__img">
-          <div class="description">
-            <h3>Red Arrow vs. The Grand Express train</h3>
-          </div>
-        </a>
-      </div>
-
-      <div class="usefulInfo__block">
-        <a href="article-page.html">
-          <img src="./resources/img/useful-info/92.jpg" alt="" class="usefulInfo__img">
-          <div class="description">
-            <h3>Travelling from Helsinki to St. Petersburg</h3>
-          </div>
+            <a href="article-page.html">
+            <div class="description">
+              <h3>Sapsan vs. Nevsky Express: how do they differ?</h3>      
+            </div>
           </a>
+        </div>
       </div>
 
-      <div class="usefulInfo__block">
-        <a href="/article-page.html">
-          <img src="./resources/img/useful-info/4.jpg" alt="" class="usefulInfo__img">
-          <div class="description">
-            <h3>Safety on Russian Trains</h3>
-          </div>
-        </a>
-      </div>
-
-      <div class="usefulInfo__block">
-        <a href="article-page.html">        
-          <img src="./resources/img/useful-info/5.jpg" alt="" class="usefulInfo__img">
-          <div class="description">
-            <h3>Best Ways to Travel from Moscow to St. Petersburg
-            </h3>
-          </div>
-        </a>
-      </div>
-
-      <div class="usefulInfo__block">
-        <a href="/article-page.html">
-          <img src="./resources/img/useful-info/7.jpg" alt="" class="usefulInfo__img">
-          <div class="description">
-            <h3>The ultimate list of Russia’s most popular trains</h3>
-          </div>
+      <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="block">
+          <a href="article-page.html">
+            <img src="./resources/img/useful-info/91.jpg" alt="" class="usefulInfo__img">
+            <div class="description">
+              <h3>Red Arrow vs. The Grand Express train</h3>
+            </div>
           </a>
+        </div>
       </div>
 
-      <div class="usefulInfo__block">
-        <a href="article-page.html">
-          <img src="./resources/img/useful-info/8.jpg" alt="" class="usefulInfo__img">
-          <div class="description">
-            <h3>Different seating classes on the Sapsan train</h3>
-          </div>
-        </a>
+      <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="block">
+          <a href="article-page.html">
+            <img src="./resources/img/useful-info/92.jpg" alt="" class="usefulInfo__img">
+            <div class="description">
+              <h3>Travelling from Helsinki to St. Petersburg</h3>
+            </div>
+            </a>
+        </div>
       </div>
 
-      <div class="usefulInfo__block">
-        <a href="article-page.html">
-          <img src="./resources/img/useful-info/9.jpg" alt="" class="usefulInfo__img">
-          <div class="description">
-            <h3>Different seating classes on the Red Arrow Train</h3>
-          </div>
-        </a>
-      </div>
-
-      <div class="usefulInfo__block">
-        <a href="/article-page.html">
-          <img src="./resources/img/useful-info/2.jpg" alt="" class="usefulInfo__img">
-          <div class="description">
-            <h3>Tips for Traveling by Train in Russia</h3>
-          </div>
-        </a>
-      </div>
-
-      <div class="usefulInfo__block">
-        <a href="article-page.html">
-          <img src="./resources/img/useful-info/3.jpg" alt="" class="usefulInfo__img">
-          <div class="description">
-            <h3>The Russian Train Experience</h3>
-          </div>
-        </a>
-      </div>
-
-      <div class="usefulInfo__block">
-        <a href="/article-page.html">
-          <img src="./resources/img/useful-info/4.jpg" alt="" class="usefulInfo__img">
-          <div class="description">
-            <h3>Safety on Russian Trains</h3>
-          </div>
-        </a>
-      </div>
-
-
-      <div class="usefulInfo__block">
-        <a href="article-page.html">        
-          <img src="./resources/img/useful-info/5.jpg" alt="" class="usefulInfo__img">
-          <div class="description">
-            <h3>Best Ways to Travel from Moscow to St. Petersburg
-            </h3>
-          </div>
-        </a>
-      </div>
-
-      <div class="usefulInfo__block">
-        <a href="/article-page.html">
-          <img src="./resources/img/useful-info/7.jpg" alt="" class="usefulInfo__img">
-          <div class="description">
-            <h3>The ultimate list of Russia’s most popular trains</h3>
-          </div>
+      <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="block">
+          <a href="/article-page.html">
+            <img src="./resources/img/useful-info/4.jpg" alt="" class="usefulInfo__img">
+            <div class="description">
+              <h3>Safety on Russian Trains</h3>
+            </div>
           </a>
+        </div>
       </div>
 
-      <div class="usefulInfo__block">
-        <a href="article-page.html">
-          <img src="./resources/img/useful-info/8.jpg" alt="" class="usefulInfo__img">
-          <div class="description">
-            <h3>Different seating classes on the Sapsan train</h3>
-          </div>
-        </a>
+      <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="block">
+          <a href="article-page.html">        
+            <img src="./resources/img/useful-info/5.jpg" alt="" class="usefulInfo__img">
+            <div class="description">
+              <h3>Best Ways to Travel from Moscow to St. Petersburg
+              </h3>
+            </div>
+          </a>
+        </div>
       </div>
 
-      <div class="usefulInfo__block">
-        <a href="article-page.html">
-          <img src="./resources/img/useful-info/9.jpg" alt="" class="usefulInfo__img">
-          <div class="description">
-            <h3>Different seating classes on the Red Arrow Train</h3>
-          </div>
-        </a>
+      <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="block">
+          <a href="/article-page.html">
+            <img src="./resources/img/useful-info/7.jpg" alt="" class="usefulInfo__img">
+            <div class="description">
+              <h3>The ultimate list of Russia’s most popular trains</h3>
+            </div>
+            </a>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="block">
+          <a href="article-page.html">
+            <img src="./resources/img/useful-info/8.jpg" alt="" class="usefulInfo__img">
+            <div class="description">
+              <h3>Different seating classes on the Sapsan train</h3>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="block">
+          <a href="article-page.html">
+            <img src="./resources/img/useful-info/9.jpg" alt="" class="usefulInfo__img">
+            <div class="description">
+              <h3>Different seating classes on the Red Arrow Train</h3>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="block">
+          <a href="/article-page.html">
+            <img src="./resources/img/useful-info/2.jpg" alt="" class="usefulInfo__img">
+            <div class="description">
+              <h3>Tips for Traveling by Train in Russia</h3>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="block">
+          <a href="article-page.html">
+            <img src="./resources/img/useful-info/3.jpg" alt="" class="usefulInfo__img">
+            <div class="description">
+              <h3>The Russian Train Experience</h3>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="block">
+          <a href="/article-page.html">
+            <img src="./resources/img/useful-info/4.jpg" alt="" class="usefulInfo__img">
+            <div class="description">
+              <h3>Safety on Russian Trains</h3>
+            </div>
+          </a>
+        </div>
+      </div>
+
+
+      <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="block">
+          <a href="article-page.html">        
+            <img src="./resources/img/useful-info/5.jpg" alt="" class="usefulInfo__img">
+            <div class="description">
+              <h3>Best Ways to Travel from Moscow to St. Petersburg
+              </h3>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="block">
+          <a href="/article-page.html">
+            <img src="./resources/img/useful-info/7.jpg" alt="" class="usefulInfo__img">
+            <div class="description">
+              <h3>The ultimate list of Russia’s most popular trains</h3>
+            </div>
+            </a>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="block">
+          <a href="article-page.html">
+            <img src="./resources/img/useful-info/8.jpg" alt="" class="usefulInfo__img">
+            <div class="description">
+              <h3>Different seating classes on the Sapsan train</h3>
+            </div>
+          </a>
+        </div>
+      </div>
+      
+      <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="block">
+          <a href="article-page.html">
+            <img src="./resources/img/useful-info/9.jpg" alt="" class="usefulInfo__img">
+            <div class="description">
+              <h3>Different seating classes on the Red Arrow Train</h3>
+            </div>
+          </a>
+        </div>
+      </div>
+
       </div>
 
     </div>
 </section>
 
 
-  <section id="action" class="flexbox vertical-align">
-    <div class="content marginTop30">
-      <p>Once you have your tickets, look forward to a wonderful, smooth<br>
-        and enjoyable journey through the Russian countryside.</p>
+<section id="action" class="d-flex align-items-center justify-content-center">
+  <div class="container">
+    <div class="row d-flex flex-column justify-content-center">
+      <div class="col-12">
+        <p>
+          Once you have your tickets, look forward to a wonderful, smooth<br>
+          and enjoyable journey through the Russian countryside.
+        </p>
 
-      <h3>Buy your ticket <span>safely and securely</span> and then sit back<br>
-        and <span>enjoy the ride!</span></h3>
-
-      <button>Get Started</button>
+        <h3>
+          Buy your ticket <span> safely and securely</span> and then sit back<br>
+          and <span>enjoy the ride!</span>
+        </h3>
+        <button>Get Started</button>
+      </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section id="recommended">
-    <div class="content marginTop30">
-      <h2>Recommended by</h2>
+<section id="recommended">
+  <div class="container">
+    <h2>Recommended by</h2>
 
-      <p>Our travel group under the names Express to Russia, Russian Rail and Trans-Europe Express has been recommended and/or accredited by:</p>
+    <p>Our travel group under the names Express to Russia, Russian Rail and Trans-Europe Express has been recommended and/or accredited by:</p>
+    <div class="recommended d-flex flex-wrap justify-content-between align-items-center mt-5">
 
-      <div class="recommended flexbox">
-        <div class="recommended__block">
-          <script type="text/javascript" src="https://seal-newjersey.bbb.org/inc/legacy.js"></script>
-          <div class="tooltip" data-tooltip="Rating: A-">
-            <a href="https://www.bbb.org/us/nj/montclair/profile/travel-agency/trans-europe-express-llc-0221-90196991/#sealclick" id="bbblink" class="rbhzbus" target="_blank" rel="nofollow">
-              <img src="https://seal-newjersey.bbb.org/logo/rbhzbus/bbb-90196991.png" width="114" height="40"
-                   style="border: 0;"
-                   alt="Trans-Europe Express LLC BBB Business Review" />
+      <div class="recommended__block">
+        <script type="text/javascript" src="https://seal-newjersey.bbb.org/inc/legacy.js"></script>
+        <div data-toggle="tooltip" data-placement="top" title="Rating: A-">
+          <a href="https://www.bbb.org/us/nj/montclair/profile/travel-agency/trans-europe-express-llc-0221-90196991/#sealclick" id="bbblink" class="rbhzbus" target="_blank" rel="nofollow">
+            <img src="https://seal-newjersey.bbb.org/logo/rbhzbus/bbb-90196991.png" width="114" height="40"
+                 style="border: 0;"
+                 alt="Trans-Europe Express LLC BBB Business Review" />
 
-              <div>Since Nov 2019<br>
-                As of 12/11/2019<br>
-                <span>Click for Profile</span></div>
-            </a>
-          </div>
-        </div>
-
-        <div class="recommended__block">
-          <div class="tooltip" data-tooltip="Recommended for train ticket booking">
-            <img src="resources/img/recommended/eyewitness.svg" alt="Eyewitness" width="120"
-                 height="30">
-          </div>
-        </div>
-
-        <div class="recommended__block">
-          <div class="tooltip" data-tooltip="Recommended for visa service">
-            <img src="resources/img/recommended/lonely_planet.svg" alt="Lonely Planet" width="120" height="60">
-          </div>
-        </div>
-
-        <div class="recommended__block">
-          <div class="tooltip"
-               data-tooltip="Member of the American Society of Travel Advisors (ASTA) for over 12 years, ASTA ID 900277519">
-            <img src="resources/img/recommended/asta.png" alt="ASTA" width="62" height="62">
-          </div>
-        </div>
-
-        <div class="recommended__block">
-          <a href="https://www.trustpilot.com/review/russianrail.com" target="_blank">
-            <div class="tooltip" data-tooltip="Rated «Excellent» on the Trustpilot review platform">
-              <img src="resources/img/recommended/trustpilot.svg" alt="Trustpilot" width="80" height="62">
-            </div>
+            <div>Since Nov 2019<br>
+              As of 12/11/2019<br>
+              <span>Click for Profile</span></div>
           </a>
         </div>
+      </div>
 
-        <div class="recommended__block">
-          <a href="https://www.tripadvisor.com/Attraction_Review-g298507-d3701481-Reviews-Express_to_Russia-St_Petersburg_Northwestern_District.html"
-             target="_blank">
-            <div class="tooltip" data-tooltip="5 out of 5 stars">
-              <img src="resources/img/recommended/tripadvisor.svg" alt="TripAdvisor" width="91" height="62">
-            </div>
-          </ahref="">
+      <div class="recommended__block">
+        <div  data-toggle="tooltip" data-placement="top" title="Recommended for train ticket booking">
+          <img src="resources/img/recommended/eyewitness.svg" alt="Eyewitness" width="120"
+               height="30">
         </div>
+      </div>
 
-        <div class="recommended__block">
-          <a href="https://vk.cc/9W2ngf" target="_blank">
-            <div class="tooltip" data-tooltip="4.9 out of 5 stars">
-              <img src="resources/img/recommended/google.png" alt="Google Reviews" width="120" height="49">
-            </div>
-          </a>
+      <div class="recommended__block">
+        <div  data-toggle="tooltip" data-placement="top" title="Recommended for visa service">
+          <img src="resources/img/recommended/lonely_planet.svg" alt="Lonely Planet" width="120" height="60">
         </div>
+      </div>
 
-        <div class="recommended__block">
-          <div class="tooltip" data-tooltip="Member of NTA">
-            <img src="resources/img/recommended/nta.svg" alt="NTA" width="120" height="34">
+      <div class="recommended__block">
+        <div  data-toggle="tooltip" data-placement="top" title="Member of the American Society of Travel Advisors (ASTA) for over 12 years, ASTA ID 900277519">
+          <img src="resources/img/recommended/asta.png" alt="ASTA" width="62" height="62">
+        </div>
+      </div>
+
+      <div class="recommended__block">
+        <a href="https://www.trustpilot.com/review/russianrail.com" target="_blank">
+          <div  data-toggle="tooltip" data-placement="top" title="Rated «Excellent» on the Trustpilot review platform">
+            <img src="resources/img/recommended/trustpilot.svg" alt="Trustpilot" width="80" height="62">
           </div>
+        </a>
+      </div>
+
+      <div class="recommended__block">
+        <a href="https://www.tripadvisor.com/Attraction_Review-g298507-d3701481-Reviews-Express_to_Russia-St_Petersburg_Northwestern_District.html"
+           target="_blank">
+          <div  data-toggle="tooltip" data-placement="top" title="5 out of 5 stars">
+            <img src="resources/img/recommended/tripadvisor.svg" alt="TripAdvisor" width="91" height="62">
+          </div>
+        </a>
+      </div>
+
+      <div class="recommended__block">
+        <a href="https://vk.cc/9W2ngf" target="_blank">
+          <div  data-toggle="tooltip" data-placement="top" title="4.9 out of 5 stars">
+            <img src="resources/img/recommended/google.png" alt="Google Reviews" width="120" height="49">
+          </div>
+        </a>
+      </div>
+
+      <div class="recommended__block">
+        <div  data-toggle="tooltip" data-placement="top" title="Member of NTA">
+          <img src="resources/img/recommended/nta.svg" alt="NTA" width="120" height="34">
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section id="kids" class="inner">
-    <div class="content">
-      <div class="flexbox kids no-wrap align-middle flex-start">
-        <img src="resources/img/culture_for_kids.png" alt="Culture for Kids">
+<section id="kids" class="inner">
+  <div class="container">
+    <div class="d-flex kids flex-nowrap align-items-center">
+      <img src="resources/img/culture_for_kids.png" alt="Culture for Kids">
 
-        <div class="kids__content">
-          <h2>Culture fo Kids</h2>
+      <div class="kids__content">
+        <h2>Culture fo Kids</h2>
 
-          <p>A portion of your order will goes<br>
-            to helping underprivileged Russian children.</p>
+        <p>A portion of your order will goes<br>
+          to helping underprivileged Russian children.</p>
 
-          <button>Learn more</button>
-        </div>
+        <button>Learn more</button>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <footer>
-    <div class="top">
-      <div class="content flexbox no-wrap">
+<footer>
+  <div class="top">
+   <div class="container">
+     <div class="row">
+      <div class="col-lg-4 col-md-4">
         <div class="contacts">
           <div>
             <p class="russia">7 812 570 4709, 7 812 570 6342</p>
           </div>
 
-          <div class="flexbox no-wrap">
+          <div class="d-flex flex-nowrap">
             <p class="usa">1 888 960 0365</p>
 
             <p class="uk">44 800 090 3365</p>
@@ -661,32 +726,35 @@
             <p class="mail"><a href="mailto:rail@russianrail.com">rail@russianrail.com</a></p>
           </div>
         </div>
+      </div>
 
-        <div class="kids">
+      <div class="col-lg-5 col-md-4">
+        <div class="join mb-lg-0 mb-md-5 mb-sm-3 mt-lg-0 mt-md-0  mt-sm-3">
           <p>Join our Russian Travel, Culture and Literature Club on Facebook and share your experiences, stories, photos and advice.</p>
 
-          <button>Join the Club</button>
+          <button class="pl-5 mt-3 position-relative">Join the Club</button>
         </div>
+      </div>
 
-        <div class="accept">
-          <p class="uppercase semibold">We accept:</p>
+      <div class="col-lg-3 col-md-4">
+        <div class="accept d-flex flex-column justify-content-end">
+          <p> <strong>We accept:</strong> </p>
 
-          <div class="flexbox align-middle">
-            <img src="resources/img/footer_ico/cards.png" alt="Cards">
+          <div class="d-flex align-items-end">
+            <img class="align-self-center"  src="resources/img/footer_ico/cards.png" alt="Cards">
 
-            <img src="resources/img/footer_ico/ssl.png" alt="SSL">
+            <img class="align-self-center" src="resources/img/footer_ico/ssl.png" alt="SSL">
 
             <script type="text/javascript" src="https://seal-newjersey.bbb.org/inc/legacy.js"></script>
-            <a href="https://www.bbb.org/us/nj/montclair/profile/travel-agency/trans-europe-express-llc-0221-90196991/#sealclick" id="bbblink" class="ruvtbas" target="_blank" rel="nofollow">
-              <img src="https://seal-newjersey.bbb.org/logo/ruvtbas/bbb-90196991.png" style="border: 0;" alt="Trans-Europe Express LLC BBB Business Review" />
+            <a  href="https://www.bbb.org/us/nj/montclair/profile/travel-agency/trans-europe-express-llc-0221-90196991/#sealclick" id="bbblink" class="ruvtbas" target="_blank" rel="nofollow">
+              <img class="align-self-center" src="https://seal-newjersey.bbb.org/logo/ruvtbas/bbb-90196991.png" style="border: 0;" alt="Trans-Europe Express LLC BBB Business Review" />
             </a>
           </div>
         </div>
 
-        <div class="follows">
-          <p class="uppercase semibold">Follow us:</p>
-
-          <div class="flexbox flex-start">
+        <div class="follows mt-sm-2">
+          <p> <strong>Follow us:</strong></p>
+          <div class="d-flex">
             <a href="https://www.facebook.com/Express2Russia" target="_blank">
               <img src="resources/img/footer_ico/facebook.svg" alt="Facebook">
             </a>
@@ -696,35 +764,51 @@
             </a>
           </div>
         </div>
+
+      </div>
+
+    </div>
+  </div>
+  </div>
+
+  <div class="bottom">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4  col-sm-12">
+          <p>Copyrights © 2020 All Rights Reserved.</p>
+        </div>
+
+        <div class="col-lg-8 col-sm-12">
+          <ul class="mt-lg-0 mt-sm-2 d-flex flex-wrap justify-content-lg-end justify-content-md-start justify-content-sm-start">
+            <li><a href="/about.html" target="_blank">About Us</a></li>
+
+            <li><a href="/russia_travel.html" target="_blank">Terms of Service</a></li>
+
+            <li><a href="/payments.html" target="_blank">Payment Options</a></li>
+
+            <li><a href="/russian-visa-questions.html" target="_blank">FAQs</a></li>
+
+            <li><a href="/contacts.html" target="_blank">Contact</a></li>
+          </ul>
+        </div>
       </div>
     </div>
+  </div>
 
-    <div class="bottom">
-      <div class="content flexbox">
-        <p>Copyrights © 2019 All Rights Reserved.</p>
-
-        <ul class="flexbox">
-          <li><a href="/about.html" target="_blank">About Us</a></li>
-
-          <li><a href="/russia_travel.html" target="_blank">Terms of Service</a></li>
-
-          <li><a href="/payments.html" target="_blank">Payment Options</a></li>
-
-          <li><a href="/russian-visa-questions.html" target="_blank">FAQs</a></li>
-
-          <li><a href="/contacts.html" target="_blank">Contact</a></li>
-        </ul>
-      </div>
-    </div>
-  </footer>
+  
+</footer>
 </main>
 
 <div id="toTop"></div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="resources/assets/OwlCarousel/dist/owl.carousel.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 <script src="resources/js/nav.js"></script>
-<script src="resources/assets/lightbox/dist/js/lightbox.js"></script>
+<script src="resources/js/main.js"></script>
+>
+
 
 <script>
   $(function(){
@@ -739,19 +823,6 @@
           }
       });
   });	
-</script>
-
-<script>
-    $(window).scroll(function() {
-        if ($(this).scrollTop() > 100) {
-            if ($('#toTop').is(':hidden')) {
-                $('#toTop').css({opacity : 1}).fadeIn('slow');
-            }
-        } else { $('#toTop').stop(true, false).fadeOut('fast'); }
-    });
-    $('#toTop').click(function() {
-        $('html, body').stop().animate({scrollTop : 0}, 300);
-    });
 </script>
 </body>
 

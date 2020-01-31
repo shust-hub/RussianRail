@@ -1,0 +1,24 @@
+#stations {
+    .stations {
+      .block {
+        cursor: auto;
+  
+        img {
+          height: 470px;
+        }
+        .description{
+          text-align: left;
+          background-color: rgba($color: white, $alpha: 1);
+        }
+  
+        &:hover {
+          .description {
+            h3{
+              color: $black-color;
+            }
+            // display: none;
+          }
+        }
+      }
+    }
+  }
