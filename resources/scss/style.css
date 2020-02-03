@@ -610,12 +610,12 @@ mark {
     font-size: 13px;
     line-height: 14px;
     color: #999;
-    font-style: italic;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex; }
     .entry-meta li .fbox-icon {
-      margin-right: 5px; }
+      margin-right: 5px;
+      color: #4169e1; }
   .entry-meta li:not(:first-child):before {
     content: ' /';
     display: inline-block;

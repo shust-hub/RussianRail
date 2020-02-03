@@ -372,11 +372,11 @@ mark {
       font-size: 13px;
       line-height: 14px;
       color: #999;
-      font-style: italic;
       display:flex;
 
       .fbox-icon{
         margin-right: 5px;
+        color: $blue-color;
       }
 
   }
