@@ -10,6 +10,10 @@
     background-image: url("../img/head.jpg");
     padding-top: 20px;
   }
+
+  &.transsib {
+    background-image: url("../img/head_inner.jpg");
+  }
   
   P {
     color:  $white-color;

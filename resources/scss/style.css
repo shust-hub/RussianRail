@@ -826,6 +826,8 @@ a:hover {
   #header.inner {
     background-image: url("../img/head.jpg");
     padding-top: 20px; }
+  #header.transsib {
+    background-image: url("../img/head_inner.jpg"); }
   #header P {
     color: #fff;
     font-size: 24px;
@@ -1572,222 +1574,215 @@ main {
   #action button {
     margin: 30px auto 0; }
 
-#testimonials, #testimonials-list {
-  padding: 45px 0 50px;
-  background: #f0f0f0; }
-  #testimonials h2, #testimonials-list h2 {
-    margin-bottom: 25px; }
-  #testimonials .owl-dots, #testimonials-list .owl-dots {
-    text-align: center;
-    margin-top: 15px; }
-    #testimonials .owl-dots .owl-dot, #testimonials-list .owl-dots .owl-dot {
-      border-radius: 50%;
+#testimonials h2, #testimonials-list h2 {
+  margin-bottom: 25px; }
+#testimonials .owl-dots, #testimonials-list .owl-dots {
+  text-align: center;
+  margin-top: 15px; }
+  #testimonials .owl-dots .owl-dot, #testimonials-list .owl-dots .owl-dot {
+    border-radius: 50%;
+    -webkit-transition: all 0.3s ease-out, all 0.3s ease-out, auto;
+    transition: all 0.3s ease-out, all 0.3s ease-out, auto;
+    width: 16px;
+    height: 16px;
+    background: #e3e3e3;
+    margin: 0 4px; }
+    #testimonials .owl-dots .owl-dot.active, #testimonials .owl-dots .owl-dot:hover, #testimonials-list .owl-dots .owl-dot.active, #testimonials-list .owl-dots .owl-dot:hover {
+      background: #c2c2c2; }
+#testimonials .testimonials, #testimonials-list .testimonials {
+  position: relative; }
+  #testimonials .testimonials .owl-prev,
+  #testimonials .testimonials .owl-next, #testimonials-list .testimonials .owl-prev,
+  #testimonials-list .testimonials .owl-next {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: auto;
+    height: auto;
+    background: transparent;
+    margin: auto;
+    z-index: 9; }
+    #testimonials .testimonials .owl-prev span,
+    #testimonials .testimonials .owl-next span, #testimonials-list .testimonials .owl-prev span,
+    #testimonials-list .testimonials .owl-next span {
+      display: none; }
+    #testimonials .testimonials .owl-prev::before,
+    #testimonials .testimonials .owl-next::before, #testimonials-list .testimonials .owl-prev::before,
+    #testimonials-list .testimonials .owl-next::before {
       -webkit-transition: all 0.3s ease-out, all 0.3s ease-out, auto;
       transition: all 0.3s ease-out, all 0.3s ease-out, auto;
-      width: 16px;
-      height: 16px;
-      background: #e3e3e3;
-      margin: 0 4px; }
-      #testimonials .owl-dots .owl-dot.active, #testimonials .owl-dots .owl-dot:hover, #testimonials-list .owl-dots .owl-dot.active, #testimonials-list .owl-dots .owl-dot:hover {
-        background: #c2c2c2; }
-  #testimonials .testimonials, #testimonials-list .testimonials {
-    position: relative; }
-    #testimonials .testimonials .owl-prev,
-    #testimonials .testimonials .owl-next, #testimonials-list .testimonials .owl-prev,
-    #testimonials-list .testimonials .owl-next {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      width: auto;
-      height: auto;
-      background: transparent;
-      margin: auto;
-      z-index: 9; }
-      #testimonials .testimonials .owl-prev span,
-      #testimonials .testimonials .owl-next span, #testimonials-list .testimonials .owl-prev span,
-      #testimonials-list .testimonials .owl-next span {
-        display: none; }
-      #testimonials .testimonials .owl-prev::before,
-      #testimonials .testimonials .owl-next::before, #testimonials-list .testimonials .owl-prev::before,
-      #testimonials-list .testimonials .owl-next::before {
-        -webkit-transition: all 0.3s ease-out, all 0.3s ease-out, auto;
-        transition: all 0.3s ease-out, all 0.3s ease-out, auto;
-        font-size: 180px;
-        line-height: 0.2;
-        font-weight: 300;
-        color: #e4e4e4; }
+      font-size: 180px;
+      line-height: 0.2;
+      font-weight: 300;
+      color: #e4e4e4; }
+      @media only screen and (max-width: 680px), (orientation: portrait) {
+        #testimonials .testimonials .owl-prev::before,
+        #testimonials .testimonials .owl-next::before, #testimonials-list .testimonials .owl-prev::before,
+        #testimonials-list .testimonials .owl-next::before {
+          font-size: 80px; } }
+    #testimonials .testimonials .owl-prev:hover::before,
+    #testimonials .testimonials .owl-next:hover::before, #testimonials-list .testimonials .owl-prev:hover::before,
+    #testimonials-list .testimonials .owl-next:hover::before {
+      color: #ad1e2f; }
+    @media only screen and (max-width: 680px), (orientation: portrait) {
+      #testimonials .testimonials .owl-prev,
+      #testimonials .testimonials .owl-next, #testimonials-list .testimonials .owl-prev,
+      #testimonials-list .testimonials .owl-next {
+        background: rgba(240, 240, 240, 0.6);
+        opacity: 0; }
+        #testimonials .testimonials .owl-prev::before,
+        #testimonials .testimonials .owl-next::before, #testimonials-list .testimonials .owl-prev::before,
+        #testimonials-list .testimonials .owl-next::before {
+          padding: 0 10px; }
+        #testimonials .testimonials .owl-prev:hover,
+        #testimonials .testimonials .owl-next:hover, #testimonials-list .testimonials .owl-prev:hover,
+        #testimonials-list .testimonials .owl-next:hover {
+          opacity: 1; } }
+  #testimonials .testimonials .owl-prev, #testimonials-list .testimonials .owl-prev {
+    left: -70px; }
+    @media only screen and (max-width: 1320px), (orientation: portrait) {
+      #testimonials .testimonials .owl-prev, #testimonials-list .testimonials .owl-prev {
+        left: 0; } }
+    #testimonials .testimonials .owl-prev::before, #testimonials-list .testimonials .owl-prev::before {
+      content: '\2039'; }
+  #testimonials .testimonials .owl-next, #testimonials-list .testimonials .owl-next {
+    right: -70px; }
+    @media only screen and (max-width: 1320px), (orientation: portrait) {
+      #testimonials .testimonials .owl-next, #testimonials-list .testimonials .owl-next {
+        right: 0; } }
+    #testimonials .testimonials .owl-next::before, #testimonials-list .testimonials .owl-next::before {
+      content: '\203A'; }
+  #testimonials .testimonials__block, #testimonials-list .testimonials__block {
+    background: #fff;
+    border: 1px solid #e4e4e4;
+    padding: 40px 30px; }
+    @media only screen and (max-width: 520px), (orientation: portrait) {
+      #testimonials .testimonials__block, #testimonials-list .testimonials__block {
+        padding: 28px 30px 35px; } }
+    #testimonials .testimonials__block .main, #testimonials-list .testimonials__block .main {
+      padding-bottom: 30px;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap; }
+      #testimonials .testimonials__block .main .quote, #testimonials-list .testimonials__block .main .quote {
+        height: 0; }
         @media only screen and (max-width: 680px), (orientation: portrait) {
-          #testimonials .testimonials .owl-prev::before,
-          #testimonials .testimonials .owl-next::before, #testimonials-list .testimonials .owl-prev::before,
-          #testimonials-list .testimonials .owl-next::before {
-            font-size: 80px; } }
-      #testimonials .testimonials .owl-prev:hover::before,
-      #testimonials .testimonials .owl-next:hover::before, #testimonials-list .testimonials .owl-prev:hover::before,
-      #testimonials-list .testimonials .owl-next:hover::before {
-        color: #ad1e2f; }
-      @media only screen and (max-width: 680px), (orientation: portrait) {
-        #testimonials .testimonials .owl-prev,
-        #testimonials .testimonials .owl-next, #testimonials-list .testimonials .owl-prev,
-        #testimonials-list .testimonials .owl-next {
-          background: rgba(240, 240, 240, 0.6);
-          opacity: 0; }
-          #testimonials .testimonials .owl-prev::before,
-          #testimonials .testimonials .owl-next::before, #testimonials-list .testimonials .owl-prev::before,
-          #testimonials-list .testimonials .owl-next::before {
-            padding: 0 10px; }
-          #testimonials .testimonials .owl-prev:hover,
-          #testimonials .testimonials .owl-next:hover, #testimonials-list .testimonials .owl-prev:hover,
-          #testimonials-list .testimonials .owl-next:hover {
-            opacity: 1; } }
-    #testimonials .testimonials .owl-prev, #testimonials-list .testimonials .owl-prev {
-      left: -70px; }
-      @media only screen and (max-width: 1320px), (orientation: portrait) {
-        #testimonials .testimonials .owl-prev, #testimonials-list .testimonials .owl-prev {
-          left: 0; } }
-      #testimonials .testimonials .owl-prev::before, #testimonials-list .testimonials .owl-prev::before {
-        content: '\2039'; }
-    #testimonials .testimonials .owl-next, #testimonials-list .testimonials .owl-next {
-      right: -70px; }
-      @media only screen and (max-width: 1320px), (orientation: portrait) {
-        #testimonials .testimonials .owl-next, #testimonials-list .testimonials .owl-next {
-          right: 0; } }
-      #testimonials .testimonials .owl-next::before, #testimonials-list .testimonials .owl-next::before {
-        content: '\203A'; }
-    #testimonials .testimonials__block, #testimonials-list .testimonials__block {
-      background: #fff;
-      border: 1px solid #e4e4e4;
-      padding: 40px 30px; }
-      @media only screen and (max-width: 520px), (orientation: portrait) {
-        #testimonials .testimonials__block, #testimonials-list .testimonials__block {
-          padding: 28px 30px 35px; } }
-      #testimonials .testimonials__block .main, #testimonials-list .testimonials__block .main {
-        padding-bottom: 30px;
-        -ms-flex-wrap: nowrap;
-            flex-wrap: nowrap; }
-        #testimonials .testimonials__block .main .quote, #testimonials-list .testimonials__block .main .quote {
-          height: 0; }
-          @media only screen and (max-width: 680px), (orientation: portrait) {
-            #testimonials .testimonials__block .main .quote, #testimonials-list .testimonials__block .main .quote {
-              display: none; } }
-          #testimonials .testimonials__block .main .quote p, #testimonials-list .testimonials__block .main .quote p {
-            font-family: "Acumin Pro";
-            font-size: 110px;
-            font-weight: 700;
-            line-height: 1;
-            color: #4169e1;
-            margin: 0;
-            padding-right: 15px; }
-        #testimonials .testimonials__block .main .description, #testimonials-list .testimonials__block .main .description {
-          position: relative; }
-          #testimonials .testimonials__block .main .description h5, #testimonials-list .testimonials__block .main .description h5 {
-            margin-top: 0; }
-            @media only screen and (max-width: 520px), (orientation: portrait) {
-              #testimonials .testimonials__block .main .description h5, #testimonials-list .testimonials__block .main .description h5 {
-                padding-top: 25px; } }
-          #testimonials .testimonials__block .main .description p:first-child, #testimonials-list .testimonials__block .main .description p:first-child {
-            margin-top: 0; }
-          #testimonials .testimonials__block .main .description p:last-child, #testimonials-list .testimonials__block .main .description p:last-child {
-            margin-bottom: 0; }
-          #testimonials .testimonials__block .main .description::after, #testimonials-list .testimonials__block .main .description::after {
-            position: absolute;
-            content: '\2605\2605\2605\2605\2605';
-            top: -2px;
-            right: 0;
-            font-family: "Segoe UI Emoji";
-            font-size: 20px;
-            line-height: 1;
-            color: #ffb400; }
-            @media only screen and (max-width: 520px), (orientation: portrait) {
-              #testimonials .testimonials__block .main .description::after, #testimonials-list .testimonials__block .main .description::after {
-                left: 0; } }
-      #testimonials .testimonials__block .footer, #testimonials-list .testimonials__block .footer {
-        border-top: 1px solid #f0f0f0;
-        padding-top: 15px; }
-        #testimonials .testimonials__block .footer p, #testimonials-list .testimonials__block .footer p {
-          margin: 0; }
-        #testimonials .testimonials__block .footer .date p, #testimonials-list .testimonials__block .footer .date p {
-          color: #6a6a6a; }
-        #testimonials .testimonials__block .footer .name p, #testimonials-list .testimonials__block .footer .name p {
-          color: #4169e1; }
-      @media only screen and (max-width: 1320px), (orientation: portrait) {
-        #testimonials .testimonials__block, #testimonials-list .testimonials__block {
-          width: 80%;
-          margin: 0 auto; } }
-      @media only screen and (max-width: 680px), (orientation: portrait) {
-        #testimonials .testimonials__block, #testimonials-list .testimonials__block {
-          width: 100%; } }
+          #testimonials .testimonials__block .main .quote, #testimonials-list .testimonials__block .main .quote {
+            display: none; } }
+        #testimonials .testimonials__block .main .quote p, #testimonials-list .testimonials__block .main .quote p {
+          font-family: "Acumin Pro";
+          font-size: 110px;
+          font-weight: 700;
+          line-height: 1;
+          color: #4169e1;
+          margin: 0;
+          padding-right: 15px; }
+      #testimonials .testimonials__block .main .description, #testimonials-list .testimonials__block .main .description {
+        position: relative; }
+        #testimonials .testimonials__block .main .description h5, #testimonials-list .testimonials__block .main .description h5 {
+          margin-top: 0; }
+          @media only screen and (max-width: 520px), (orientation: portrait) {
+            #testimonials .testimonials__block .main .description h5, #testimonials-list .testimonials__block .main .description h5 {
+              padding-top: 25px; } }
+        #testimonials .testimonials__block .main .description p:first-child, #testimonials-list .testimonials__block .main .description p:first-child {
+          margin-top: 0; }
+        #testimonials .testimonials__block .main .description p:last-child, #testimonials-list .testimonials__block .main .description p:last-child {
+          margin-bottom: 0; }
+        #testimonials .testimonials__block .main .description::after, #testimonials-list .testimonials__block .main .description::after {
+          position: absolute;
+          content: '\2605\2605\2605\2605\2605';
+          top: -2px;
+          right: 0;
+          font-family: "Segoe UI Emoji";
+          font-size: 20px;
+          line-height: 1;
+          color: #ffb400; }
+          @media only screen and (max-width: 520px), (orientation: portrait) {
+            #testimonials .testimonials__block .main .description::after, #testimonials-list .testimonials__block .main .description::after {
+              left: 0; } }
+    #testimonials .testimonials__block .footer, #testimonials-list .testimonials__block .footer {
+      border-top: 1px solid #f0f0f0;
+      padding-top: 15px; }
+      #testimonials .testimonials__block .footer p, #testimonials-list .testimonials__block .footer p {
+        margin: 0; }
+      #testimonials .testimonials__block .footer .date p, #testimonials-list .testimonials__block .footer .date p {
+        color: #6a6a6a; }
+      #testimonials .testimonials__block .footer .name p, #testimonials-list .testimonials__block .footer .name p {
+        color: #4169e1; }
+    @media only screen and (max-width: 1320px), (orientation: portrait) {
+      #testimonials .testimonials__block, #testimonials-list .testimonials__block {
+        width: 80%;
+        margin: 0 auto; } }
+    @media only screen and (max-width: 680px), (orientation: portrait) {
+      #testimonials .testimonials__block, #testimonials-list .testimonials__block {
+        width: 100%; } }
 
-#testimonials-list {
-  background-color: #f0f0f0;
-  padding-top: 1px; }
-  #testimonials-list .testimonials {
-    position: relative;
-    padding: 30px 0 0; }
-    #testimonials-list .testimonials__block {
-      background: #fff;
-      border: 1px solid #e4e4e4;
-      padding: 40px 30px;
-      width: 49.5%;
-      margin-bottom: 10px; }
-      @media only screen and (max-width: 520px), (orientation: portrait) {
-        #testimonials-list .testimonials__block {
-          padding: 28px 30px 35px; } }
-      #testimonials-list .testimonials__block .main {
-        padding-bottom: 30px;
-        -ms-flex-wrap: nowrap;
-            flex-wrap: nowrap; }
-        #testimonials-list .testimonials__block .main .quote {
-          height: 0; }
-          @media only screen and (max-width: 680px), (orientation: portrait) {
-            #testimonials-list .testimonials__block .main .quote {
-              display: none; } }
-          #testimonials-list .testimonials__block .main .quote p {
-            font-family: "Acumin Pro";
-            font-size: 110px;
-            font-weight: 700;
-            line-height: 1;
-            color: #4169e1;
-            margin: 0;
-            padding-right: 15px; }
-        #testimonials-list .testimonials__block .main .description {
-          position: relative; }
-          #testimonials-list .testimonials__block .main .description h5 {
-            margin-top: 0; }
-            @media only screen and (max-width: 520px), (orientation: portrait) {
-              #testimonials-list .testimonials__block .main .description h5 {
-                padding-top: 25px; } }
-          #testimonials-list .testimonials__block .main .description p:first-child {
-            margin-top: 0; }
-          #testimonials-list .testimonials__block .main .description p:last-child {
-            margin-bottom: 0; }
-          #testimonials-list .testimonials__block .main .description::after {
-            position: absolute;
-            content: '\2605\2605\2605\2605\2605';
-            top: -2px;
-            right: 0;
-            font-family: "Segoe UI Emoji";
-            font-size: 20px;
-            line-height: 1;
-            color: #ffb400; }
-            @media only screen and (max-width: 520px), (orientation: portrait) {
-              #testimonials-list .testimonials__block .main .description::after {
-                left: 0; } }
-      #testimonials-list .testimonials__block .footer {
-        border-top: 1px solid #f0f0f0;
-        padding-top: 15px; }
-        #testimonials-list .testimonials__block .footer p {
-          margin: 0; }
-        #testimonials-list .testimonials__block .footer .date p {
-          color: #6a6a6a; }
-        #testimonials-list .testimonials__block .footer .name p {
-          color: #4169e1; }
-      @media only screen and (max-width: 1023px), (orientation: portrait) {
-        #testimonials-list .testimonials__block {
-          width: 80%;
-          margin: 0 auto; } }
-      @media only screen and (max-width: 680px), (orientation: portrait) {
-        #testimonials-list .testimonials__block {
-          width: 100%; } }
+#testimonials-list .testimonials {
+  position: relative; }
+  #testimonials-list .testimonials__block {
+    background: #fff;
+    border: 1px solid #e4e4e4;
+    padding: 40px 30px;
+    width: 49.5%;
+    margin-bottom: 10px; }
+    @media only screen and (max-width: 520px), (orientation: portrait) {
+      #testimonials-list .testimonials__block {
+        padding: 28px 30px 35px; } }
+    #testimonials-list .testimonials__block .main {
+      padding-bottom: 30px;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap; }
+      #testimonials-list .testimonials__block .main .quote {
+        height: 0; }
+        @media only screen and (max-width: 680px), (orientation: portrait) {
+          #testimonials-list .testimonials__block .main .quote {
+            display: none; } }
+        #testimonials-list .testimonials__block .main .quote p {
+          font-family: "Acumin Pro";
+          font-size: 110px;
+          font-weight: 700;
+          line-height: 1;
+          color: #4169e1;
+          margin: 0;
+          padding-right: 15px; }
+      #testimonials-list .testimonials__block .main .description {
+        position: relative; }
+        #testimonials-list .testimonials__block .main .description h5 {
+          margin-top: 0; }
+          @media only screen and (max-width: 520px), (orientation: portrait) {
+            #testimonials-list .testimonials__block .main .description h5 {
+              padding-top: 25px; } }
+        #testimonials-list .testimonials__block .main .description p:first-child {
+          margin-top: 0; }
+        #testimonials-list .testimonials__block .main .description p:last-child {
+          margin-bottom: 0; }
+        #testimonials-list .testimonials__block .main .description::after {
+          position: absolute;
+          content: '\2605\2605\2605\2605\2605';
+          top: -2px;
+          right: 0;
+          font-family: "Segoe UI Emoji";
+          font-size: 20px;
+          line-height: 1;
+          color: #ffb400; }
+          @media only screen and (max-width: 520px), (orientation: portrait) {
+            #testimonials-list .testimonials__block .main .description::after {
+              left: 0; } }
+    #testimonials-list .testimonials__block .footer {
+      border-top: 1px solid #f0f0f0;
+      padding-top: 15px; }
+      #testimonials-list .testimonials__block .footer p {
+        margin: 0; }
+      #testimonials-list .testimonials__block .footer .date p {
+        color: #6a6a6a; }
+      #testimonials-list .testimonials__block .footer .name p {
+        color: #4169e1; }
+    @media only screen and (max-width: 1023px), (orientation: portrait) {
+      #testimonials-list .testimonials__block {
+        width: 80%;
+        margin: 0 auto; } }
+    @media only screen and (max-width: 680px), (orientation: portrait) {
+      #testimonials-list .testimonials__block {
+        width: 100%; } }
 
 #kids {
   padding: 50px 0 55px; }
@@ -1904,7 +1899,6 @@ main {
 
 #news {
   position: relative;
-  padding: 45px 0 80px;
   overflow: hidden; }
   #news h2 {
     margin-bottom: 25px; }
@@ -2290,12 +2284,12 @@ main {
     padding: 30px 25px 40px; }
     .trains .train__description .text {
       padding-right: 25px; }
+    @media (min-width: 1281px) {
+      .trains .train__description img {
+        min-width: 285px; } }
     @media only screen and (max-width: 980px), (orientation: portrait) {
       .trains .train__description {
         padding-bottom: 20px; } }
-    @media only screen and (max-width: 680px), (orientation: portrait) {
-      .trains .train__description img {
-        max-width: 150px; } }
   .trains .train__schedule {
     margin-bottom: 25px; }
     .trains .train__schedule .stroke {
@@ -2379,37 +2373,9 @@ main {
       width: 100%; } }
 .trains #news {
   padding: 0; }
-  @media only screen and (max-width: 980px), (orientation: portrait) {
-    .trains #news.hidden {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex; } }
-  @media only screen and (max-width: 980px), (orientation: portrait) {
-    .trains #news {
-      -js-display: flex;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: horizontal;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: row;
-              flex-direction: row;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
-      -ms-flex-line-pack: justify;
-          align-content: space-between;
-      -webkit-box-align: stretch;
-          -ms-flex-align: stretch;
-              align-items: stretch;
-      -webkit-box-pack: justify;
-          -ms-flex-pack: justify;
-              justify-content: space-between;
-      display: none; } }
-  .trains #news .block img {
-    height: 300px; }
-    @media only screen and (max-width: 980px), (orientation: portrait) {
-      .trains #news .block img {
-        width: 100%; } }
+  .trains #news .container {
+    padding-left: 0 !important;
+    padding-right: 0 !important; }
 
 #about {
   background-image: url(../img/background_about.jpg);

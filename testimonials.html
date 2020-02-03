@@ -10,7 +10,9 @@
 
   <link rel="icon" href="resources/img/favicon.ico" type="image/x-icon" />
 
-  <link rel="stylesheet" href="resources/css/style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="resources/scss/style.css">
   <link rel="stylesheet" href="resources/assets/lightbox/dist/css/lightbox.min.css">
 
   <link rel="stylesheet" href="resources/assets/OwlCarousel/dist/assets/owl.carousel.min.css">
@@ -219,42 +221,40 @@
 </header>
 
 <main>
-  <section id="header" class="flexbox vertical-align inner">
-    <div class="content flexbox">
-      <div class="left">
-        <h1>Russian Visa<br> Invitations
-          </h1>
-
-        <p class="breadcrumbs">
-          <a href="/">Home</a> / <a href="visa.html">Russian visa</a>
-        </p>
+  <section id="header" class="header">
+    <div class="container">
+      <div class="row align-items-center">
+      <div class="col-lg-8 col-md-12 col-sm-12  mt-5 mt-lg-0 text-center text-lg-left">
+        <h1>about us</h1>
+          <p class="breadcrumbs mt-3 mt-lg-5">
+            <a href="/">Home</a>
+            </p>
       </div>
 
-      <div class="right">
-        <h2>Start planning</h2>
-
-        <form action="#">
+      <div class="col-lg-4 col-md-8 offset-md-2 offset-lg-0 col-sm-12 mt-3 mt-lg-5">
+        <form action="#" class="headerForm">
+          <h2>Start planning</h2>
           <div class="way">
             <input type="text" placeholder="Depatrture from">
           </div>
 
           <input type="text" placeholder="Arrival to">
 
-          <div class="right__colums flexbox">
-            <div class="half flexbox">
+          <div class="w-75 d-flex justify-content-between">
+            <div class="d-flex">
               <input id="one-way" name="way" type="radio">
               <label for="one-way">One way</label>
             </div>
 
-            <div class="half flexbox">
+            <div class="d-flex">
               <input id="return" name="way" type="radio" placeholder="Return">
               <label for=return>Return</label>
             </div>
           </div>
 
-          <div class="right__colums flexbox">
-            <input class="half" type="text" placeholder="Date">
-            <input class="half" type="text" placeholder="Return date" disabled>
+          <div class="d-flex">
+            <input class="mr-2" type="text" placeholder="Date">
+            <input type="text" placeholder="Return date" disabled>
           </div>
 
           <input type="text" placeholder="Passengers">
@@ -263,325 +263,235 @@
         </form>
       </div>
     </div>
-  </section>
-
-  <section id="testimonials-list">
-    <div class="content">
-        <div class="article__nav">
-          <ul>
-            <li>
-              <a href="testimonials.html"><p>Sapsan</p></a>
-            </li>
-            <li>
-              <a href="testimonials.html?tag=Red+Arrow"><p>Red Arrow</p></a>
-            </li>
-            <li>
-              <a href="testimonials.html?tag=Grand+Express"><p>Grand Express</p></a>
-            </li>
-            <li>
-              <a href="testimonials.html?tag=Lastochka"><p>Lastochka</p></a>
-            </li>
-            <li>
-                <a href="testimonials.html?tag=Trans-Siberian+Trains"><p>Trans-Siberian Trains</p></a>
-            </li>
-            <li>
-                <a href="testimonials.html?tag=Golden-Ring+Train"><p>Golden-Ring Train</p></a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="content">
-          <div class="testimonials flexbox">
-            <div class="testimonials__block">
-                <div class="main flexbox">
-                  <div class="quote">
-                    <p>“</p>
-                  </div>
-      
-                  <div class="description">
-                    <h5>Booking through your company</h5>
-      
-                    <p>Booking through your company made our life easier when organising such a complex trip from our
-                      perspective. Communication was excellent and to break the trip into four parts from Beijing/Ulaan
-                      Baatar/Urkutsk/Moscow/St Petersburg this was essential. We would recommend tour company.</p>
-                  </div>
-                </div>
-      
-                <div class="footer flexbox">
-                  <div class="date">
-                    <p>Published, Nov 05, 2019</p>
-                  </div>
-      
-                  <div class="name">
-                    <p>— Joseph Gontar, USA</p>
-                  </div>
-                </div>
-              </div>
-      
-              <div class="testimonials__block">
-                <div class="main flexbox">
-                  <div class="quote">
-                    <p>“</p>
-                  </div>
-      
-                  <div class="description">
-                    <h5>Booking through your company</h5>
-      
-                    <p>Booking through your company made our life easier when organising such a complex trip from our
-                      perspective. Communication was excellent and to break the trip into four parts from Beijing/Ulaan
-                      Baatar/Urkutsk/Moscow/St Petersburg this was essential. We would recommend tour company.</p>
-                  </div>
-                </div>
-      
-                <div class="footer flexbox">
-                  <div class="date">
-                    <p>Published, Nov 05, 2019</p>
-                  </div>
-      
-                  <div class="name">
-                    <p>— Joseph Gontar, USA</p>
-                  </div>
-                </div>
-              </div>
-      
-              <div class="testimonials__block">
-                <div class="main flexbox">
-                  <div class="quote">
-                    <p>“</p>
-                  </div>
-      
-                  <div class="description">
-                    <h5>Booking through your company</h5>
-      
-                    <p>Booking through your company made our life easier when organising such a complex trip from our
-                      perspective. Communication was excellent and to break the trip into four parts from Beijing/Ulaan
-                      Baatar/Urkutsk/Moscow/St Petersburg this was essential. We would recommend tour company.</p>
-                  </div>
-                </div>
-      
-                <div class="footer flexbox">
-                  <div class="date">
-                    <p>Published, Nov 05, 2019</p>
-                  </div>
-      
-                  <div class="name">
-                    <p>— Joseph Gontar, USA</p>
-                  </div>
-                </div>
-              </div>
-      
-              <div class="testimonials__block">
-                <div class="main flexbox">
-                  <div class="quote">
-                    <p>“</p>
-                  </div>
-      
-                  <div class="description">
-                    <h5>Booking through your company</h5>
-      
-                    <p>Booking through your company made our life easier when organising such a complex trip from our
-                      perspective. Communication was excellent and to break the trip into four parts from Beijing/Ulaan
-                      Baatar/Urkutsk/Moscow/St Petersburg this was essential. We would recommend tour company.</p>
-                  </div>
-                </div>
-      
-                <div class="footer flexbox">
-                  <div class="date">
-                    <p>Published, Nov 05, 2019</p>
-                  </div>
-      
-                  <div class="name">
-                    <p>— Joseph Gontar, USA</p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="testimonials__block">
-                <div class="main flexbox">
-                  <div class="quote">
-                    <p>“</p>
-                  </div>
-      
-                  <div class="description">
-                    <h5>Booking through your company</h5>
-      
-                    <p>Booking through your company made our life easier when organising such a complex trip from our
-                      perspective. Communication was excellent and to break the trip into four parts from Beijing/Ulaan
-                      Baatar/Urkutsk/Moscow/St Petersburg this was essential. We would recommend tour company.</p>
-                  </div>
-                </div>
-      
-                <div class="footer flexbox">
-                  <div class="date">
-                    <p>Published, Nov 05, 2019</p>
-                  </div>
-      
-                  <div class="name">
-                    <p>— Joseph Gontar, USA</p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="testimonials__block">
-                <div class="main flexbox">
-                  <div class="quote">
-                    <p>“</p>
-                  </div>
-      
-                  <div class="description">
-                    <h5>Booking through your company</h5>
-      
-                    <p>Booking through your company made our life easier when organising such a complex trip from our
-                      perspective. Communication was excellent and to break the trip into four parts from Beijing/Ulaan
-                      Baatar/Urkutsk/Moscow/St Petersburg this was essential. We would recommend tour company.</p>
-                  </div>
-                </div>
-      
-                <div class="footer flexbox">
-                  <div class="date">
-                    <p>Published, Nov 05, 2019</p>
-                  </div>
-      
-                  <div class="name">
-                    <p>— Joseph Gontar, USA</p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="testimonials__block">
-                <div class="main flexbox">
-                  <div class="quote">
-                    <p>“</p>
-                  </div>
-      
-                  <div class="description">
-                    <h5>Booking through your company</h5>
-      
-                    <p>Booking through your company made our life easier when organising such a complex trip from our
-                      perspective. Communication was excellent and to break the trip into four parts from Beijing/Ulaan
-                      Baatar/Urkutsk/Moscow/St Petersburg this was essential. We would recommend tour company.</p>
-                  </div>
-                </div>
-      
-                <div class="footer flexbox">
-                  <div class="date">
-                    <p>Published, Nov 05, 2019</p>
-                  </div>
-      
-                  <div class="name">
-                    <p>— Joseph Gontar, USA</p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="testimonials__block">
-                <div class="main flexbox">
-                  <div class="quote">
-                    <p>“</p>
-                  </div>
-      
-                  <div class="description">
-                    <h5>Booking through your company</h5>
-      
-                    <p>Booking through your company made our life easier when organising such a complex trip from our
-                      perspective. Communication was excellent and to break the trip into four parts from Beijing/Ulaan
-                      Baatar/Urkutsk/Moscow/St Petersburg this was essential. We would recommend tour company.</p>
-                  </div>
-                </div>
-      
-                <div class="footer flexbox">
-                  <div class="date">
-                    <p>Published, Nov 05, 2019</p>
-                  </div>
-      
-                  <div class="name">
-                    <p>— Joseph Gontar, USA</p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="testimonials__block">
-                <div class="main flexbox">
-                  <div class="quote">
-                    <p>“</p>
-                  </div>
-      
-                  <div class="description">
-                    <h5>Booking through your company</h5>
-      
-                    <p>Booking through your company made our life easier when organising such a complex trip from our
-                      perspective. Communication was excellent and to break the trip into four parts from Beijing/Ulaan
-                      Baatar/Urkutsk/Moscow/St Petersburg this was essential. We would recommend tour company.</p>
-                  </div>
-                </div>
-      
-                <div class="footer flexbox">
-                  <div class="date">
-                    <p>Published, Nov 05, 2019</p>
-                  </div>
-      
-                  <div class="name">
-                    <p>— Joseph Gontar, USA</p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="testimonials__block">
-                <div class="main flexbox">
-                  <div class="quote">
-                    <p>“</p>
-                  </div>
-      
-                  <div class="description">
-                    <h5>Booking through your company</h5>
-      
-                    <p>Booking through your company made our life easier when organising such a complex trip from our
-                      perspective. Communication was excellent and to break the trip into four parts from Beijing/Ulaan
-                      Baatar/Urkutsk/Moscow/St Petersburg this was essential. We would recommend tour company.</p>
-                  </div>
-                </div>
-      
-                <div class="footer flexbox">
-                  <div class="date">
-                    <p>Published, Nov 05, 2019</p>
-                  </div>
-      
-                  <div class="name">
-                    <p>— Joseph Gontar, USA</p>
-                  </div>
-                </div>
-              </div>
-          </div>
-      </div>
-
-  </section>
-
-
-
-
-
-  <section id="action" class="flexbox vertical-align">
-    <div class="content marginTop30">
-      <p>Once you have your tickets, look forward to a wonderful, smooth<br>
-        and enjoyable journey through the Russian countryside.</p>
-
-      <h3>Buy your ticket <span>safely and securely</span> and then sit back<br>
-        and <span>enjoy the ride!</span></h3>
-
-      <button>Get Started</button>
     </div>
   </section>
 
+  <section class="background-grey mb-n4">
+  <div class="container">
+    <div class="article__nav">
+      <ul>
+        <li>
+          <a href="testimonials.html"><p>Sapsan</p></a>
+        </li>
+        <li>
+          <a href="testimonials.html?tag=Red+Arrow"><p>Red Arrow</p></a>
+        </li>
+        <li>
+          <a href="testimonials.html?tag=Grand+Express"><p>Grand Express</p></a>
+        </li>
+        <li>
+          <a href="testimonials.html?tag=Lastochka"><p>Lastochka</p></a>
+        </li>
+        <li>
+            <a href="testimonials.html?tag=Trans-Siberian+Trains"><p>Trans-Siberian Trains</p></a>
+        </li>
+        <li>
+            <a href="testimonials.html?tag=Golden-Ring+Train"><p>Golden-Ring Train</p></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+  <section id="testimonials-list" class="background-grey">
+      <div class="container">
+          <div class="testimonials d-flex flex-wrap justify-content-between">
+
+            <div class="testimonials__block">
+              <div class="main d-flex">
+                <div class="quote">
+                  <p>“</p>
+                  </div>
+        
+                  <div class="description">
+                  <h5>Booking through your company</h5>
+        
+                  <p>Booking through your company made our life easier when organising such a complex trip from our
+                  perspective. Communication was excellent and to break the trip into four parts from Beijing/Ulaan
+                  Baatar/Urkutsk/Moscow/St Petersburg this was essential. We would recommend tour company.</p>
+                </div>
+              </div>
+    
+              <div class="footer d-flex justify-content-between">
+                <div class="date">
+                  <p>Published, Nov 05, 2019</p>
+                </div>
+    
+                <div class="name">
+                  <p>— Joseph Gontar, USA</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonials__block">
+              <div class="main d-flex">
+                <div class="quote">
+                  <p>“</p>
+                  </div>
+        
+                  <div class="description">
+                  <h5>Booking through your company</h5>
+        
+                  <p>Booking through your company made our life easier when organising such a complex trip from our
+                  perspective. Communication was excellent and to break the trip into four parts from Beijing/Ulaan
+                  Baatar/Urkutsk/Moscow/St Petersburg this was essential. We would recommend tour company.</p>
+                </div>
+              </div>
+    
+              <div class="footer d-flex justify-content-between">
+                <div class="date">
+                  <p>Published, Nov 05, 2019</p>
+                </div>
+    
+                <div class="name">
+                  <p>— Joseph Gontar, USA</p>
+                </div>
+              </div>
+            </div>
+            <div class="testimonials__block">
+              <div class="main d-flex">
+                <div class="quote">
+                  <p>“</p>
+                  </div>
+        
+                  <div class="description">
+                  <h5>Booking through your company</h5>
+        
+                  <p>Booking through your company made our life easier when organising such a complex trip from our
+                  perspective. Communication was excellent and to break the trip into four parts from Beijing/Ulaan
+                  Baatar/Urkutsk/Moscow/St Petersburg this was essential. We would recommend tour company.</p>
+                </div>
+              </div>
+    
+              <div class="footer d-flex justify-content-between">
+                <div class="date">
+                  <p>Published, Nov 05, 2019</p>
+                </div>
+    
+                <div class="name">
+                  <p>— Joseph Gontar, USA</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonials__block">
+              <div class="main d-flex">
+                <div class="quote">
+                  <p>“</p>
+                  </div>
+        
+                  <div class="description">
+                  <h5>Booking through your company</h5>
+        
+                  <p>Booking through your company made our life easier when organising such a complex trip from our
+                  perspective. Communication was excellent and to break the trip into four parts from Beijing/Ulaan
+                  Baatar/Urkutsk/Moscow/St Petersburg this was essential. We would recommend tour company.</p>
+                </div>
+              </div>
+    
+              <div class="footer d-flex justify-content-between">
+                <div class="date">
+                  <p>Published, Nov 05, 2019</p>
+                </div>
+    
+                <div class="name">
+                  <p>— Joseph Gontar, USA</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonials__block">
+              <div class="main d-flex">
+                <div class="quote">
+                  <p>“</p>
+                  </div>
+        
+                  <div class="description">
+                  <h5>Booking through your company</h5>
+        
+                  <p>Booking through your company made our life easier when organising such a complex trip from our
+                  perspective. Communication was excellent and to break the trip into four parts from Beijing/Ulaan
+                  Baatar/Urkutsk/Moscow/St Petersburg this was essential. We would recommend tour company.</p>
+                </div>
+              </div>
+    
+              <div class="footer d-flex justify-content-between">
+                <div class="date">
+                  <p>Published, Nov 05, 2019</p>
+                </div>
+    
+                <div class="name">
+                  <p>— Joseph Gontar, USA</p>
+                </div>
+              </div>
+            </div>
+            <div class="testimonials__block">
+              <div class="main d-flex">
+                <div class="quote">
+                  <p>“</p>
+                  </div>
+        
+                  <div class="description">
+                  <h5>Booking through your company</h5>
+        
+                  <p>Booking through your company made our life easier when organising such a complex trip from our
+                  perspective. Communication was excellent and to break the trip into four parts from Beijing/Ulaan
+                  Baatar/Urkutsk/Moscow/St Petersburg this was essential. We would recommend tour company.</p>
+                </div>
+              </div>
+    
+              <div class="footer d-flex justify-content-between">
+                <div class="date">
+                  <p>Published, Nov 05, 2019</p>
+                </div>
+    
+                <div class="name">
+                  <p>— Joseph Gontar, USA</p>
+                </div>
+              </div>
+            </div>
+      
+
+
+          <button class="mt-4 mx-auto">SHOW MORE</button>
+      </div>
+
+  </section>
+
+
+
+
+
+
+  <section id="action" class="d-flex align-items-center justify-content-center">
+    <div class="container">
+      <div class="row d-flex flex-column justify-content-center">
+        <div class="col-12">
+          <p>
+            Once you have your tickets, look forward to a wonderful, smooth<br>
+            and enjoyable journey through the Russian countryside.
+          </p>
+
+          <h3>
+            Buy your ticket <span> safely and securely</span> and then sit back<br>
+            and <span>enjoy the ride!</span>
+          </h3>
+          <button>Get Started</button>
+        </div>
+      </div>
+    </div>
+</section>
+
   <section id="recommended">
-    <div class="content marginTop30">
+    <div class="container">
       <h2>Recommended by</h2>
 
       <p>Our travel group under the names Express to Russia, Russian Rail and Trans-Europe Express has been recommended and/or accredited by:</p>
+      <div class="recommended d-flex flex-wrap justify-content-between align-items-center mt-5">
 
-      <div class="recommended flexbox">
         <div class="recommended__block">
           <script type="text/javascript" src="https://seal-newjersey.bbb.org/inc/legacy.js"></script>
-          <div class="tooltip" data-tooltip="Rating: A-">
+          <div data-toggle="tooltip" data-placement="top" title="Rating: A-">
             <a href="https://www.bbb.org/us/nj/montclair/profile/travel-agency/trans-europe-express-llc-0221-90196991/#sealclick" id="bbblink" class="rbhzbus" target="_blank" rel="nofollow">
               <img src="https://seal-newjersey.bbb.org/logo/rbhzbus/bbb-90196991.png" width="114" height="40"
                    style="border: 0;"
@@ -595,28 +505,27 @@
         </div>
 
         <div class="recommended__block">
-          <div class="tooltip" data-tooltip="Recommended for train ticket booking">
+          <div  data-toggle="tooltip" data-placement="top" title="Recommended for train ticket booking">
             <img src="resources/img/recommended/eyewitness.svg" alt="Eyewitness" width="120"
                  height="30">
           </div>
         </div>
 
         <div class="recommended__block">
-          <div class="tooltip" data-tooltip="Recommended for visa service">
+          <div  data-toggle="tooltip" data-placement="top" title="Recommended for visa service">
             <img src="resources/img/recommended/lonely_planet.svg" alt="Lonely Planet" width="120" height="60">
           </div>
         </div>
 
         <div class="recommended__block">
-          <div class="tooltip"
-               data-tooltip="Member of the American Society of Travel Advisors (ASTA) for over 12 years, ASTA ID 900277519">
+          <div  data-toggle="tooltip" data-placement="top" title="Member of the American Society of Travel Advisors (ASTA) for over 12 years, ASTA ID 900277519">
             <img src="resources/img/recommended/asta.png" alt="ASTA" width="62" height="62">
           </div>
         </div>
 
         <div class="recommended__block">
           <a href="https://www.trustpilot.com/review/russianrail.com" target="_blank">
-            <div class="tooltip" data-tooltip="Rated «Excellent» on the Trustpilot review platform">
+            <div  data-toggle="tooltip" data-placement="top" title="Rated «Excellent» on the Trustpilot review platform">
               <img src="resources/img/recommended/trustpilot.svg" alt="Trustpilot" width="80" height="62">
             </div>
           </a>
@@ -625,7 +534,7 @@
         <div class="recommended__block">
           <a href="https://www.tripadvisor.com/Attraction_Review-g298507-d3701481-Reviews-Express_to_Russia-St_Petersburg_Northwestern_District.html"
              target="_blank">
-            <div class="tooltip" data-tooltip="5 out of 5 stars">
+            <div  data-toggle="tooltip" data-placement="top" title="5 out of 5 stars">
               <img src="resources/img/recommended/tripadvisor.svg" alt="TripAdvisor" width="91" height="62">
             </div>
           </a>
@@ -633,14 +542,14 @@
 
         <div class="recommended__block">
           <a href="https://vk.cc/9W2ngf" target="_blank">
-            <div class="tooltip" data-tooltip="4.9 out of 5 stars">
+            <div  data-toggle="tooltip" data-placement="top" title="4.9 out of 5 stars">
               <img src="resources/img/recommended/google.png" alt="Google Reviews" width="120" height="49">
             </div>
           </a>
         </div>
 
         <div class="recommended__block">
-          <div class="tooltip" data-tooltip="Member of NTA">
+          <div  data-toggle="tooltip" data-placement="top" title="Member of NTA">
             <img src="resources/img/recommended/nta.svg" alt="NTA" width="120" height="34">
           </div>
         </div>
@@ -649,8 +558,8 @@
   </section>
 
   <section id="kids" class="inner">
-    <div class="content">
-      <div class="flexbox kids no-wrap align-middle flex-start">
+    <div class="container">
+      <div class="d-flex kids flex-nowrap align-items-center">
         <img src="resources/img/culture_for_kids.png" alt="Culture for Kids">
 
         <div class="kids__content">
@@ -667,79 +576,94 @@
 
   <footer>
     <div class="top">
-      <div class="content flexbox no-wrap">
-        <div class="contacts">
-          <div>
-            <p class="russia">7 812 570 4709, 7 812 570 6342</p>
-          </div>
+     <div class="container">
+       <div class="row">
+        <div class="col-lg-4 col-md-4">
+          <div class="contacts">
+            <div>
+              <p class="russia">7 812 570 4709, 7 812 570 6342</p>
+            </div>
 
-          <div class="flexbox no-wrap">
-            <p class="usa">1 888 960 0365</p>
+            <div class="d-flex flex-nowrap">
+              <p class="usa">1 888 960 0365</p>
 
-            <p class="uk">44 800 090 3365</p>
-          </div>
+              <p class="uk">44 800 090 3365</p>
+            </div>
 
-          <div>
-            <p class="au">61 2 8011 3021</p>
-          </div>
+            <div>
+              <p class="au">61 2 8011 3021</p>
+            </div>
 
-          <div>
-            <p class="mail"><a href="mailto:rail@russianrail.com">rail@russianrail.com</a></p>
-          </div>
-        </div>
-
-        <div class="kids">
-          <p>Join our Russian Travel, Culture and Literature Club on Facebook and share your experiences, stories, photos and advice.</p>
-
-          <button>Join the Club</button>
-        </div>
-
-        <div class="accept">
-          <p class="uppercase semibold">We accept:</p>
-
-          <div class="flexbox align-middle">
-            <img src="resources/img/footer_ico/cards.png" alt="Cards">
-
-            <img src="resources/img/footer_ico/ssl.png" alt="SSL">
-
-            <script type="text/javascript" src="https://seal-newjersey.bbb.org/inc/legacy.js"></script>
-            <a href="https://www.bbb.org/us/nj/montclair/profile/travel-agency/trans-europe-express-llc-0221-90196991/#sealclick" id="bbblink" class="ruvtbas" target="_blank" rel="nofollow">
-              <img src="https://seal-newjersey.bbb.org/logo/ruvtbas/bbb-90196991.png" style="border: 0;" alt="Trans-Europe Express LLC BBB Business Review" />
-            </a>
+            <div>
+              <p class="mail"><a href="mailto:rail@russianrail.com">rail@russianrail.com</a></p>
+            </div>
           </div>
         </div>
 
-        <div class="follows">
-          <p class="uppercase semibold">Follow us:</p>
+        <div class="col-lg-5 col-md-4">
+          <div class="join mb-lg-0 mb-md-5 mb-sm-3 mt-lg-0 mt-md-0  mt-sm-3">
+            <p>Join our Russian Travel, Culture and Literature Club on Facebook and share your experiences, stories, photos and advice.</p>
 
-          <div class="flexbox flex-start">
-            <a href="https://www.facebook.com/Express2Russia" target="_blank">
-              <img src="resources/img/footer_ico/facebook.svg" alt="Facebook">
-            </a>
-
-            <a href="https://www.instagram.com/russianrail/" target="_blank">
-              <img src="resources/img/footer_ico/instagram.svg" alt="Instagram">
-            </a>
+            <button class="pl-5 mt-3 position-relative">Join the Club</button>
           </div>
         </div>
+
+        <div class="col-lg-3 col-md-4">
+          <div class="accept d-flex flex-column justify-content-end">
+            <p> <strong>We accept:</strong> </p>
+
+            <div class="d-flex align-items-end">
+              <img class="align-self-center"  src="resources/img/footer_ico/cards.png" alt="Cards">
+
+              <img class="align-self-center" src="resources/img/footer_ico/ssl.png" alt="SSL">
+
+              <script type="text/javascript" src="https://seal-newjersey.bbb.org/inc/legacy.js"></script>
+              <a  href="https://www.bbb.org/us/nj/montclair/profile/travel-agency/trans-europe-express-llc-0221-90196991/#sealclick" id="bbblink" class="ruvtbas" target="_blank" rel="nofollow">
+                <img class="align-self-center" src="https://seal-newjersey.bbb.org/logo/ruvtbas/bbb-90196991.png" style="border: 0;" alt="Trans-Europe Express LLC BBB Business Review" />
+              </a>
+            </div>
+          </div>
+
+          <div class="follows mt-sm-2">
+            <p> <strong>Follow us:</strong></p>
+            <div class="d-flex">
+              <a href="https://www.facebook.com/Express2Russia" target="_blank">
+                <img src="resources/img/footer_ico/facebook.svg" alt="Facebook">
+              </a>
+
+              <a href="https://www.instagram.com/russianrail/" target="_blank">
+                <img src="resources/img/footer_ico/instagram.svg" alt="Instagram">
+              </a>
+            </div>
+          </div>
+
+        </div>
+
       </div>
+    </div>
     </div>
 
     <div class="bottom">
-      <div class="content flexbox">
-        <p>Copyrights © 2019 All Rights Reserved.</p>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4  col-sm-12">
+            <p>Copyrights © 2020 All Rights Reserved.</p>
+          </div>
 
-        <ul class="flexbox">
-          <li><a href="/about.html" target="_blank">About Us</a></li>
+          <div class="col-lg-8 col-sm-12">
+            <ul class="mt-lg-0 mt-sm-2 d-flex flex-wrap justify-content-lg-end justify-content-md-start justify-content-sm-start">
+              <li><a href="/about.html" target="_blank">About Us</a></li>
 
-          <li><a href="/russia_travel.html" target="_blank">Terms of Service</a></li>
+              <li><a href="/russia_travel.html" target="_blank">Terms of Service</a></li>
 
-          <li><a href="/payments.html" target="_blank">Payment Options</a></li>
+              <li><a href="/payments.html" target="_blank">Payment Options</a></li>
 
-          <li><a href="/russian-visa-questions.html" target="_blank">FAQs</a></li>
+              <li><a href="/russian-visa-questions.html" target="_blank">FAQs</a></li>
 
-          <li><a href="/contacts.html" target="_blank">Contact</a></li>
-        </ul>
+              <li><a href="/contacts.html" target="_blank">Contact</a></li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
     
@@ -748,37 +672,13 @@
 
 <div id="toTop"></div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="resources/assets/OwlCarousel/dist/owl.carousel.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 <script src="resources/js/nav.js"></script>
-<script src="resources/assets/lightbox/dist/js/lightbox.js"></script>
+<script src="resources/js/main.js"></script>
 
-<script>
-    $(window).scroll(function() {
-        if ($(this).scrollTop() > 100) {
-            if ($('#toTop').is(':hidden')) {
-                $('#toTop').css({opacity : 1}).fadeIn('slow');
-            }
-        } else { $('#toTop').stop(true, false).fadeOut('fast'); }
-    });
-    $('#toTop').click(function() {
-        $('html, body').stop().animate({scrollTop : 0}, 300);
-    });
-</script>
-<script>
-    $(function(){
-        // this will get the full URL at the address bar
-        var url = window.location.href; 
-  
-        // passes on every "a" tag 
-        $(".article__nav a").each(function() {
-                // checks if its the same on the address bar
-            if(url == (this.href)) { 
-                $(this).closest("li").addClass("active");
-            }
-        });
-    });	
-  </script>
 </body>
 
 </html>

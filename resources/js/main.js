@@ -25,7 +25,7 @@ $(document).ready(function() {
         }
     })
 
-    var owl = $('.testimonials');
+    var owl = $('.testimonials_1');
     owl.owlCarousel({
       margin: 10,
       nav: true,
@@ -74,7 +74,7 @@ $(document).ready(function() {
 
   })
 
-    var owl = $('.testimonials');
+    var owl = $('.testimonials_2');
     owl.owlCarousel({
         margin: 0,
         nav: false,
