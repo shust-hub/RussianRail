@@ -1,11 +1,5 @@
 
 .trains {
-  // @media only screen and (max-width: 980px), (orientation: portrait) {
-  //   .content {
-  //     flex-wrap: wrap;
-  //   }
-  // }
-
 
     .sidebar {
       ul {
@@ -101,7 +95,7 @@
 
           img {
             @media (min-width: 1281px) {
-              min-width: 285px;
+              max-width: 250px;
             }
           
           }
@@ -110,99 +104,6 @@
             padding-bottom: 20px;
           }
 
-        }
-
-        &__schedule {
-          .stroke {
-            background: lighten($lighter-gray-color, 2%);
-            border-bottom: 1px solid $dark-white-color;
-
-            &:first-child {
-              border-top: 1px solid $dark-white-color;
-            }
-
-            .bold {
-              margin-top: 10px;
-              margin-bottom: 0;
-            }
-
-            .name {
-              font-size: 12px;
-              line-height: 14px;
-
-              margin-top: 0;
-              margin-bottom: 10px;
-            }
-
-            .number {
-              @extend %border-box;
-
-              flex-grow: 0;
-
-              padding: 0 25px;
-
-              border-right: 1px dashed $dark-white-color;
-            }
-
-            .time {
-              @extend %border-box;
-
-              max-width: 180px;
-              width: 100%;
-
-              border-right: 1px dashed $dark-white-color;
-
-              padding: 0 25px;
-
-              @media only screen and (max-width: 680px), (orientation: portrait) {
-                max-width: 145px;
-              }
-            }
-
-            .from {
-              @extend %border-box;
-
-              flex-grow: 1;
-
-              position: relative;
-              min-width: 180px;
-
-              padding: 0 25px;
-
-              &::after {
-                @extend %position-absolute;
-
-                right: -50%;
-
-                width: 10px;
-                height: 13px;
-
-                background-image: url("../img/art_arrow.svg");
-
-                margin: auto;
-
-                @media only screen and (max-width: 1200px), (orientation: portrait) {
-                  right: -70%;
-                }
-
-                @media only screen and (max-width: 1200px), (orientation: portrait) {
-                  right: -85%;
-                }
-              }
-            }
-
-            .to {
-              @extend %border-box;
-
-              flex-grow: 1;
-
-              min-width: 180px;
-
-              padding: 0 25px;
-            }
-          }
-
-          margin-bottom: 25px;
         }
     }
 

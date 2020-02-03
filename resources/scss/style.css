@@ -85,7 +85,7 @@ hr {
           box-sizing: content-box;
   height: 0; }
 
-header .content .nav-trigger, header .content .nav-trigger span, header .content .nav-trigger span::before, header .content .nav-trigger span::after, .navigation li ul.subnav, .navigation .subnav-trigger::before, .navigation .subnav-trigger::after, .navigation .go-back a::before, .navigation .go-back a::after, #kids.inner .kids button::after, .trains .sidebar ul li.active::before, .trains .train__schedule .stroke .from::after, .trains .customer-reviews span::after, #trainPage .train__schedule .stroke .from::after {
+header .content .nav-trigger, header .content .nav-trigger span, header .content .nav-trigger span::before, header .content .nav-trigger span::after, .navigation li ul.subnav, .navigation .subnav-trigger::before, .navigation .subnav-trigger::after, .navigation .go-back a::before, .navigation .go-back a::after, #kids.inner .kids button::after, .trains .sidebar ul li.active::before, .trains .customer-reviews span::after, .list-group .list-group-item .from::after {
   position: absolute;
   content: '';
   top: 0;
@@ -93,7 +93,7 @@ header .content .nav-trigger, header .content .nav-trigger span, header .content
   left: 0;
   right: 0; }
 
-*, ::after, ::before, form input, form textarea, .block .description, #header .headerForm, #recommended .recommended__block a#bbblink div, #choose .content .choose__block, .navigation, .navigation__list, .navigation__list a, #destinations .destinations__block .description, #testimonials .testimonials__block, #testimonials-list .testimonials__block, #testimonials .testimonials__block .main .quote p, #testimonials-list .testimonials__block .main .quote p, #kids .kids__content, #news .news, #news .news__block .description, #articles .articles, #articles .articles__block .description, .trains .train__description .text, .trains .train__schedule .stroke .number, .trains .train__schedule .stroke .time, .trains .train__schedule .stroke .from, .trains .train__schedule .stroke .to, #about, #trainPage .train__description .text, #trainPage .train__schedule .stroke .number, #trainPage .train__schedule .stroke .time, #trainPage .train__schedule .stroke .from, #trainPage .train__schedule .stroke .to {
+*, ::after, ::before, form input, form textarea, .block .description, #header .headerForm, #recommended .recommended__block a#bbblink div, #choose .content .choose__block, .navigation, .navigation__list, .navigation__list a, #destinations .destinations__block .description, #testimonials .testimonials__block, #testimonials-list .testimonials__block, #testimonials .testimonials__block .main .quote p, #testimonials-list .testimonials__block .main .quote p, #kids .kids__content, #news .news, #news .news__block .description, #articles .articles, #articles .articles__block .description, .trains .train__description .text, #about, #trainPage .train__description .text, .list-group .list-group-item .from {
   -webkit-box-sizing: border-box;
   -ms-box-sizing: border-box;
   -o-box-sizing: border-box;
@@ -2286,64 +2286,10 @@ main {
       padding-right: 25px; }
     @media (min-width: 1281px) {
       .trains .train__description img {
-        min-width: 285px; } }
+        max-width: 250px; } }
     @media only screen and (max-width: 980px), (orientation: portrait) {
       .trains .train__description {
         padding-bottom: 20px; } }
-  .trains .train__schedule {
-    margin-bottom: 25px; }
-    .trains .train__schedule .stroke {
-      background: whitesmoke;
-      border-bottom: 1px solid #e4e4e4; }
-      .trains .train__schedule .stroke:first-child {
-        border-top: 1px solid #e4e4e4; }
-      .trains .train__schedule .stroke .bold {
-        margin-top: 10px;
-        margin-bottom: 0; }
-      .trains .train__schedule .stroke .name {
-        font-size: 12px;
-        line-height: 14px;
-        margin-top: 0;
-        margin-bottom: 10px; }
-      .trains .train__schedule .stroke .number {
-        -webkit-box-flex: 0;
-            -ms-flex-positive: 0;
-                flex-grow: 0;
-        padding: 0 25px;
-        border-right: 1px dashed #e4e4e4; }
-      .trains .train__schedule .stroke .time {
-        max-width: 180px;
-        width: 100%;
-        border-right: 1px dashed #e4e4e4;
-        padding: 0 25px; }
-        @media only screen and (max-width: 680px), (orientation: portrait) {
-          .trains .train__schedule .stroke .time {
-            max-width: 145px; } }
-      .trains .train__schedule .stroke .from {
-        -webkit-box-flex: 1;
-            -ms-flex-positive: 1;
-                flex-grow: 1;
-        position: relative;
-        min-width: 180px;
-        padding: 0 25px; }
-        .trains .train__schedule .stroke .from::after {
-          right: -50%;
-          width: 10px;
-          height: 13px;
-          background-image: url("../img/art_arrow.svg");
-          margin: auto; }
-          @media only screen and (max-width: 1200px), (orientation: portrait) {
-            .trains .train__schedule .stroke .from::after {
-              right: -70%; } }
-          @media only screen and (max-width: 1200px), (orientation: portrait) {
-            .trains .train__schedule .stroke .from::after {
-              right: -85%; } }
-      .trains .train__schedule .stroke .to {
-        -webkit-box-flex: 1;
-            -ms-flex-positive: 1;
-                flex-grow: 1;
-        min-width: 180px;
-        padding: 0 25px; }
 .trains .customer-reviews {
   background: #fff;
   border: 1px solid #e4e4e4;
@@ -2847,60 +2793,41 @@ input:checked ~ .tab-content {
     @media only screen and (max-width: 680px), (orientation: portrait) {
       #trainPage .train__description img {
         max-width: 150px; } }
-  #trainPage .train__schedule {
-    margin-bottom: 25px; }
-    #trainPage .train__schedule .stroke {
-      background: whitesmoke;
-      border-bottom: 1px solid #e4e4e4; }
-      #trainPage .train__schedule .stroke:first-child {
-        border-top: 1px solid #e4e4e4; }
-      #trainPage .train__schedule .stroke .bold {
-        margin-top: 10px;
-        margin-bottom: 0; }
-      #trainPage .train__schedule .stroke .name {
-        font-size: 12px;
-        line-height: 14px;
-        margin-top: 0;
-        margin-bottom: 10px; }
-      #trainPage .train__schedule .stroke .number {
-        -webkit-box-flex: 0;
-            -ms-flex-positive: 0;
-                flex-grow: 0;
-        padding: 0 25px;
-        border-right: 1px dashed #e4e4e4; }
-      #trainPage .train__schedule .stroke .time {
-        max-width: 180px;
-        width: 100%;
-        border-right: 1px dashed #e4e4e4;
-        padding: 0 25px; }
-        @media only screen and (max-width: 680px), (orientation: portrait) {
-          #trainPage .train__schedule .stroke .time {
-            max-width: 145px; } }
-      #trainPage .train__schedule .stroke .from {
-        -webkit-box-flex: 1;
-            -ms-flex-positive: 1;
-                flex-grow: 1;
-        position: relative;
-        min-width: 180px;
-        padding: 0 25px; }
-        #trainPage .train__schedule .stroke .from::after {
-          right: -50%;
-          width: 10px;
-          height: 13px;
-          background-image: url("../img/art_arrow.svg");
-          margin: auto; }
-          @media only screen and (max-width: 1200px), (orientation: portrait) {
-            #trainPage .train__schedule .stroke .from::after {
-              right: -70%; } }
-          @media only screen and (max-width: 1200px), (orientation: portrait) {
-            #trainPage .train__schedule .stroke .from::after {
-              right: -85%; } }
-      #trainPage .train__schedule .stroke .to {
-        -webkit-box-flex: 1;
-            -ms-flex-positive: 1;
-                flex-grow: 1;
-        min-width: 180px;
-        padding: 0 25px; }
+
+.list-group {
+  margin-bottom: 15px; }
+  .list-group .list-group-item {
+    background: whitesmoke;
+    border-bottom: 1px solid #e4e4e4;
+    border-left: none;
+    border-right: none;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 300; }
+    .list-group .list-group-item:first-child {
+      border-top: 1px solid #e4e4e4; }
+    .list-group .list-group-item .from {
+      -webkit-box-flex: 1;
+          -ms-flex-positive: 1;
+              flex-grow: 1;
+      position: relative;
+      min-width: 180px;
+      padding: 0 25px; }
+      .list-group .list-group-item .from::after {
+        right: -50%;
+        width: 10px;
+        height: 13px;
+        background-image: url("../img/art_arrow.svg");
+        margin: auto; }
+        @media only screen and (max-width: 1200px), (orientation: portrait) {
+          .list-group .list-group-item .from::after {
+            right: -70%; } }
+        @media only screen and (max-width: 1200px), (orientation: portrait) {
+          .list-group .list-group-item .from::after {
+            right: -85%; } }
+  .list-group .list-group-item-success {
+    color: #4169e1;
+    background: #f1f4fd; }
 
 #stations .stations .block {
   cursor: auto; }
