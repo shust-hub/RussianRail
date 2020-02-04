@@ -55,6 +55,12 @@
     border-bottom: 1px solid $dark-white-color;
     border-left: none;
     border-right: none;
+    color: $accent-color;
+    cursor: pointer;
+
+    table{
+      cursor: default;
+    }
 
     font-size: 14px;
     line-height: 20px;
@@ -66,26 +72,22 @@
 
         .from {
           @extend %border-box;
-
           flex-grow: 1;
-
           position: relative;
           min-width: 180px;
 
-          padding: 0 25px;
 
           &::after {
             @extend %position-absolute;
-
+            @media (min-width: 320px) and (max-width: 480px) {
+               display: none;
+            }
+            
             right: -50%;
-
             width: 10px;
             height: 13px;
-
             background-image: url("../img/art_arrow.svg");
-
             margin: auto;
-
             @media only screen and (max-width: 1200px), (orientation: portrait) {
               right: -70%;
             }

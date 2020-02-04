@@ -85,7 +85,7 @@ hr {
           box-sizing: content-box;
   height: 0; }
 
-header .content .nav-trigger, header .content .nav-trigger span, header .content .nav-trigger span::before, header .content .nav-trigger span::after, .navigation li ul.subnav, .navigation .subnav-trigger::before, .navigation .subnav-trigger::after, .navigation .go-back a::before, .navigation .go-back a::after, #kids.inner .kids button::after, .trains .sidebar ul li.active::before, .trains .customer-reviews span::after, .list-group .list-group-item .from::after {
+header .content .nav-trigger, header .content .nav-trigger span, header .content .nav-trigger span::before, header .content .nav-trigger span::after, .navigation li ul.subnav, .navigation .subnav-trigger::before, .navigation .subnav-trigger::after, .navigation .go-back a::before, .navigation .go-back a::after, #kids.inner .kids button::after, .trains .sidebar ul li.active::before, .customer-reviews span::after, .list-group .list-group-item .from::after {
   position: absolute;
   content: '';
   top: 0;
@@ -93,7 +93,7 @@ header .content .nav-trigger, header .content .nav-trigger span, header .content
   left: 0;
   right: 0; }
 
-*, ::after, ::before, form input, form textarea, .block .description, #header .headerForm, #recommended .recommended__block a#bbblink div, #choose .content .choose__block, .navigation, .navigation__list, .navigation__list a, #destinations .destinations__block .description, #testimonials .testimonials__block, #testimonials-list .testimonials__block, #testimonials .testimonials__block .main .quote p, #testimonials-list .testimonials__block .main .quote p, #kids .kids__content, #news .news, #news .news__block .description, #articles .articles, #articles .articles__block .description, .trains .train__description .text, #about, #trainPage .train__description .text, .list-group .list-group-item .from {
+*, ::after, ::before, form input, form textarea, .block .description, .horizontal-block, #header .headerForm, #recommended .recommended__block a#bbblink div, #choose .content .choose__block, .navigation, .navigation__list, .navigation__list a, #destinations .destinations__block .description, #testimonials .testimonials__block, #testimonials-list .testimonials__block, #testimonials .testimonials__block .main .quote p, #testimonials-list .testimonials__block .main .quote p, #kids .kids__content, #news .news, #news .news__block .description, #articles .articles, #articles .articles__block .description, #about, #trainPage .train__description .text, .list-group .list-group-item .from {
   -webkit-box-sizing: border-box;
   -ms-box-sizing: border-box;
   -o-box-sizing: border-box;
@@ -571,8 +571,6 @@ mark {
 
 .article__nav {
   width: 100%;
-  margin-top: 30px;
-  background-color: #f0f0f0;
   z-index: 23; }
   .article__nav ul {
     display: -webkit-box;
@@ -747,6 +745,46 @@ mark {
   @media (min-width: 320px) and (max-width: 1023px) {
     .block {
       margin-bottom: 10px; } }
+
+.horizontal-block {
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  margin-bottom: 15px;
+  background: #fff;
+  border: 1px solid #e4e4e4;
+  padding: 10px 10px; }
+  .horizontal-block a img {
+    -webkit-transition: all 0.3s ease-out, all 0.3s ease-out, auto;
+    transition: all 0.3s ease-out, all 0.3s ease-out, auto;
+    -o-object-fit: cover;
+       object-fit: cover;
+    height: 180px;
+    width: 100%; }
+  .horizontal-block a .description h3, .horizontal-block a .description h2 {
+    font-size: 16px;
+    line-height: 18px;
+    color: #000; }
+  .horizontal-block a .description p {
+    -webkit-transition: all 0.3s ease-out, all 0.3s ease-out, auto;
+    transition: all 0.3s ease-out, all 0.3s ease-out, auto;
+    position: relative;
+    margin-bottom: 0;
+    color: #000; }
+  .horizontal-block a .description .more::after {
+    position: absolute;
+    content: 'read more \2192';
+    font-family: "Segoe UI Emoji";
+    font-size: 16px;
+    color: #ad1e2f;
+    margin-left: 5px;
+    white-space: nowrap; }
+  .horizontal-block a:hover img {
+    opacity: .9; }
+  .horizontal-block a:hover .description h3, .horizontal-block a:hover .description h2 {
+    color: #ad1e2f; }
+  .horizontal-block a:hover .description p {
+    color: #000; }
 
 .background-grey {
   background-color: #f0f0f0; }
@@ -2217,111 +2255,73 @@ main {
       #articles .articles__block .description a {
         color: #000; }
 
-.trains .sidebar ul {
+.trains .sidebar {
   background: #fff;
   border: 1px solid #e4e4e4;
-  padding: 30px 25px 40px; }
-  @media only screen and (max-width: 980px), (orientation: portrait) {
-    .trains .sidebar ul {
-      -js-display: flex;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: horizontal;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: row;
-              flex-direction: row;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
-      -ms-flex-line-pack: start;
-          align-content: flex-start;
-      -webkit-box-align: start;
-          -ms-flex-align: start;
-              align-items: flex-start;
-      -webkit-box-pack: start;
-          -ms-flex-pack: start;
-              justify-content: flex-start;
-      padding: 25px 25px 20px;
-      margin-bottom: 20px; } }
-  .trains .sidebar ul h2 {
-    margin-bottom: 15px; }
-    @media only screen and (max-width: 980px), (orientation: portrait) {
-      .trains .sidebar ul h2 {
-        width: 100%; } }
-  .trains .sidebar ul li {
-    position: relative;
-    font-size: 14px;
-    padding-bottom: 12px; }
-    @media only screen and (max-width: 980px), (orientation: portrait) {
-      .trains .sidebar ul li {
-        padding-right: 26px; }
-        .trains .sidebar ul li::after {
-          position: absolute;
-          content: '\22EF';
-          top: 0;
-          right: 7px; }
-        .trains .sidebar ul li:last-child::after {
-          content: ''; } }
-    .trains .sidebar ul li.active {
-      padding-left: 16px; }
-      .trains .sidebar ul li.active a {
-        color: #000;
-        font-weight: 700;
-        pointer-events: none;
-        cursor: default; }
-      .trains .sidebar ul li.active::before {
-        top: 2px;
-        width: 10px;
-        height: 13px;
-        background-image: url("../img/art_arrow.svg"); }
-    .trains .sidebar ul li:last-child {
-      padding-bottom: 0; }
-.trains .train {
+  padding: 25px 25px 20px; }
+  .trains .sidebar ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-columns: 3;
+            columns: 3; }
+    .trains .sidebar ul h2 {
+      margin-bottom: 15px;
+      width: 100%; }
+    .trains .sidebar ul li {
+      position: relative;
+      font-size: 14px;
+      padding-bottom: 12px;
+      -moz-column-break-inside: avoid;
+      -webkit-column-break-inside: avoid;
+      column-break-inside: avoid; }
+      .trains .sidebar ul li.active {
+        padding-left: 16px; }
+        .trains .sidebar ul li.active a {
+          color: #000;
+          font-weight: 700;
+          pointer-events: none;
+          cursor: default; }
+        .trains .sidebar ul li.active::before {
+          top: 2px;
+          width: 10px;
+          height: 13px;
+          background-image: url("../img/art_arrow.svg"); }
+      .trains .sidebar ul li:last-child {
+        padding-bottom: 0; }
+.trains .train a h2 {
+  font-size: 32px;
+  margin-bottom: 15px; }
+.trains .train a img {
+  height: 270px; }
+
+.customer-reviews {
   background: #fff;
   border: 1px solid #e4e4e4;
-  margin-bottom: 20px; }
-  .trains .train__description {
-    padding: 30px 25px 40px; }
-    .trains .train__description .text {
-      padding-right: 25px; }
-    @media (min-width: 1281px) {
-      .trains .train__description img {
-        max-width: 250px; } }
-    @media only screen and (max-width: 980px), (orientation: portrait) {
-      .trains .train__description {
-        padding-bottom: 20px; } }
-.trains .customer-reviews {
-  background: #fff;
-  border: 1px solid #e4e4e4;
-  margin-top: 10px;
+  margin-top: 0;
   padding: 30px 25px; }
-  .trains .customer-reviews span {
+  .customer-reviews span {
     font-size: 20px;
     position: relative;
     color: transparent; }
-    .trains .customer-reviews span::after {
+    .customer-reviews span::after {
       content: '\2605\2605\2605\2605\2605\2605\2605\2605\2605';
       color: #ffb400;
       top: 6px;
       overflow: hidden; }
-    .trains .customer-reviews span.half-star::after {
+    .customer-reviews span.half-star::after {
       width: 9px;
       overflow: hidden; }
-    .trains .customer-reviews span.last-star {
+    .customer-reviews span.last-star {
       margin-left: -17px; }
-      .trains .customer-reviews span.last-star::after {
+      .customer-reviews span.last-star::after {
         content: '\2606';
         left: auto; }
-.trains #testimonials {
-  padding: 0; }
-  @media only screen and (max-width: 1320px), (orientation: portrait) {
-    .trains #testimonials .testimonials__block {
-      width: 100%; } }
-.trains #news {
-  padding: 0; }
-  .trains #news .container {
-    padding-left: 0 !important;
-    padding-right: 0 !important; }
+
+@media only screen and (max-width: 1320px), (orientation: portrait) {
+  #testimonials .testimonials__block {
+    width: 100%; } }
 
 #about {
   background-image: url(../img/background_about.jpg);
@@ -2801,9 +2801,13 @@ input:checked ~ .tab-content {
     border-bottom: 1px solid #e4e4e4;
     border-left: none;
     border-right: none;
+    color: #ad1e2f;
+    cursor: pointer;
     font-size: 14px;
     line-height: 20px;
     font-weight: 300; }
+    .list-group .list-group-item table {
+      cursor: default; }
     .list-group .list-group-item:first-child {
       border-top: 1px solid #e4e4e4; }
     .list-group .list-group-item .from {
@@ -2811,14 +2815,16 @@ input:checked ~ .tab-content {
           -ms-flex-positive: 1;
               flex-grow: 1;
       position: relative;
-      min-width: 180px;
-      padding: 0 25px; }
+      min-width: 180px; }
       .list-group .list-group-item .from::after {
         right: -50%;
         width: 10px;
         height: 13px;
         background-image: url("../img/art_arrow.svg");
         margin: auto; }
+        @media (min-width: 320px) and (max-width: 480px) {
+          .list-group .list-group-item .from::after {
+            display: none; } }
         @media only screen and (max-width: 1200px), (orientation: portrait) {
           .list-group .list-group-item .from::after {
             right: -70%; } }
@@ -2838,5 +2844,22 @@ input:checked ~ .tab-content {
     background-color: white; }
   #stations .stations .block:hover .description h3 {
     color: #000; }
+
+.tour-block {
+  position: relative; }
+  .tour-block .tour-price {
+    position: absolute;
+    right: 0px;
+    top: 20px;
+    border: none;
+    color: #fff;
+    text-align: center;
+    padding-top: 9px;
+    width: 170px;
+    height: 40px;
+    z-index: 99;
+    background-image: url("/resources/img/tours/price.png");
+    background-position: right;
+    background-repeat: no-repeat; }
 
 /*# sourceMappingURL=style.css.map */

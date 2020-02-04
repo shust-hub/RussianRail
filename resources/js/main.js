@@ -90,7 +90,40 @@ $(document).ready(function() {
                 items: 1
             }
         }
-    })
+    });
+
+    var owl = $('.articles_slider');
+    owl.owlCarousel({
+        margin: 15,
+        nav: false,
+        loop: true,
+        dots: true,
+        autoplay: true,
+        autoplayTimeout: 20000,
+        responsive: {
+            0: {
+                items: 1
+            },
+            981: {
+                items: 2
+            },
+            1320: {
+                items: 2
+            },
+            1321: {
+                items: 3
+            },
+            1920: {
+                items: 3
+            }
+        }
+    });
+
+
+    $('.show_timetable').click(function(){
+        $(this).next().slideToggle('slow');
+        
+        });
 
   $(window).scroll(function() {
     if ($(this).scrollTop() > 100) {

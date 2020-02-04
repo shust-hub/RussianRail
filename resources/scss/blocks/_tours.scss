@@ -1,0 +1,18 @@
+.tour-block{
+    position: relative;
+    .tour-price{
+        position: absolute;
+        right: 0px;
+        top: 20px;
+        border: none;
+        color: $white-color;
+        text-align: center;
+        padding-top: 9px;
+        width: 170px;
+        height: 40px;
+        z-index: 99;
+        background-image: url('/resources/img/tours/price.png'); 
+        background-position: right;  
+        background-repeat: no-repeat;
+    }
+}
