@@ -9,10 +9,10 @@ $(document).ready(function() {
 	$('.nav-trigger').on('click', function(event){
 		event.preventDefault();
 		if($('header').hasClass('nav-is-visible')) $('.moves-out').removeClass('moves-out');
-
 		$('header').toggleClass('nav-is-visible');
 		$('.navigation').toggleClass('nav-is-visible');
 		$('main').toggleClass('nav-is-visible');
+		$('.navigation li').removeClass('active');
 	});
 
 	//mobile version - go back to main navigation
@@ -31,6 +31,7 @@ $(document).ready(function() {
 			$(this).addClass('active');
 			$('.navigation').removeClass('moves-out');
 			$(this).parent().addClass('moves-out');
+
 		}
 	});
 

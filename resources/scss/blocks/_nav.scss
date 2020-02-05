@@ -27,9 +27,13 @@ header {
     z-index: 99;
 
     .content {
+
+    
+     
       .nav-trigger {
         span {
           background: rgba($white-color, 0);
+
 
           &::before {
             @include transform(translateY(0) rotate(-45deg));
@@ -142,7 +146,7 @@ header {
   .navigation {
     &.moves-out {
       @media only screen and (max-width: 1024px), (orientation: portrait) {
-        overflow-y: auto;
+        overflow-y: scroll;
       }
 
       li {
@@ -175,7 +179,7 @@ header {
 
               margin-top: 75px;
 
-              opacity: 1;
+              opacity: 0;
             }
 
             li {
@@ -204,6 +208,7 @@ header {
               }
 
               &.flexbox {
+                
                 ul {
                   @media only screen and (max-width: 860px), (orientation: portrait) {
                     width: 100%;
@@ -215,6 +220,7 @@ header {
                     width: 100%;
                     padding-right: 10px;
                     padding-top: 20px;
+                    
                   }
                 }
               }
@@ -322,20 +328,18 @@ main {
   @extend %border-box;
 
   align-content: flex-start;
-
   position: fixed;
-
   top: 75px;
   left: 0;
-
   width: 100vw;
-  height: 100vh;
+  height: calc(100vh - 55px);
 
 
-  // @media only screen and (max-width: 1024px), (orientation: portrait) {
-  //   position: absolute;
-  //   height: 210vh;
-  // }
+  @media only screen and (max-width: 1024px), (orientation: portrait) {
+    position: fixed;
+    // height: 99vh;
+    overflow-y: scroll!important;
+  }
 
   -webkit-overflow-scrolling: touch;
   visibility: hidden;
@@ -350,6 +354,7 @@ main {
 
       .content {
         padding-top: 20px;
+        background: $lighter-gray-color;
       }
 
       &.moves-out {
@@ -502,11 +507,11 @@ main {
         }
 
         @media only screen and (max-width: 680px), (orientation: portrait) {
-          padding: 28px 30px;
+          padding: 18px 30px;
         }
 
         @media only screen and (max-width: 520px), (orientation: portrait) {
-          padding: 28px 15px;
+          padding: 18px 15px;
         }
       }
     }
@@ -670,7 +675,8 @@ main {
 
   @media only screen and (max-width: 1024px), (orientation: portrait) {
     padding: 28px 50px;
-    overflow: hidden;
+    // overflow: hidden;
+    overflow-y: scroll
   }
 
   @media only screen and (max-width: 680px), (orientation: portrait) {

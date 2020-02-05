@@ -16,10 +16,10 @@ $(document).ready(function() {
             0: {
                 items: 1
             },
-            1320: {
+            768: {
                 items: 2
             },
-            1350: {
+            992: {
                 items: 3
             }
         }
@@ -97,7 +97,7 @@ $(document).ready(function() {
         margin: 15,
         nav: false,
         loop: true,
-        dots: true,
+        dots: false,
         autoplay: true,
         autoplayTimeout: 20000,
         responsive: {

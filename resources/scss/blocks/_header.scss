@@ -6,6 +6,12 @@
   background-position: 0 80%;
   color:  $white-color;
 
+  @media (min-width: 320px) and (max-width: 480px) {
+  
+    min-height:calc(100vh - 55px);
+    
+  }
+
   &.inner {
     background-image: url("../img/head.jpg");
     padding-top: 20px;
