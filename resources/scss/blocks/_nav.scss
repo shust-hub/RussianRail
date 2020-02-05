@@ -15,7 +15,7 @@ header {
 
   z-index: 3;
 
-  @media only screen and (max-width: 1024px), (orientation: portrait) {
+  @media only screen and (max-width: 1023px)  {
     .flex_end {
       justify-content: flex-start;
     }
@@ -46,7 +46,7 @@ header {
     display: none;
     content: 'desktop';
 
-    @media only screen and (max-width: 1024px), (orientation: portrait) {
+    @media only screen and (max-width: 1024px)  {
       content: 'mobile';
     }
   }
@@ -68,7 +68,7 @@ header {
     nav {
       width: 60%;
 
-      @media only screen and (max-width: 1180px), (orientation: portrait) {
+      @media only screen and (max-width: 1180px)  {
         width: 70%;
       }
     }
@@ -128,12 +128,12 @@ header {
         display: none;
       }
 
-      @media only screen and (max-width: 1023px), (orientation: portrait) {
+      @media only screen and (max-width: 1023px)  {
         right: 30px;
         display: block;
       }
 
-      @media only screen and (max-width: 520px), (orientation: portrait) {
+      @media only screen and (max-width: 520px)  {
         right: 15px;
       }
     }
@@ -141,7 +141,7 @@ header {
 
   .navigation {
     &.moves-out {
-      @media only screen and (max-width: 1024px), (orientation: portrait) {
+      @media only screen and (max-width: 1024px)  {
         overflow-y: auto;
       }
 
@@ -194,7 +194,7 @@ header {
 
                 padding-bottom: 0;
 
-                @media only screen and (max-width: 1024px), (orientation: portrait) {
+                @media only screen and (max-width: 1024px)  {
                   padding-bottom: 15px;
                 }
               }
@@ -205,16 +205,17 @@ header {
 
               &.flexbox {
                 ul {
-                  @media only screen and (max-width: 860px), (orientation: portrait) {
+                  @media only screen and (max-width: 860px)  {
                     width: 100%;
                   }
                 }
 
                 &.content {
-                  @media only screen and (max-width: 1024px), (orientation: portrait) {
+                  @media only screen and (max-width: 1023px)  {
                     width: 100%;
                     padding-right: 10px;
                     padding-top: 20px;
+                    padding-left: 10px;
                   }
                 }
               }
@@ -269,7 +270,7 @@ main {
       visibility: visible;
       overflow: visible;
 
-      @media only screen and (min-width: 1024px) {
+      @media only screen and (min-width: 1023px) {
         height: 75px;
       }
 
@@ -332,7 +333,7 @@ main {
   height: calc(100vh - 55px);
 
 
-  @media only screen and (max-width: 1023px), (orientation: portrait) {
+  @media only screen and (max-width: 1023px)  {
     overflow-y: scroll!important;
   }
 
@@ -343,7 +344,7 @@ main {
   overflow-x: hidden;
 
   &.nav-is-visible {
-    @media only screen and (max-width: 1024px), (orientation: portrait) {
+    @media only screen and (max-width: 1024px)  {
       visibility: visible;
       background: $white-color;
 
@@ -396,7 +397,7 @@ main {
 
     cursor: pointer;
 
-    @media only screen and (max-width: 1024px), (orientation: portrait) {
+    @media only screen and (max-width: 1024px)  {
       height: auto;
       padding: 0;
     }
@@ -454,12 +455,12 @@ main {
       ul {
         li {
           ul {
-            @media only screen and (max-width: 1024px), (orientation: portrait) {
+            @media only screen and (max-width: 1024px)  {
               margin-bottom: 15px;
             }
 
             li {
-              @media only screen and (max-width: 1024px), (orientation: portrait) {
+              @media only screen and (max-width: 1024px)  {
                 padding-bottom: 8px;
               }
             }
@@ -481,7 +482,7 @@ main {
 
       opacity: 0;
 
-      @media only screen and (max-width: 1024px), (orientation: portrait) {
+      @media only screen and (max-width: 1024px)  {
         @include transform(translateX(100%));
       }
 
@@ -500,11 +501,11 @@ main {
           text-align: left;
         }
 
-        @media only screen and (max-width: 680px), (orientation: portrait) {
+        @media only screen and (max-width: 680px)  {
           padding: 28px 30px;
         }
 
-        @media only screen and (max-width: 520px), (orientation: portrait) {
+        @media only screen and (max-width: 520px)  {
           padding: 28px 15px;
         }
       }
@@ -534,16 +535,16 @@ main {
     &.flexbox {
       width: 60%;
 
-      @media only screen and (max-width: 1180px), (orientation: portrait) {
+      @media only screen and (max-width: 1180px)  {
         width: 70%;
       }
 
-      @media only screen and (max-width: 1024px), (orientation: portrait) {
+      @media only screen and (max-width: 1023px)  {
         width: 100%;
       }
 
       li {
-        @media only screen and (max-width: 1024px), (orientation: portrait) {
+        @media only screen and (max-width: 1023px)  {
           margin-bottom: 8px;
           width: 100%;
         }
@@ -552,7 +553,7 @@ main {
   }
 
   .first-li {
-    @media only screen and (max-width: 1024px), (orientation: portrait) {
+    @media only screen and (max-width: 1024px)  {
       padding-bottom: 8px;
     }
   }
@@ -600,7 +601,7 @@ main {
     &::after {
       @include transform(rotate(-45deg));
 
-      @media only screen and (max-width: 1023px), (orientation: portrait) {
+      @media only screen and (max-width: 1023px)  {
         top: 10px;
       }
     }
@@ -667,16 +668,16 @@ main {
     visibility: visible;
   }
 
-  @media only screen and (max-width: 1023px), (orientation: portrait) {
+  @media only screen and (max-width: 1023px)  {
     padding: 28px 50px;
     overflow: hidden;
   }
 
-  @media only screen and (max-width: 680px), (orientation: portrait) {
+  @media only screen and (max-width: 680px)  {
     padding: 28px 30px;
   }
 
-  @media only screen and (max-width: 520px), (orientation: portrait) {
+  @media only screen and (max-width: 520px)  {
     padding: 28px 15px;
     
   }
