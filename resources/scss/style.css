@@ -1239,7 +1239,7 @@ header {
         right: 15px; } }
   @media only screen and (max-width: 1024px), (orientation: portrait) {
     header .navigation.moves-out {
-      overflow-y: scroll; } }
+      overflow-y: auto; } }
   @media only screen and (min-width: 1024px) {
     header .navigation.moves-out li.active .subnav-trigger::before, header .navigation.moves-out li.active .subnav-trigger::after {
       width: 14px;
@@ -1258,7 +1258,7 @@ header {
         transform: translateY(0);
         border-top: 1px solid #f0f0f0;
         margin-top: 75px;
-        opacity: 0; } }
+        opacity: 1; } }
     header .navigation.moves-out li.active ul.subnav li {
       padding: 3px 30px 3px 0; }
       header .navigation.moves-out li.active ul.subnav li:last-child {
@@ -1347,15 +1347,13 @@ main {
   overflow-x: hidden; }
   @media only screen and (max-width: 1024px), (orientation: portrait) {
     .navigation {
-      position: fixed;
       overflow-y: scroll !important; } }
   @media only screen and (max-width: 1024px), (orientation: portrait) {
     .navigation.nav-is-visible {
       visibility: visible;
       background: #f0f0f0; }
       .navigation.nav-is-visible .content {
-        padding-top: 20px;
-        background: #f0f0f0; }
+        padding-top: 20px; }
       .navigation.nav-is-visible.moves-out li a {
         -webkit-transform: translateX(-100%);
         transform: translateX(-100%);
@@ -1435,10 +1433,10 @@ main {
       text-align: left; }
     @media only screen and (max-width: 680px), (orientation: portrait) {
       .navigation li ul.subnav li {
-        padding: 18px 30px; } }
+        padding: 28px 30px; } }
     @media only screen and (max-width: 520px), (orientation: portrait) {
       .navigation li ul.subnav li {
-        padding: 18px 15px; } }
+        padding: 28px 15px; } }
   .navigation a {
     display: block;
     height: auto;
@@ -1544,7 +1542,7 @@ main {
   @media only screen and (max-width: 1024px), (orientation: portrait) {
     .navigation {
       padding: 28px 50px;
-      overflow-y: scroll; } }
+      overflow: hidden; } }
   @media only screen and (max-width: 680px), (orientation: portrait) {
     .navigation {
       padding: 28px 30px; } }
