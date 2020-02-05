@@ -21,6 +21,8 @@ header {
     }
   }
 
+
+
   &.nav-is-visible {
     z-index: 99;
 
@@ -329,6 +331,11 @@ main {
   width: 100vw;
   height: 100vh;
 
+
+  // @media only screen and (max-width: 1024px), (orientation: portrait) {
+  //   position: absolute;
+  //   height: 210vh;
+  // }
 
   -webkit-overflow-scrolling: touch;
   visibility: hidden;
