@@ -51,6 +51,7 @@ $(document).ready(function() {
 
 	function checkWindowWidth() {
 		var mq = window.getComputedStyle(document.querySelector('header'), '::before').getPropertyValue('content').replace(/"/g, '');
-		return ( mq == 'mobile' ) ? false : true;
+		// return ( mq == 'mobile' ) ? false : true;
+		return ( mq < 1204 ) ? false : true;
 	}
 });
