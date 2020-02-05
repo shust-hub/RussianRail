@@ -332,7 +332,7 @@ main {
   height: calc(100vh - 55px);
 
 
-  @media only screen and (max-width: 1024px), (orientation: portrait) {
+  @media only screen and (max-width: 1023px), (orientation: portrait) {
     overflow-y: scroll!important;
   }
 
@@ -345,7 +345,7 @@ main {
   &.nav-is-visible {
     @media only screen and (max-width: 1024px), (orientation: portrait) {
       visibility: visible;
-      background: $lighter-gray-color;
+      background: $white-color;
 
       .content {
         padding-top: 20px;
@@ -375,7 +375,7 @@ main {
         ul.subnav {
           @include transform(translateX(0));
 
-          background: $lighter-gray-color;
+          background: $white-color;
 
           opacity: 1;
 

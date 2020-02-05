@@ -1345,13 +1345,13 @@ main {
   visibility: hidden;
   z-index: 9;
   overflow-x: hidden; }
-  @media only screen and (max-width: 1024px), (orientation: portrait) {
+  @media only screen and (max-width: 1023px), (orientation: portrait) {
     .navigation {
       overflow-y: scroll !important; } }
   @media only screen and (max-width: 1024px), (orientation: portrait) {
     .navigation.nav-is-visible {
       visibility: visible;
-      background: #f0f0f0; }
+      background: #fff; }
       .navigation.nav-is-visible .content {
         padding-top: 20px; }
       .navigation.nav-is-visible.moves-out li a {
@@ -1365,7 +1365,7 @@ main {
       .navigation.nav-is-visible li.active ul.subnav {
         -webkit-transform: translateX(0);
         transform: translateX(0);
-        background: #f0f0f0;
+        background: #fff;
         opacity: 1; }
         .navigation.nav-is-visible li.active ul.subnav li ul {
           display: block; } }
