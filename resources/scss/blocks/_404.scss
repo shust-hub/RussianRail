@@ -1,0 +1,75 @@
+#p404{
+    .shadow404 {
+        font-size: 320px;
+        font-weight: bold;
+        color: $lighter-gray-color;
+    }
+
+    .text404{
+        position: absolute;
+        top: 50%;
+        margin-top: -130px;
+        left:38%;
+        font-size: 200px;
+        color: $accent-color;
+    }
+
+    /* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (max-width: 575.98px) { 
+    .shadow404 {
+        font-size: 165px;
+    }
+    .text404{
+        top: 50%;
+        margin-top: -71px;
+        left:50%;
+        margin-left: -107px;
+        font-size: 125px;
+    }
+ }
+
+    // Small devices (landscape phones, less than 768px)
+    @media (max-width: 767.98px) { 
+        .shadow404 {
+            font-size: 165px!important;
+            text-align: center;
+        }
+        .text404{
+            top: 50%;
+            margin-top: -71px;
+            left:50%;
+            margin-left: -107px;
+            font-size: 125px;
+        }
+    }
+
+    // Medium devices (tablets, less than 992px)
+    @media (max-width: 991.98px) { 
+        .shadow404 {
+            font-size: 165px!important;
+            text-align: center;
+        }
+        .text404{
+            top: 50%;
+            margin-top: -71px;
+            left:50%;
+            margin-left: -170px;
+            font-size: 125px;
+        }
+    }
+
+    // Large devices (desktops, less than 1200px)
+    @media (max-width: 1199.98px) {
+        .shadow404 {
+            font-size: 265px;
+        }
+        .text404{
+            left:50%;
+            margin-left: -115px;
+        }
+    }
+}

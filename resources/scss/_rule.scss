@@ -261,8 +261,6 @@ section{
 
 .listWithArrow li {
   position: relative;
-  font-size: 14px;
-  line-height: 20px;
   font-weight: 300;
   padding-left: 30px;
 }
@@ -280,8 +278,6 @@ section{
 
 .listWithCheck li {
   position: relative;
-  font-size: 14px;
-  line-height: 20px;
   font-weight: 300;
   padding-left: 30px;
 }
@@ -338,7 +334,7 @@ mark {
         height: 100%;
       }
       p{
-        font-size: 16px;
+        font-size: 14px;
         line-height: 18px;
         font-weight: bold;
       }
@@ -416,8 +412,11 @@ mark {
 }
 
 .feature-box{
-  background-color: $lighter-gray-color;
   display: flex;
+  p {
+    font-size: 14px;
+    line-height: 20px;
+  }
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
@@ -505,7 +504,7 @@ mark {
       content: '\2192';
 
       font-family: $symbol-font;
-      font-size: 16px;
+      font-size: 14px;
       color: $accent-color;
 
       margin-left: 5px;
@@ -569,7 +568,7 @@ mark {
         position: absolute;
         content: 'read more \2192';
         font-family: $symbol-font;
-        font-size: 16px;
+        font-size: 14px;
         color: $accent-color;
         margin-left: 5px;
         white-space: nowrap;
@@ -584,8 +583,8 @@ mark {
       .description {
   
         h3, h2 {
-          font-size: 16px;
-          line-height: 18px;
+          font-size: 18px;
+          line-height: 20px;
           color: $black-color;
         }
   
@@ -600,7 +599,7 @@ mark {
           position: absolute;
           content: 'read more \2192';
           font-family: $symbol-font;
-          font-size: 16px;
+          font-size: 14px;
           color: $accent-color;
           margin-left: 5px;
           white-space: nowrap;
@@ -650,11 +649,6 @@ mark {
   } 
 }
 
-.train-routes {
-  img{
-    
-  }
-}
 
 .background-grey{
   background-color: $lighter-gray-color;
