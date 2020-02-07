@@ -275,8 +275,9 @@ a { color: #ad1e2f; text-decoration: none; -webkit-transition: all 0.3s ease-out
 
 a:hover { color: #de4356; }
 
-#header { background-image: url("../img/head.jpg"); background-position: center; background-repeat: no-repeat; background-size: cover; background-position: 0 80%; color: #fff; }
+#header { background-image: url("../img/head.jpg"); background-position: center; background-repeat: no-repeat; background-size: cover; background-position: 0 80%; color: #fff; height: 55vh; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-transition: .5s linear; transition: .5s linear; }
 @media (min-width: 320px) and (max-width: 480px) { #header { min-height: calc(100vh - 55px); } }
+@media (min-width: 1024px) { #header.header-index.scroll { height: 100vh; -webkit-transition: .5s linear; transition: .5s linear; } }
 #header.inner { background-image: url("../img/head.jpg"); padding-top: 20px; }
 #header.transsib { background-image: url("../img/head_inner_sib.jpg"); }
 #header P { color: #fff; font-size: 24px; font-weight: bolder; display: inline-block; text-shadow: -1px 1px 0 rgba(0, 0, 0, 0.3), 1px 1px 0 rgba(0, 0, 0, 0.3), 1px -1px 0 rgba(0, 0, 0, 0.3), -1px -1px 0 rgba(0, 0, 0, 0.3); }
@@ -348,8 +349,9 @@ footer a#bbblink img { height: 42px !important; }
 footer a#bbblink.ruvtbas, footer a#bbblink.ruvtbus { width: 23px !important; height: 37px !important; margin-left: 10px; }
 footer a#bbblink.sevtbas:hover img, footer a#bbblink.rbvtbas:hover img, footer a#bbblink.ruvtbas:hover img, footer a#bbblink.sevtbus:hover img, footer a#bbblink.rbvtbus:hover img, footer a#bbblink.ruvtbus:hover img { margin-left: -23px !important; }
 
-header { -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); -ms-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); -o-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); position: fixed; top: 0; left: 0; height: 75px; width: 100vw; background: #fff; z-index: 3; }
+header { -webkit-transition: opacity 0.3s 0.2s, auto, -webkit-transform 0.3s 0.2s; transition: opacity 0.3s 0.2s, auto, -webkit-transform 0.3s 0.2s; transition: transform 0.3s 0.2s, opacity 0.3s 0.2s, auto; transition: transform 0.3s 0.2s, opacity 0.3s 0.2s, auto, -webkit-transform 0.3s 0.2s; -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); -ms-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); -o-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); position: fixed; top: 0; left: 0; height: 75px; width: 100vw; background: #fff; z-index: 3; }
 @media only screen and (max-width: 1023px) { header .flex_end { -webkit-box-pack: start; -ms-flex-pack: start; justify-content: flex-start; } }
+header nav { transition: transform 0.3s 0.2s, opacity 0.3s 0.2s, auto, -webkit-transform 0.3s 0.2s; }
 header.nav-is-visible { z-index: 99; }
 header.nav-is-visible .content .nav-trigger span { background: rgba(255, 255, 255, 0); }
 header.nav-is-visible .content .nav-trigger span::before { -webkit-transform: translateY(0) rotate(-45deg); transform: translateY(0) rotate(-45deg); }
@@ -359,7 +361,7 @@ header::before { display: none; content: 'desktop'; }
 header .content .logo { z-index: 9; }
 header .content .logo img { -webkit-transition: all 0.3s ease-out, all 0.3s ease-out, auto; transition: all 0.3s ease-out, all 0.3s ease-out, auto; width: 100px; }
 header .content .logo img:hover { opacity: .8; }
-header .content nav { width: 60%; }
+header .content nav { width: 60%; -webkit-transition: opacity 0.3s 0.2s, auto, -webkit-transform 0.3s 0.2s; transition: opacity 0.3s 0.2s, auto, -webkit-transform 0.3s 0.2s; transition: transform 0.3s 0.2s, opacity 0.3s 0.2s, auto; transition: transform 0.3s 0.2s, opacity 0.3s 0.2s, auto, -webkit-transform 0.3s 0.2s; }
 @media only screen and (max-width: 1180px) { header .content nav { width: 70%; } }
 header .content .nav-trigger { display: block; left: auto; right: 50px; width: 50px; height: 100%; overflow: hidden; white-space: nowrap; color: transparent; }
 header .content .nav-trigger span { -webkit-transition: background-color, 0.3s, auto; transition: background-color, 0.3s, auto; left: auto; top: 50%; width: 20px; height: 2px; background: #000; margin-left: -10px; }
@@ -374,7 +376,7 @@ header .content .nav-trigger span::after { -webkit-transform: translateY(6px); t
 header .navigation.moves-out li.active .subnav-trigger::before { -webkit-transform: rotate(225deg); transform: rotate(225deg); }
 header .navigation.moves-out li.active .subnav-trigger::after { -webkit-transform: rotate(135deg); transform: rotate(135deg); }
 header .navigation.moves-out li.active ul.subnav { bottom: auto; }
-@media only screen and (min-width: 1024px) { header .navigation.moves-out li.active ul.subnav { -webkit-transform: translateY(0); transform: translateY(0); border-top: 1px solid #f0f0f0; margin-top: 75px; opacity: 1; } }
+@media only screen and (min-width: 1024px) { header .navigation.moves-out li.active ul.subnav { border-top: 1px solid #f0f0f0; margin-top: 75px; opacity: 1; } }
 header .navigation.moves-out li.active ul.subnav li { padding: 3px 30px 3px 0; }
 header .navigation.moves-out li.active ul.subnav li:last-child { padding-right: 0; }
 header .navigation.moves-out li.active ul.subnav li a { padding-top: 0; }
@@ -394,6 +396,7 @@ main { position: relative; content: 'mobile'; min-height: 100vh; padding-top: 55
 @media only screen and (min-width: 1023px) { .no-js header .navigation { height: 75px; } }
 .no-js header .navigation__list { display: inline-block; }
 .no-js header .navigation li:last-child { display: block; }
+.no-js header .navigation li ul { -webkit-transition: opacity 0.3s 0.2s, auto, -webkit-transform 0.3s 0.2s; transition: opacity 0.3s 0.2s, auto, -webkit-transform 0.3s 0.2s; transition: transform 0.3s 0.2s, opacity 0.3s 0.2s, auto; transition: transform 0.3s 0.2s, opacity 0.3s 0.2s, auto, -webkit-transform 0.3s 0.2s; }
 .no-js header .navigation li ul.subnav { position: static; width: 100%; }
 @media only screen and (min-width: 1024px) { .no-js header .navigation li ul.subnav { top: 75px; } }
 .no-js header .navigation li ul li { opacity: 1; }
@@ -404,6 +407,7 @@ main { position: relative; content: 'mobile'; min-height: 100vh; padding-top: 55
 
 .navigation { -ms-flex-line-pack: start; align-content: flex-start; position: fixed; top: 75px; left: 0; width: 100vw; height: calc(100vh - 55px); -webkit-overflow-scrolling: touch; visibility: hidden; z-index: 9; overflow-x: hidden; }
 @media only screen and (max-width: 1023px) { .navigation { overflow-y: scroll !important; } }
+.navigation.nav-is-visible { -webkit-transition: opacity 0.3s 0.2s, auto, -webkit-transform 0.3s 0.2s; transition: opacity 0.3s 0.2s, auto, -webkit-transform 0.3s 0.2s; transition: transform 0.3s 0.2s, opacity 0.3s 0.2s, auto; transition: transform 0.3s 0.2s, opacity 0.3s 0.2s, auto, -webkit-transform 0.3s 0.2s; }
 @media only screen and (max-width: 1024px) { .navigation.nav-is-visible { visibility: visible; background: #fff; }
   .navigation.nav-is-visible .content { padding-top: 20px; }
   .navigation.nav-is-visible.moves-out li a { -webkit-transform: translateX(-100%); transform: translateX(-100%); opacity: 0; }
@@ -422,7 +426,6 @@ main { position: relative; content: 'mobile'; min-height: 100vh; padding-top: 55
 @media only screen and (max-width: 1024px) { .navigation li.flexbox ul li ul li { padding-bottom: 8px; } }
 .navigation li ul.subnav { -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); -ms-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); -o-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); -webkit-transition: opacity 0.3s 0.2s, auto, -webkit-transform 0.3s 0.2s; transition: opacity 0.3s 0.2s, auto, -webkit-transform 0.3s 0.2s; transition: transform 0.3s 0.2s, opacity 0.3s 0.2s, auto; transition: transform 0.3s 0.2s, opacity 0.3s 0.2s, auto, -webkit-transform 0.3s 0.2s; width: 100%; background: #fff; padding: 28px 0; opacity: 0; }
 @media only screen and (max-width: 1024px) { .navigation li ul.subnav { -webkit-transform: translateX(100%); transform: translateX(100%); } }
-@media only screen and (min-width: 1024px) { .navigation li ul.subnav { -webkit-transform: translateY(-1500px); transform: translateY(-1500px); } }
 @media only screen and (min-width: 1024px) { .navigation li ul.subnav li { opacity: 0; } }
 .navigation li ul.subnav li ul { display: none; text-align: left; }
 @media only screen and (max-width: 680px) { .navigation li ul.subnav li { padding: 28px 30px; } }

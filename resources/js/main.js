@@ -1,3 +1,13 @@
+$(window).scroll(function() {    
+    var scroll = $(window).scrollTop();    
+    if (scroll <= 5)  {
+        $('.header-index').addClass('scroll');
+        }
+        else {
+        $('.header-index').removeClass('scroll');
+        }
+});
+
 $(document).ready(function() {
 
     $(function () {

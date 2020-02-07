@@ -1,4 +1,7 @@
 header {
+
+  transition: transform 0.3s 0.2s, opacity 0.3s 0.2s, auto;
+
   @include shadow(0 1px 2px rgba($black-color, .2));
 
   @extend %font-smoothing;
@@ -21,6 +24,9 @@ header {
     }
   }
 
+nav{
+  transition: transform 0.3s 0.2s, opacity 0.3s 0.2s, auto, -webkit-transform 0.3s 0.2s;
+  }
 
 
   &.nav-is-visible {
@@ -67,6 +73,8 @@ header {
 
     nav {
       width: 60%;
+
+      @include transition(transform .3s .2s, opacity .3s .2s);
 
       @media only screen and (max-width: 1180px)  {
         width: 70%;
@@ -169,7 +177,7 @@ header {
             bottom: auto;
 
             @media only screen and (min-width: 1024px) {
-              @include transform(translateY(0));
+              // @include transform(translateY(0));
 
               border-top: 1px solid $lighter-gray-color;
 
@@ -284,6 +292,7 @@ main {
         }
 
         ul {
+          transition: transform 0.3s 0.2s, opacity 0.3s 0.2s, auto;
           &.subnav {
             position: static;
             width: 100%;
@@ -344,6 +353,7 @@ main {
   overflow-x: hidden;
 
   &.nav-is-visible {
+    @include transition(transform .3s .2s, opacity .3s .2s);
     @media only screen and (max-width: 1024px)  {
       visibility: visible;
       background: $white-color;
@@ -487,7 +497,7 @@ main {
       }
 
       @media only screen and (min-width: 1024px) {
-        @include transform(translateY(-1500px));
+        // @include transform(translateY(-1500px));
       }
 
       li {

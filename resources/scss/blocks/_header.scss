@@ -5,11 +5,23 @@
   background-size: cover;
   background-position: 0 80%;
   color:  $white-color;
+  height: 55vh;
+  display: flex;
+  align-items: center;
+
+  transition: .5s linear;
 
   @media (min-width: 320px) and (max-width: 480px) {
   
     min-height:calc(100vh - 55px);
     
+  }
+
+  &.header-index.scroll {
+    @media (min-width: 1024px){
+      height: 100vh;
+      transition:  .5s linear;
+    }
   }
 
   &.inner {
