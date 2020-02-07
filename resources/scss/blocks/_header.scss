@@ -5,7 +5,6 @@
   background-size: cover;
   background-position: 0 80%;
   color:  $white-color;
-  height: 55vh;
   display: flex;
   align-items: center;
 
@@ -17,11 +16,14 @@
     
   }
 
+  &.header-index{
+    max-height: 200vh;
+    height: 75vh;
+  }
+
   &.header-index.scroll {
-    @media (min-width: 1024px){
-      height: 100vh;
+      height: calc(100vh - 55px);
       transition:  .5s linear;
-    }
   }
 
   &.inner {

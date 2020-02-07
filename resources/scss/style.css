@@ -275,9 +275,10 @@ a { color: #ad1e2f; text-decoration: none; -webkit-transition: all 0.3s ease-out
 
 a:hover { color: #de4356; }
 
-#header { background-image: url("../img/head.jpg"); background-position: center; background-repeat: no-repeat; background-size: cover; background-position: 0 80%; color: #fff; height: 55vh; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-transition: .5s linear; transition: .5s linear; }
+#header { background-image: url("../img/head.jpg"); background-position: center; background-repeat: no-repeat; background-size: cover; background-position: 0 80%; color: #fff; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-transition: .5s linear; transition: .5s linear; }
 @media (min-width: 320px) and (max-width: 480px) { #header { min-height: calc(100vh - 55px); } }
-@media (min-width: 1024px) { #header.header-index.scroll { height: 100vh; -webkit-transition: .5s linear; transition: .5s linear; } }
+#header.header-index { max-height: 200vh; height: 75vh; }
+#header.header-index.scroll { height: calc(100vh - 55px); -webkit-transition: .5s linear; transition: .5s linear; }
 #header.inner { background-image: url("../img/head.jpg"); padding-top: 20px; }
 #header.transsib { background-image: url("../img/head_inner_sib.jpg"); }
 #header P { color: #fff; font-size: 24px; font-weight: bolder; display: inline-block; text-shadow: -1px 1px 0 rgba(0, 0, 0, 0.3), 1px 1px 0 rgba(0, 0, 0, 0.3), 1px -1px 0 rgba(0, 0, 0, 0.3), -1px -1px 0 rgba(0, 0, 0, 0.3); }
