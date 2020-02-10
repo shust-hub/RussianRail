@@ -1,0 +1,152 @@
+@import url("https://use.fontawesome.com/releases/v5.8.1/css/all.css");
+.faqs {
+    @extend %deafult-font;
+    margin-top: 30px;
+}
+.toggle {
+    display:block;
+    position:relative;
+    margin:0 0 20px 0;
+}
+.toggle .togglet, .toggle .toggleta{
+    display:block;
+    position:relative;
+    line-height:24px;
+    padding:0 0 0 24px;
+    margin:0;
+    font-size:16px;
+    font-weight:600;
+    color:#444;
+    cursor:pointer;
+}
+.toggle .togglet i{
+    position:absolute;
+    top:0;
+    left:0;
+    width:16px;
+    text-align:center;
+    font-size:16px;
+    line-height:24px
+}
+.toggle .toggleta{
+    color: $accent-color;
+    position: relative;
+}.toggle 
+.togglet i.toggle-open,.toggle .toggleta i.toggle-closed{
+    // display:none;
+    &:after {
+        font-family: "Font Awesome 5 Free"; 
+        content: "\f054";
+        font-style: normal;
+      }
+}.toggle .toggleta i.toggle-open{
+    display:block;
+    &:after {
+        content: "\f078";
+        font-family: 'Font Awesome 5 Free';
+        font-size: 1rem;
+        color: $accent-color;
+        font-style: normal;
+      }
+}
+.toggle .togglec{
+    display:block;
+    position:relative;
+    padding:10px 0 0 24px;
+}
+.toggle.toggle-bg .togglet,
+.toggle.toggle-bg .toggleta{
+    background-color:#EEE;
+    line-height:44px;padding:0 0 0 36px;
+    border-radius:2px}
+    .toggle.toggle-bg .togglet i{
+        left:14px;line-height:44px;
+    }
+    .toggle.toggle-bg .togglec{
+        padding:12px 0 0 36px;
+    }
+    .toggle.toggle-border{
+        border:1px solid #CCC;
+        border-radius:4px;
+    }
+    .toggle.toggle-border .togglet,.toggle.toggle-border .toggleta{
+        line-height:44px;
+        padding:0 15px 0 36px;
+    }
+    .toggle.toggle-border .togglet i{
+        left:14px;line-height:44px;
+    }
+    .toggle.toggle-border .togglec{
+        padding:0 15px 15px 36px;
+    }
+    .faqs .toggle{
+        border-bottom:1px solid #EEE;
+        padding-bottom:12px;margin-bottom:12px;
+    }
+    .faqs .toggle .togglet,.faqs .toggle .toggleta{
+        font-size:15px
+    }
+    .faqs .toggle .togglet i{
+        top:1px;font-size:14px;
+    }
+    .faqs .toggle .togglec{
+        padding-bottom:10px;
+    }
+    .accordion{
+        margin-bottom:20px;
+    }
+    .acctitle{
+        display:block;
+        position:relative;
+        line-height:24px;
+        margin:0;
+        font-size:14px;
+        font-weight:bold;
+        color:#444;
+        cursor:pointer;
+        border-top:1px dotted #DDD;
+        padding:10px 0 10px 20px
+    }
+    .acctitlec{
+        cursor:auto
+    }
+    .acctitle:first-child{
+        border-top:0
+    }
+    .acctitle i{
+        position:absolute;
+        top:0;left:0;width:14px;
+        text-align:center;
+        font-size:14px;line-height:44px
+    }
+    .acctitle i.acc-open,.acctitlec i.acc-closed{
+        display:none
+    }
+    .acctitlec i.acc-open{
+        display:block
+    }
+    .acc_content{
+        position:relative;
+        padding:0 0 15px 20px;}
+        .accordion.accordion-bg .acctitle,.accordion.accordion-bg .acctitlec{
+            background-color:#EEE;line-height:44px;
+            padding:0 0 0 36px;
+            margin-bottom:5px;border-top:0;}
+    .accordion.accordion-bg .acctitle i{
+        left:14px;line-height:44px;
+    }
+    .accordion.accordion-bg .acc_content{
+        padding:10px 0 15px 36px;
+    }
+    .accordion.accordion-border{
+        border:1px solid #DDD;
+        border-radius:4px;
+    }
+    .accordion.accordion-border .acctitle,.accordion.accordion-border .acctitlec{
+        border-color:#CCC;line-height:44px;padding:0 15px 0 36px;}
+    .accordion.accordion-border .acctitle i{
+        left:14px;line-height:44px;
+    }
+    .accordion.accordion-border .acc_content{
+        padding:0 15px 15px 36px;
+    }

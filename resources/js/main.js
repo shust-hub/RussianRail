@@ -10,6 +10,8 @@ $(window).scroll(function() {
 
 $(document).ready(function() {
 
+    $("*").removeClass('clearfix');
+
     $(function () {
       $('[data-toggle="tooltip"]').tooltip()
     })
@@ -133,7 +135,42 @@ $(document).ready(function() {
     $('.show_timetable').click(function(){
         $(this).next().slideToggle('slow');
         
+    });
+
+
+    $(function(){
+        V=$(this).attr("data-state");
+        if(V!="open"){
+            $(this).find(".togglec").hide();
+            $(this).find(".toggle-closed").hide();
+        }else{
+            $(this).find(".togglet").addClass("toggleta");
+            
+        }
+        $(this).find(".togglet").click(function(){
+            $(this).toggleClass("toggleta").next(".togglec").slideToggle(300);
+            return true
         });
+    });
+
+
+
+        // function(){
+        //     var T=C(".toggle");
+        //     if(T.length>0){
+        //         T.each(function(){
+        //             var U=C(this),
+        //             V=U.attr("data-state");
+        //             if(V!="open"){
+        //                 U.find(".togglec").hide()
+        //             }else{
+        //                 U.find(".togglet").addClass("toggleta")
+        //             }
+        //             U.find(".togglet").click(function(){
+        //                 C(this).toggleClass("toggleta").next(".togglec").slideToggle(300);return true}
+        //                 )})}}
+        // accordions:function(){
+        //     var T=C(".accordion");if(T.length>0){T.each(function(){var U=C(this),W=U.attr("data-state"),V=U.attr("data-active");if(!V){V=0}else{V=V-1}U.find(".acc_content").hide();if(W!="closed"){U.find(".acctitle:eq("+Number(V)+")").addClass("acctitlec").next().show()}U.find(".acctitle").click(function(){if(C(this).next().is(":hidden")){U.find(".acctitle").removeClass("acctitlec").next().slideUp("normal");C(this).toggleClass("acctitlec").next().slideDown("normal")}return false})})}}
 
   $(window).scroll(function() {
     if ($(this).scrollTop() > 100) {
@@ -145,3 +182,5 @@ $(document).ready(function() {
 $('#toTop').click(function() {
     $('html, body').stop().animate({scrollTop : 0}, 300);
 });
+
+
