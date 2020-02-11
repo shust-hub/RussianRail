@@ -10,7 +10,10 @@ $(window).scroll(function() {
 
 $(document).ready(function() {
 
-    $("*").removeClass('clearfix');
+    $("*"
+    
+    
+    ).removeClass('clearfix');
 
     $(function () {
       $('[data-toggle="tooltip"]').tooltip()
