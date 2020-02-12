@@ -11,8 +11,7 @@ $(window).scroll(function() {
 $(document).ready(function() {
 
     $('.header-index').addClass('scroll'); 
-    $("*").removeClass('clearfix');
-
+    
     $(function () {
       $('[data-toggle="tooltip"]').tooltip()
     })
