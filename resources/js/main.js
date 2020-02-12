@@ -1,5 +1,5 @@
 $(window).scroll(function() {    
-    var scroll = $(window).scrollTop();    
+    var scroll = $(window).scrollTop();   
     if (scroll <= 5)  {
         $('.header-index').addClass('scroll');
         }
@@ -10,10 +10,8 @@ $(window).scroll(function() {
 
 $(document).ready(function() {
 
-    $("*"
-    
-    
-    ).removeClass('clearfix');
+    $('.header-index').addClass('scroll'); 
+    $("*").removeClass('clearfix');
 
     $(function () {
       $('[data-toggle="tooltip"]').tooltip()
