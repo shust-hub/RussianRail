@@ -4,6 +4,7 @@
     
         img {
         @include transition();
+        max-height: 250px;
     
         &:hover {
             opacity: .8;
