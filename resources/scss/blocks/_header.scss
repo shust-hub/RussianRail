@@ -57,6 +57,13 @@
         color: darken($white-color, 20%);
       }
     }
+
+    a:not(:last-child):after {
+      content: "/";
+      margin-left: 9px;
+    }
+
+
   }
 
   h1, h4 {
