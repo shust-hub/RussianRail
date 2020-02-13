@@ -255,6 +255,8 @@ mark { background-color: rgba(0, 0, 0, 0.5); color: white; padding: 0 5px; }
 
 .alert-info { background-color: #dfe7ff; padding: 20px 30px; margin-bottom: 30px; }
 
+.breadcrumbs a:after { content: "/\00a0"; }
+
 body { font-family: "Open Sans", sans-serif; font-size: 100%; line-height: 1.3; color: #171717; }
 
 h1 { font-family: "Acumin Pro"; font-size: 60px; font-weight: 700; line-height: 1; }
