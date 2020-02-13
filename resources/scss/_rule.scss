@@ -404,10 +404,13 @@ mark {
   }
 }
 
+
 .mapRoute{
   margin-top: 20px;
   img{
       width: 100%;
+      min-height: 260px;
+      object-fit: cover;
   }
 }
 
@@ -660,11 +663,4 @@ mark {
   margin-bottom: 30px;
 }
 
-.mapRoute{ 
-  img{
-    min-height: 260px;
-    object-fit: cover;
-  }
-  
-}
 
