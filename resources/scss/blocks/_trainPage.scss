@@ -4,7 +4,7 @@
     
         img {
         @include transition();
-        max-height: 250px;
+        max-height: 241px;
     
         &:hover {
             opacity: .8;
@@ -103,7 +103,7 @@
         }   
   }
 
-  .list-group-item-success {
+  .list-group-item:nth-child(2n) {
     color: $blue-color;
     background: lighten($blue-color, 40%);
   }

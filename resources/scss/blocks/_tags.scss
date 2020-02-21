@@ -1,0 +1,24 @@
+.tag {
+    background: $white-color;
+    border: 1px solid $dark-white-color;
+    border-radius: 10px;
+    font-weight: bold;
+    @include transition();
+    color: $accent-color;
+    font-size: small;
+
+    &:hover {
+        background: $blue-color;
+        border: 1px solid $blue-color;
+        color: white;
+        font-size: small;
+    }
+}
+
+.tag-active{
+    background: $blue-color;
+    border: 1px solid $blue-color;
+    color: white;
+    font-size: small;
+}
+

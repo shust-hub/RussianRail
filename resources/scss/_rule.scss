@@ -416,7 +416,7 @@ mark {
 
 .feature-box{
   display: flex;
-  p {
+  p, h3 {
     font-size: 14px;
     line-height: 20px;
   }
@@ -430,6 +430,8 @@ mark {
   @media (min-width: 320px) and (max-width: 1023px) {
     margin-bottom: 25px;
   }
+
+  
 }
 
 .white-box {
@@ -451,7 +453,7 @@ mark {
   img {
     @include transition();
     object-fit: cover;
-    height: 400px;
+    height: 350px;
     width: 100%;
   }
 
@@ -558,6 +560,7 @@ mark {
         font-size: 16px;
         line-height: 18px;
         color: $black-color;
+        margin-bottom: 15px;
       }
 
       p {
@@ -661,5 +664,8 @@ mark {
   background-color: rgb(223, 231, 255);
   padding: 20px 30px;
   margin-bottom: 30px;
+  border-color: rgb(223, 231, 255);
+  border-radius: 0;
+  color: $black-color;
 }
 

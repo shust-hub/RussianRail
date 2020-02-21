@@ -193,7 +193,7 @@ nav{
                 padding-right: 0;
               }
 
-              a {
+              a, p {
                 padding-top: 0;
               }
 
@@ -231,7 +231,7 @@ nav{
           }
         }
 
-        a {
+        a, p {
           opacity: 0;
 
           @media only screen and (min-width: 1024px) {
@@ -364,7 +364,7 @@ main {
 
       &.moves-out {
         li {
-          a {
+          a, p {
             @include transform(translateX(-100%));
 
             opacity: 0;
@@ -372,7 +372,7 @@ main {
 
           .subnav {
             li {
-              a {
+              a, p {
                 @include transform(translateX(0));
 
                 opacity: 1;
@@ -424,7 +424,7 @@ main {
       }
     }
 
-    a {
+    a, p {
       @extend %border-box;
 
       @media only screen and (min-width: 1024px) {
