@@ -572,11 +572,10 @@ mark {
       
       .more::after {
         position: absolute;
-        content: 'read more \2192';
+        content: 'Read more \2192';
         font-family: $symbol-font;
         font-size: 14px;
         color: $accent-color;
-        margin-left: 5px;
         white-space: nowrap;
       }
 
