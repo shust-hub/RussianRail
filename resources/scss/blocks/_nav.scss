@@ -79,6 +79,11 @@ nav{
       @media only screen and (max-width: 1180px)  {
         width: 70%;
       }
+
+      p{
+        font-weight: 400; 
+        margin: 0;
+      }
     }
 
     .nav-trigger {
@@ -184,6 +189,7 @@ nav{
               margin-top: 75px;
 
               opacity: 1;
+              display: block;
             }
 
             li {
@@ -353,6 +359,7 @@ main {
   overflow-x: hidden;
 
   &.nav-is-visible {
+    display: block;
     @include transition(transform .3s .2s, opacity .3s .2s);
     @media only screen and (max-width: 1024px)  {
       visibility: visible;
@@ -371,11 +378,13 @@ main {
           }
 
           .subnav {
+            display: block;
             li {
               a, p {
                 @include transform(translateX(0));
 
                 opacity: 1;
+                
               }
             }
           }
@@ -389,6 +398,7 @@ main {
           background: $white-color;
 
           opacity: 1;
+          display: block;
 
           li {
             ul {
@@ -413,13 +423,13 @@ main {
     }
 
     &:hover {
-      a.subnav-trigger {
+      p.subnav-trigger,a.subnav-trigger {
         color: $accent-color;
       }
     }
 
     &.active {
-      a.subnav-trigger {
+      p.subnav-trigger,a.subnav-trigger {
         color: $accent-color;
       }
     }
@@ -492,6 +502,8 @@ main {
 
       opacity: 0;
 
+      display: none;
+
       @media only screen and (max-width: 1024px)  {
         @include transform(translateX(100%));
       }
@@ -522,7 +534,7 @@ main {
     }
   }
 
-  a {
+  a, p {
     display: block;
     height: auto;
 
@@ -563,6 +575,10 @@ main {
   }
 
   .first-li {
+    &:hover{
+      color: $black-color;
+    }
+    cursor: default;
     @media only screen and (max-width: 1024px)  {
       padding-bottom: 8px;
     }
@@ -628,7 +644,7 @@ main {
       padding-top: 0;
     }
 
-    a {
+    a, p {
       position: relative;
 
       &::before,
@@ -663,9 +679,6 @@ main {
       opacity: 0;
       pointer-events: none;
 
-      a {
-
-      }
     }
   }
 ///////////////////////////////////////////////////////////////

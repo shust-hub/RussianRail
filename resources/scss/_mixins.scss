@@ -319,38 +319,54 @@
   color: $black-color;
   font-size: 14px;
   font-weight: 300 !important;
+  // padding-left: 15px;
 }
 
 @mixin form() {
   .way {
     position: relative;
 
-    &::after {
+    .station_switcher {
       position: absolute;
-      content: '\21C4';
-
       top: 0;
-      right: 15px;
-
+      right: 20px;
       color: $accent-color;
-      font-size: 30px;
-      font-family: $symbol-font;
+      font-size: 25px;
+      line-height: 40px;
+      cursor: pointer;
     }
   }
-  input, textarea {
+
+  input, select, textarea {
     @include placeholder();
     @include transition();
 
     width: 100%;
+    min-width: 0;
     height: 40px;
     background: $lighter-gray-color;
-
     border: none;
-
-    padding: 5px 15px;
     margin-bottom: 10px;
-
     @extend %border-box;
+    padding-left: 15px;
+    box-sizing: border-box;
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    &[type='number'] {
+      -moz-appearance: textfield;
+  }
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+    }
+
+    option[value=""][disabled] {
+      display: none;
+    }
 
     &[type="radio"] {
       display: none;
@@ -417,15 +433,13 @@
     &#one-way:checked + label::before,
     &#return:checked + label::before {
       content: "\2022";
-
       font-family: $symbol-font;
       color: $accent-color;
       font-size: 34px;
       text-align: center;
-      line-height: 12px;
-
+      line-height: 11px;
       border: 1px solid $accent-color;
-    }
+        }
   }
 
   label {
@@ -451,7 +465,6 @@
       @include border-radius(10px);
     }
   }
-
   button {
     margin-top: 10px;
 

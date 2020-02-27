@@ -86,7 +86,7 @@ hr {
           box-sizing: content-box;
   height: 0; }
 
-header .content .nav-trigger, header .content .nav-trigger span, header .content .nav-trigger span::before, header .content .nav-trigger span::after, .navigation li ul.subnav, .navigation .subnav-trigger::before, .navigation .subnav-trigger::after, .navigation .go-back a::before, .navigation .go-back a::after, #kids.inner .kids button::after, .trains .sidebar ul li.active::before, .customer-reviews span::after, .list-group .list-group-item .from::after {
+header .content .nav-trigger, header .content .nav-trigger span, header .content .nav-trigger span::before, header .content .nav-trigger span::after, .navigation li ul.subnav, .navigation .subnav-trigger::before, .navigation .subnav-trigger::after, .navigation .go-back a::before, .navigation .go-back a::after, .navigation .go-back p::before, .navigation .go-back p::after, #kids.inner .kids button::after, .trains__sidebar ul li.active::before, .customer-reviews span::after, .list-group .list-group-item .from::after {
   position: absolute;
   content: '';
   top: 0;
@@ -94,7 +94,7 @@ header .content .nav-trigger, header .content .nav-trigger span, header .content
   left: 0;
   right: 0; }
 
-*, ::after, ::before, form input, form textarea, .block .description, .horizontal-block, #header .headerForm, #recommended .recommended__block a#bbblink div, #choose .content .choose__block, .navigation, .navigation__list, .navigation__list a, .navigation__list p, #destinations .destinations__block .description, #testimonials .testimonials__block, #testimonials-list .testimonials__block, #testimonials .testimonials__block .main .quote p, #testimonials-list .testimonials__block .main .quote p, #kids .kids__content, #news .news, #news .news__block .description, #articles .articles, #articles .articles__block .description, #about, #trainPage .train__description .text, .list-group .list-group-item .from {
+*, ::after, ::before, form input, form select, form textarea, .block .description, .horizontal-block, #header .headerForm, #recommended .recommended__block a#bbblink div, #choose .content .choose__block, .navigation, .navigation__list, .navigation__list a, .navigation__list p, #destinations .destinations__block .description, #testimonials .testimonials__block, #testimonials-list .testimonials__block, #testimonials .testimonials__block .main .quote p, #testimonials-list .testimonials__block .main .quote p, #kids .kids__content, #news .news, #news .news__block .description, #articles .articles, #articles .articles__block .description, .train, #about, #trainPage .train__description .text, .list-group .list-group-item .from {
   -webkit-box-sizing: border-box;
   -ms-box-sizing: border-box;
   -o-box-sizing: border-box;
@@ -104,7 +104,7 @@ header {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased; }
 
-header, header .content .nav-trigger span::before, header .content .nav-trigger span::after, .navigation .subnav-trigger::before, .navigation .subnav-trigger::after, .navigation .go-back a::before, .navigation .go-back a::after {
+header, header .content .nav-trigger span::before, header .content .nav-trigger span::after, .navigation .subnav-trigger::before, .navigation .subnav-trigger::after, .navigation .go-back a::before, .navigation .go-back a::after, .navigation .go-back p::before, .navigation .go-back p::after {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden; }
 
@@ -166,6 +166,13 @@ p, .faqs {
   50% {
     -webkit-transform: translate(0, -10px);
             transform: translate(0, -10px); } }
+body {
+  min-width: 320px;
+  overflow-x: hidden; }
+  @media (max-width: 319px) {
+    body {
+      overflow-x: scroll; } }
+
 a:hover {
   text-decoration: none; }
 
@@ -317,76 +324,88 @@ a {
 
 form .way {
   position: relative; }
-  form .way::after {
+  form .way .station_switcher {
     position: absolute;
-    content: '\21C4';
     top: 0;
-    right: 15px;
+    right: 20px;
     color: #ad1e2f;
-    font-size: 30px;
-    font-family: "Segoe UI Emoji"; }
-form input, form textarea {
+    font-size: 25px;
+    line-height: 40px;
+    cursor: pointer; }
+form input, form select, form textarea {
   color: #000;
   font-size: 14px;
   font-weight: 300 !important;
   -webkit-transition: all 0.3s ease-out, all 0.3s ease-out, auto;
   transition: all 0.3s ease-out, all 0.3s ease-out, auto;
   width: 100%;
+  min-width: 0;
   height: 40px;
   background: #f0f0f0;
   border: none;
-  padding: 5px 15px;
-  margin-bottom: 10px; }
-  form input[type="radio"], form textarea[type="radio"] {
+  margin-bottom: 10px;
+  padding-left: 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; }
+  form input[type='number'], form select[type='number'], form textarea[type='number'] {
+    -moz-appearance: textfield; }
+  form input::-webkit-outer-spin-button, form input::-webkit-inner-spin-button, form select::-webkit-outer-spin-button, form select::-webkit-inner-spin-button, form textarea::-webkit-outer-spin-button, form textarea::-webkit-inner-spin-button {
+    -webkit-appearance: none; }
+  form input option[value=""][disabled], form select option[value=""][disabled], form textarea option[value=""][disabled] {
     display: none; }
-  form input::-webkit-input-placeholder, form textarea::-webkit-input-placeholder {
+  form input[type="radio"], form select[type="radio"], form textarea[type="radio"] {
+    display: none; }
+  form input::-webkit-input-placeholder, form select::-webkit-input-placeholder, form textarea::-webkit-input-placeholder {
     color: #000;
     font-size: 14px;
     font-weight: 300 !important; }
-  form input::-ms-input-placeholder, form textarea::-ms-input-placeholder {
+  form input::-ms-input-placeholder, form select::-ms-input-placeholder, form textarea::-ms-input-placeholder {
     color: #000;
     font-size: 14px;
     font-weight: 300 !important; }
-  form input:-ms-input-placeholder, form textarea:-ms-input-placeholder {
+  form input:-ms-input-placeholder, form select:-ms-input-placeholder, form textarea:-ms-input-placeholder {
     color: #000;
     font-size: 14px;
     font-weight: 300 !important; }
-  form input::placeholder, form textarea::placeholder {
+  form input::placeholder, form select::placeholder, form textarea::placeholder {
     color: #000;
     font-size: 14px;
     font-weight: 300 !important; }
-  form input:-ms-input-placeholder, form textarea:-ms-input-placeholder {
+  form input:-ms-input-placeholder, form select:-ms-input-placeholder, form textarea:-ms-input-placeholder {
     color: #000;
     font-size: 14px;
     font-weight: 300 !important; }
-  form input:-moz-placeholder, form textarea:-moz-placeholder {
+  form input:-moz-placeholder, form select:-moz-placeholder, form textarea:-moz-placeholder {
     color: #000;
     font-size: 14px;
     font-weight: 300 !important; }
-  form input:disabled, form textarea:disabled {
+  form input:disabled, form select:disabled, form textarea:disabled {
     pointer-events: none;
     opacity: .3; }
-  form input:active, form input:focus, form textarea:active, form textarea:focus {
+  form input:active, form input:focus, form select:active, form select:focus, form textarea:active, form textarea:focus {
     background: whitesmoke; }
-    form input:active::-webkit-input-placeholder, form input:focus::-webkit-input-placeholder, form textarea:active::-webkit-input-placeholder, form textarea:focus::-webkit-input-placeholder {
+    form input:active::-webkit-input-placeholder, form input:focus::-webkit-input-placeholder, form select:active::-webkit-input-placeholder, form select:focus::-webkit-input-placeholder, form textarea:active::-webkit-input-placeholder, form textarea:focus::-webkit-input-placeholder {
       color: transparent; }
-    form input:active::-ms-input-placeholder, form input:focus::-ms-input-placeholder, form textarea:active::-ms-input-placeholder, form textarea:focus::-ms-input-placeholder {
+    form input:active::-ms-input-placeholder, form input:focus::-ms-input-placeholder, form select:active::-ms-input-placeholder, form select:focus::-ms-input-placeholder, form textarea:active::-ms-input-placeholder, form textarea:focus::-ms-input-placeholder {
       color: transparent; }
-    form input:active:-ms-input-placeholder, form input:focus:-ms-input-placeholder, form textarea:active:-ms-input-placeholder, form textarea:focus:-ms-input-placeholder {
+    form input:active:-ms-input-placeholder, form input:focus:-ms-input-placeholder, form select:active:-ms-input-placeholder, form select:focus:-ms-input-placeholder, form textarea:active:-ms-input-placeholder, form textarea:focus:-ms-input-placeholder {
       color: transparent; }
-    form input:active::placeholder, form input:focus::placeholder, form textarea:active::placeholder, form textarea:focus::placeholder {
+    form input:active::placeholder, form input:focus::placeholder, form select:active::placeholder, form select:focus::placeholder, form textarea:active::placeholder, form textarea:focus::placeholder {
       color: transparent; }
-    form input:active:-ms-input-placeholder, form input:focus:-ms-input-placeholder, form textarea:active:-ms-input-placeholder, form textarea:focus:-ms-input-placeholder {
+    form input:active:-ms-input-placeholder, form input:focus:-ms-input-placeholder, form select:active:-ms-input-placeholder, form select:focus:-ms-input-placeholder, form textarea:active:-ms-input-placeholder, form textarea:focus:-ms-input-placeholder {
       color: transparent; }
-    form input:active:-moz-placeholder, form input:focus:-moz-placeholder, form textarea:active:-moz-placeholder, form textarea:focus:-moz-placeholder {
+    form input:active:-moz-placeholder, form input:focus:-moz-placeholder, form select:active:-moz-placeholder, form select:focus:-moz-placeholder, form textarea:active:-moz-placeholder, form textarea:focus:-moz-placeholder {
       color: transparent; }
-  form input#one-way:checked + label::before, form input#return:checked + label::before, form textarea#one-way:checked + label::before, form textarea#return:checked + label::before {
+  form input#one-way:checked + label::before, form input#return:checked + label::before, form select#one-way:checked + label::before, form select#return:checked + label::before, form textarea#one-way:checked + label::before, form textarea#return:checked + label::before {
     content: "\2022";
     font-family: "Segoe UI Emoji";
     color: #ad1e2f;
     font-size: 34px;
     text-align: center;
-    line-height: 12px;
+    line-height: 11px;
     border: 1px solid #ad1e2f; }
 form label {
   position: relative;
@@ -504,9 +523,6 @@ button {
 
 a .tooltip {
   cursor: pointer; }
-
-body {
-  overflow-x: hidden; }
 
 section {
   padding: 30px 0; }
@@ -782,12 +798,10 @@ mark {
     margin-bottom: 0;
     color: #000; }
   .horizontal-block .description .more::after {
-    position: absolute;
-    content: 'read more \2192';
+    content: 'Read more \2192';
     font-family: "Segoe UI Emoji";
     font-size: 14px;
     color: #ad1e2f;
-    margin-left: 5px;
     white-space: nowrap; }
   .horizontal-block .description img {
     -webkit-transition: all 0.3s ease-out, all 0.3s ease-out, auto;
@@ -1233,6 +1247,9 @@ header {
     @media only screen and (max-width: 1180px) {
       header .content nav {
         width: 70%; } }
+    header .content nav p {
+      font-weight: 400;
+      margin: 0; }
   header .content .nav-trigger {
     display: block;
     left: auto;
@@ -1296,7 +1313,8 @@ header {
       header .navigation.moves-out li.active ul.subnav {
         border-top: 1px solid #f0f0f0;
         margin-top: 75px;
-        opacity: 1; } }
+        opacity: 1;
+        display: block; } }
     header .navigation.moves-out li.active ul.subnav li {
       padding: 3px 30px 3px 0; }
       header .navigation.moves-out li.active ul.subnav li:last-child {
@@ -1393,6 +1411,7 @@ main {
     .navigation {
       overflow-y: scroll !important; } }
   .navigation.nav-is-visible {
+    display: block;
     -webkit-transition: opacity 0.3s 0.2s, auto, -webkit-transform 0.3s 0.2s;
     transition: opacity 0.3s 0.2s, auto, -webkit-transform 0.3s 0.2s;
     transition: transform 0.3s 0.2s, opacity 0.3s 0.2s, auto;
@@ -1407,15 +1426,18 @@ main {
           -webkit-transform: translateX(-100%);
           transform: translateX(-100%);
           opacity: 0; }
-        .navigation.nav-is-visible.moves-out li .subnav li a, .navigation.nav-is-visible.moves-out li .subnav li p {
-          -webkit-transform: translateX(0);
-          transform: translateX(0);
-          opacity: 1; }
+        .navigation.nav-is-visible.moves-out li .subnav {
+          display: block; }
+          .navigation.nav-is-visible.moves-out li .subnav li a, .navigation.nav-is-visible.moves-out li .subnav li p {
+            -webkit-transform: translateX(0);
+            transform: translateX(0);
+            opacity: 1; }
         .navigation.nav-is-visible li.active ul.subnav {
           -webkit-transform: translateX(0);
           transform: translateX(0);
           background: #fff;
-          opacity: 1; }
+          opacity: 1;
+          display: block; }
           .navigation.nav-is-visible li.active ul.subnav li ul {
             display: block; } }
   .navigation__list {
@@ -1425,9 +1447,9 @@ main {
       .navigation__list {
         height: auto;
         padding: 0; } }
-    .navigation__list:hover a.subnav-trigger {
+    .navigation__list:hover p.subnav-trigger, .navigation__list:hover a.subnav-trigger {
       color: #ad1e2f; }
-    .navigation__list.active a.subnav-trigger {
+    .navigation__list.active p.subnav-trigger, .navigation__list.active a.subnav-trigger {
       color: #ad1e2f; }
     @media only screen and (min-width: 1024px) {
       .navigation__list a, .navigation__list p {
@@ -1465,7 +1487,8 @@ main {
     width: 100%;
     background: #fff;
     padding: 28px 0;
-    opacity: 0; }
+    opacity: 0;
+    display: none; }
     @media only screen and (max-width: 1024px) {
       .navigation li ul.subnav {
         -webkit-transform: translateX(100%);
@@ -1482,15 +1505,15 @@ main {
     @media only screen and (max-width: 520px) {
       .navigation li ul.subnav li {
         padding: 28px 15px; } }
-  .navigation a {
+  .navigation a, .navigation p {
     display: block;
     height: auto;
     color: #000; }
-    .navigation a:hover {
+    .navigation a:hover, .navigation p:hover {
       color: #ad1e2f; }
-    .navigation a.hidden {
+    .navigation a.hidden, .navigation p.hidden {
       color: transparent; }
-      .navigation a.hidden:hover {
+      .navigation a.hidden:hover, .navigation p.hidden:hover {
         color: transparent; }
   .navigation div.flexbox {
     width: 60%; }
@@ -1504,9 +1527,13 @@ main {
       .navigation div.flexbox li {
         margin-bottom: 8px;
         width: 100%; } }
-  @media only screen and (max-width: 1024px) {
-    .navigation .first-li {
-      padding-bottom: 8px; } }
+  .navigation .first-li {
+    cursor: default; }
+    .navigation .first-li:hover {
+      color: #000; }
+    @media only screen and (max-width: 1024px) {
+      .navigation .first-li {
+        padding-bottom: 8px; } }
   .navigation .subnav-trigger {
     position: relative; }
     @media only screen and (min-width: 1024px) {
@@ -1552,19 +1579,19 @@ main {
     padding-bottom: 20px; }
     .navigation .go-back.content {
       padding-top: 0; }
-    .navigation .go-back a {
+    .navigation .go-back a, .navigation .go-back p {
       position: relative; }
-      .navigation .go-back a::before, .navigation .go-back a::after {
+      .navigation .go-back a::before, .navigation .go-back a::after, .navigation .go-back p::before, .navigation .go-back p::after {
         display: inline-block;
         width: 10px;
         height: 1px;
         -webkit-transform-origin: 1px 50%;
         transform-origin: 1px 50%; }
-      .navigation .go-back a::before {
+      .navigation .go-back a::before, .navigation .go-back p::before {
         -webkit-transform: rotate(45deg);
         transform: rotate(45deg);
         top: 11px; }
-      .navigation .go-back a::after {
+      .navigation .go-back a::after, .navigation .go-back p::after {
         -webkit-transform: rotate(-45deg);
         transform: rotate(-45deg); }
     @media only screen and (min-width: 1024px) {
@@ -1945,8 +1972,7 @@ main {
   #kids.inner {
     padding: 30px 0 55px; }
     #kids.inner .kids {
-      background: #fff;
-      border: 1px solid #e4e4e4;
+      border: 1px solid #f0f0f0;
       background-image: url("../img/banner_bg.png");
       background-repeat: repeat-x;
       background-position: bottom;
@@ -2358,52 +2384,113 @@ main {
       #articles .articles__block .description a {
         color: #000; }
 
-.trains .sidebar {
+.trains__sidebar {
   background: #fff;
   border: 1px solid #e4e4e4;
   padding: 25px 25px 20px; }
-  .trains .sidebar ul {
+  .trains__sidebar ul {
     -moz-column-break-inside: avoid;
     -webkit-column-break-inside: avoid;
     column-break-inside: avoid; }
     @media (min-width: 768px) {
-      .trains .sidebar ul {
+      .trains__sidebar ul {
         -webkit-columns: 3;
                 columns: 3; } }
-    .trains .sidebar ul h2 {
+    .trains__sidebar ul h2 {
       margin-bottom: 15px;
       width: 100%; }
-    .trains .sidebar ul li {
+    .trains__sidebar ul li {
       position: relative;
       font-size: 14px;
       padding-bottom: 12px; }
       @media (min-width: 1281px) {
-        .trains .sidebar ul li {
+        .trains__sidebar ul li {
           -moz-column-break-inside: avoid;
           -webkit-column-break-inside: avoid;
           column-break-inside: avoid; } }
-      .trains .sidebar ul li.active {
+      .trains__sidebar ul li.active {
         padding-left: 16px; }
-        .trains .sidebar ul li.active a {
+        .trains__sidebar ul li.active a {
           color: #000;
           font-weight: 700;
           pointer-events: none;
           cursor: default; }
-        .trains .sidebar ul li.active::before {
+        .trains__sidebar ul li.active::before {
           top: 2px;
           width: 10px;
           height: 13px;
           background-image: url("../img/art_arrow.svg"); }
-      .trains .sidebar ul li:last-child {
+      .trains__sidebar ul li:last-child {
         padding-bottom: 0; }
-.trains .train a h2 {
-  font-size: 32px;
-  margin-bottom: 15px; }
-  @media only screen and (max-width: 480px), (orientation: portrait) {
-    .trains .train a h2 {
-      font-size: 28px; } }
-.trains .train a img {
-  height: 300px; }
+
+.train {
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 15px;
+  background: #fff;
+  border: 1px solid #e4e4e4;
+  padding: 10px 10px; }
+  .train img {
+    -webkit-transition: all 0.3s ease-out, all 0.3s ease-out, auto;
+    transition: all 0.3s ease-out, all 0.3s ease-out, auto;
+    -o-object-fit: cover;
+       object-fit: cover;
+    height: 300px;
+    width: 100%; }
+  .train .description h3, .train .description h2 {
+    color: #000;
+    margin-bottom: 15px; }
+  .train .description p {
+    -webkit-transition: all 0.3s ease-out, all 0.3s ease-out, auto;
+    transition: all 0.3s ease-out, all 0.3s ease-out, auto;
+    position: relative;
+    margin-bottom: 0;
+    color: #000; }
+  .train .description .more::after {
+    content: 'Read more \2192';
+    font-family: "Segoe UI Emoji";
+    font-size: 14px;
+    color: #ad1e2f;
+    white-space: nowrap; }
+  .train .description img {
+    -webkit-transition: all 0.3s ease-out, all 0.3s ease-out, auto;
+    transition: all 0.3s ease-out, all 0.3s ease-out, auto;
+    -o-object-fit: cover;
+       object-fit: cover;
+    height: 180px;
+    width: 100%; }
+  .train .description .description h3, .train .description .description h2 {
+    color: #000; }
+  .train .description .description p {
+    -webkit-transition: all 0.3s ease-out, all 0.3s ease-out, auto;
+    transition: all 0.3s ease-out, all 0.3s ease-out, auto;
+    position: relative;
+    margin-bottom: 0;
+    color: #000; }
+  .train .description .description .more::after {
+    position: absolute;
+    content: 'read more \2192';
+    font-family: "Segoe UI Emoji";
+    font-size: 14px;
+    color: #ad1e2f;
+    margin-left: 5px;
+    white-space: nowrap; }
+  .train .description:hover img {
+    opacity: .9; }
+  .train .description:hover .description h3, .train .description:hover .description h2 {
+    color: #ad1e2f; }
+  .train .description:hover .description p {
+    color: #000; }
+  .train a .description h3, .train a .description h2 {
+    color: #000; }
+  .train a .description p {
+    color: #000; }
+  .train a .description .more::after {
+    color: #ad1e2f; }
+  .train a:hover .description h3, .train a:hover .description h2 {
+    color: #ad1e2f; }
+  .train a:hover .description p {
+    color: #000; }
 
 .customer-reviews {
   background: #fff;
@@ -2982,17 +3069,13 @@ input:checked ~ .tab-content {
       -webkit-box-flex: 1;
           -ms-flex-positive: 1;
               flex-grow: 1;
-      position: relative;
-      min-width: 180px; }
+      position: relative; }
       .list-group .list-group-item .from::after {
         right: -50%;
         width: 10px;
         height: 13px;
         background-image: url("../img/art_arrow.svg");
         margin: auto; }
-        @media (min-width: 320px) and (max-width: 480px) {
-          .list-group .list-group-item .from::after {
-            display: none; } }
         @media only screen and (max-width: 1200px), (orientation: portrait) {
           .list-group .list-group-item .from::after {
             right: -70%; } }
@@ -3068,7 +3151,10 @@ input:checked ~ .tab-content {
   @media (max-width: 991.98px) {
     #p404 .shadow404 {
       font-size: 165px !important;
-      text-align: center; }
+      text-align: center;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none; }
     #p404 .text404 {
       top: 50%;
       margin-top: -71px;

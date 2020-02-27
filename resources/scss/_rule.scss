@@ -2,6 +2,12 @@
   @extend %border-box;
 }
 
+body {
+  min-width: 320px;
+  overflow-x: hidden;
+  @media (max-width: 319px) { overflow-x: scroll;}
+}
+
 a:hover{
   text-decoration: none;
 }
@@ -249,10 +255,6 @@ a {
   .tooltip {
     cursor: pointer;
   }
-}
-
-body{
-  overflow-x: hidden;
 }
 
 section{
@@ -507,7 +509,6 @@ mark {
     .more::after {
       position: absolute;
       content: '\2192';
-
       font-family: $symbol-font;
       font-size: 14px;
       color: $accent-color;
@@ -521,9 +522,7 @@ mark {
   }
 
   @media (min-width: 320px) and (max-width: 1023px) {
-  
     margin-bottom: 10px;
-    
   }
 }
 
@@ -541,7 +540,6 @@ mark {
 .horizontal-block {
   overflow: hidden;
   position: relative;
-  // cursor: pointer;
   margin-bottom: 15px;
   @extend %border-box;
   background: $white-color;
@@ -571,7 +569,6 @@ mark {
       }
       
       .more::after {
-        position: absolute;
         content: 'Read more \2192';
         font-family: $symbol-font;
         font-size: 14px;

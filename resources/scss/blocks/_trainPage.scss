@@ -27,7 +27,6 @@
 
     .train {
         @include white-border();
-
         margin-bottom: 20px;
 
         &__description {
@@ -35,7 +34,6 @@
 
           .text {
             @extend %border-box;
-
             padding-right: 25px;
           }
 
@@ -78,15 +76,9 @@
           @extend %border-box;
           flex-grow: 1;
           position: relative;
-          min-width: 180px;
-
 
           &::after {
             @extend %position-absolute;
-            @media (min-width: 320px) and (max-width: 480px) {
-               display: none;
-            }
-            
             right: -50%;
             width: 10px;
             height: 13px;

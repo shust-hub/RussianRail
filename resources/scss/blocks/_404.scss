@@ -52,6 +52,9 @@
         .shadow404 {
             font-size: 165px!important;
             text-align: center;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
         }
         .text404{
             top: 50%;
