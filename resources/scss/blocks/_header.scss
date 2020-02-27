@@ -18,7 +18,7 @@
 
   &.header-index{
     max-height: 200vh;
-    height: 75vh;
+    height: 100vh;
   }
 
   &.header-index.scroll {
@@ -78,6 +78,7 @@
     text-align: left;
     color: $black-color;
     padding: 30px 15px 40px;
+    position: relative;
 
     h2 {
       color: $black-color;
