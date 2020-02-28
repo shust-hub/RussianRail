@@ -23,9 +23,9 @@ window.mobilecheck = function() {
 var drawCalendar = function(opt){
 
     let city;
-    city.getJSON( "/stations", {"term":"def"},function( data ) {});
+    city.getJSON( "/stations", {"term":"def"});
     console.log(city);
-    
+
     var isMobile = false; //initiate as false
 // device detection
     if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
