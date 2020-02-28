@@ -23,7 +23,7 @@ window.mobilecheck = function() {
 var drawCalendar = function(opt){
 
     let city;
-    city.getJSON( "/stations", {"term":"def"});
+    city.getJSON( "/stations");
     console.log(city);
 
     var isMobile = false; //initiate as false
