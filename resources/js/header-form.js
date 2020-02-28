@@ -23,7 +23,7 @@ window.mobilecheck = function() {
 var drawCalendar = function(opt){
 
     let city;
-    city.getJSON( "/stations");
+    city.getJSON( "https://russianrail.travexpress.net/stations");
     console.log(city);
 
     var isMobile = false; //initiate as false
