@@ -24,7 +24,7 @@ var drawCalendar = function(opt){
 
     let city;
     city.getJSON( "https://russianrail.travexpress.net/stations");
-    console.log(city);
+    console.log(city, "01");
 
     var isMobile = false; //initiate as false
 // device detection
