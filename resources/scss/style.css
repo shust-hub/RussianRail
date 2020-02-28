@@ -94,7 +94,7 @@ header .content .nav-trigger, header .content .nav-trigger span, header .content
   left: 0;
   right: 0; }
 
-*, ::after, ::before, form input, form select, form textarea, .block .description, .horizontal-block, #header .headerForm, #recommended .recommended__block a#bbblink div, #choose .content .choose__block, .navigation, .navigation__list, .navigation__list a, .navigation__list p, #destinations .destinations__block .description, #testimonials .testimonials__block, #testimonials-list .testimonials__block, #testimonials .testimonials__block .main .quote p, #testimonials-list .testimonials__block .main .quote p, #kids .kids__content, #news .news, #news .news__block .description, #articles .articles, #articles .articles__block .description, .train, #about, #trainPage .train__description .text, .list-group .list-group-item .from {
+*, ::after, ::before, .block .description, .horizontal-block, #header .headerForm, #recommended .recommended__block a#bbblink div, #choose .content .choose__block, .navigation, .navigation__list, .navigation__list a, .navigation__list p, #destinations .destinations__block .description, #testimonials .testimonials__block, #testimonials-list .testimonials__block, #testimonials .testimonials__block .main .quote p, #testimonials-list .testimonials__block .main .quote p, #kids .kids__content, #news .news, #news .news__block .description, #articles .articles, #articles .articles__block .description, .train, #about, #trainPage .train__description .text, .list-group .list-group-item .from {
   -webkit-box-sizing: border-box;
   -ms-box-sizing: border-box;
   -o-box-sizing: border-box;
@@ -321,112 +321,6 @@ a {
     background-color: rgba(173, 30, 47, 0.6); }
     #toTop:hover::after {
       opacity: 1; }
-
-form .way {
-  position: relative; }
-  form .way .station_switcher {
-    position: absolute;
-    top: 0;
-    right: 20px;
-    color: #ad1e2f;
-    font-size: 25px;
-    line-height: 40px;
-    cursor: pointer; }
-form input, form select, form textarea {
-  color: #000;
-  font-size: 14px;
-  font-weight: 300 !important;
-  -webkit-transition: all 0.3s ease-out, all 0.3s ease-out, auto;
-  transition: all 0.3s ease-out, all 0.3s ease-out, auto;
-  width: 100%;
-  min-width: 0;
-  height: 40px;
-  background: #f0f0f0;
-  border: none;
-  margin-bottom: 10px;
-  padding-left: 15px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none; }
-  form input[type='number'], form select[type='number'], form textarea[type='number'] {
-    -moz-appearance: textfield; }
-  form input::-webkit-outer-spin-button, form input::-webkit-inner-spin-button, form select::-webkit-outer-spin-button, form select::-webkit-inner-spin-button, form textarea::-webkit-outer-spin-button, form textarea::-webkit-inner-spin-button {
-    -webkit-appearance: none; }
-  form input option[value=""][disabled], form select option[value=""][disabled], form textarea option[value=""][disabled] {
-    display: none; }
-  form input[type="radio"], form select[type="radio"], form textarea[type="radio"] {
-    display: none; }
-  form input::-webkit-input-placeholder, form select::-webkit-input-placeholder, form textarea::-webkit-input-placeholder {
-    color: #000;
-    font-size: 14px;
-    font-weight: 300 !important; }
-  form input::-ms-input-placeholder, form select::-ms-input-placeholder, form textarea::-ms-input-placeholder {
-    color: #000;
-    font-size: 14px;
-    font-weight: 300 !important; }
-  form input:-ms-input-placeholder, form select:-ms-input-placeholder, form textarea:-ms-input-placeholder {
-    color: #000;
-    font-size: 14px;
-    font-weight: 300 !important; }
-  form input::placeholder, form select::placeholder, form textarea::placeholder {
-    color: #000;
-    font-size: 14px;
-    font-weight: 300 !important; }
-  form input:-ms-input-placeholder, form select:-ms-input-placeholder, form textarea:-ms-input-placeholder {
-    color: #000;
-    font-size: 14px;
-    font-weight: 300 !important; }
-  form input:-moz-placeholder, form select:-moz-placeholder, form textarea:-moz-placeholder {
-    color: #000;
-    font-size: 14px;
-    font-weight: 300 !important; }
-  form input:disabled, form select:disabled, form textarea:disabled {
-    pointer-events: none;
-    opacity: .3; }
-  form input:active, form input:focus, form select:active, form select:focus, form textarea:active, form textarea:focus {
-    background: whitesmoke; }
-    form input:active::-webkit-input-placeholder, form input:focus::-webkit-input-placeholder, form select:active::-webkit-input-placeholder, form select:focus::-webkit-input-placeholder, form textarea:active::-webkit-input-placeholder, form textarea:focus::-webkit-input-placeholder {
-      color: transparent; }
-    form input:active::-ms-input-placeholder, form input:focus::-ms-input-placeholder, form select:active::-ms-input-placeholder, form select:focus::-ms-input-placeholder, form textarea:active::-ms-input-placeholder, form textarea:focus::-ms-input-placeholder {
-      color: transparent; }
-    form input:active:-ms-input-placeholder, form input:focus:-ms-input-placeholder, form select:active:-ms-input-placeholder, form select:focus:-ms-input-placeholder, form textarea:active:-ms-input-placeholder, form textarea:focus:-ms-input-placeholder {
-      color: transparent; }
-    form input:active::placeholder, form input:focus::placeholder, form select:active::placeholder, form select:focus::placeholder, form textarea:active::placeholder, form textarea:focus::placeholder {
-      color: transparent; }
-    form input:active:-ms-input-placeholder, form input:focus:-ms-input-placeholder, form select:active:-ms-input-placeholder, form select:focus:-ms-input-placeholder, form textarea:active:-ms-input-placeholder, form textarea:focus:-ms-input-placeholder {
-      color: transparent; }
-    form input:active:-moz-placeholder, form input:focus:-moz-placeholder, form select:active:-moz-placeholder, form select:focus:-moz-placeholder, form textarea:active:-moz-placeholder, form textarea:focus:-moz-placeholder {
-      color: transparent; }
-  form input#one-way:checked + label::before, form input#return:checked + label::before, form select#one-way:checked + label::before, form select#return:checked + label::before, form textarea#one-way:checked + label::before, form textarea#return:checked + label::before {
-    content: "\2022";
-    font-family: "Segoe UI Emoji";
-    color: #ad1e2f;
-    font-size: 34px;
-    text-align: center;
-    line-height: 11px;
-    border: 1px solid #ad1e2f; }
-form label {
-  position: relative;
-  font-size: 14px;
-  padding-left: 25px; }
-  form label::before {
-    position: absolute;
-    display: inline-block;
-    content: '';
-    top: 0;
-    left: 0;
-    width: 18px;
-    height: 18px;
-    background: #f0f0f0;
-    border: 1px solid #f0f0f0;
-    border-radius: 10px; }
-form button {
-  margin-top: 10px; }
-  @media only screen and (max-width: 800px), (orientation: portrait) {
-    form button {
-      max-width: 100%; } }
 
 button {
   -webkit-transition: all 0.3s ease-out, all 0.3s ease-out, auto;
@@ -3499,7 +3393,7 @@ body.noScroll {
   min-height: 56px;
   margin: 0;
   background-color: #fff;
-  color: #666;
+  color: black;
   text-decoration: none;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
@@ -3581,7 +3475,7 @@ body.noScroll {
 .pickerCalendarDay {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  color: #425486;
+  color: #6a6a6a;
   cursor: pointer;
   display: block;
   font-size: 14px;
@@ -3598,12 +3492,13 @@ body.noScroll {
   pointer-events: none; }
 
 .pickerCalendarDay.pickerWeekend {
-  font-weight: 700; }
+  font-weight: 700;
+  color: #ad1e2f; }
 
 .pickerWeekdaysWeekday {
   height: 32px;
   width: 100%;
-  color: #a1a9c3;
+  color: #6a6a6a;
   font-size: 12px;
   font-weight: 500;
   text-align: center;
@@ -3619,7 +3514,8 @@ body.noScroll {
   justify-content: center; }
 
 .pickerWeekdaysWeekday.pickerWeekdaysWeekend {
-  font-weight: 700; }
+  font-weight: 700;
+  color: #ad1e2f; }
 
 .pickerSelectedRange {
   -webkit-box-sizing: border-box;
@@ -3637,7 +3533,6 @@ body.noScroll {
 .pickerDayLabel {
   -webkit-box-sizing: content-box;
   box-sizing: content-box;
-  color: #425486;
   width: 28px;
   height: 28px;
   margin: 0 auto;
@@ -3655,15 +3550,15 @@ body.noScroll {
 
 .pickerDayLabel.pickerActiveDay {
   color: #fff;
-  background-color: #5e90cc;
-  border: 2px solid #5e90cc; }
+  background-color: #4169e1;
+  border: 2px solid #4169e1; }
 
 .pickerDayLabel.pickerUnavailableDay {
   color: #ccc; }
 
 .pickerDayLabel:hover:not(.pickerUnavailableDay):not(.pickerActiveDay) {
   background-color: #fff;
-  border: 2px solid #5e90cc;
+  border: 2px solid #4169e1;
   color: #666; }
 
 .pickerNavigationContainer {
@@ -3684,7 +3579,7 @@ body.noScroll {
 
 .pickerNavigationTitle {
   height: 20px;
-  color: #132968;
+  color: #ad1e2f;
   font-size: 16px;
   font-weight: 700;
   line-height: 20px;
@@ -3717,7 +3612,7 @@ body.noScroll {
 .pickerNavigationNavIcon > svg {
   width: 16px;
   height: 16px;
-  color: #a1a9c3; }
+  color: #6a6a6a; }
 
 .pickerNavigationNavIcon.pickerNavigationBlank {
   cursor: auto; }
@@ -3766,7 +3661,7 @@ body.noScroll {
 .desktopPickerStations li > .stationPicker {
   border-bottom: 1px solid #e9e9e9;
   padding-bottom: 10px;
-  color: #425486;
+  color: #6a6a6a;
   font-size: 16px;
   font-weight: 500;
   line-height: 30px; }
@@ -3830,7 +3725,7 @@ body.noScroll {
 
 .mobilePickerCalendarMonth {
   height: 20px;
-  color: #132968;
+  color: #ad1e2f;
   font-size: 16px;
   font-weight: 700;
   line-height: 20px;
@@ -3850,8 +3745,14 @@ body.noScroll {
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
 
+.disabled {
+  background-color: #fbfbfb; }
+
 .searchBarBlock .label {
-  color: #535353; }
+  color: black; }
+
+.disabled .field {
+  color: #6a6a6a !important; }
 
 .searchBarBlock .field {
   width: 100%;
@@ -3863,15 +3764,12 @@ body.noScroll {
   font-weight: 400; }
 
 .searchBarBlock:not(.barPicked) .field {
-  color: #999; }
-
-#searchTicket label {
-  display: none; }
+  color: black; }
 
 #searchTicket input {
   background: #FFF;
   border: none;
-  color: #222;
+  color: black;
   padding: 0.25rem 0; }
 
 .stationSwap {
@@ -3885,6 +3783,9 @@ body.noScroll {
 #searchTicket .picker {
   position: relative; }
 
+#searchTicket label {
+  margin-bottom: 0; }
+
 @media (min-width: 768px) {
   #searchTicket {
     background: #FFF; }
@@ -3896,25 +3797,14 @@ body.noScroll {
     display: block;
     color: #333; }
 
-  #searchTicket label {
-    font-size: 0.7rem;
-    margin-bottom: 0; }
-
   #searchTicket input {
     font-size: 1rem; }
 
   #searchTicket .field i {
     vertical-align: middle; } }
 @media (min-width: 992px) {
-  #searchTicket .label {
-    font-size: 0.9rem;
-    margin-bottom: 0.25rem; }
-
   #searchTicket .field {
     font-size: 16px; } }
-@media (max-width: 767px) {
-  #searchTicket .label {
-    display: none; } }
 .btn-plus-minus,
 .passengers-num {
   display: inline-block;
@@ -3968,10 +3858,55 @@ body.noScroll {
   width: 350px;
   padding: 20px; }
 
-.radio-buttons {
-  margin-bottom: 10px; }
+.checkReturn-label {
+  display: block;
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 14px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
 
-label[for=one-way] span, label[for=return] span {
-  font-size: 16px; }
+.checkReturn-label input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0; }
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 18px;
+  width: 18px;
+  background-color: #f0f0f0; }
+
+.checkReturn-label:hover input ~ .checkmark {
+  background-color: #ccc; }
+
+.checkReturn-label input:checked ~ .checkmark {
+  background-color: #ad1e2f; }
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none; }
+
+.checkReturn-label input:checked ~ .checkmark:after {
+  display: block; }
+
+.checkReturn-label .checkmark:after {
+  left: 6px;
+  top: 3px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg); }
 
 /*# sourceMappingURL=style.css.map */

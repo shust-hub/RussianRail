@@ -35,34 +35,6 @@
 
   </script>
 
-  <script>
-    jQuery(document).ready(function($){ 
-      $( function() {
-        $( "#departure-date" ).datepicker({
-          dateFormat: "dd.mm.yy"
-        });
-        $( "#return-date" ).datepicker({
-          dateFormat: "dd.mm.yy"
-        });
-    });
-  });
-  </script>
-
-<script>
-  jQuery(document).ready(function($){ 
-    $.getJSON( "https://russianrail.travexpress.net/stations", {"term":"def"},function( data ) {
-      var from = $('#departure-stations');
-      var to= $('#arrival-stations');
-        if(data['list']) {
-          data['list'].forEach(function (item) {
-          $('<option value="'+item+'">').text(item).appendTo(from);
-          $('<option value="'+item+'">').text(item).appendTo(to);
-        });
-      }
-    }); 
-  });
-</script>
-
 </head>
 
 <body>
@@ -268,59 +240,12 @@
       </div>
 
       <div class="col-lg-4 col-md-8 offset-md-2 offset-lg-0 col-sm-12 mt-3 mt-lg-5">
-        <!-- <form id="searchTicket" class="headerForm" method="get" action="/search.html">
-          <h2>Start planning</h2>
-          <div class="way">
-            <input class="search_station" id="from_tr" name="from" 
-            placeholder="Depatrture from" 
-            list="departure-stations" 
-            autocomplete="off"
-            required>
-            <datalist id="departure-stations">
-              <option>1</option>
-              <option>2</option>
-            </datalist>
-            <a class="button station_switcher">
-              <i class="fas fa-random"></i>
-            </a>
-          </div>
-
-          <input class="search_station" id="to_tr" name="to" 
-          placeholder="Arrival to" list="arrival-stations"
-          autocomplete="off"
-          required>
-          <datalist id="arrival-stations">
-            <option>1</option>
-            <option>2</option>
-          </datalist>
-
-          <div  class="w-75 d-flex justify-content-between">
-            <div class="d-flex">
-              <input id="one-way" class="form-check-input" name="way" type="radio" checked>
-              <label  for="one-way">One way</label>
-            </div>
-
-            <div class="d-flex">
-              <input id="return" class="form-check-input" name="way" type="radio">
-              <label for="return">Return</label>
-            </div>
-          </div>
-
-          <div id="dates" class="d-flex flex-nowrap">
-            <input  class="date mr-2" id="departure-date" name="departure-date" type="text" readonly autocomplete="off" placeholder="Date">
-            <input class="date" id="return-date" name="return-date" type="text" readonly autocomplete="off" placeholder="Return date">
-          </div>
-
-          <input type="number" min="1" max="20" placeholder="Passengers" required>
-
-          <button id="btnSearchStation">Search</button>
-        </form> -->
 
         <form id="searchTicket" class="headerForm" name="searchTicket" method="get" action="/search">
           <h2>Start planning</h2>
             <div class="departure-field position-relative">
                 <div class="searchBarBlock" id="stationDepartureBar">
-                    <div class="field"><i class="icon-sapsan-pin"></i> <span>Depature From</span></div>
+                    <div class="field"><span>Depature From</span></div>
 
                     <input type="hidden" id="stationDepartureField" name="from"  value="">
                 </div>
@@ -333,38 +258,35 @@
 
             <div class="arrival-field">
                 <div class="searchBarBlock" id="stationArrivalBar">
-                    <div class="field"><i class="icon-sapsan-pin"></i> <span>Arrival To</span></div>
-
+                    <div class="field"><span>Arrival To</span></div>
                     <input type="hidden" id="stationArrivalField" name="to" value="">
                 </div>
                 <div class="picker"></div>
             </div>
 
-            <div class="w-75 d-flex justify-content-between align-middle radio-buttons">
-              <div class="d-flex">
-                <input id="one-way" class="form-check-input" name="way" type="radio" checked>
-                <label  for="one-way"> <span>One way</span>  </label>
-              </div>
-  
-              <div class="d-flex">
-                <input id="return" class="form-check-input" name="way" type="radio">
-                <label for="return"> <span>Return</span> </label>
-              </div>
+
+            <div class="checkReturnBox d-flex align-items-center mb-2">
+              <label class="checkReturn-label" for="checkReturn">
+                <input class="checkReturn" name="check-return" type="checkbox" value="" id="checkReturn"> 
+                <span class="checkmark"></span>
+                With return
+              </label>
             </div>
 
             <div id="dates" class="d-flex flex-nowrap">
+
               <div class="dateFrom-field w-100 mr-2">
-                <div class="searchBarBlock" id="dateDepartureBar">
-                    <div class="field"><i class="icon-sapsan-calendar"></i> <span>Date</span></div>
-                    <input type="hidden" id="dateDepartureField" name="date"  value="">
+                <div class="searchBarBlock date_br" id="dateDepartureBar">
+                    <div class="field"> <span>Date</span></div>
+                    <input type="hidden" id="dateDepartureField" name="date-depature"  value="">
                 </div>
                 <div class="picker"></div>
             </div>
 
               <div class="dateTo-field w-100">
-                <div class="searchBarBlock" id="dateArrivalBar">
-                    <div class="field"><i class="icon-sapsan-calendar"></i> <span>Date</span></div>
-                    <input type="hidden" id="dateArrivalField" name="date"  value="">
+                <div class="searchBarBlock date_br disabled" id="dateArrivalBar">
+                    <div class="field"> <span>Return Date</span></div>
+                    <input type="hidden" id="dateArrivalField" name="date-arrival"  value="">
                 </div>
                 <div class="picker"></div>
             </div>
@@ -377,8 +299,7 @@
                 </div>
                 <div class="picker"></div>
             </div>
-
-            <button id="searchButton" type="submit">Search</button>
+            <button id="searchButton" class="w-100" type="submit">Search</button>
       </form>
 
 

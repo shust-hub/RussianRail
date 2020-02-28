@@ -1,3 +1,17 @@
+$(function() {
+    enable_cb();
+    $("#checkReturn").click(enable_cb);
+  });
+  
+  function enable_cb() {
+    if (this.checked) {
+      $('#dateArrivalBar').removeClass('disabled');
+    } else {
+      $("#dateArrivalBar").addClass("disabled");
+      $('#dateArrivalField').val("");
+      $('#dateArrivalBar span').text("Return Date");
+    }
+  }
 
 window.mobilecheck = function() {
     var check = false;
@@ -18,7 +32,7 @@ var drawCalendar = function(opt){
     this.format = "ddd, MMM Do";
     this.weekStart = 0;
     this.mobile = mobilecheck();
-    this.minDate = moment(new Date()).add(2,"d").startOf('day');
+    this.minDate = moment(new Date()).add(1,"d").startOf('day');
     this.maxDate = moment(new Date()).add(1,"y").startOf('day');
     this.iconLeft = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 15"><path fill="currentColor" fill-rule="evenodd" d="M13 10.2L3.4.6c-.8-.8-2-.8-2.8 0-.8.8-.8 2 0 2.8l11 11c.4.4.9.6 1.4.6.5 0 1-.2 1.4-.6l11-11c.8-.8.8-2 0-2.8-.8-.8-2-.8-2.8 0L13 10.2z"></path></svg>';
     this.iconBack = '<svg viewBox="0 0 11 20" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path fill="currentColor" d="M2.571 10.355l8.16 8.093a.904.904 0 0 1 0 1.286.922.922 0 0 1-1.296 0L.268 10.643a.904.904 0 0 1 0-1.286L9.435.267a.922.922 0 0 1 1.297 0 .904.904 0 0 1 0 1.285L2.57 9.645a.5.5 0 0 0-.003.707.5.5 0 0 0 .003.003z" id="chevron2a"></path></defs><use xlink:href="#chevron2a"></use></svg>';
@@ -120,7 +134,7 @@ var drawCalendar = function(opt){
         }
     };
     this.showSwap = function(){
-        if($('#stationDepartureField').val()&&$('#stationArrivalField').val()){
+        if($('#stationDepartureField').val()&&($('#stationArrivalField').val())){
             $('#stationSwap').show();
         } else {
             $('#stationSwap').hide();
@@ -135,6 +149,9 @@ var drawCalendar = function(opt){
             return false;
         } else if($('#dateDepartureField').val()==""){
             $('#dateDepartureBar').click();
+            return false;
+        } else if(($('#checkReturn').prop("checked") == true) && ($('#dateArrivalField').val()=="")){ 
+            $('#dateArrivalBar').click();
             return false;
         } else if($('#passengersField').val()=="") {
             $('#passengersBar').click();
@@ -168,6 +185,7 @@ var drawCalendar = function(opt){
         var c2 = $('<div class="mobilePickerContainer">').appendTo(c1);
         var calendars = $('<div class="mobilePickerPanel">').appendTo(c2);
         _t.container = main;
+        
 
         for (var c = 0; c <= 11; c++) {
             m.startOf('month');
@@ -186,6 +204,7 @@ var drawCalendar = function(opt){
 
             }
         });
+
         calendars
             .on('click', '.pickerCalendarDay',function(){
                 _t.container = $(this).parents('.mobileSidebarContainer');
@@ -200,6 +219,57 @@ var drawCalendar = function(opt){
             })
         ;
 
+        ///////////////////////////////////////////////////////////
+        main = $('<div class="mobileSidebarContainer" id="mobileDateArrival">').appendTo(div)
+            .on('click','.mobileSidebarBackButton',function(){
+                _t.container = $(this).parents('.mobileSidebarContainer');
+                _t.close();
+            });
+        $('<div class="mobileSidebarHeader">\n' +
+            '        <div class="mobileSidebarBackButton mobileSidebarButton">\n' +
+            _t.iconBack +
+            '        </div>\n' +
+            '        <div class="mobileSidebarTitleLabel"><span>Arrival date</span></div>\n' +
+            '        <div class="mobileSidebarButton"></div>\n' +
+            '    </div>').appendTo(main);
+        var k1 = $('<div class="mobileSidebarContent">').appendTo(main);
+        var k2 = $('<div class="mobilePickerContainer">').appendTo(k1);
+        calendars = $('<div class="mobilePickerPanel">').appendTo(k2);
+        _t.container = main;
+        
+        for (var c = 0; c <= 11; c++) {
+            m.startOf("month");
+            month = $('<div class="mobilePickerCalendarContainer">').appendTo(calendars);
+            this.month = month;
+            $('<div class="mobilePickerCalendarMonth">').text(m.local().format('MMMM YYYY')).appendTo(month);
+            this.weekDayHeader(m);
+            this.drawMonthDays(m);
+            m.add(1, 'M');
+        }
+
+        $('#dateArrivalBar').click(function(){
+            if($('#checkReturn').prop("checked") == true){
+                $('#mobileDateArrival').addClass('mobileSidebarVisible');
+                if(_t.selected){
+
+                }
+            }
+        });
+
+        calendars
+            .on('click', '.pickerCalendarDay',function(){
+                _t.container = $(this).parents('.mobileSidebarContainer');
+                _t.container.find('.pickerDayLabel').removeClass('pickerActiveDay');
+                $(this).find('.pickerDayLabel').addClass('pickerActiveDay');
+                $('#dateArrivalBar').addClass("barPicked");
+                $('#dateArrivalBar span').text(moment($(this).data("picker")).format(_t.format));
+                var insert = moment($(this).data("picker")).format('YYYY-MM-DD');
+                $('#dateArrivalField').val(insert);
+                _t.close();
+
+            })
+        ;
+        ///////////////////////////////////////////////////////////
 
 
         main = $('<div class="mobileSidebarContainer" id="mobileStationDeparture">').appendTo(div)
@@ -465,6 +535,51 @@ var drawCalendar = function(opt){
 
                 });
         });
+////////////////////////////////////////////////////////////////////////////
+        $('#dateArrivalBar').click(function() {
+            if($('#checkReturn').prop("checked") == true){ 
+            div = $(this).next();
+
+            calendars = $('<div class="desktopPickerCalendars desktopPickerPanel">').appendTo(div);
+            if (_t.selected) {
+                m = moment(_t.selected);
+            } else {
+                m = moment(new Date());
+            }
+            m.startOf('month');
+
+            _t.container = calendars;
+            calendars.data('start', m.format());
+
+
+            _t.drawDesktopCalendars(calendars);
+
+            calendars
+                .on('click','.pickerNavigationIconRight', function(){
+                    m = moment(calendars.data('start')).add(1, 'M');
+                    calendars.data('start',m.format());
+                    calendars.empty();
+                    _t.drawDesktopCalendars(calendars);
+                })
+                .on('click','.pickerNavigationIconLeft', function(){
+                    m = moment(calendars.data('start')).subtract(1, 'M');
+                    calendars.data('start',m.format());
+                    calendars.empty();
+                    _t.drawDesktopCalendars(calendars);
+                })
+                .on('click', '.pickerCalendarDay',function(){
+                    pickerMoment = moment($(this).data("picker"));
+                    _t.selected = pickerMoment.format();
+                    $('#dateArrivalBar span').text(pickerMoment.format(_t.format));
+                    $('#dateArrivalBar').addClass("barPicked");
+                    insert = pickerMoment.format('YYYY-MM-DD');
+                    $('#dateArrivalField').val(insert);
+                    _t.close();
+                    _t.nextStep();
+                });
+            }
+        });
+//////////////////////////////////////////////////////////////////////////
         $('#stationDepartureBar').click(function() {
             var div = $(this).next();
             var calendars = $('<div class="desktopPickerPanel desktopPickerStations">').appendTo(div);
