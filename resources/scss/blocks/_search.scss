@@ -1,0 +1,175 @@
+
+@import url('https://fonts.googleapis.com/css?family=Arimo:400,700&display=swap&subset=cyrillic');
+#train_shedule {
+    margin-top: 21px;
+    padding: 0;
+    .bookingStepTable{
+        background-color: $lighter-gray-color;
+        border-bottom: 1px solid #d9d9d9;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.075);
+        position: relative;
+        &::before{
+            background: #fff;
+            content: '';
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            width: calc((100%) / 2);
+            position: absolute;
+        }
+        .bookingStepTable-list {
+            .bookingStepTable_item {
+                background-color: $lighter-gray-color;
+                color: $middle-gray-color;
+                display: inline-block;
+                padding: 0 25px 0 55px;
+                position: relative;
+                
+                &:after, &:before {
+                    left: 100%;
+                    top: 50%;
+                    border: solid transparent;
+                    content: " ";
+                    height: 0;
+                    width: 0;
+                    position: absolute;
+                    pointer-events: none;
+                    z-index: 2;
+                }
+                
+                &:not(:last-child):after {
+                    border-color: rgba(136, 183, 213, 0);
+                    border-left-color:  $lighter-gray-color;
+                    border-width: 20px;
+                    margin-top: -20px;
+                }
+                &:not(:last-child):before {
+                    border-color: rgba(194, 225, 245, 0);
+                    border-left-color: $light-gray-color;
+                    border-width: 21px;
+                    margin-top: -21px;
+                }
+                
+            }
+             .active{
+                background-color: white;
+                color: black;
+                &:not(:last-child):after {
+                    border-left-color: white;
+                }
+            }
+        }
+    }
+}
+
+.container-mobile {
+    @media only screen and (max-width: 520px), (orientation: portrait) {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+.trainShedule {
+    border: 1px solid #d9d9d9;
+
+    .trainShedule-header {
+        border-bottom: 1px solid #d9d9d9;
+        text-align: center;
+        .result {
+            font-family: $header-font;
+            font-size: 35px;
+            line-height: 1;
+            margin-right: 20px;
+            @extend %no-margin;
+          
+            @media only screen and (max-width: 1200px), (orientation: portrait) {
+              font-size: 30px;
+            }
+          
+            @media only screen and (max-width: 800px), (orientation: portrait) {
+              font-size: 26px;
+            }
+          
+            @media only screen and (max-width: 520px), (orientation: portrait) {
+              font-size: 22px;
+            }
+        }
+
+        .current-date, .passangers {
+            font-weight: bold;
+            color: $middle-gray-color;
+            font-size: 20px;
+            span {
+                font-weight: normal;
+            }
+            i {
+                color: $blue-color;
+            }
+        }
+    }
+    .trainShedule-row{
+        .trainShedule-meta{
+            cursor: pointer;
+            &:hover {
+                color: $blue-color;
+            }
+        }
+
+        &:not(:last-child) {
+           padding-bottom: 5px;
+            border-bottom: 1px solid #d9d9d9;
+        }
+        
+    }
+    .trainShedule-timeDep, .trainShedule-timeArr,
+    .trainShedule-price, .trainShedule-name {
+        font-family: 'Arimo';
+        font-size: 40px;
+        line-height: 1;
+        @extend %no-margin;
+      
+        @media only screen and (max-width: 1200px), (orientation: portrait) {
+          font-size: 34px;
+        }
+      
+        @media only screen and (max-width: 800px), (orientation: portrait) {
+          font-size: 26px;
+        }
+      
+        @media only screen and (max-width: 520px), (orientation: portrait) {
+          font-size: 22x;
+        }
+    }
+
+    .trainShedule-name {
+        color: $accent-color;
+        font-weight: bold;
+    }
+
+    .trainShedule-meta,
+    .trainShedule-station, 
+    .trainShedule-totalPrice {
+        font-size: 14px;
+        color: $middle-gray-color;
+    }
+
+    button {
+        max-width: 600px;
+    }
+
+    .lineWrapper {
+        .circle {
+            border-radius: 50%;
+            background: #ffffff;
+            border: 1px solid #8d8d8d;
+            height: 10px;
+            width: 10px;
+        }
+        .line {
+            background: $blue-color;
+            height: 2px;
+            width: 84%;
+        }
+    }
+}
