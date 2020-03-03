@@ -254,7 +254,7 @@
                     <div class="trainShedule-header p-3">
                         <div class="d-flex flex-row flex-wrap justify-content-between align-items-center">
                             <div class="result">Moscow - St. Petersburg</div>
-                            <div class="current-date"> 16 Apr<span> Thursday</span> </div>
+                            <div class="current-date"></div>
                             <div class="passangers"><i class="fas fa-users"></i> 5</div>
                         </div>                            
                     </div>
@@ -280,7 +280,7 @@
                                                     <div class="trainShedule-station">Leningradsky</div>
                                                 </div>
                                                 <div class="col-4 col-lg-6 text-center">
-                                                    <div class="trainShedule-timeTravel">8h 39min</div>
+                                                    <div id="trainShedule-timeTravel" class="trainShedule-timeTravel">8h 39min</div>
                                                     <div class="lineWrapper align-items-center d-flex flex-nowrap w-100 justify-content-center">
                                                         <div class="circle left"></div>
                                                         <div class="line"></div>
@@ -590,7 +590,7 @@
   </footer>
 </main>
 
-<script type="text/javascript"> 
+<script> 
   let firstDate = "00:20";
   let secondDate = "00:41";
   let getDate = (string) => new Date(0, 0,0, string.split(':')[0], string.split(':')[1]); 
@@ -599,6 +599,7 @@
   let minutes = Math.round(((different % 86400000) % 3600000) / 60000);
   let result = hours + ':' + minutes;
   console.log(result);
+  document.getElementById('trainShedule-timeTravel').innerHTML = result;
   </script> 
 
 <div id="mobileContainer"></div>
@@ -613,6 +614,15 @@
 <script src="resources/js/nav.js"></script>
 <script src="resources/js/header-form.js"></script>
 <script src="resources/js/main.js"></script>
+
+<script>
+  let currentDate = "25.03.2020";
+  var month = ["January", "February", "March", "April", "May", "June",
+  "July", "August", "September", "October", "November", "December"][currentDate.getMonth()];
+  var str = month + ' ' + currentDate.getFullYear();
+  console.log(str);
+  document.getElementByClassname('current-date').innerHTML = str;
+</script>
 
 </body>
 
