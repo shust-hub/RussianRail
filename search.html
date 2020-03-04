@@ -254,7 +254,7 @@
                     <div class="trainShedule-header p-3">
                         <div class="d-flex flex-row flex-wrap justify-content-between align-items-center">
                             <div class="result">Moscow - St. Petersburg</div>
-                            <div class="current-date"></div>
+                            <div id="current-date" class="current-date"></div>
                             <div class="passangers"><i class="fas fa-users"></i> 5</div>
                         </div>                            
                     </div>
@@ -269,7 +269,9 @@
                                         </div>
                                         <div class="trainShedule-meta mb-3 mb-lg-0">
                                             <ul>
-                                                <li>express eticket</li>
+                                              <li class="trainShedule-meta"> 
+                                                <div class="traineShedule_tips "data-toggle="tooltip" data-placement="top"> eticket </div> 
+                                            </li>  
                                             </ul>
                                         </div>
                                     </div>
@@ -615,13 +617,18 @@
 <script src="resources/js/header-form.js"></script>
 <script src="resources/js/main.js"></script>
 
+<div id="cdate" class="cdate hidden">25.03.2020</div>
+
 <script>
-  let currentDate = "25.03.2020";
-  var month = ["January", "February", "March", "April", "May", "June",
-  "July", "August", "September", "October", "November", "December"][currentDate.getMonth()];
-  var str = month + ' ' + currentDate.getFullYear();
-  console.log(str);
-  document.getElementByClassname('current-date').innerHTML = str;
+  let days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  let from = $("#cdate").text().split(".")
+  let f = new Date(from[2], from[1] - 1, from[0])
+  let month = ["January", "February", "March", "April", "May", "June",
+  "July", "August", "September", "October", "November", "December"][f.getMonth()];
+  Date.prototype.getDayName = function() {
+        return days[ this.getDay() ];
+  };
+  $('#current-date').html( f.getDay() + ' ' + month + ', ' + f.getDayName().replace(f.getDayName(), '<span>'+ f.getDayName() +'</span>')) ;
 </script>
 
 </body>
