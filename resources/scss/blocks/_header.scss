@@ -17,13 +17,9 @@
   }
 
   &.header-index{
-    max-height: 200vh;
     height: 100vh;
-  }
+    min-height: 60vh;
 
-  &.header-index.scroll {
-      height: calc(100vh - 55px);
-      transition:  .5s linear;
   }
 
   &.inner {

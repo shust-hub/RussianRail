@@ -1,17 +1,29 @@
-$(window).scroll(function() {    
-    var scroll = $(window).scrollTop();   
-    if (scroll <= 5)  {
-        $('.header-index').addClass('scroll');
-        }
-        else {
-        $('.header-index').removeClass('scroll');
-        }
-});
+$(window).scroll(function () {
+    var scrollTop = $(window).scrollTop();
+    if (scrollTop == 0) {
+        maxHeight = 100;
+    } else if (scrollTop < 400) {
+        maxHeight = 85;
+    } else {
+        maxHeight = 150 - 75 * ((scrollTop - 200)) / 200;
+
+    }
+    $('.header-index').css({
+        'height': maxHeight + "vh"
+    });
+})
+
+function infinite(){
+    $('#kidsScroll').animate({"background-position-x":"-5000px"},90000,function(){
+      $(this).css({"background-position-x":'0px'});
+    });
+  }
+
 
 $(document).ready(function() {
+      infinite();
+      setInterval(infinite,900000); 
 
-    $('.header-index').addClass('scroll'); 
-    
     $(function () {
       $('[data-toggle="tooltip"]').tooltip()
     })
@@ -153,27 +165,41 @@ $(document).ready(function() {
         });
     });
 
-    $(".traineShedule_tips").mouseover(function() {
-        var nm = $(this).text();
-        var tip = ''
-        switch (nm){
-            case "eticket": $(this).prop('title', "This is a ticket with electronic registration. The electronic ticket that we email to you does not have to be exchanged prior to your trip. To board the train, you just have to show this electronic ticket and your passport.");
-            break;
-            case "paper ticket": tip = "Paper ticket can only be used in original. It has to be picked up at our office or delivered by FedEx";
-            break;
-            case "semi e-ticket": tip = "This is a ticket which will be sent to you by email, but which you will have to exchange for a boarding pass prior to the trip at the train station. You can exchange your semi e-ticket in a ticket booth (it should have an E-ticket sign) or at an electronic terminal at the train station. To get your boarding pass at the station and to board a train you will have to show your passport.";
-            break;
-            case "express": tip = "Express (skory) train\n<br>" +
-                "Express trains usually serve long distance routes and are quite popular among travelers. Average speed of a Skory train is from 50 to 91 km/h. These trains run regularly and make less stops than Passazhirsky trains.";
-            break;
-            case "high-speed": tip = "These are very fast trains that cover long distances in a short amount of time. Their speed is 140-200km/h. These trains do not have sleeper carriages, they have only seats. 1st class seats are similar to Business class airplane seats and 2nd class can be compared to Economy airplane seats. All of these trains are also Firmenny (branded) and offer high-quality service.";
-            break;
-            case "branded": tip = "Branded (firmenny) train<br>" +
-                "Branded trains are high standard trains. Their major amenities are: air-conditioning, convenient train schedule, shorter travel time, newer carriages, bed linen and toiletries of higher quality. Compartments for disabled people are also available on these trains. Each train has its specific interior design and a name such ‘Kama’, ‘Red Arrow’. These Russian trains typically have 1st, 2nd and 3rd class carriages and have a restaurant carriage.";
-            break;
-            }     
-        });
-
+    $('.traineShedule_tips').each(function(ndx, elem) {
+            var $elem = $(elem);
+            switch ($elem.text().trim()){
+                case "eticket": 
+                    $elem.attr('title', 'This is a ticket with electronic registration. The electronic ticket that we email to you does not have to be exchanged prior to your trip. To board the train, you just have to show this electronic ticket and your passport.') // set title attribute
+                    .data('toggle', 'tooltip') 
+                    .tooltip(); 
+                break;
+                case "paper ticket":
+                    $elem.attr('title', 'Paper ticket can only be used in original. It has to be picked up at our office or delivered by FedEx') // set title attribute
+                    .data('toggle', 'tooltip') 
+                    .tooltip(); 
+                break;
+                case "semi e-ticket": 
+                    $elem.attr('title',  "This is a ticket which will be sent to you by email, but which you will have to exchange for a boarding pass prior to the trip at the train station. You can exchange your semi e-ticket in a ticket booth (it should have an E-ticket sign) or at an electronic terminal at the train station. To get your boarding pass at the station and to board a train you will have to show your passport.")
+                    .data('toggle', 'tooltip') 
+                    .tooltip(); 
+                break;
+                case "express": 
+                    $elem.attr('title', "Express trains usually serve long distance routes and are quite popular among travelers. Average speed of a Skory train is from 50 to 91 km/h. These trains run regularly and make less stops than Passazhirsky trains.")
+                    .data('toggle', 'tooltip') 
+                    .tooltip(); 
+                break;
+                case "high-speed":
+                    $elem.attr('title', "These are very fast trains that cover long distances in a short amount of time. Their speed is 140-200km/h. These trains do not have sleeper carriages, they have only seats. 1st class seats are similar to Business class airplane seats and 2nd class can be compared to Economy airplane seats. All of these trains are also Firmenny (branded) and offer high-quality service.")
+                    .data('toggle', 'tooltip') 
+                    .tooltip(); 
+                break;
+                case "branded":
+                   $elem.attr('title', "Branded trains are high standard trains. Their major amenities are: air-conditioning, convenient train schedule, shorter travel time, newer carriages, bed linen and toiletries of higher quality. Compartments for disabled people are also available on these trains. Each train has its specific interior design and a name such ‘Kama’, ‘Red Arrow’. These Russian trains typically have 1st, 2nd and 3rd class carriages and have a restaurant carriage.")
+                   .data('toggle', 'tooltip') 
+                   .tooltip(); 
+                break;
+                }     
+        })
 
 
         // function(){

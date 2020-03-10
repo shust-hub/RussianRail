@@ -95,7 +95,7 @@ header .content .nav-trigger, header .content .nav-trigger span, header .content
   left: 0;
   right: 0; }
 
-*, ::after, ::before, .block .description, .horizontal-block, #header .headerForm, #recommended .recommended__block a#bbblink div, #choose .content .choose__block, .navigation, .navigation__list, .navigation__list a, .navigation__list p, #destinations .destinations__block .description, #testimonials .testimonials__block, #testimonials-list .testimonials__block, #testimonials .testimonials__block .main .quote p, #testimonials-list .testimonials__block .main .quote p, #kids .kids__content, #news .news, #news .news__block .description, #articles .articles, #articles .articles__block .description, .train, #about, #trainPage .train__description .text, .list-group .list-group-item .from {
+*, ::after, ::before, .block .description, .horizontal-block, #header .headerForm, #recommended .recommended__block a#bbblink div, #choose .content .choose__block, .navigation, .navigation__list, .navigation__list a, .navigation__list p, #destinations .destinations__block .description, #testimonials .testimonials__block, #testimonials-list .testimonials__block, #testimonials .testimonials__block .main .quote p, #testimonials-list .testimonials__block .main .quote p, #kids .kids__content, #news .news, #news .news__block .description, .train, #about, #trainPage .train__description .text, .list-group .list-group-item .from {
   -webkit-box-sizing: border-box;
   -ms-box-sizing: border-box;
   -o-box-sizing: border-box;
@@ -109,8 +109,7 @@ header, header .content .nav-trigger span::before, header .content .nav-trigger 
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden; }
 
-.noMargin, h1, h2, h3, h4, #kids .kids__content p, .trainShedule .trainShedule-header .result, .trainShedule .trainShedule-timeDep, .trainShedule .trainShedule-timeArr,
-.trainShedule .trainShedule-price, .trainShedule .trainShedule-name {
+.noMargin, h1, h2, h3, h4, #kids .kids__content p, .trainShedule .trainShedule-header .result, .trainShedule .trainShedule-timeDep, .trainShedule .trainShedule-timeArr {
   margin: 0; }
 
 p, .faqs {
@@ -328,7 +327,6 @@ button {
   -webkit-transition: all 0.3s ease-out, all 0.3s ease-out, auto;
   transition: all 0.3s ease-out, all 0.3s ease-out, auto;
   width: 100%;
-  max-width: 380px;
   height: 50px;
   background: #ad1e2f;
   font-family: "Open Sans", sans-serif;
@@ -416,12 +414,6 @@ button {
     opacity: 1;
     /* Показываем его */
     visibility: visible; }
-
-a .tooltip {
-  cursor: pointer; }
-
-section {
-  padding: 30px 0; }
 
 .listWithArrow li {
   position: relative;
@@ -747,7 +739,7 @@ mark {
 .alert-info {
   background-color: #dfe7ff;
   padding: 20px 30px;
-  margin-bottom: 30px;
+  margin: 20px 0;
   border-color: #dfe7ff;
   border-radius: 0;
   color: #000; }
@@ -777,8 +769,7 @@ h2 {
   font-family: "Acumin Pro";
   font-size: 32px;
   font-weight: 700;
-  line-height: 1.3;
-  margin-bottom: 25px; }
+  line-height: 1.3; }
   @media only screen and (max-width: 480px), (orientation: portrait) {
     h2 {
       font-size: 22px; } }
@@ -837,12 +828,8 @@ a:hover {
     #header {
       min-height: calc(100vh - 55px); } }
   #header.header-index {
-    max-height: 200vh;
-    height: 100vh; }
-  #header.header-index.scroll {
-    height: calc(100vh - 55px);
-    -webkit-transition: .5s linear;
-    transition: .5s linear; }
+    height: 100vh;
+    min-height: 60vh; }
   #header.inner {
     background-image: url("../img/head.jpg");
     padding-top: 20px; }
@@ -1425,15 +1412,16 @@ main {
         margin-bottom: 8px;
         width: 100%; } }
   .navigation .first-li {
-    cursor: default; }
+    cursor: default;
+    margin-bottom: 5px; }
     .navigation .first-li:hover {
       color: #000; }
-    @media only screen and (max-width: 1024px) {
+    @media only screen and (max-width: 1023px) {
       .navigation .first-li {
         padding-bottom: 8px; } }
   .navigation .subnav-trigger {
     position: relative; }
-    @media only screen and (min-width: 1024px) {
+    @media only screen and (min-width: 1023px) {
       .navigation .subnav-trigger {
         z-index: 1;
         padding-left: 1.1em;
@@ -1625,7 +1613,8 @@ main {
         font-size: 22px;
         line-height: 21px; } }
   #action button {
-    margin: 30px auto 0; }
+    margin: 30px auto 0;
+    max-width: 380px; }
 
 #testimonials h2, #testimonials-list h2 {
   margin-bottom: 25px; }
@@ -1713,7 +1702,6 @@ main {
       #testimonials .testimonials__block, #testimonials-list .testimonials__block {
         padding: 28px 30px 35px; } }
     #testimonials .testimonials__block .main, #testimonials-list .testimonials__block .main {
-      padding-bottom: 30px;
       -ms-flex-wrap: nowrap;
           flex-wrap: nowrap; }
       #testimonials .testimonials__block .main .quote, #testimonials-list .testimonials__block .main .quote {
@@ -1791,7 +1779,6 @@ main {
       #testimonials-list .testimonials__block {
         padding: 28px 30px 35px; } }
     #testimonials-list .testimonials__block .main {
-      padding-bottom: 30px;
       -ms-flex-wrap: nowrap;
           flex-wrap: nowrap; }
       #testimonials-list .testimonials__block .main .quote {
@@ -2125,11 +2112,6 @@ main {
   position: relative;
   padding: 45px 0 80px;
   overflow: hidden; }
-  #articles h2 {
-    margin-bottom: 25px; }
-    @media only screen and (max-width: 980px), (orientation: portrait) {
-      #articles h2 {
-        padding-bottom: 0; } }
   #articles .articles-wrapper {
     position: relative;
     width: 100%; }
@@ -2190,96 +2172,6 @@ main {
             right: 0; } }
         #articles .articles-wrapper .articles-nav .owl-next::before {
           content: '\203A'; }
-  @media only screen and (max-width: 1320px), (orientation: portrait) {
-    #articles .articles {
-      width: 80%;
-      margin: 0 auto; } }
-  @media only screen and (max-width: 680px), (orientation: portrait) {
-    #articles .articles {
-      width: 100%; } }
-  #articles .articles__block {
-    overflow: hidden;
-    position: relative;
-    cursor: pointer;
-    width: auto;
-    max-height: 480px; }
-    #articles .articles__block img {
-      height: 402px;
-      width: auto; }
-      @media only screen and (max-width: 980px), (orientation: portrait) {
-        #articles .articles__block img {
-          width: 100%; } }
-    #articles .articles__block img {
-      -webkit-transition: all 0.3s ease-out, all 0.3s ease-out, auto;
-      transition: all 0.3s ease-out, all 0.3s ease-out, auto; }
-    #articles .articles__block h3 {
-      color: black; }
-    #articles .articles__block:hover img {
-      opacity: .9; }
-    #articles .articles__block:hover .description h3 {
-      color: #ad1e2f; }
-    #articles .articles__block .description {
-      position: absolute;
-      bottom: 30px;
-      left: 0;
-      right: 0;
-      width: calc(100% - 40px);
-      background: #fff;
-      text-align: center;
-      padding: 25px 25px 30px;
-      margin: auto; }
-      @media only screen and (max-width: 520px), (orientation: portrait) {
-        #articles .articles__block .description {
-          width: calc(100% - 30px);
-          bottom: 15px; } }
-      #articles .articles__block .description p {
-        -webkit-transition: all 0.3s ease-out, all 0.3s ease-out, auto;
-        transition: all 0.3s ease-out, all 0.3s ease-out, auto;
-        color: black;
-        position: relative;
-        margin-bottom: 0; }
-        #articles .articles__block .description p::after {
-          position: absolute;
-          content: '\2192';
-          font-family: "Segoe UI Emoji";
-          font-size: 16px;
-          color: #ad1e2f;
-          margin-left: 5px; }
-    @media only screen and (max-width: 980px), (orientation: portrait) {
-      #articles .articles__block {
-        height: 350px; } }
-    @media only screen and (max-width: 980px), (orientation: portrait) {
-      #articles .articles__block {
-        margin-right: 0; } }
-    #articles .articles__block .description {
-      bottom: 15px;
-      width: calc(100% - 30px);
-      min-width: auto;
-      max-width: none;
-      text-align: center;
-      padding-top: 25px; }
-      @media only screen and (max-width: 1200px), (orientation: portrait) {
-        #articles .articles__block .description {
-          min-height: 214px;
-          max-height: 214px; } }
-      @media only screen and (max-width: 1046px), (orientation: portrait) {
-        #articles .articles__block .description {
-          min-height: 230px;
-          max-height: 230px; } }
-      @media only screen and (max-width: 1039px), (orientation: portrait) {
-        #articles .articles__block .description {
-          min-height: 250px;
-          max-height: 250px; } }
-      @media only screen and (max-width: 980px), (orientation: portrait) {
-        #articles .articles__block .description {
-          min-height: auto;
-          max-height: none; } }
-      #articles .articles__block .description h3 {
-        font-size: 16px;
-        line-height: 18px;
-        color: #000; }
-      #articles .articles__block .description a {
-        color: #000; }
 
 .trains__sidebar {
   background: #fff;
@@ -3260,94 +3152,6 @@ input:checked ~ .tab-content {
   color: white;
   font-size: small; }
 
-.ui-datepicker {
-  position: absolute;
-  left: 50%;
-  background: #fff;
-  border-radius: 4px;
-  overflow: hidden; }
-
-.ui-datepicker-header {
-  height: 50px;
-  line-height: 50px;
-  color: white;
-  background: #ad1e2f;
-  margin-bottom: 10px; }
-
-.ui-datepicker-prev, .ui-datepicker-next {
-  width: 20px;
-  height: 20px;
-  text-indent: 9999px;
-  border: 2px solid white;
-  border-radius: 100%;
-  cursor: pointer;
-  overflow: hidden;
-  margin-top: 12px; }
-
-.ui-datepicker-prev {
-  float: left;
-  margin-left: 12px; }
-  .ui-datepicker-prev:after {
-    -webkit-transform: rotate(45deg);
-            transform: rotate(45deg);
-    margin: -43px 0px 0px 8px; }
-
-.ui-datepicker-next {
-  float: right;
-  margin-right: 12px; }
-  .ui-datepicker-next:after {
-    -webkit-transform: rotate(-135deg);
-            transform: rotate(-135deg);
-    margin: -43px 0px 0px 6px; }
-
-.ui-datepicker-prev:after, .ui-datepicker-next:after {
-  content: '';
-  position: absolute;
-  display: block;
-  width: 4px;
-  height: 4px;
-  border-left: 2px solid white;
-  border-bottom: 2px solid white; }
-
-.ui-datepicker-prev:hover,
-.ui-datepicker-next:hover,
-.ui-datepicker-prev:hover:after,
-.ui-datepicker-next:hover:after {
-  border-color: #e69696; }
-
-.ui-datepicker-title {
-  text-align: center; }
-
-.ui-datepicker-calendar {
-  width: 100%;
-  text-align: center; }
-  .ui-datepicker-calendar thead tr th span {
-    display: block;
-    width: 40px;
-    color: #ad1e2f;
-    margin-bottom: 5px;
-    font-size: 13px; }
-
-.ui-state-default {
-  display: block;
-  text-decoration: none;
-  color: #b5b5b5;
-  line-height: 40px;
-  font-size: 12px; }
-  .ui-state-default:hover {
-    background: rgba(0, 0, 0, 0.02); }
-
-.ui-state-highlight {
-  color: #ad1e2f;
-  background: #f0f0f0; }
-
-.ui-state-active {
-  color: #4169e1; }
-
-.ui-datepicker-unselectable .ui-state-default {
-  color: #eee;
-  border: 2px solid transparent; }
-
 body.noScroll {
   left: 0;
   right: 0;
@@ -4003,38 +3807,67 @@ body.noScroll {
         color: #4169e1; }
   .trainShedule .trainShedule-row .trainShedule-meta {
     cursor: pointer; }
+    .trainShedule .trainShedule-row .trainShedule-meta:not(:last-child):after {
+      position: relative;
+      content: "/";
+      margin: 0 5px;
+      pointer-events: none;
+      cursor: default;
+      pointer-events: none;
+      display: inline-block; }
     .trainShedule .trainShedule-row .trainShedule-meta:hover {
       color: #4169e1; }
-  .trainShedule .trainShedule-row:not(:last-child) {
-    padding-bottom: 5px;
-    border-bottom: 1px solid #d9d9d9; }
-  .trainShedule .trainShedule-timeDep, .trainShedule .trainShedule-timeArr,
-  .trainShedule .trainShedule-price, .trainShedule .trainShedule-name {
+      .trainShedule .trainShedule-row .trainShedule-meta:hover:not(:last-child):after {
+        color: #6a6a6a; }
+  .trainShedule .trainShedule-row:not(:first-child) {
+    border-top: 1px solid #d9d9d9; }
+  .trainShedule .trainShedule-timeDep, .trainShedule .trainShedule-timeArr {
     font-family: 'Arimo';
-    font-size: 40px;
+    font-size: 30px;
     line-height: 1; }
     @media only screen and (max-width: 1200px), (orientation: portrait) {
-      .trainShedule .trainShedule-timeDep, .trainShedule .trainShedule-timeArr,
-      .trainShedule .trainShedule-price, .trainShedule .trainShedule-name {
-        font-size: 34px; } }
-    @media only screen and (max-width: 800px), (orientation: portrait) {
-      .trainShedule .trainShedule-timeDep, .trainShedule .trainShedule-timeArr,
-      .trainShedule .trainShedule-price, .trainShedule .trainShedule-name {
+      .trainShedule .trainShedule-timeDep, .trainShedule .trainShedule-timeArr {
         font-size: 26px; } }
+    @media only screen and (max-width: 800px), (orientation: portrait) {
+      .trainShedule .trainShedule-timeDep, .trainShedule .trainShedule-timeArr {
+        font-size: 22px; } }
     @media only screen and (max-width: 520px), (orientation: portrait) {
-      .trainShedule .trainShedule-timeDep, .trainShedule .trainShedule-timeArr,
-      .trainShedule .trainShedule-price, .trainShedule .trainShedule-name {
-        font-size: 22x; } }
+      .trainShedule .trainShedule-timeDep, .trainShedule .trainShedule-timeArr {
+        font-size: 20px; } }
+  .trainShedule .trainShedule-price {
+    font-size: 26px; }
+    @media only screen and (max-width: 1600px), (orientation: portrait) {
+      .trainShedule .trainShedule-price {
+        font-size: 24px; } }
+    @media only screen and (max-width: 1200px), (orientation: portrait) {
+      .trainShedule .trainShedule-price {
+        font-size: 20px; } }
+  .trainShedule .days {
+    background: #d9d9d9;
+    position: absolute;
+    left: -66px;
+    top: -2px;
+    padding: 2px 5px;
+    color: #6a6a6a;
+    font-weight: bold;
+    border-radius: 5px;
+    font-size: 12px; }
   .trainShedule .trainShedule-name {
     color: #ad1e2f;
-    font-weight: bold; }
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 1; }
+    @media only screen and (max-width: 1200px), (orientation: portrait) {
+      .trainShedule .trainShedule-name {
+        font-size: 27px; } }
+    @media only screen and (max-width: 800px), (orientation: portrait) {
+      .trainShedule .trainShedule-name {
+        font-size: 23px; } }
   .trainShedule .trainShedule-meta,
   .trainShedule .trainShedule-station,
   .trainShedule .trainShedule-totalPrice {
     font-size: 14px;
     color: #6a6a6a; }
-  .trainShedule button {
-    max-width: 600px; }
   .trainShedule .lineWrapper .circle {
     border-radius: 50%;
     background: #ffffff;

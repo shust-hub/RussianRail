@@ -579,7 +579,8 @@ main {
       color: $black-color;
     }
     cursor: default;
-    @media only screen and (max-width: 1024px)  {
+    margin-bottom: 5px;
+    @media only screen and (max-width: 1023px)  {
       padding-bottom: 8px;
     }
   }
@@ -587,7 +588,7 @@ main {
   .subnav-trigger {
     position: relative;
 
-    @media only screen and (min-width: 1024px) {
+    @media only screen and (min-width: 1023px) {
       z-index: 1;
 
       padding: {
