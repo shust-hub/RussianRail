@@ -11,7 +11,7 @@
   <link rel="icon" href="resources/img/favicon.ico" type="image/x-icon" />
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css">
   <link rel="stylesheet" href="resources/scss/style.css">
   <link rel="stylesheet" href="resources/assets/lightbox/dist/css/lightbox.min.css">
 
@@ -237,27 +237,10 @@
 
         <form id="searchTicket" class="headerForm" name="searchTicket" method="get" action="/search">
           <h2>Start planning</h2>
-            <div class="departure-field position-relative">
-                <div class="searchBarBlock" id="stationDepartureBar">
-                    <div class="field"><span>Depature From</span></div>
 
-                    <input type="hidden" id="stationDepartureField" name="from"  value="">
-                </div>
-                <div class="picker"></div>
+            <input class="input" type="text">
 
-                
-                <i class="fas fa-random stationSwap"  id="stationSwap"></i>
-               
-            </div>
-
-            <div class="arrival-field">
-                <div class="searchBarBlock" id="stationArrivalBar">
-                    <div class="field"><span>Arrival To</span></div>
-                    <input type="hidden" id="stationArrivalField" name="to" value="">
-                </div>
-                <div class="picker"></div>
-            </div>
-
+            <input class="input" type="text">
 
             <div class="checkReturnBox d-flex align-items-center mb-2">
               <label class="checkReturn-label" for="checkReturn">
@@ -267,33 +250,15 @@
               </label>
             </div>
 
-            <div id="dates" class="d-flex flex-nowrap">
-
-              <div class="dateFrom-field w-100 mr-2">
-                <div class="searchBarBlock date_br" id="dateDepartureBar">
-                    <div class="field"> <span>Date</span></div>
-                    <input type="hidden" id="dateDepartureField" name="date-depature"  value="">
-                </div>
-                <div class="picker"></div>
+            <div class="d-md-flex">
+              <input id="fromDate" type="text" autocomplete="off" placeholder="Depature From" class="calendar input mr-2">
+              <input id="toDate" type="text" autocomplete="off" placeholder="Arrival To" disabled class="calendar input">
             </div>
 
-              <div class="dateTo-field w-100">
-                <div class="searchBarBlock date_br disabled" id="dateArrivalBar">
-                    <div class="field"> <span>Return Date</span></div>
-                    <input type="hidden" id="dateArrivalField" name="date-arrival"  value="">
-                </div>
-                <div class="picker"></div>
-            </div>
-            </div>
 
-            <div class="passengers-field">
-                <div class="searchBarBlock" id="passengersBar">
-                    <div class="field"><i class="icon-sapsan-passengers"></i> <span>Passengers</span></div>
-                    <input type="hidden" id="passengersField" name="passengers"  value="">
-                </div>
-                <div class="picker"></div>
-            </div>
-            <button id="searchButton" class="w-100" type="submit">Search</button>
+            <input id="passangers" class="input" type="text" placeholder="Passangers" disabled>
+
+            <button id="searchButton" class="w-100"  value="" type="submit">Search</button>
       </form>
 
 
@@ -533,7 +498,7 @@
 <script src="resources/assets/OwlCarousel/dist/owl.carousel.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-<script src="resources/js/moment-with-locales.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script src="resources/js/nav.js"></script>
 <script src="resources/js/header-form.js"></script>
 <script src="resources/js/main.js"></script>

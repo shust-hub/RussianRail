@@ -1,479 +1,97 @@
-body.noScroll {
-    left: 0;
-    right: 0;
-    position: fixed;
-    height: 100vh;
-    overflow: hidden
-  }
+$width: 320px;
+
+.ui-datepicker {
+  padding: 20px;
+  border: none;
+  box-shadow: 0 12px 36px 16px rgba(0,0,0,0.24);
+  width: $width;
+}
+
+.ui-corner-all {
+  border-radius: 0;
+}
+
+.ui-widget-header {
+  border: 0;
+  background-color: $accent-color;
+}
+
+.ui-datepicker-header {
+  text-align: center;
+  background: white;
+  padding-bottom: 15px;
+  font-weight: 300;
+  color: $accent-color;
   
-  .mobileSidebarContainer {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: 100vw;
-    height: 100%;
-    max-height: 100vh;
-    margin: 0!important;
-    z-index: 100000;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-transition: -webkit-transform .15s ease-in;
-    transition: -webkit-transform .15s ease-in;
-    transition: transform .15s ease-in;
-    transition: transform .15s ease-in, -webkit-transform .15s ease-in;
-    -webkit-transform: translateX(100vw);
-    transform: translateX(100vw);
-    will-change: transform
-  }
-  
-  .mobileSidebarContainer.mobileSidebarVisible {
-    left: 0;
-    -webkit-transform: translateX(0);
-    transform: translateX(0)
-  }
-  
-  .mobileSidebarContainer.mobileSidebarVisible .mobileSidebarHeader {
-    -webkit-box-shadow: 0 4px 8px 0 rgba(51, 51, 51, .1);
-    box-shadow: 0 4px 8px 0 rgba(51, 51, 51, .1)
-  }
-  
-  .mobileSidebarHeader {
-    position: relative;
-    width: 100%;
-    min-height: 56px;
-    margin: 0;
-    background-color: #fff;
-    color: black;
-    text-decoration: none;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -webkit-box-shadow: 0 4px 8px 0 rgba(51, 51, 51, 0);
-    box-shadow: 0 4px 8px 0 rgba(51, 51, 51, 0)
-  }
-  
-  .mobileSidebarBackButton,
-  .mobileSidebarHeader {
-    z-index: 1;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center
-  }
-  
-  .mobileSidebarBackButton {
-    height: 56px;
-    width: 56px;
-    cursor: pointer;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center
-  }
-  
-  .mobileSidebarBackButton>svg {
-    height: 20px;
-    width: 20px;
-    color: #717fa4
-  }
-  
-  .mobileSidebarTitleLabel {
-    position: relative;
-    height: 56px;
-    width: 100%;
-    color: $gray-color;
-    font-size: 18px;
-    font-weight: 700;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center
-  }
-  
-  .mobileSidebarContent {
-    position: relative;
-    width: 100%;
-    height: calc(100vh - 56px);
-    padding-bottom: 72px;
-    overflow: scroll;
-    -webkit-overflow-scrolling: touch;
-    background-color: #fff;
-    opacity: 1
-  }
-  
-  .mobileSidebarContent>div {
-    min-width: 100%
-  }
-  
-  .pickerDefaultFont {
-    font-size: 14px;
-    font-weight: 400;
-    font-style: normal;
-    font-stretch: normal
-  }
-  
-  .pickerCalendarRow {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    margin: 0;
-    padding: 2px 0
-  }
-  
-  .pickerCalendarDay {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    color:$middle-gray-color;
-    cursor: pointer;
-    display: block;
-    font-size: 14px;
-    height: 32px;
-    line-height: 28px;
-    list-style: none;
-    position: relative;
+  .ui-datepicker-prev,
+  .ui-datepicker-next,
+  .ui-datepicker-title {
+    border: none;
+    outline: none;
+    margin: 5px;
+    color: $accent-color;  }
+}
+
+.ui-datepicker-prev.ui-state-hover,
+.ui-datepicker-next.ui-state-hover {
+  border: none;
+  outline: none;
+  background: lighten($accent-color, 50%);
+}
+
+.ui-datepicker-calendar {
+  .ui-state-default {
+    background: none;
+    border: none;
     text-align: center;
-    width: 100%;
-    min-width: 28px;
-    z-index: 0
+    height: 33px;
+    width: 33px;
+    line-height: 26px;
+    font-size: 14px;
   }
   
-  .pickerCalendarDay.pickerIsUnavailable {
-    pointer-events: none
-  }
-  
-  .pickerCalendarDay.pickerWeekend {
-    font-weight: 700;
+  .ui-state-highlight {
     color: $accent-color;
   }
   
-  .pickerWeekdaysWeekday {
-    height: 32px;
-    width: 100%;
-    color:$middle-gray-color;
-    font-size: 12px;
-    font-weight: 500;
-    text-align: center;
-    text-transform: uppercase;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: end;
-    -ms-flex-align: end;
-    align-items: flex-end;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center
-  }
-  
-  .pickerWeekdaysWeekday.pickerWeekdaysWeekend {
-    font-weight: 700;
-    color: $accent-color;
-  }
-  
-  .pickerSelectedRange {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    pointer-events: none
-  }
-  
-  
-  .pickerDayLabel {
-    -webkit-box-sizing: content-box;
-    box-sizing: content-box;
-    width: 28px;
-    height: 28px;
-    margin: 0 auto;
+  .ui-state-active {
     border-radius: 50%;
-    border: 2px solid #fff;
-    z-index: 2;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-line-pack: center;
-    align-content: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center
+    background-color: $accent-color;
+    color: white;
   }
   
-  .pickerDayLabel.pickerActiveDay {
-    color: #fff;
-    background-color: $blue-color;
-    border: 2px solid $blue-color
-  }
-  
-  .pickerDayLabel.pickerUnavailableDay {
-    color: #ccc
-  }
-  
-  
-  .pickerDayLabel:hover:not(.pickerUnavailableDay):not(.pickerActiveDay) {
-    background-color: #fff;
-    border: 2px solid $blue-color;
-    color: #666
-  }
-  
-
-  .pickerNavigationContainer {
-    height: 24px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between
-  }
-  
-  .pickerNavigationTitle {
-    height: 20px;
-    color: $accent-color;
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 20px;
-    text-align: center
-  }
-  
-  .pickerNavigationNavIcon {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    cursor: pointer;
-    padding: 15px 5px
-  }
-  
-  .pickerNavigationNavIcon.pickerNavigationIconLeft {
-    -webkit-transform: rotate(90deg);
-    transform: rotate(90deg);
-    -webkit-box-align: end;
-    -ms-flex-align: end;
-    align-items: flex-end
-  }
-  
-  .pickerNavigationNavIcon.pickerNavigationIconRight {
-    -webkit-transform: rotate(-90deg);
-    transform: rotate(-90deg);
-    -webkit-box-align: end;
-    -ms-flex-align: end;
-    align-items: flex-end
-  }
-  
-  .pickerNavigationNavIcon>svg {
-    width: 16px;
-    height: 16px;
-    color: $middle-gray-color
-  }
-  
-  .pickerNavigationNavIcon.pickerNavigationBlank {
-    cursor: auto
-  }
-  
-  .pickerNavigationNavIcon.pickerNavigationDisabled {
-    opacity: .4;
-    pointer-events: none
-  }
-  
-  
-  .desktopPickerPanel {
-    position: absolute;
-    -webkit-box-shadow: 0 8px 16px 0 rgba(51, 51, 51, .2);
-    box-shadow: 0 8px 16px 0 rgba(51, 51, 51, .2);
-    background-color: #fff;
-    z-index: 100;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row
-  }
-  .desktopPickerStations {
-    left: -25px;
-    width: 220px;
-  }
-  .mobilePickerStations ul,
-  .desktopPickerStations ul {
-    list-style: none;
-    margin: 15px 0 5px 0;
-    padding: 0;
-    display: block;
-    width: 100%;
-  }
-  .mobilePickerStations li,
-  .desktopPickerStations li{
-    text-align: left;
-    padding: 10px 18px 0 18px;
-    display: block;
-  }
-  .mobilePickerStations li > .stationPicker,
-  .desktopPickerStations li > .stationPicker{
-    border-bottom: 1px solid #e9e9e9 ;
-    padding-bottom: 10px;
-    color:$middle-gray-color;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 30px;
-  }
-  .mobilePickerStations li:last-child > .stationPicker,
-  .desktopPickerStations li:last-child > .stationPicker{
-    border: none;
-  }
-  .mobilePickerStations  .stationPicker i,
-  .desktopPickerStations  .stationPicker i {
-    margin-right: 8px;
-    font-size: 20px;
-  }
-  .mobilePickerStations li:hover,
-  .desktopPickerStations li:hover{
-    background-color:  #f9f9fa;
-  }
-  .mobilePickerStations .stationPicker,
-  .desktopPickerStations .stationPicker {
-    cursor: pointer;
-  }
-  .desktopPickerCalendars {
-    left: calc(-256px + 50%);
-    width: 512px;
-    padding: 24px 24px 32px;
-  }
-  
-  .desktopPickerCalendarContainer:not(:first-child) {
-    margin-left: 16px
-  }
-  
-  .mobilePickerContainer {
-    width: 100%;
-    padding: 32px 0;
-    background-color: #fff;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none
-  }
-  
-  .mobilePickerPanel {
-    width: 100%;
-    min-width: 224px;
-    max-width: 512px;
-    padding: 0 16px
-  }
-  
-  .mobilePickerCalendarContainer {
-    width: 100%;
-    margin-bottom: 16px
-  }
-  
-  .mobilePickerCalendarMonth {
-    height: 20px;
-    color: $accent-color;
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 20px;
-    text-align: center
-  }
-  
-  .searchBarBlock {
-    cursor: pointer;
-    text-align: left;
-    background-color: $lighter-gray-color;
-    font-weight: 300 !important;
-    transition: all 0.3s ease-out, all 0.3s ease-out, auto;
-    height: 40px;
-    border: none;
-    margin-bottom: 10px;
-    padding: 10px 15px;
-    box-sizing: border-box;
-  }
-
-  .disabled {
-    background-color: #fbfbfb;
-  }
-  .searchBarBlock .label {
-    color: black;
-  }
-
-  .disabled .field {
-    color: $middle-gray-color!important;
-  }
-
-  .searchBarBlock .field {
-    width: 100%;
-    min-width: 0;
+  thead th {
     font-size: 14px;
+    color: #999999;
+    font-weight: 200;
   }
-  .barPicked {
-    color: $gray-color;
-    font-weight: 400;
-  }
-  .searchBarBlock:not(.barPicked) .field{
-    color: black;
-  }
+}
+
+.ui-datepicker-buttonpane {
+  border: none;
   
-  #searchTicket input {
-    background: #FFF;
+  .ui-state-default {
+    background: white;
     border: none;
-    color: black;
-    padding: 0.25rem 0;
   }
-  
-  .stationSwap {
+
+  .ui-datepicker-close,
+  .ui-datepicker-current {
+    background: white;
+    color: $accent-color;
+    text-transform: uppercase;
+    border: none;
+    opacity: 1;
+    font-weight:200;
+    outline: none;
+    
+    &:hover {
+      background: lighten($accent-color, 50%);
+    }
+  }
+}
+
+ .stationSwap {
     position: absolute;
     font-size: 25px;
     cursor: pointer;
@@ -481,41 +99,31 @@ body.noScroll {
     top: 8px;
     color: $accent-color;
   }
-
-
-  #searchTicket .picker {
-    position: relative;
+  .input {
+    width: 100%;
+    height: 35px;
+    background-color: #f0f0f0;
+    border: 1px solid #f0f0f0;
+    font-weight: 300 !important;
+    transition: all 0.3s ease-out, all 0.3s ease-out, auto;
+    height: 40px;
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    box-sizing: border-box;
+    font-size: 16px;
   }
-  #searchTicket label {
-    margin-bottom: 0;
+
+  input:focus,
+  select:focus,
+  textarea:focus
+  {
+    border: 1px solid red;
+    outline: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    box-sizing: border-box;
   }
 
-  @media (min-width: 768px) {
-    #searchTicket {
-      background: #FFF;
-    }
-
-    #searchTicket label {
-      text-align: left;
-      text-transform: capitalize;
-      font-weight: normal;
-      display: block;
-      color: #333;
-    }
-    #searchTicket input {
-      font-size: 1rem;
-  
-    }
-    #searchTicket .field i {
-      vertical-align: middle;
-    }
-  }
-  @media (min-width: 992px) {
-  
-    #searchTicket .field {
-      font-size: 16px;
-    }
-  }
   .btn-plus-minus,
   .passengers-num
   {
@@ -523,7 +131,7 @@ body.noScroll {
     width: 28px;
     height: 28px;
     border-radius: 2px;
-    border: 1px solid #d5d5d5;
+    border: 1px solid $accent-color;
     margin: 2px;
     vertical-align: top;
     line-height: 25px;
@@ -575,7 +183,7 @@ body.noScroll {
     display: block;
     position: relative;
     padding-left: 25px;
-    margin-bottom: 12px;
+    margin-bottom: 0;
     cursor: pointer;
     font-size: 14px;
     -webkit-user-select: none;
@@ -631,6 +239,10 @@ body.noScroll {
     transform: rotate(45deg);
   }
 
-  #searchButton{
-    max-width: 500px;
+  #passangers {
+    cursor: pointer;
+  }
+
+  #toDate[disabled]{
+    background-color: #fbfbfb;
   }
