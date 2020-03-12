@@ -151,13 +151,14 @@
         }
     }
     .trainShedule-price {
-        font-size: 26px;
+        font-size: 30px;
+        line-height: 1;
         @media only screen and (max-width: 1600px), (orientation: portrait) {
-            font-size: 24px;
+            font-size: 26px;
         }
         
         @media only screen and (max-width: 1200px), (orientation: portrait) {
-            font-size: 20px;
+            font-size: 22px;
         }
         
     }

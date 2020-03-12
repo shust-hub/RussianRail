@@ -3157,7 +3157,7 @@ input:checked ~ .tab-content {
   border: none;
   -webkit-box-shadow: 0 12px 36px 16px rgba(0, 0, 0, 0.24);
           box-shadow: 0 12px 36px 16px rgba(0, 0, 0, 0.24);
-  width: 320px; }
+  width: 335px; }
 
 .ui-corner-all {
   border-radius: 0; }
@@ -3177,14 +3177,26 @@ input:checked ~ .tab-content {
   .ui-datepicker-header .ui-datepicker-title {
     border: none;
     outline: none;
-    margin: 5px;
+    margin: 5px 0;
     color: #ad1e2f; }
+
+.ui-widget-header .ui-icon {
+  background-image: url("../img/next.png");
+  background-position: center; }
+
+.ui-datepicker-next {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg); }
 
 .ui-datepicker-prev.ui-state-hover,
 .ui-datepicker-next.ui-state-hover {
   border: none;
   outline: none;
-  background: #f7d3d7; }
+  background: white; }
+
+.ui-datepicker-prev span.ui-icon:focus,
+.ui-datepicker-next span.ui-icon:focus {
+  outline: none !important; }
 
 .ui-datepicker-calendar .ui-state-default {
   background: none;
@@ -3196,6 +3208,12 @@ input:checked ~ .tab-content {
   font-size: 14px; }
 .ui-datepicker-calendar .ui-state-highlight {
   color: #ad1e2f; }
+.ui-datepicker-calendar .ui-datepicker-week-end a {
+  color: #ad1e2f; }
+.ui-datepicker-calendar .ui-datepicker-week-end .ui-state-active {
+  border-radius: 50%;
+  background-color: #ad1e2f;
+  color: white; }
 .ui-datepicker-calendar .ui-state-active {
   border-radius: 50%;
   background-color: #ad1e2f;
@@ -3231,7 +3249,7 @@ input:checked ~ .tab-content {
   top: 8px;
   color: #ad1e2f; }
 
-.input {
+.input, .form-control {
   width: 100%;
   height: 35px;
   background-color: #f0f0f0;
@@ -3244,17 +3262,25 @@ input:checked ~ .tab-content {
   padding: 10px 15px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-size: 16px; }
+  font-size: 16px;
+  border-radius: 0; }
+
+.form-control:disabled, .form-control[readonly] {
+  background-color: #f0f0f0;
+  opacity: 1; }
 
 input:focus,
 select:focus,
 textarea:focus {
-  border: 1px solid red;
+  border: 1px solid #ad1e2f;
   outline: 0;
   -webkit-box-shadow: none;
   box-shadow: none;
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
+
+.btn {
+  border-radius: 0; }
 
 .btn-plus-minus,
 .passengers-num {
@@ -3365,6 +3391,67 @@ textarea:focus {
 
 #toDate[disabled] {
   background-color: #fbfbfb; }
+
+.popover {
+  max-width: 100%;
+  border: none;
+  border-radius: 0;
+  padding: 20px;
+  -webkit-box-shadow: 0 12px 36px 16px rgba(0, 0, 0, 0.24);
+  box-shadow: 0 12px 36px 16px rgba(0, 0, 0, 0.24);
+  width: 335px; }
+
+.popover .arrow {
+  display: none; }
+
+.popover-body .input-group {
+  width: 135px; }
+.popover-body .btn {
+  background: #ad1e2f;
+  color: white;
+  border-color: #ad1e2f;
+  font-weight: bold;
+  text-transform: uppercase;
+  height: 40px;
+  border: 1px solid #ad1e2f; }
+.popover-body .btn:hover {
+  background: #c32235;
+  color: rgba(255, 255, 255, 0.9);
+  border-color: #c32235; }
+.popover-body .btn-primary {
+  background-color: #f0f0f0;
+  color: white !important;
+  border: none;
+  margin: 0 2px; }
+  .popover-body .btn-primary:hover {
+    background: #c32235;
+    color: rgba(255, 255, 255, 0.9); }
+    .popover-body .btn-primary:hover .fas {
+      color: rgba(255, 255, 255, 0.9); }
+  .popover-body .btn-primary:active {
+    background: #ad1e2f; }
+.popover-body .input-passanger {
+  background-color: white;
+  border: 1px solid #f0f0f0;
+  padding: 0;
+  max-width: 45px;
+  min-width: 45px; }
+.popover-body label {
+  margin-top: 5px;
+  line-height: 1px; }
+  .popover-body label p {
+    font-family: "Acumin Pro";
+    line-height: 10px;
+    padding-left: 5px;
+    color: #535353;
+    font-size: 13px;
+    font-weight: 500; }
+.popover-body .btn-primary:not(:disabled):not(.disabled).active, .popover-body .btn-primary:not(:disabled):not(.disabled):active, .popover-body .show > .btn-primary.dropdown-toggle {
+  background: #c32235;
+  color: rgba(255, 255, 255, 0.9);
+  border-color: #c32235; }
+.popover-body .number-spinner .fas {
+  color: white; }
 
 #train_shedule {
   margin-top: 21px;
@@ -3478,13 +3565,14 @@ textarea:focus {
       .trainShedule .trainShedule-timeDep, .trainShedule .trainShedule-timeArr {
         font-size: 20px; } }
   .trainShedule .trainShedule-price {
-    font-size: 26px; }
+    font-size: 30px;
+    line-height: 1; }
     @media only screen and (max-width: 1600px), (orientation: portrait) {
       .trainShedule .trainShedule-price {
-        font-size: 24px; } }
+        font-size: 26px; } }
     @media only screen and (max-width: 1200px), (orientation: portrait) {
       .trainShedule .trainShedule-price {
-        font-size: 20px; } }
+        font-size: 22px; } }
   .trainShedule .days {
     background: #d9d9d9;
     position: absolute;

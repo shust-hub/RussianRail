@@ -37,6 +37,104 @@ $(function() {
     }
   }
 
+  var options = {
+    content: function() {
+      return $(this).parent().find('.popover-content').html();
+    },
+    sanitize: false,
+    html: true,
+    fallbackPlacement: [],
+    placement: 'bottom'
+  };
+  var $popover = $('.passangers-field>.trigger').popover(options);
+  
+  // Open Popover
+  var pax = [1,0];
+  $('.passangers-field>.trigger').click(function(e) {
+    e.stopPropagation();
+    $('.popover-body input').each(function(i) {
+      $(this).val(pax[i]);
+    });
+  });
+  
+  // Close Popover
+  $(document).click(function(e) {
+    if($(e.target).hasClass('dismiss')) {
+      $('.passangers-field>.trigger').popover('hide');
+    }
+  });
+  
+  // On Close Store Values
+  $popover.on('hide.bs.popover', function(e) {
+    $('.popover-body input').each(function(i) {
+      pax[i] = $(this).val();
+    });
+  });
+    
+  // Change Values on + & - Button Clicks
+  $(document).on('click', '.number-spinner a', function() {
+    var btn = $(this),
+        input = btn.closest('.number-spinner').find('input'),
+        oldValue = input.val().trim(),
+        inputPax = $('#pax'),
+        dataTotal = parseInt(inputPax.attr('data-total')),
+        dataAdults = parseInt(inputPax.attr('data-adults')),
+        dataChildren = parseInt(inputPax.attr('data-children'));
+        dataInfant = parseInt(inputPax.attr('data-infant'));
+  
+    if(btn.attr('data-dir') == 'up') {
+      if(oldValue < input.attr('max')) {
+        oldValue++;
+        
+        if(input.attr('id') === 'adult') {
+          dataAdults++
+          inputPax.attr('data-adults', dataAdults);
+          console.log('Adult added! The new adult total is: ' + dataAdults);
+        } else if(input.attr('id') === 'child') {
+          dataChildren++
+          inputPax.attr('data-children', dataChildren);
+          console.log('Child added! The new child total is: ' + dataChildren);
+        }
+        else if(input.attr('id') === 'infant') {
+          dataInfant++
+          if (dataInfant>dataAdults) {
+            console.log('Err 1');
+            return false;
+          }
+          inputPax.attr('data-infant', dataInfant);
+          console.log('Child added! The new infant total is: ' + dataInfant);
+        }
+      }
+    } else {
+      if(oldValue > input.attr('min')) {
+        oldValue--;
+        
+        if(input.attr('id') === 'adult') {
+          dataAdults--
+          inputPax.attr('data-adults', dataAdults);
+          console.log('Adult added! The new adult total is: ' + dataAdults);
+        } else if(input.attr('id') === 'child') {
+          dataChildren--
+          inputPax.attr('data-children', dataChildren);
+          console.log('Child added! The new child total is: ' + dataChildren);
+        } else if(input.attr('id') === 'infant') {
+          dataInfant--
+          inputPax.attr('data-infant', dataInfant);
+          console.log('Child added! The new infant total is: ' + dataInfant);
+        }
+      }
+    }
+    dataTotal = dataAdults + dataChildren + dataInfant;
+    inputPax.attr('data-total', dataTotal);
+    inputPax.attr('placeholder',  dataTotal + ' • Adults: ' + dataAdults + ' • Children: ' + dataChildren + ' • Infant: ' + dataInfant);
+    
+    input.val(oldValue);
+  });
+  
+  // Show Popover On Startup
+  $('.container>.trigger').popover('show')
+  
+
 
 
 // $(function() {
