@@ -1,41 +1,144 @@
-var dateFormat = "mm/dd/yy",
-    from = $( "#fromDate" )
-    .datepicker({
-        defaultDate: "+1w"
-    })
-    .on( "change", function() {
-        to.datepicker( "option", "minDate", getDate( this ) );
-    }),
-    to = $( "#toDate" ).datepicker({
-    defaultDate: "+1w"
-    })
-    .on( "change", function() {
-    from.datepicker( "option", "maxDate", getDate( this ) );
-    });
 
-function getDate( element ) {
-    var date;
-    try {
-    date = $.datepicker.parseDate( dateFormat, element.value );
-    } catch( error ) {
-    date = null;
-    }
-    return date;
-}
+// var dateFormat = "mm/dd/yy",
+//     from = $( "#fromDate" )
+//     .datepicker({
+//         defaultDate: "+1w",
+//         container: '.headerForm'
+//     })
+//     .on( "change", function() {
+//         to.datepicker( "option", "minDate", getDate( this ) );
+//     }),
+//     to = $( "#toDate" ).datepicker({
+//     defaultDate: "+1w"
+//     })
+//     .on( "change", function() {
+//     from.datepicker( "option", "maxDate", getDate( this ) );
+//     });
 
-$(function() {
-    enable_cb();
-    $("#checkReturn").click(enable_cb);
-  });
+// function getDate( element ) {
+//     var date;
+//     try {
+//     date = $.datepicker.parseDate( dateFormat, element.value );
+//     } catch( error ) {
+//     date = null;
+//     }
+//     return date;
+// }
+
+// $(function() {
+//     enable_cb();
+//     $("#checkReturn").click(enable_cb);
+//   });
   
-  function enable_cb() {
-    if (this.checked) {
-      $('#toDate').prop('disabled', false);
-    } else {
-      $("#toDate").prop('disabled', true);
-      $('#toDate').val("");
-    }
+//   function enable_cb() {
+//     if (this.checked) {
+//       $('#toDate').prop('disabled', false);
+//     } else {
+//       $("#toDate").prop('disabled', true);
+//       $('#toDate').val("");
+//     }
+//   }
+
+var bindDateRangeValidation = function (f, s, e) {
+  if(!(f instanceof jQuery)){
+    console.log("Not passing a jQuery object");
   }
+
+  var jqForm = f,
+      startDateId = s,
+      endDateId = e;
+
+  var checkDateRange = function (startDate, endDate) {
+      var isValid = (startDate != "" && endDate != "") ? startDate <= endDate : true;
+      return isValid;
+  }
+
+  var bindValidator = function () {
+      var bstpValidate = jqForm.data('bootstrapValidator');
+      var validateFields = {
+          startDate: {
+              validators: {
+                  notEmpty: { message: 'This field is required.' },
+                  callback: {
+                      message: 'Start Date must less than or equal to End Date.',
+                      callback: function (startDate, validator, $field) {
+                          return checkDateRange(startDate, $('#' + endDateId).val())
+                      }
+                  }
+              }
+          },
+          endDate: {
+              validators: {
+                  notEmpty: { message: 'This field is required.' },
+                  callback: {
+                      message: 'End Date must greater than or equal to Start Date.',
+                      callback: function (endDate, validator, $field) {
+                          return checkDateRange($('#' + startDateId).val(), endDate);
+                      }
+                  }
+              }
+          },
+          customize: {
+              validators: {
+                  customize: { message: 'customize.' }
+              }
+          }
+      }
+      if (!bstpValidate) {
+          jqForm.bootstrapValidator({
+              excluded: [':disabled'], 
+          })
+      }
+    
+      jqForm.bootstrapValidator('addField', startDateId, validateFields.startDate);
+      jqForm.bootstrapValidator('addField', endDateId, validateFields.endDate);
+    
+  };
+
+  var hookValidatorEvt = function () {
+      var dateBlur = function (e, bundleDateId, action) {
+          jqForm.bootstrapValidator('revalidateField', e.target.id);
+      }
+
+      $('#' + startDateId).on("dp.change dp.update blur", function (e) {
+          $('#' + endDateId).data("DateTimePicker").setMinDate(e.date);
+          dateBlur(e, endDateId);
+      });
+
+      $('#' + endDateId).on("dp.change dp.update blur", function (e) {
+          $('#' + startDateId).data("DateTimePicker").setMaxDate(e.date);
+          dateBlur(e, startDateId);
+      });
+  }
+
+  bindValidator();
+  hookValidatorEvt();
+};
+
+
+$(function () {
+  var sd = new Date(), ed = new Date();
+
+  $('#startDate').datetimepicker({ 
+    pickTime: false, 
+    format: "DD, MMMM YYYY", 
+    defaultDate: sd, 
+    maxDate: ed ,
+    container: $('.headerForm')
+  });
+
+  $('#endDate').datetimepicker({ 
+    pickTime: false, 
+    format: "YYYY/MM/DD", 
+    defaultDate: ed, 
+    minDate: sd ,
+    container: $('.headerForm')
+  });
+
+  //passing 1.jquery form object, 2.start date dom Id, 3.end date dom Id
+  bindDateRangeValidation($("#form"), 'startDate', 'endDate');
+});
+///////////////////////////////////////////////////////////////////////////////
 
   var options = {
     content: function() {
@@ -44,7 +147,8 @@ $(function() {
     sanitize: false,
     html: true,
     fallbackPlacement: [],
-    placement: 'bottom'
+    placement: 'bottom',
+    container: $('.headerForm')
   };
   var $popover = $('.passangers-field>.trigger').popover(options);
   
@@ -70,9 +174,17 @@ $(function() {
       pax[i] = $(this).val();
     });
   });
+
+  function checkSum(adult, child, infant) {
+    if ((adult + child + infant)>10){
+      $(".error-msg").append("<div class='error-info'>Only 10</div>");
+      return false;
+    }
+  }
     
   // Change Values on + & - Button Clicks
   $(document).on('click', '.number-spinner a', function() {
+    $(".error-msg").empty()
     var btn = $(this),
         input = btn.closest('.number-spinner').find('input'),
         oldValue = input.val().trim(),
@@ -83,32 +195,49 @@ $(function() {
         dataInfant = parseInt(inputPax.attr('data-infant'));
   
     if(btn.attr('data-dir') == 'up') {
+    
       if(oldValue < input.attr('max')) {
         oldValue++;
         
         if(input.attr('id') === 'adult') {
+          if ((dataAdults +  dataChildren + dataInfant)==10){
+            $(".error-msg").append("<div class='error-info'><p>The maximum number of passengers in one order is 10.</p></div>");
+            return false;
+          }
           dataAdults++
           inputPax.attr('data-adults', dataAdults);
+          if ((adult + child + infant)>9){
+            $(".error-msg").append("<div class='error-info'><p>The maximum number of passengers in one order is 10.</p></div>");
+            return false;
+          }
           console.log('Adult added! The new adult total is: ' + dataAdults);
         } else if(input.attr('id') === 'child') {
+          if ((dataAdults +  dataChildren + dataInfant)==10){
+            $(".error-msg").append("<div class='error-info'><p>The maximum number of passengers in one order is 10.</p></div>");
+            return false;
+          }
           dataChildren++
           inputPax.attr('data-children', dataChildren);
           console.log('Child added! The new child total is: ' + dataChildren);
         }
         else if(input.attr('id') === 'infant') {
+          if ((dataAdults +  dataChildren + dataInfant)==10){
+            $(".error-msg").append("<div class='error-info'><p>The maximum number of passengers in one order is 10.</p></div>");
+            return false;
+          }
           dataInfant++
           if (dataInfant>dataAdults) {
-            console.log('Err 1');
+            $(".error-msg").append("<div class='error-info'>One adult can be accompanied by only one child without seat</div>");
             return false;
           }
           inputPax.attr('data-infant', dataInfant);
           console.log('Child added! The new infant total is: ' + dataInfant);
         }
       }
+
     } else {
       if(oldValue > input.attr('min')) {
         oldValue--;
-        
         if(input.attr('id') === 'adult') {
           dataAdults--
           inputPax.attr('data-adults', dataAdults);

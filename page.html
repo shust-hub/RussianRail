@@ -18,6 +18,12 @@
   <link rel="stylesheet" href="resources/assets/OwlCarousel/dist/assets/owl.carousel.min.css">
   <link rel="stylesheet" href="resources/assets/OwlCarousel/dist/assets/owl.theme.default.min.css">
   
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/3.1.3/css/bootstrap-datetimepicker.min.css">
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"> -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.3/css/bootstrapValidator.min.css">
+
+
+
  <script>
       function slowScroll(id) {
           var offset = 0;
@@ -250,10 +256,18 @@
               </label>
             </div>
 
-            <div class="d-md-flex">
+            <!-- <div class="d-md-flex">
               <input id="fromDate" type="text" autocomplete="off" placeholder="Depature From" class="calendar input mr-2">
               <input id="toDate" type="text" autocomplete="off" placeholder="Arrival To" disabled class="calendar input">
-            </div>
+            </div> -->
+
+            <div class="form-group">
+              <label for="startDate">Start Date</label>
+              <input id="startDate" name="startDate" type="text" class="form-control" />
+
+              <label for="endDate">End Date</label>
+              <input id="endDate" name="endDate" type="text" class="form-control" />
+          </div>
             
             <div class="passangers-field position-relative">
               <span class="trigger  position-relative">
@@ -268,7 +282,7 @@
                     <input type="text" name="adult" id="adult" class="form-control text-center input-passanger" value="1" max="9" min="1" disabled>
                     <a class="btn btn-primary" data-dir="up"><i class="fas fa-plus"></i></a>
                   </div>
-                  <label for="adult"> <p><i class="fas fa-male"></i> Adults <i> </i></p> </label>
+                  <label for="adult"> <span><i class="fas fa-male"></i> Adults <i> </i></span> </label>
                 </div>
 
                 <div class="form-group d-flex">
@@ -277,7 +291,7 @@
                     <input type="text" name="child" id="child" class="form-control text-center input-passanger" value="0" max="9" min="0" disabled>
                     <a class="btn btn-primary" data-dir="up"><i class="fas fa-plus"></i></a>
                   </div>
-                  <label for="child"> <p><i class="fas fa-child"></i> Children (Age: 5-9)</p> </label>
+                  <label for="child"> <span><i class="fas fa-child"></i> Children (Age: 5-9)</span> </label>
                 </div>
 
                 <div class="form-group d-flex">
@@ -286,8 +300,10 @@
                     <input type="text" name="infant" id="infant" class="form-control text-center input-passanger" value="0" max="9" min="0" disabled>
                     <a class="btn btn-primary" data-dir="up"><i class="fas fa-plus"></i></a>
                   </div>
-                  <label for="child"> <p><i class="fas fa-baby"></i> Infant (Age: 0-4)</p> <br> <i>without seat</i> </label>
+                  <label for="child"> <span><i class="fas fa-baby"></i> Infant (Age: 0-4)</span> <br> <i>without seat</i> </label>
                 </div>
+
+                <div class="error-msg"> </div>
 
                 <a class="btn btn-block dismiss">Save</a>
               </div>    
@@ -537,6 +553,13 @@
 <script src="resources/js/nav.js"></script>
 <script src="resources/js/header-form.js"></script>
 <script src="resources/js/main.js"></script>
+
+
+<!-- <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.3/js/bootstrapValidator.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.2/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/3.1.3/js/bootstrap-datetimepicker.min.js"></script>
 
 </body>
 

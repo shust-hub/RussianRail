@@ -744,6 +744,14 @@ mark {
   border-radius: 0;
   color: #000; }
 
+.error-info {
+  background-color: #f37979;
+  padding: 20px 30px;
+  margin: 20px 0;
+  border-color: #f37979;
+  border-radius: 0;
+  color: #000; }
+
 body {
   font-family: "Open Sans", sans-serif;
   font-size: 100%;
@@ -3157,7 +3165,10 @@ input:checked ~ .tab-content {
   border: none;
   -webkit-box-shadow: 0 12px 36px 16px rgba(0, 0, 0, 0.24);
           box-shadow: 0 12px 36px 16px rgba(0, 0, 0, 0.24);
-  width: 335px; }
+  width: 335px;
+  position: absolute;
+  top: 20px;
+  left: 5px; }
 
 .ui-corner-all {
   border-radius: 0; }
@@ -3396,10 +3407,14 @@ textarea:focus {
   max-width: 100%;
   border: none;
   border-radius: 0;
-  padding: 20px;
+  padding: 70px 20px;
   -webkit-box-shadow: 0 12px 36px 16px rgba(0, 0, 0, 0.24);
   box-shadow: 0 12px 36px 16px rgba(0, 0, 0, 0.24);
-  width: 335px; }
+  width: 100%;
+  min-height: 100%;
+  -webkit-transform: none !important;
+          transform: none !important;
+  margin-top: 0 !important; }
 
 .popover .arrow {
   display: none; }
@@ -3439,12 +3454,12 @@ textarea:focus {
 .popover-body label {
   margin-top: 5px;
   line-height: 1px; }
-  .popover-body label p {
+  .popover-body label span {
     font-family: "Acumin Pro";
-    line-height: 10px;
+    line-height: 29px;
     padding-left: 5px;
     color: #535353;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 500; }
 .popover-body .btn-primary:not(:disabled):not(.disabled).active, .popover-body .btn-primary:not(:disabled):not(.disabled):active, .popover-body .show > .btn-primary.dropdown-toggle {
   background: #c32235;

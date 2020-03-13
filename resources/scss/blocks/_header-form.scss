@@ -1,8 +1,12 @@
+
 .ui-datepicker {
   padding: 20px;
   border: none;
   box-shadow: 0 12px 36px 16px rgba(0,0,0,0.24);
   width: 335px;
+  position: absolute;
+  top:20px;
+  left:5px;
 }
 
 .ui-corner-all {
@@ -283,15 +287,16 @@
   }
 
   .popover {
-
     max-width: 100%;
     border: none;
     border-radius: 0;
-    padding: 20px;
+    padding: 70px 20px;
     -webkit-box-shadow: 0 12px 36px 16px rgba(0, 0, 0, 0.24);
     box-shadow: 0 12px 36px 16px rgba(0, 0, 0, 0.24);
-    width: 335px;
-  
+    width: 100%;
+    min-height: 100%;
+    transform: none!important;
+    margin-top: 0!important;
 }
 
 .popover .arrow {
@@ -351,15 +356,14 @@
   label {
     margin-top: 5px;
     line-height: 1px;
-    p{
+    span{
       font-family: $header-font;
-      line-height: 10px;
+      line-height: 29px;
       padding-left: 5px;
       color: #535353;
-      font-size: 13px;
+      font-size: 14px;
       font-weight: 500;
     }
-
   }
 
   .btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
