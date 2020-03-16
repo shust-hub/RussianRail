@@ -1,44 +1,3 @@
-
-// var dateFormat = "mm/dd/yy",
-//     from = $( "#fromDate" )
-//     .datepicker({
-//         defaultDate: "+1w",
-//         container: '.headerForm'
-//     })
-//     .on( "change", function() {
-//         to.datepicker( "option", "minDate", getDate( this ) );
-//     }),
-//     to = $( "#toDate" ).datepicker({
-//     defaultDate: "+1w"
-//     })
-//     .on( "change", function() {
-//     from.datepicker( "option", "maxDate", getDate( this ) );
-//     });
-
-// function getDate( element ) {
-//     var date;
-//     try {
-//     date = $.datepicker.parseDate( dateFormat, element.value );
-//     } catch( error ) {
-//     date = null;
-//     }
-//     return date;
-// }
-
-// $(function() {
-//     enable_cb();
-//     $("#checkReturn").click(enable_cb);
-//   });
-  
-//   function enable_cb() {
-//     if (this.checked) {
-//       $('#toDate').prop('disabled', false);
-//     } else {
-//       $("#toDate").prop('disabled', true);
-//       $('#toDate').val("");
-//     }
-//   }
-
 var bindDateRangeValidation = function (f, s, e) {
   if(!(f instanceof jQuery)){
     console.log("Not passing a jQuery object");
@@ -121,23 +80,34 @@ $(function () {
 
   $('#startDate').datetimepicker({ 
     pickTime: false, 
-    format: "DD, MMMM YYYY", 
-    defaultDate: sd, 
-    maxDate: ed ,
-    container: $('.headerForm')
+    format: "DD, MMMM YYYY",
+    widgetParent: '.headerForm'
   });
 
   $('#endDate').datetimepicker({ 
     pickTime: false, 
-    format: "YYYY/MM/DD", 
-    defaultDate: ed, 
-    minDate: sd ,
-    container: $('.headerForm')
+    format: "DD, MMMM YYYY", 
+    widgetParent: '.headerForm'
   });
 
   //passing 1.jquery form object, 2.start date dom Id, 3.end date dom Id
   bindDateRangeValidation($("#form"), 'startDate', 'endDate');
 });
+
+
+$(function() {
+  enable_cb();
+  $("#checkReturn").click(enable_cb);
+});
+
+function enable_cb() {
+  if (this.checked) {
+    $('#endDate').prop('disabled', false);
+  } else {
+    $("#endDate").prop('disabled', true);
+    $('#endDate').val("");
+  }
+}
 ///////////////////////////////////////////////////////////////////////////////
 
   var options = {
@@ -153,7 +123,7 @@ $(function () {
   var $popover = $('.passangers-field>.trigger').popover(options);
   
   // Open Popover
-  var pax = [1,0];
+  var pax = [1,0,0];
   $('.passangers-field>.trigger').click(function(e) {
     e.stopPropagation();
     $('.popover-body input').each(function(i) {
@@ -239,14 +209,32 @@ $(function () {
       if(oldValue > input.attr('min')) {
         oldValue--;
         if(input.attr('id') === 'adult') {
+          
+          if ((dataAdults +  dataChildren + dataInfant)==10){
+            $(".error-msg").append("<div class='error-info'><p>The maximum number of passengers in one order is 10.</p></div>");
+            return false;
+          }
+          
+          if ((adult + child + infant)>9){
+            $(".error-msg").append("<div class='error-info'><p>The maximum number of passengers in one order is 10.</p></div>");
+            return false;
+          }
           dataAdults--
           inputPax.attr('data-adults', dataAdults);
           console.log('Adult added! The new adult total is: ' + dataAdults);
         } else if(input.attr('id') === 'child') {
+          if ((dataAdults +  dataChildren + dataInfant)==10){
+            $(".error-msg").append("<div class='error-info'><p>The maximum number of passengers in one order is 10.</p></div>");
+            return false;
+          }
           dataChildren--
           inputPax.attr('data-children', dataChildren);
           console.log('Child added! The new child total is: ' + dataChildren);
         } else if(input.attr('id') === 'infant') {
+          if ((dataAdults +  dataChildren + dataInfant)==10){
+            $(".error-msg").append("<div class='error-info'><p>The maximum number of passengers in one order is 10.</p></div>");
+            return false;
+          }
           dataInfant--
           inputPax.attr('data-infant', dataInfant);
           console.log('Child added! The new infant total is: ' + dataInfant);
@@ -255,7 +243,7 @@ $(function () {
     }
     dataTotal = dataAdults + dataChildren + dataInfant;
     inputPax.attr('data-total', dataTotal);
-    inputPax.attr('placeholder',  dataTotal + ' • Adults: ' + dataAdults + ' • Children: ' + dataChildren + ' • Infant: ' + dataInfant);
+    inputPax.attr('placeholder',  dataTotal + ' Adults: ' + dataAdults + ' • Children: ' + dataChildren + ' • Infant: ' + dataInfant);
     
     input.val(oldValue);
   });

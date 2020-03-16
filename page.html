@@ -241,7 +241,7 @@
 
       <div class="col-lg-4 col-md-8 offset-md-2 offset-lg-0 col-sm-12 mt-3 mt-lg-5">
 
-        <form id="searchTicket" class="headerForm" name="searchTicket" method="get" action="/search">
+        <form id="searchTicket" style="position:relative" class="headerForm" name="searchTicket" method="get" action="/search">
           <h2>Start planning</h2>
 
             <input class="input" type="text">
@@ -256,17 +256,9 @@
               </label>
             </div>
 
-            <!-- <div class="d-md-flex">
-              <input id="fromDate" type="text" autocomplete="off" placeholder="Depature From" class="calendar input mr-2">
-              <input id="toDate" type="text" autocomplete="off" placeholder="Arrival To" disabled class="calendar input">
-            </div> -->
-
-            <div class="form-group">
-              <label for="startDate">Start Date</label>
-              <input id="startDate" name="startDate" type="text" class="form-control" />
-
-              <label for="endDate">End Date</label>
-              <input id="endDate" name="endDate" type="text" class="form-control" />
+            <div class="d-flex">
+              <input id="startDate" placeholder="Depature From" name="startDate" type="text" class="input mr-2" />
+              <input id="endDate" placeholder="Arrival To" name="endDate" type="text" class="input" />
           </div>
             
             <div class="passangers-field position-relative">
@@ -300,7 +292,7 @@
                     <input type="text" name="infant" id="infant" class="form-control text-center input-passanger" value="0" max="9" min="0" disabled>
                     <a class="btn btn-primary" data-dir="up"><i class="fas fa-plus"></i></a>
                   </div>
-                  <label for="child"> <span><i class="fas fa-baby"></i> Infant (Age: 0-4)</span> <br> <i>without seat</i> </label>
+                  <label for="infant"> <span><i class="fas fa-baby"></i> Infant (Age: 0-4)</span> <br> <i>without seat</i> </label>
                 </div>
 
                 <div class="error-msg"> </div>
